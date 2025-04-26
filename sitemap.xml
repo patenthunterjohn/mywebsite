@@ -8,9 +8,11 @@
   </url>
   <url>
     <loc>https://patenthunterjohn.com/meta/meta-US12160768B2.html</loc>
-    <lastmod>2025-04-26</lastmod> <!-- 最後更新時間 -->
+    <lastmod>2025-04-26</lastmod> 
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority> <!-- 頁面優先級（0.0 到 1.0，數值越大，優先級越高） -->
+    <priority>0.8</priority>
   </url>
   <!-- 可以根據需要添加更多的頁面 -->
+  <!-- lastmod 最後更新時間 -->
+  <!-- priority 頁面優先級（0.0 到 1.0，數值越大，優先級越高） -->
 </urlset>
