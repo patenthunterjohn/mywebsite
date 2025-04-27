@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無線通信比特率協商方法</title>
+
+    <!-- 引入A網頁的JavaScript檔案 -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrollgress.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.slidertron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <!-- Stylesheets -->
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-xlarge.css" />
+    </noscript>
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="css/ie/v9.css" />
+    <![endif]-->
+    <!--[if lte IE 8]>
+        <script src="css/ie/html5shiv.js"></script>
+        <link rel="stylesheet" href="css/ie/v8.css" />
+    <![endif]-->
+</head>
+<body class="landing">
+    <!-- Header -->
+    <header id="header" class="alt skel-layers-fixed">
+        <nav id="nav">
+            <ul>
+
+                <li><a href="..\index.html">首頁</a></li>
+                <li><a href="..\about.html">關於我們</a></li>
+                <li><a href="..\privacy-policy.html">隱私政策</a></li>
+                
+                <!-- 可加上更多導覽項目 -->
+
+
+            </ul>
+        </nav>
+		
+		<!-- 圖的CSS，讓圖不會重疊到文字 -->
+	    <style>
+	        img {
+	            display: block;
+	            margin: 20px 0;
+	            max-width: 100%;
+	            height: auto;
+	        }
+	        p {
+	            margin-bottom: 1em;
+	        }
+	        ol {
+	            margin-bottom: 1em;
+	        }
+	        h1 {
+	            margin-bottom: 20px;
+	        }
+	    </style>
+    
+    </header>
+
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <!-- 文章區域 -->
+        <div class="article" style="flex: 1;">
+    <Br>
+    <Br>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無線裝置於WLAN中使用優先存取時槽以支援低延遲流量的方法</title>
+    
+    
+            
+</head>
+<body>
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <!-- 文章區域 -->
+        <div class="article" style="flex: 1;">
+        
+    <h2>無線裝置於WLAN中使用優先存取時槽以支援低延遲流量的方法</h2>
+
+    <h3>技術手段</h3>
+    <p>本技術主要是在無線區域網路（WLAN）中，透過特定機制讓無線裝置可以優先使用時槽以傳輸敏感延遲的資料。具體來說，無線裝置首先從無線節點接收到一則廣播訊息，該訊息中包含了支援低延遲流量的指示，以及一組針對多個可用時槽的參數設定。接著，無線裝置會向無線節點發送一個請求，要求分配至少一個優先時槽，並在請求中指明裝置相關的流量類型與應用類型。可分配的時槽包含上行傳輸時槽、下行傳輸時槽、連續或非連續配置的多個時槽。之後，無線裝置會收到無線節點的回應，回應中會授權使用特定時槽並提供該時槽的參數細節。最終，無線裝置依據回應中所指示的參數，在指定時槽內進行資料存取。    
+    
+    </p>
+
+    <h3>詳細說明</h3>
+    <img src="images\US12058723B2-1.JPG" alt="圖1">
+    <p>圖1說明了一個提供優先增強分散式通道存取（EDCA）的系統100。整體來看，系統100包含一個無線節點102（例如無線基地台），可透過網路160與一個或多個無線裝置150（例如無線用戶端STA）進行通訊。無線裝置150可與無線節點102或其他無線裝置150競爭或請求通訊權限，支援多種傳輸模式，包括下行、上行與裝置對裝置（P2P）通訊。無線節點102能針對高延遲要求、擴增實境（AR）、虛擬實境（VR）等應用，提供更可預測且可靠的優先通道存取。無線節點102可以是單獨的無線存取點，或內建於路由器中，透過各種無線或行動連網技術連接至無線網路160，該網路可以是WLAN、LAN、WAN、PAN、公司內網或公私合併的網路。系統100也可能是人工實境系統的一部分，包含虛擬場景生成與渲染功能，無線節點102可依照無線裝置150的位置與視線方向，產生並傳送對應的影像畫面，供如頭戴顯示器（HWD 150）等裝置渲染使用。無線節點102內部設有處理器104與儲存裝置106，負責資料預處理、參數管理與方法執行（如方法400），並搭配電路元件108進行系統控制。無線節點102還包含通訊介面115與內容提供器116，其中通訊介面115負責與無線裝置150互傳資料，如裝置的位置、朝向與視線資訊；內容提供器116則根據這些資訊生成人工實境中的視角畫面，並可同時提供影像數據及相關的元資料（例如運動向量、深度資訊、邊緣偵測、物件資料等），以提升渲染品質與互動體驗。這些內容可定時傳送到無線裝置150，確保使用者在移動或改變視線時仍能即時獲得更新的人工實境畫面。整個系統架構靈活，可根據需求調整組件配置或功能分工。</p>
+    
+    <img src="images\US12058723B2-3a.JPG" alt="圖3A">
+    <p>圖3A說明一段時間週期118的架構，該週期由多個時間區段110組成，每個區段又細分為多個時間時槽112。無線節點102可以將整個時間週期118依照預定的持續時間（例如1024微秒）分割成多個時間區段110，而這些區段的長度可以根據週期長度、網路160的特性，或與無線裝置150間的頻道162（如頻寬、傳輸速率）來調整。接著，無線節點102再依據每個時間區段110的長度、預期的傳輸機會（txop）需求、或資料交換的時間，進一步將時間區段細分成多個時間時槽112。這些時槽112可以是固定長度也可以是可調整長度，設計目的是讓每個時槽足夠容納一個或多個資料框交換，例如發送/接收RTS/CTS信號、A-MPDU資料單元、或ACK回應等。為了支援不同優先等級的應用，像是AR/VR類型的高延遲敏感流量130，部分時槽112可以設定成優先時槽302，並配置第一組參數120，例如加強型通道存取（EDCA）參數、仲裁型間格時間（A-AIFS）、競爭窗口大小，或第一計時器126的設定。而其他未被特別分配的時槽則為一般時槽304，使用第二組預設參數120。不同無線裝置150可透過提出請求142來獲得這些優先時槽，例如，第一、第二、第三裝置各自分配到不同的優先時槽子集合（310、312、314）。未分配的時槽則開放供一般裝置以第二參數120進行非優先存取。透過這樣的時槽管理與參數設定，無線節點102可以靈活地分配頻寬資源，並依據不同流量類型與應用需求，達成高效且公平的無線通訊。</p>
+
+    <img src="images\US12058723B2-3b.JPG" alt="圖3B">
+    <p>圖3B說明了無線裝置150如何在時槽邊界進行非優先存取的競爭。圖示中，優先時槽112和非優先時槽112擁有明確的邊界，這些邊界是根據各自時槽112的持續時間來確定的。這些時槽邊界的設置可以控制在該時間區段110內，何時以及哪種類型的流量130可以進行傳輸。例如，在第一種情況332中，非優先流量130會在優先時槽112與非優先時槽112的邊界處停止或被阻止傳輸。如果無線裝置150正在進行下行或上行傳輸，且使用的是非優先流量（例如第二類流量），那麼當優先時槽112開始，或在優先時槽開始前一段確定的時間內，該傳輸就會停止或終止。</p>
+
+    <img src="images\US12058723B2-3c.JPG" alt="圖3C">
+    <p>圖3C顯示了無線裝置150如何在時槽邊界進行優先存取競爭。在某些實施例中，第一種情況362顯示，當優先流量130在兩個不同的優先時槽112之間的邊界處，會停止或阻止傳輸。對於優先流量130或第一類流量130，當無線裝置150分配到的當前優先時槽112的邊界與下一個分配給其他無線裝置150的優先時槽112之間到達時，傳輸機會會在邊界處結束。</p>
+
+    <img src="images\US12058723B2-4.JPG" alt="圖4">
+    <p>圖4說明了一個提供增強分配通道存取（EDCA）的方法，特別適用於低延遲需求的應用或連線。在這個方法中，無線節點102會將一段時間區間118劃分為多個時間間隔110，這些間隔的長度可以相同或不同，並進一步劃分為多個時間槽112。每個時間槽112的長度會根據傳輸類型、數據交換需求和傳輸機會（txop）等因素來決定。無線節點102也會根據不同需求配置具有不同參數的時間槽，例如，某些時間槽會配置為優先存取，以支持高延遲應用如AR/VR等。接著，無線節點會傳送廣告訊息140，告知無線裝置150這些優先存取的時間槽可用，並包含各時間槽的相關參數。當無線裝置150收到廣告訊息後，會發送請求142，表示需要存取這些優先時間槽。無線節點102會根據請求來確定流量類型，並分配合適的時間槽。對於需要低延遲的流量，無線節點會分配優先時間槽，確保這些應用能夠獲得所需的資源。接著，無線節點會回應請求並確認分配的時間槽，無線裝置則可以在這些時間槽內進行上行或下行傳輸。如果某些時間槽尚未被佔用，無線裝置可以進一步進行傳輸。如果時間槽被其他裝置佔用，無線裝置則需要等待合適的時間槽。這個方法有效地管理了時間槽的使用，保證了低延遲應用的優先權，並且確保一般流量也能夠有效地進行傳輸，從而達到網絡流量的最佳化和質量保證。</p>    
+       
+            <!-- 文章底部廣告 -->
+            <div style="margin-top: 30px;">
+                <!-- 輸入 Google AdSense 廣告代碼 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+     				crossorigin="anonymous"></script>
+                <!-- ad-01 -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-2586263174422060"
+				     data-ad-slot="8580246879"
+				     data-ad-format="auto"
+				     data-full-width-responsive="true"></ins>
+				<script>
+				     (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+                
+                
+            </div>
+        </div>
+
+        <!-- 右側廣告區域 -->
+        <div class="sidebar" style="width: 25%; padding-left: 20px;">
+            <!-- 右側廣告 1 -->
+            <div style="margin-bottom: 20px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+     			crossorigin="anonymous"></script>
+			<!-- ad-02 -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-2586263174422060"
+			     data-ad-slot="1328442815"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+                
+                
+            </div>
+            <!-- 右側廣告 2 -->
+            <div>
+          
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+			     crossorigin="anonymous"></script>
+			<!-- ad-03 -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-2586263174422060"
+			     data-ad-slot="2370061741"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+               
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- 空白區塊 -->
+	<div style="height: 5px;"></div>
+
+    <!-- 版權區塊 -->
+    <section id="cta" class="wrapper style3">
+        <h4>©2023 醬找專利 版權所有</h4>
+    </section>
+
+</body>
+</html>
