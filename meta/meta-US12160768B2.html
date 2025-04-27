@@ -72,6 +72,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>基於無授權與授權頻譜位元率比較的連線品質協商技術</title>
+    
+    
+            
 </head>
 <body>
     <div class="container" style="display: flex; justify-content: space-between;">
@@ -144,19 +147,25 @@
     </div>
     <p>圖8A說明了協商位元率、無線通道支援的位元率及/或編碼位元率的圖表800。協商位元率可能是由第一裝置110A和第二裝置110B在會話開始時（例如，在服務啟動前）協商的位元率。無線通道支援的位元率（例如，A和B的內部連接位元率）則是根據至少一個無線通道的頻道質量來決定的，例如由第一裝置110A和/或第二裝置110B測量。編碼位元率是實際應用於裝置110與綁定裝置150之間無線通信的位元率。根據圖800，若至少一個無線通道的頻道質量在會話期間發生變化（例如，變差或變好），則無線通道支援的媒體資訊（如位元率）也會相應變化（例如，減少或增加）。例如，若第二裝置110B與第二綁定裝置150B之間的無線通道頻道質量下降，則支援的位元率（或其他媒體資訊）也會減少。此時，裝置110可以根據頻道質量的變化來調整、協商或適應媒體資訊（如編碼位元率）。舉例來說，如果至少一個無線通道的質量（例如，第一裝置110A與第一綁定裝置150A之間的無線通道）在會話期間下降，則第一裝置110A可以發送請求（例如，圖7B所示的臨時最大媒體位元率請求訊息（TMMBR），嵌入在RTCP封包中）給第二裝置110B，該請求可能包括要求根據無線通道的質量下降來降低視訊位元率（或其他媒體資訊）。此外，若至少一個無線通道（如第一裝置110A與第一綁定裝置150A之間的通道）的質量低於裝置110之間連接的質量（例如端到端（E2E）鏈接），則第一裝置110A（或其他裝置110）可以發送/傳送請求來降低視訊位元率（或其他媒體資訊）給第二裝置110B（或其他裝置110）。</p>
 	<p>圖8B則說明了根據無線通道頻道質量在會話期間調整媒體資訊（如位元率）的過程850。在過程800中，第一裝置110A（和/或第二裝置110B）可以確定、協商、測量並/或識別第二位元率（b0）和/或其他媒體資訊（例如，視訊解析度）。第二位元率（例如，協商位元率）是由第一裝置110A與第二裝置110B之間的連接所能支援的位元率，且該連接至少部分使用/跨越授權頻譜。在某些實施中，第一裝置110A（和/或第二裝置110B）可以根據第二位元率來確定最大封包丟失率p0（即，會話期間可以容忍的最大封包丟失率）。第一裝置110A（和/或第二裝置110B）可以測量/確定至少一個無線通道的頻道質量。例如，第一裝置110A可能會測定第一裝置110A與第一綁定裝置150A之間的無線通道頻道質量。第二裝置110B則可能會測定第二裝置110B與第二綁定裝置150B之間的頻道質量。根據測定的頻道質量，第一裝置110A（和/或第二裝置110B）可以確定/估算與無線通道相關的封包丟失率（p1）。如果封包丟失率低於最大封包丟失率（p1&lt;p0），則第一裝置110A（和/或第二裝置110B）會決定保持相同的第二位元率。如果封包丟失率超過最大封包丟失率（p1&gt;p0），則第一裝置110A（和/或第二裝置110B）會調整、修改並/或適應第二位元率。例如，第一裝置110A（和/或第二裝置110B）會調整第二位元率，將其設定為使封包丟失率低於最大封包丟失率的位元率。在某些實施中，第一裝置110A（和/或第二裝置110B）可以根據預設的/可調整的位元率變更量（例如，Δb）來修改第二位元率。</p>
+          
        
             <!-- 文章底部廣告 -->
             <div style="margin-top: 30px;">
                 <!-- 輸入 Google AdSense 廣告代碼 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-xxxxxxx"
-                     data-ad-slot="xxxxxxx"
-                     data-ad-format="auto"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+     				crossorigin="anonymous"></script>
+                <!-- ad-01 -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-2586263174422060"
+				     data-ad-slot="8580246879"
+				     data-ad-format="auto"
+				     data-full-width-responsive="true"></ins>
+				<script>
+				     (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+                
+                
             </div>
         </div>
 
@@ -164,27 +173,37 @@
         <div class="sidebar" style="width: 25%; padding-left: 20px;">
             <!-- 右側廣告 1 -->
             <div style="margin-bottom: 20px;">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-xxxxxxx"
-                     data-ad-slot="xxxxxxx"
-                     data-ad-format="auto"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+     			crossorigin="anonymous"></script>
+			<!-- ad-02 -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-2586263174422060"
+			     data-ad-slot="1328442815"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+                
+                
             </div>
             <!-- 右側廣告 2 -->
             <div>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-xxxxxxx"
-                     data-ad-slot="xxxxxxx"
-                     data-ad-format="auto"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+          
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+			     crossorigin="anonymous"></script>
+			<!-- ad-03 -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-2586263174422060"
+			     data-ad-slot="2370061741"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+               
             </div>
         </div>
     </div>
