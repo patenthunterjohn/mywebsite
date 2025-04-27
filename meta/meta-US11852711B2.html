@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無線通信比特率協商方法</title>
+
+    <!-- 引入A網頁的JavaScript檔案 -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrollgress.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.slidertron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <!-- Stylesheets -->
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-xlarge.css" />
+    </noscript>
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="css/ie/v9.css" />
+    <![endif]-->
+    <!--[if lte IE 8]>
+        <script src="css/ie/html5shiv.js"></script>
+        <link rel="stylesheet" href="css/ie/v8.css" />
+    <![endif]-->
+</head>
+<body class="landing">
+    <!-- Header -->
+    <header id="header" class="alt skel-layers-fixed">
+        <nav id="nav">
+            <ul>
+
+                <li><a href="..\index.html">首頁</a></li>
+                <li><a href="..\about.html">關於我們</a></li>
+                <li><a href="..\privacy-policy.html">隱私政策</a></li>
+                
+                <!-- 可加上更多導覽項目 -->
+
+
+            </ul>
+        </nav>
+		
+		<!-- 圖的CSS，讓圖不會重疊到文字 -->
+	    <style>
+	        img {
+	            display: block;
+	            margin: 20px 0;
+	            max-width: 100%;
+	            height: auto;
+	        }
+	        p {
+	            margin-bottom: 1em;
+	        }
+	        ol {
+	            margin-bottom: 1em;
+	        }
+	        h1 {
+	            margin-bottom: 20px;
+	        }
+	    </style>
+    
+    </header>
+
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <!-- 文章區域 -->
+        <div class="article" style="flex: 1;">
+    <Br>
+    <Br>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>透過超寬頻技術改善多設備間連接的干擾管理</title>
+    
+    
+            
+</head>
+<body>
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <!-- 文章區域 -->
+        <div class="article" style="flex: 1;">
+        
+    <h2>透過超寬頻技術改善多設備間連接的干擾管理</h2>
+
+    <h3>技術手段</h3>
+    <p>本技術包括以下幾個步驟：首先，透過第一個裝置（配備有第一個超寬頻(UWB)天線），與多個第二裝置建立各自的連接，每個第二裝置也配備有相應的UWB天線。接著，第一裝置會識別其中一個連接所遭遇的干擾狀況。依據此干擾狀況，第一裝置會更新該連接的流量配置。更新配置的步驟包括選擇合適的波形格式，用來調整經由該連接傳送的流量。最後，第一裝置根據更新後的配置，向其中一個第二裝置傳送數據包。這一方法旨在通過精細調整設備間的通信方式，優化在多裝置環境中可能遭遇的干擾問題。
+    </p>
+
+    <h3>詳細說明</h3>
+<img src="images\US11852711B2-1.JPG" alt="圖1">
+    <p>圖1說明了一個範例的人工現實系統環境，其中包含了存取點(AP)、多個頭戴裝置(HWDs)、以及多個運算裝置。這些運算裝置提供人工現實所需的影像資料，並透過無線連接與頭戴裝置進行溝通。存取點則是用來連接這些裝置到網路，並支援無線資料傳輸。HWD 150是穿戴式電子裝置，能夠向使用者呈現人工現實體驗，並包括顯示器、處理器、感測器等元件，這些元件協同運作來偵測裝置的定位與使用者的凝視方向，進而渲染符合其所在位置與方向的影像。此系統中的無線介面能夠通過不同的無線連接方式，如Wi-Fi或超寬頻(UWB)，將定位、方向與視線資料從HWD 150傳送到運算裝置。運算裝置則處理影像資料並將影像回傳至HWD 150，以提供即時的人工現實體驗。感測器則包括加速度計、陀螺儀等元件，協助偵測HWD 150的運動及定位變化，從而實現動態的畫面更新。處理器則根據接收到的資料進行影像的渲染、重投影等處理，保證使用者在虛擬空間中的體驗真實且流暢。這個系統架構設計上高度模組化，可根據需求調整各元件的功能分配，達到最佳的人工現實效果。</p>
+
+    <img src="images\US11852711B2-7.JPG" alt="圖7">
+    <p>圖7說明了在一個受到干擾的環境中，第一裝置702與多個第二裝置704之間的干擾管理方式。在這個環境中，第一裝置702包含多個超寬頻(UWB)天線，並與多個第二裝置704（如第二裝置704(1)、704(2)等）建立連接，每個第二裝置也擁有自己的UWB天線。第一裝置702可能是主要設備，而第二裝置則是周邊設備。此外，這些裝置還配備了干擾控制器713來協助處理與管理設備間的干擾問題。干擾控制器713負責檢測或識別設備間連接的干擾狀況，並根據干擾狀況選擇合適的控制方法。干擾的來源可能包括Wi-Fi或藍牙等無線設備的共存干擾、碰撞（即兩個或多個設備同時傳輸資料）、頻道狀況（如頻道退化）、以及傳輸功率需求等。干擾控制器713能夠監控頻道活動，測量或估算信號強度（如訊號對噪聲比SNR、接收信號強度指標RSSI等），並根據這些資料來識別干擾。例如，當干擾控制器發現某個頻道或連接上的傳輸活動過於頻繁，或信號質量不佳時，會選擇調整傳輸功率、波形控制、數據處理或頻率跳躍等干擾控制策略。這些控制措施可確保系統在受到干擾的情況下，仍能維持穩定的資料傳輸。這樣的干擾管理方法在高密度裝置或干擾環境中尤為重要，能有效提升系統的可靠性與效能。</p>
+
+    <img src="images\US11852711B2-8.JPG" alt="圖8">
+    <p>圖8說明了一個檢測干擾狀況並進行超寬頻(UWB)通信的方法流程。根據此流程，設備會首先接收干擾數據，這些數據可能與頻道干擾、傳輸頻道活動或信號能量等有關。接著，設備會檢查是否滿足閾值標準。如果未達到標準，表示已經識別到干擾，設備將選擇並實施一或多項干擾控制策略。這些策略可能包括調整傳輸功率、改變波形格式、調整數據處理方式，或進行頻率跳躍等。當這些控制措施被執行後，設備會傳送數據包，並繼續循環進行干擾數據的接收與處理。具體而言，當設備檢測到干擾時，干擾控制器會根據歷史數據選擇最佳的應對策略，並調整無線傳輸的配置。這些調整可能是降低傳輸功率來避免干擾，或根據信號質量選擇更簡單的波形格式以降低功耗。此外，根據不同的干擾狀況，設備也可能選擇不同的數據處理方案來優化通信效能。當通道條件不佳或信號強度較低時，設備可能會降低數據包大小，或根據情況切換頻率範圍，以避免與其他無線網絡的干擾。這一系列的干擾控制措施有助於提升系統在複雜無線環境中的穩定性與效率。</p>
+
+    <img src="images\US11852711B2-9.JPG" alt="圖9">
+    <p>圖9說明了一個執行超寬頻(UWB)通信的方法流程。根據此流程，設備首先建立與多個設備的連接，並在之後檢測是否存在干擾情況。一旦識別到干擾，設備會根據這些干擾條件更新配置，並依照更新後的配置發送數據包。在流程的初始步驟，設備會與其他設備建立連接，並開始檢測干擾狀況，如信號質量差、無信標傳輸或低信號強度等。根據這些干擾指標，設備可以選擇調整傳輸功率或波形格式，甚至根據測得的數據調整頻率，以減少干擾。如果干擾情況被確認，設備會更新配置，可能會選擇合適的傳輸功率、簡化的波形格式或更適應的數據處理方案來應對這些條件。隨後，設備會根據這些調整過的設定發送數據包。此外，設備還能根據數據包的類型和干擾情況，選擇適當的數據處理方案，進而優化數據包大小或進行編碼，以提高通信效能。在一些情況下，設備可能會為多個設備生成連接服務計畫，定義不同的數據交換時段，並根據需要調整非同步數據的傳輸時間，確保不同設備間的有效溝通。這樣的流程確保了在各種無線環境下，設備能靈活調整自身的配置，以應對不同的干擾狀況，並提供穩定高效的通信服務。</p>
+    
+            <!-- 文章底部廣告 -->
+            <div style="margin-top: 30px;">
+                <!-- 輸入 Google AdSense 廣告代碼 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+     				crossorigin="anonymous"></script>
+                <!-- ad-01 -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-2586263174422060"
+				     data-ad-slot="8580246879"
+				     data-ad-format="auto"
+				     data-full-width-responsive="true"></ins>
+				<script>
+				     (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+                
+                
+            </div>
+        </div>
+
+        <!-- 右側廣告區域 -->
+        <div class="sidebar" style="width: 25%; padding-left: 20px;">
+            <!-- 右側廣告 1 -->
+            <div style="margin-bottom: 20px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+     			crossorigin="anonymous"></script>
+			<!-- ad-02 -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-2586263174422060"
+			     data-ad-slot="1328442815"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+                
+                
+            </div>
+            <!-- 右側廣告 2 -->
+            <div>
+          
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+			     crossorigin="anonymous"></script>
+			<!-- ad-03 -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-2586263174422060"
+			     data-ad-slot="2370061741"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+               
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- 空白區塊 -->
+	<div style="height: 5px;"></div>
+
+    <!-- 版權區塊 -->
+    <section id="cta" class="wrapper style3">
+        <h4>©2023 醬找專利 版權所有</h4>
+    </section>
+
+</body>
+</html>
