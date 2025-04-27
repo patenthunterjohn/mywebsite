@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡單文章範本</title>
+
+    <!-- 引入A網頁的JavaScript檔案 -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrollgress.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.slidertron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <!-- Stylesheets -->
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-xlarge.css" />
+    </noscript>
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="css/ie/v9.css" />
+    <![endif]-->
+    <!--[if lte IE 8]>
+        <script src="css/ie/html5shiv.js"></script>
+        <link rel="stylesheet" href="css/ie/v8.css" />
+    <![endif]-->
+</head>
+<body class="landing">
+    <!-- Header -->
+    <header id="header" class="alt skel-layers-fixed">
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <!-- 可加上更多導覽項目 -->
+            </ul>
+        </nav>
+		
+		<!-- 圖的CSS，讓圖不會重疊到文字 -->
+	    <style>
+	        img {
+	            display: block;
+	            margin: 20px 0;
+	            max-width: 100%;
+	            height: auto;
+	        }
+	        p {
+	            margin-bottom: 1em;
+	        }
+	        ol {
+	            margin-bottom: 1em;
+	        }
+	        h1 {
+	            margin-bottom: 20px;
+	        }
+	    </style>
+    
+    </header>
+
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <!-- 文章區域 -->
+        <div class="article" style="flex: 1;">
+    <h1>無線通信比特率協商方法</h1>
+
+    <p><strong>請求項描述</strong></p>
+    <p>本文所描述的請求項涉及一種無線通信中比特率選擇和協商的過程。具體來說，這項方法由第一設備執行，該設備通過兩條無線連接來確定和比較比特率。一條無線連接位於無授權頻譜中，與第一個有線設備進行通信，第二條無線連接則位於授權頻譜中，與第二個設備進行通信。第一設備首先確定這兩條連接支持的比特率，並將這些比特率進行比較。根據比較結果，第一設備向第二設備發送一條「提議消息」，該消息包含第一條或第二條連接的比特率，以便兩設備之間達成最合適的數據傳輸速率協議。</p>
+
+    <p><strong>請求項的詳細解釋與圖示對應</strong></p>
+    <p>根據上述請求項的描述，這一方法強調了無線設備如何基於不同的頻譜環境（無授權和授權頻譜）來選擇最優的數據傳輸比特率。具體步驟如下：</p>
+    <ol>
+        <li><strong>確定比特率：</strong>
+            第一設備首先會確定兩條無線連接的比特率。<img src="images\US12160768B2-1.jpg" alt="圖1：系統環境示意圖" />
+            展示了一個系統環境，這個環境可能包括無線設備和其他與之交互的設備（例如頭戴顯示設備）。在這種環境中，無線設備需選擇最合適的連接來保證數據傳輸的質量，這一過程就包括了比特率的確定。
+        </li>
+        <li><strong>比較比特率：</strong>
+            接下來，第一設備將比較兩條無線連接的比特率，這樣可以確定哪一條連接在當前條件下提供更高效的數據傳輸。無論是無授權頻譜還是授權頻譜，設備都需要根據實際的信道條件來做出選擇。這樣的比特率比較是實時進行的，以適應可能變化的信號質量。
+        </li>
+        <li><strong>發送提議消息：</strong>
+            根據比特率的比較結果，第一設備會向第二設備發送一條包含最佳比特率的提議消息。這一過程有助於兩設備達成協議，以便選擇最佳的數據傳輸速率，確保通信的高效性和穩定性。
+        </li>
+    </ol>
+
+    <p>為了讓這些過程更具體化，我們可以參考圖示。<img src="images\US12160768B2-3a.jpg" alt="圖3A：通信網絡示意圖" /> 提供了一個通信網絡的示意圖，展示了多設備通信的場景。在這個場景中，第一設備與不同的設備進行無線通信，並根據網絡狀況選擇最佳的數據傳輸速率。</p>
+
+    <p>4. <strong>信道質量評估與比特率選擇：</strong>
+        在選擇比特率的過程中，信道質量的評估是非常關鍵的。<img src="images\US12160768B2-7a.jpg" alt="圖7A：信道質量評估圖" /> 展示了如何根據無線信道的質量來估算和確定比特率。這個圖示幫助理解如何動態調整比特率以適應不同的網絡環境。
+    </p>
+
+    <p><strong>總結</strong></p>
+    <p>總結來說，這一請求項提出了一種有效的無線通信方法，通過在無授權和授權頻譜下選擇和比較比特率，達到優化數據傳輸效率的目的。設備根據實時的信道狀況進行比特率的選擇，從而保證兩設備間的數據傳輸不僅穩定且高效。這種方法的應用在許多無線通信場景中都具有極大的實用價值，特別是在需要高效數據傳輸的場合，如虛擬現實、視頻會議等。通過動態調整和比特率協商，無線通信可以更加靈活應對各種環境變化，提升用戶體驗。</p>            
+            <!-- 文章底部廣告 -->
+            <div style="margin-top: 30px;">
+                <!-- 輸入 Google AdSense 廣告代碼 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-xxxxxxx"
+                     data-ad-slot="xxxxxxx"
+                     data-ad-format="auto"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <!-- 右側廣告區域 -->
+        <div class="sidebar" style="width: 25%; padding-left: 20px;">
+            <!-- 右側廣告 1 -->
+            <div style="margin-bottom: 20px;">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-xxxxxxx"
+                     data-ad-slot="xxxxxxx"
+                     data-ad-format="auto"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            <!-- 右側廣告 2 -->
+            <div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-xxxxxxx"
+                     data-ad-slot="xxxxxxx"
+                     data-ad-format="auto"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <!-- 空白區塊 -->
+	<div style="height: 5000px;"></div>
+
+    <!-- 版權區塊 -->
+    <section id="cta" class="wrapper style3">
+        <h4>©2023 醬找專利 版權所有</h4>
+    </section>
+
+</body>
+</html>
