@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無線通信比特率協商方法</title>
+
+    <!-- 引入A網頁的JavaScript檔案 -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrollgress.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.slidertron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <!-- Stylesheets -->
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-xlarge.css" />
+    </noscript>
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="css/ie/v9.css" />
+    <![endif]-->
+    <!--[if lte IE 8]>
+        <script src="css/ie/html5shiv.js"></script>
+        <link rel="stylesheet" href="css/ie/v8.css" />
+    <![endif]-->
+</head>
+<body class="landing">
+    <!-- Header -->
+    <header id="header" class="alt skel-layers-fixed">
+        <nav id="nav">
+            <ul>
+
+                <li><a href="..\index.html">首頁</a></li>
+                <li><a href="..\about.html">關於我們</a></li>
+                <li><a href="..\privacy-policy.html">隱私政策</a></li>
+                
+                <!-- 可加上更多導覽項目 -->
+
+
+            </ul>
+        </nav>
+		
+		<!-- 圖的CSS，讓圖不會重疊到文字 -->
+	    <style>
+	        img {
+	            display: block;
+	            margin: 20px 0;
+	            max-width: 100%;
+	            height: auto;
+	        }
+	        p {
+	            margin-bottom: 1em;
+	        }
+	        ol {
+	            margin-bottom: 1em;
+	        }
+	        h1 {
+	            margin-bottom: 20px;
+	        }
+	    </style>
+    
+    </header>
+
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <!-- 文章區域 -->
+        <div class="article" style="flex: 1;">
+    <Br>
+    <Br>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工實境內容無線傳輸之連線參數調整技術</title>
+    
+    
+            
+</head>
+<body>
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <!-- 文章區域 -->
+        <div class="article" style="flex: 1;">
+        
+    <h2>人工實境內容無線傳輸之連線參數調整技術</h2>
+
+    <h3>技術手段</h3>
+    <p>本技術提出一種第一裝置，包含一組無線收發器與一個或多個處理器。無線收發器負責透過無線連結與第二裝置進行通訊，而處理器則設計來執行以下功能：首先，判斷將透過無線連結傳輸的內容類型；接著，判定該無線連結的頻道狀況；最後，根據i)頻道狀況與ii)欲傳輸內容（特別是人工實境內容）的類型，產生一組或多組供第一裝置存取無線連結時使用的參數。透過這種設計，可依據實際通訊條件及內容需求動態調整無線傳輸參數，提升人工實境應用的資料傳輸品質與穩定性。
+    </p>
+    <h3>詳細說明</h3>
+    <img src="images\US11838369B1-1.JPG" alt="圖1">
+<p>
+圖1說明了一個人工實境系統環境100的基本架構，主要包含使用者配戴的頭戴式裝置（HWD 150）與提供人工實境內容的主機（Console 110）。HWD 150可以是頭戴式顯示器或頭戴式設備，負責偵測自身的位置與朝向，以及使用者的身體、手部或臉部的形狀與位置資訊，並將這些資料傳回主機。主機根據這些偵測資料及使用者輸入，生成對應的人工實境影像資料，再傳送到HWD 150進行顯示。有些版本的系統會將部分主機功能整合到HWD 150中，甚至HWD 150本身就可以獨立執行主機功能。HWD 150除了顯示影像，還可能透過外接裝置如喇叭或耳機來輸出音訊。裝置內部包含多項組件，包括感測器155、眼動追蹤器160、手部追蹤器162、通訊介面165、影像渲染器170、電子顯示器175、透鏡180以及補償器185，這些元件共同運作，協助偵測位置與使用者目光方向，並即時渲染符合場景的人工實境影像。感測器155可透過影像感測器、加速度計、陀螺儀或磁力計等偵測裝置位置與移動方向，例如測量裝置的平移與旋轉運動，並根據累積的數據推算新位置與新朝向。眼動追蹤器160負責捕捉使用者雙眼的影像，分析眼球旋轉、平移、扭轉或形狀變化，從而判定相對於裝置的注視方向，搭配裝置的整體朝向，可計算出使用者真實的注視角度。手部追蹤器162則透過影像感測與影像處理，辨識使用者手部的形狀、位置與姿勢，提供進一步的人機互動資料。整體而言，圖1展示的系統結構，透過多種感測與運算技術，使人工實境體驗能夠更加精準且流暢。
+</p>
+
+<img src="images\US11838369B1-4.JPG" alt="圖4">
+<p>
+圖4說明了一個系統環境400，其中裝置410、420、430共用同一條無線連結進行通訊。在這個環境中，裝置410可以是前述的主機Console 110，而裝置420、430則可以是頭戴式裝置HWD 150或其他無線裝置，例如智慧型手機、筆電、平板或控制器等輸入設備。這些裝置彼此距離通常在100英尺以內，並且透過無線技術（如Wi-Fi或藍牙）進行通訊。由於裝置會共用或重疊使用同一頻段，因此必須競爭無線連結的存取權，每個裝置會設定像是AIFS、CWmin、CWmax或TXOP等EDCA參數來試圖搶得通訊機會。裝置間可以採用「確定式」的方式設定EDCA參數，例如讓人工實境應用的裝置（如420）設定較低的AIFS、CWmin與CWmax值，相較於其他裝置（如430），以提高存取無線連結的優先權，確保人工實境內容能順暢傳輸。另一方面，若兩個裝置420、430都是提供人工實境應用，彼此又無法直接溝通，僅採用確定式參數設定容易造成頻繁碰撞，進而影響連線效率。為此，系統可在偵測到碰撞後，依照隨機變數調整EDCA參數，以降低重複碰撞的機率。此外，裝置420可在一段時間內使用確定式參數，提升人工實境內容的傳輸優先權；另一段時間則改用機率式參數設定，讓其他應用裝置也有機會公平地存取無線連結。裝置420亦可依據即時偵測到的頻道狀況，如偵測到裝置430結束傳輸後，再適時調整參數進行通訊。藉由這種靈活切換確定式與機率式設定的方式，不但能兼顧人工實境內容的傳輸需求，也能維持無線網路整體的公平性與穩定性。
+</p>
+
+<img src="images\US11838369B1-5.JPG" alt="圖5">
+<p>
+圖5說明了一個時序圖，展示裝置（例如裝置410、420、430）如何依據EDCA參數來存取無線連結。這些裝置會設定像是AIFS、CWmin、CWmax以及TXOP等EDCA參數，並依此試圖連接無線網路。AIFS代表裝置在進入倒數計時或進行退避機制之前，必須等待的一段時間；而競爭視窗（Contention Window）則提供一個隨機選取退避時間的範圍，裝置會從CWmin開始設定初始倒數值，並在每個退避時槽逐步遞減這個倒數值，直到倒數到0時，才會嘗試存取無線連結。如果連結失敗，裝置就會將倒數初始值加大，甚至加倍，一直到CWmax為止。至於TXOP，則表示裝置成功取得連結後，可以持續傳輸資料的最長時間。透過設定或調整這些EDCA參數，裝置能有效管理在共享無線網路中的通訊時機。另一方面，EDCA參數也可以依據通訊內容的重要性來分級設定，通常會將傳輸內容分為不同的通訊存取類別（AC），像是語音、影像、一般傳輸或背景資料等。以人工實境應用為例，系統會針對其選定的AC，透過無線控制器520指定一組EDCA參數值。通常，優先權較高的AC會擁有較小的AIFS、CWmin與CWmax，因此能在其他低優先權的AC之前先取得無線連結權，確保像人工實境這種對即時性要求很高的應用能夠順暢運作。
+</p>
+
+<img src="images\US11838369B1-7.JPG" alt="圖7">
+<p>
+圖7說明了一個範例流程700，展示裝置600如何調整參數以存取無線連結。在這個流程中，裝置600會根據要傳輸的內容類型，決定性地修改EDCA參數的設定值，例如針對人工實境應用，就會優先設定較有利的參數組。裝置600可能會在需要時，從以機率方式設定的參數組切換到決定性設定的參數組，以便在發現其他裝置也在使用無線連結時，能優先取得連線權限。接著，裝置600會嘗試連上無線網路，並判斷連線是否成功。若在嘗試後接收到CTS（Clear-To-Send）或ACK（Acknowledgement）訊框，就表示連線成功；反之，如果在時間內沒有收到這些回應，則認為連線失敗。連線失敗時，裝置600會隨機調整EDCA參數，產生新的參數組，藉此避免與其他裝置發生重複碰撞。當連線成功後，裝置600便會在預設或根據周遭設備數量動態調整的一段時間內傳輸內容，傳輸結束或時間到達後，自動釋放無線連結，讓其他裝置也有機會連線。此外，裝置600還會定期重設EDCA參數，比如每10毫秒或每累積100次存取後，切換不同的參數組（不論是機率性或決定性的設定），藉此在確保人工實境等高優先需求下，同時也能兼顧不同裝置之間的連線公平性與網路資源分配。
+</p>  
+       
+            <!-- 文章底部廣告 -->
+            <div style="margin-top: 30px;">
+                <!-- 輸入 Google AdSense 廣告代碼 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+     				crossorigin="anonymous"></script>
+                <!-- ad-01 -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-2586263174422060"
+				     data-ad-slot="8580246879"
+				     data-ad-format="auto"
+				     data-full-width-responsive="true"></ins>
+				<script>
+				     (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+                
+                
+            </div>
+        </div>
+
+        <!-- 右側廣告區域 -->
+        <div class="sidebar" style="width: 25%; padding-left: 20px;">
+            <!-- 右側廣告 1 -->
+            <div style="margin-bottom: 20px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+     			crossorigin="anonymous"></script>
+			<!-- ad-02 -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-2586263174422060"
+			     data-ad-slot="1328442815"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+                
+                
+            </div>
+            <!-- 右側廣告 2 -->
+            <div>
+          
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+			     crossorigin="anonymous"></script>
+			<!-- ad-03 -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-2586263174422060"
+			     data-ad-slot="2370061741"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+               
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- 空白區塊 -->
+	<div style="height: 5px;"></div>
+
+    <!-- 版權區塊 -->
+    <section id="cta" class="wrapper style3">
+        <h4>©2023 醬找專利 版權所有</h4>
+    </section>
+
+</body>
+</html>

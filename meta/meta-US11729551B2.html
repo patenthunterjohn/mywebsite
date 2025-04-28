@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>無線通信比特率協商方法</title>
+
+    <!-- 引入A網頁的JavaScript檔案 -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrollgress.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.slidertron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <!-- Stylesheets -->
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-xlarge.css" />
+    </noscript>
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="css/ie/v9.css" />
+    <![endif]-->
+    <!--[if lte IE 8]>
+        <script src="css/ie/html5shiv.js"></script>
+        <link rel="stylesheet" href="css/ie/v8.css" />
+    <![endif]-->
+</head>
+<body class="landing">
+    <!-- Header -->
+    <header id="header" class="alt skel-layers-fixed">
+        <nav id="nav">
+            <ul>
+
+                <li><a href="..\index.html">首頁</a></li>
+                <li><a href="..\about.html">關於我們</a></li>
+                <li><a href="..\privacy-policy.html">隱私政策</a></li>
+                
+                <!-- 可加上更多導覽項目 -->
+
+
+            </ul>
+        </nav>
+		
+		<!-- 圖的CSS，讓圖不會重疊到文字 -->
+	    <style>
+	        img {
+	            display: block;
+	            margin: 20px 0;
+	            max-width: 100%;
+	            height: auto;
+	        }
+	        p {
+	            margin-bottom: 1em;
+	        }
+	        ol {
+	            margin-bottom: 1em;
+	        }
+	        h1 {
+	            margin-bottom: 20px;
+	        }
+	    </style>
+    
+    </header>
+
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <!-- 文章區域 -->
+        <div class="article" style="flex: 1;">
+    <Br>
+    <Br>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基於超寬頻測量的定位導向音訊輸出方法</title>
+    
+    
+            
+</head>
+<body>
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <!-- 文章區域 -->
+        <div class="article" style="flex: 1;">
+        
+    <h2>基於超寬頻測量的定位導向音訊輸出方法</h2>
+
+    <h3>技術手段</h3>
+    <p>本技術涉及一種基於超寬頻（UWB）技術的音訊輸出方法。此方法包括：由第一裝置（配備第一UWB天線）與第二裝置（配備第二UWB天線）建立連線；第一裝置根據第一與第二UWB天線之間的一項或多項測量結果，判定第一裝置相對於第二裝置的方向；接著第一裝置接收來自第二裝置的音訊訊號，並根據判定出的方向，將音訊訊號轉換為音訊輸出，提供給第一裝置的使用者。透過這項技術，可實現音訊輸出隨裝置方位動態調整，提升人工實境等應用的沉浸感與互動性。</p>
+    <h3>詳細說明</h3>
+    <img src="images\US11729551B2-1.JPG" alt="圖1">
+    <p>圖1說明了一個人工實境系統環境100的基本架構。系統主要包含一個存取點AP 105、一個或多個頭戴式顯示裝置HWD 150（如HWD 150A、150B），以及一個或多個運算裝置110（如110A、110B），這些運算裝置負責將人工實境的資料傳送到對應的HWD。存取點105可以是路由器或其他讓運算裝置和HWD連上網路的設備，例如基地台。運算裝置110可能是客製化設備或行動裝置，能從AP 105取得內容並傳送人工實境的影像資料給HWD 150，後者再根據這些資料呈現畫面給使用者觀看。各HWD可以透過無線連結與對應的運算裝置連接，像是Wi-Fi Direct、藍牙或超寬頻（UWB）技術。每個HWD 150內建感測器155、無線介面165、處理器170和顯示器175，共同運作以偵測裝置的位置與朝向，以及使用者的注視方向，並根據這些資訊渲染人工實境畫面。感測器155可以包括成像感測器、加速度計、陀螺儀和磁力計，用來追蹤平移與旋轉運動。無線介面165則負責與運算裝置或存取點進行資料交換，包含裝置位置、注視方向或手部追蹤資料，同時也接收影像資料。處理器170可能是GPU、CPU或兩者結合，負責解碼、渲染影像，並進行物體資訊、深度資訊的處理與更新，例如進行遮蔽、重投影或融合，以符合最新的使用者位置與朝向。顯示器175則可能是液晶顯示器或OLED顯示器，負責將渲染好的影像投射到使用者眼前，有些HWD設計成透明顯示，讓使用者可以同時看到真實世界。處理器也會針對鏡片可能帶來的光學失真，例如色差或桶狀變形進行補償，確保使用者看到的畫面品質良好。整個系統架構靈活，不同元件之間的功能也能依需求做調整分配，提供沉浸式且高互動性的人工實境體驗。</p>
+
+    <img src="images\US11729551B2-2.JPG" alt="圖2">
+    <p>圖2說明了一個頭戴式裝置HWD 150的結構設計，該裝置包含前方的硬式本體205以及一條用來固定的頭帶210。前方的硬式本體205內部整合了電子顯示器175（在圖2中未顯示）、鏡片（未顯示）、感測器155、眼動追蹤器、通訊介面165以及處理器170，感測器155安裝於硬式本體內部，平時不會被使用者直接看到。在其他版本中，這些元件的位置配置也可能有所不同，例如處理器170、眼動追蹤器或感測器155可以依需求調整安裝位置。進一步來說，這套系統採用超寬頻（UWB）技術進行裝置間通訊，UWB通常運作在3到10 GHz的免執照頻段中，頻寬超過500 MHz，傳輸功率密度低，通常限制在−41.3 dBm/MHz，部分系統則可在−5到+5 dBm/MHz的範圍內傳輸，並在50 MHz帶寬內的峰值功率上限為0 dBm。UWB技術透過簡單的調變與擴頻技術，即使資料速率較低（約數十到數百Kbps），仍能有效抵抗Wi-Fi與藍牙等干擾，即便在環境中存在其他UWB裝置也能維持穩定。不過若資料速率提升到數Mbps以上，抗干擾效果會下降。因此，本系統選擇運作在7到8 GHz頻段，該頻段不僅全球普遍開放，且Wi-Fi設備也較少使用此頻段，可進一步減少同頻干擾，確保通訊品質。在AR/VR應用場景中，這種UWB技術特別適合用於高精度定位、安全性傳輸，以及中低速率的資料傳遞，例如AR/VR控制器與主機間的連線，資料傳輸速率可達2到31 Mbps（依IEEE 802.15.4z標準），具備低成本、低功耗等優勢，且可根據人體遮蔽損失進行調整，適用於各種沉浸式體驗需求。</p>
+
+    <img src="images\US11729551B2-6.JPG" alt="圖6">
+    <p>圖6說明了一個音訊渲染流程600，根據裝置間相對方向調整音訊輸出的作業方式。此流程可由第一裝置（如HWD 150或第一裝置302）、周邊裝置（如周邊裝置304）或第三方裝置（如存取點105）執行。第一裝置通常具備UWB天線與揚聲器，並可能包含麥克風與顯示器；第二裝置則可能是小型配件、顯示器或其他具備UWB功能與麥克風的設備。流程一開始（步驟602），第一裝置與第二裝置建立連線，可能透過排程喚醒或在靠近時自動配對，也可進行握手程序來確保隱私與安全，並在成功配對後進行波束成形（beamforming）。接著（步驟604），第一裝置根據UWB測量結果，透過TOF（傳輸時間差）、AoA（到達角度）等技術，判斷自身相對於第二裝置的方向與距離，並可利用多天線進一步提升精準度。同時也可結合IMU感測器（如傾斜、旋轉、偏航等數據）來增加定位信心度。之後（步驟606），第一裝置從第二裝置接收音訊訊號，並依據彼此的方向關係進行音訊內容的選擇、調整或濾波，像是加強或減弱特定頻率、音量，甚至加入混響效果，讓音訊呈現出與空間方位相符的臨場感。如果第一裝置收到完整音訊資料，也可以依據方向資訊自行進行後續處理。最後（步驟608），第一裝置會將處理後的音訊播放給使用者，同時持續偵測雙方方向的變化，必要時即時調整音訊輸出。例如在虛擬音樂會應用中，使用者隨著移動位置，能即時感受到樂器聲音位置的改變，達成真實的空間音效體驗，展現了UWB技術在AR/VR互動場景中的巨大潛力。</p>
+ 
+       
+            <!-- 文章底部廣告 -->
+            <div style="margin-top: 30px;">
+                <!-- 輸入 Google AdSense 廣告代碼 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+     				crossorigin="anonymous"></script>
+                <!-- ad-01 -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-2586263174422060"
+				     data-ad-slot="8580246879"
+				     data-ad-format="auto"
+				     data-full-width-responsive="true"></ins>
+				<script>
+				     (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+                
+                
+            </div>
+        </div>
+
+        <!-- 右側廣告區域 -->
+        <div class="sidebar" style="width: 25%; padding-left: 20px;">
+            <!-- 右側廣告 1 -->
+            <div style="margin-bottom: 20px;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+     			crossorigin="anonymous"></script>
+			<!-- ad-02 -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-2586263174422060"
+			     data-ad-slot="1328442815"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+                
+                
+            </div>
+            <!-- 右側廣告 2 -->
+            <div>
+          
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+			     crossorigin="anonymous"></script>
+			<!-- ad-03 -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-2586263174422060"
+			     data-ad-slot="2370061741"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+               
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- 空白區塊 -->
+	<div style="height: 5px;"></div>
+
+    <!-- 版權區塊 -->
+    <section id="cta" class="wrapper style3">
+        <h4>©2023 醬找專利 版權所有</h4>
+    </section>
+
+</body>
+</html>
