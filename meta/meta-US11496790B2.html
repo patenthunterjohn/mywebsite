@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用超寬頻 (UWB) 技術控制智慧串流設備的方法</title>
+
+    <!-- 引入A網頁的JavaScript檔案 -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrollgress.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.slidertron.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <!-- Stylesheets -->
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-xlarge.css" />
+    </noscript>
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="css/ie/v9.css" />
+    <![endif]-->
+    <!--[if lte IE 8]>
+        <script src="css/ie/html5shiv.js"></script>
+        <link rel="stylesheet" href="css/ie/v8.css" />
+    <![endif]-->
+
+    <!-- 圖的CSS，讓圖不會重疊到文字 -->
+    <style>
+        img {
+            display: block;
+            margin: 20px 0;
+            max-width: 100%;
+            height: auto;
+        }
+        p, ol {
+            margin-bottom: 1em;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body class="landing">
+    <!-- Header -->
+    <header id="header" class="alt skel-layers-fixed">
+        <nav id="nav">
+            <ul>
+                <li><a href="../index.html">首頁</a></li>
+                <li><a href="../about.html">關於我們</a></li>
+                <li><a href="../privacy-policy.html">隱私政策</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" style="display: flex; justify-content: space-between;">
+        <!-- 文章區域 -->
+        <div class="article" style="flex: 1;">
+            <br><br>
+
+            <h2>利用超寬頻 (UWB) 技術控制智慧串流設備的方法</h2>
+
+            <h3>技術手段</h3>
+            <p>本技術涉及一種用於控制智慧串流裝置的方法，該方法包括：首先，確定發射器超寬頻（UWB）裝置相對於一群鄰近裝置的位置。該位置是根據從發射器UWB裝置發送的UWB信號來確定的，該群體包括智慧串流裝置及一個或多個其他與智慧串流裝置連接的裝置，而非發射器UWB裝置。位置的確定是基於接收自發射器UWB裝置的UWB信號，並指示發射器UWB裝置指向該群體中的某一裝置。根據發射器UWB裝置的位置，進行選擇性命令路由，包括：基於該位置識別出預定接收裝置（該裝置是發射器UWB裝置指向的裝置），並由第一裝置（作為中介裝置）選擇與該接收裝置及發射器UWB裝置發出的命令對應的信號，然後由中介裝置將命令信號路由到預定接收裝置。</p>
+
+            
+            <h3>詳細說明</h3>
+            <img src="images\US11496790B2-1.JPG" alt="圖1">
+  <p>
+    圖1說明了在某些實施方式下，設備運作的概覽。此設備100包含一系列硬體元件，這些元件執行與設備控制相關的各項功能，並能與超寬頻控制裝置進行通信。設備100可以包括一個或多個輸入裝置120，這些輸入裝置向處理器110（如CPU、GPU、HPU等）提供輸入，通知其執行某些動作。這些動作可通過硬體控制器進行調解，控制器解讀從輸入裝置接收的訊號並利用通信協議將這些資訊傳送給處理器110。輸入裝置120的範例包括滑鼠、鍵盤、觸控螢幕、紅外線感測器、觸控板、可穿戴設備、影像或相機輸入裝置、麥克風等其他用戶輸入裝置。處理器110可以是單一處理單元，也可以是分佈於多個設備中的多個處理單元，並且可以與其他硬體設備透過總線（如PCI總線或SCSI總線）連接。處理器110可以與顯示裝置130的硬體控制器進行通信，顯示裝置130用於顯示文字與圖形，並提供視覺回饋。顯示裝置130的範例包括LCD、LED顯示螢幕、投影、全像或增強現實顯示（例如頭戴顯示裝置）。此外，設備100還可能包括一個通信裝置，能夠無線或有線與網路節點通信，並透過如TCP/IP協議與其他裝置或伺服器進行通信，進行分布式操作。處理器110可以存取設備內部或分佈於多個設備的記憶體150，這些記憶體包括各種硬體裝置來進行易失性和非易失性存儲，並儲存作業系統、超寬頻應用程式及其他應用程式。記憶體150還可以包括資料記憶體170，用來儲存控制設備100的資料，配置資料、設定選項、用戶偏好等。
+  </p>
+
+  <img src="images\US11496790B2-2.JPG" alt="圖2">
+  <p>
+    圖2說明了某些實施方式下，該技術的運作環境概覽。此環境200包括一個或多個客戶端計算裝置205A-D，這些裝置的範例可以包括前述的設備100。客戶端計算裝置205透過網路230，利用邏輯連接與一個或多個遠端伺服器進行通信。伺服器210可以是邊緣伺服器，接收客戶端請求並透過其他伺服器（如伺服器220A-C）協調完成這些請求。伺服器210與220可以包括與設備100類似的計算系統，並且每個伺服器可能都是分散式計算環境，包含位於同一地點或不同地理位置的多個設備。伺服器220可以代表一組伺服器，這些伺服器可以共用資料庫，或各自擁有獨立的資料庫。資料庫215與225儲存包括用戶設定資料、用戶偏好、超寬頻控制資料等資訊。網路230可以是局域網（LAN）或廣域網（WAN），也可以是其他有線或無線網路，並且支援如TCP/IP協議的連接方式。超寬頻（UWB）遙控裝置250則使用超寬頻無線通訊技術，這是一種高頻段的短距離通信協議。由於其大頻寬與短脈衝，UWB裝置能實現比傳統裝置更高精度的距離測量，並能即時追蹤裝置的移動，從而精確計算裝置的相對位置和運動狀態。UWB遙控裝置250可以包括處理器、通信裝置及其他元件，並可利用多輸入多輸出（MIMO）分佈式天線系統來提升信號的傳輸範圍與可靠性，實現更強的定位精度。UWB技術不僅在視線範圍內提供優於其他通信技術的精確度，還能在有障礙物的情況下，提供比其他技術更強的定位能力，這使其在複雜的環境中仍能有效運作。此外，UWB技術也能提供更高的安全性，防止中繼或中間人攻擊，這是其他通信技術無法達到的優勢。
+  </p>
+
+  <img src="images\US11496790B2-3.JPG" alt="圖3">
+  <p>
+    圖3說明了在某些實施方式中，可用於執行所述技術的系統組件300。這些組件包括硬體302、一般軟體320，以及專門組件340。如前所述，實施該技術的系統可使用各種硬體，包括處理單元304（例如CPU、GPU、APU等）、工作記憶體306、儲存記憶體308（可以是本地儲存或與遠端儲存裝置的介面，如儲存215或225），以及輸入輸出裝置310。在不同的實施方式中，儲存記憶體308可以是本地裝置、遠端儲存裝置的介面或其組合。舉例來說，儲存記憶體308可以是一組硬碟（例如RAID陣列）或透過網路存取的雲端儲存服務（如NAS裝置或其他伺服器提供的儲存）。這些組件300可以實現於客戶端計算裝置（如客戶端計算裝置205）、伺服器計算裝置（如伺服器210或220）或UWB裝置（如UWB裝置250）上，並且這些組件可以分別在不同的裝置上實現。一般軟體320包括各種應用程式，如作業系統322、本地程式324和基本輸入輸出系統（BIOS）326。專門組件340則是一般軟體應用程式320的子組件，例如本地程式324。這些專門組件包括UWB通信軟體344、會議軟體346、內容項目軟體348、三維控制軟體350、隱私模式軟體352、設定軟體354、用戶配置檔軟體356、校準軟體358等，並提供用戶介面、數據傳輸和專門功能的控制。UWB通信軟體344與輸入輸出裝置310中的UWB硬體接口，協助智能串流裝置與UWB控制裝置（如UWB遙控裝置250）之間的通信，並可接收來自UWB遙控裝置250的指令及位置信息，進而控制智能串流裝置的功能，如音量調節或內容傳輸等。會議軟體346則允許使用者進行虛擬會議，支援音訊與視訊通話，並包括管理會議設置的功能，例如選擇音訊與視訊來源設備、靜音功能、共享螢幕等。內容項目軟體348使使用者能夠瀏覽、修改和互動內容項目，如社群媒體貼文、圖片、音訊檔案等。三維控制軟體350則讓使用者利用UWB遙控裝置250控制螢幕上的游標，進行動作指令並選擇內容項目。隱私模式軟體352可限制特定內容或設定的存取，確保私人資料的安全。設定軟體354則允許使用者保存與智能串流裝置相關的設定選項，並在不同裝置間同步這些設定。用戶配置檔軟體356則讓使用者儲存個人資料與偏好，並在不同裝置上載入其設定檔。校準軟體358則可校準智能串流裝置與UWB控制裝置之間的對應關係，確保精確的定位功能。
+  </p>
+
+  <img src="images\US11496790B2-5b.JPG" alt="圖5B">
+  <p>
+    圖5B說明了一種資料傳輸的操作環境550，這個環境在某些實作中用來在來源裝置（如401a或501a）與目標裝置（如401b或501b）之間轉移資訊。根據圖4與圖5A的說明，使用者可以透過UWB遙控裝置（403或503）指向來源裝置，UWB裝置與來源裝置之間會建立UWB通訊連線，並可在兩者間傳送資料。舉例來說，UWB遙控裝置可以偵測並識別哪一台是資料的來源裝置，準備進行傳輸。接下來，使用者再透過一個手勢動作555，將UWB遙控裝置轉向目標裝置（401b或501b）。這時，UWB遙控裝置會與目標裝置建立UWB通訊，並辨識該裝置為資料要傳送的目的地。完成辨識後，系統便可建立一個通訊通道，將所選的內容項目或通話資訊從來源裝置傳送到目標裝置。若傳送的是通話資訊，則目標裝置會加入該通話，原本的來源裝置則會自動退出。整體而言，這樣的互動設計讓使用者僅需透過簡單的指向與手勢，就能在多個智慧裝置之間快速完成資料轉移或會議移交，操作直覺且便利。
+  </p>
+
+  <img src="images\US11496790B2-7e.JPG" alt="圖7E">
+  <p>
+    圖7E說明了一個流程740，此流程在某些實作中可用來根據UWB遙控裝置的位置來判斷使用者欲控制的目標裝置。首先，系統會像圖7A中的區塊702那樣偵測UWB遙控器的位置，接著可能會等待某個觸發條件發生（如圖7A中的判斷區塊704）。一旦條件成立，流程會在區塊742收到來自UWB遙控器的指令，這些指令有可能適用於多個裝置，例如音量調整、開關電源等，可能同時對智慧串流裝置、其控制的電視，或其他媒體播放器有效。因此系統需要判斷這項指令是針對哪一個裝置發出的。流程接著在區塊744進行裝置判定，主要根據UWB遙控器的位置來推斷指令對應的目標裝置，最常見的做法是選擇與UWB遙控器距離最近的裝置。在其他實作中，系統也可能參考角度資訊，判斷使用者是否有「指向」特定裝置。有些情況下會先進行校準程序，讓使用者用UWB遙控器從不同角度指向各個欲控制的裝置，系統據此建立一個三維空間對應關係，日後再依UWB裝置的實際位置與方向來比對判斷。或者，系統也可以透過數學轉換，將目前的位置與方向與先前校準的資料做比對來確定目標裝置。最後，在區塊746中，系統會將指令傳送到被判定為目標的裝置，並在該裝置上執行相關操作。這整個流程讓使用者透過直覺性的「指向」方式控制多個智慧裝置，提升操作效率與便利性。
+  </p>
+            <!-- 文章底部廣告 -->
+            <div style="margin-top: 30px;">
+                <!-- 輸入 Google AdSense 廣告代碼 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+                    crossorigin="anonymous"></script>
+                <!-- ad-01 -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-2586263174422060"
+                    data-ad-slot="8580246879"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+
+        <!-- 右側廣告區域 -->
+        <div class="sidebar" style="width: 25%; padding-left: 20px;">
+            <!-- 右側廣告 1 -->
+            <div style="margin-bottom: 20px;">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+                    crossorigin="anonymous"></script>
+                <!-- ad-02 -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-2586263174422060"
+                    data-ad-slot="1328442815"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <!-- 右側廣告 2 -->
+            <div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586263174422060"
+                    crossorigin="anonymous"></script>
+                <!-- ad-03 -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-2586263174422060"
+                    data-ad-slot="2370061741"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <!-- 空白區塊 -->
+    <div style="height: 5px;"></div>
+
+    <!-- 版權區塊 -->
+    <section id="cta" class="wrapper style3">
+        <h4>©2023 醬找專利 版權所有</h4>
+    </section>
+
+</body>
+</html>
