@@ -1,84 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://patenthunterjohn.com/</loc>
+    <loc>https://www.patenthunterjohn.com/</loc>
     <lastmod>2025-04-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/about.html</loc>
+    <loc>https://www.patenthunterjohn.com/about.html</loc>
     <lastmod>2025-04-27</lastmod> 
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/privacy-policy.html</loc>
+    <loc>https://www.patenthunterjohn.com/privacy-policy.html</loc>
     <lastmod>2025-04-27</lastmod> 
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/meta/meta-US12058723B2.html</loc>
+    <loc>https://www.patenthunterjohn.com/meta/meta-US12058723B2.html</loc>
     <lastmod>2025-04-29</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/meta/meta-US11852711B2.html</loc>
+    <loc>https://www.patenthunterjohn.com/meta/meta-US11852711B2.html</loc>
     <lastmod>2025-04-29</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/meta/meta-US11838369B1.html</loc>
+    <loc>https://www.patenthunterjohn.com/meta/meta-US11838369B1.html</loc>
     <lastmod>2025-04-29</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/meta/meta-US11729551B2.html</loc>
+    <loc>https://www.patenthunterjohn.com/meta/meta-US11729551B2.html</loc>
     <lastmod>2025-04-29</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/meta/meta-US11652550B2.html</loc>
+    <loc>https://www.patenthunterjohn.com/meta/meta-US11652550B2.html</loc>
     <lastmod>2025-04-29</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/meta/meta-US11637916B2.html</loc>
+    <loc>https://www.patenthunterjohn.com/meta/meta-US11637916B2.html</loc>
     <lastmod>2025-04-29</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/meta/meta-US11601532B2.html</loc>
+    <loc>https://www.patenthunterjohn.com/meta/meta-US11601532B2.html</loc>
     <lastmod>2025-04-29</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/meta/meta-US11588910B2.html</loc>
+    <loc>https://www.patenthunterjohn.com/meta/meta-US11588910B2.html</loc>
     <lastmod>2025-04-29</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/meta/meta-US11496790B2.html</loc>
+    <loc>https://www.patenthunterjohn.com/meta/meta-US11496790B2.html</loc>
     <lastmod>2025-04-29</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://patenthunterjohn.com/meta/meta-US12160768B2.html</loc>
+    <loc>https://www.patenthunterjohn.com/meta/meta-US12160768B2.html</loc>
     <lastmod>2025-04-29</lastmod> 
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- 可以根據需要添加更多的頁面 -->
-  <!-- lastmod 最後更新時間 -->
-  <!-- priority 頁面優先級（0.0 到 1.0，數值越大，優先級越高） -->
 </urlset>
