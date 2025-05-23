@@ -174,7 +174,7 @@
   </div>
 </details>
 <!-- 新聞區塊 - 臺灣 -->
-<div class="news-container" style="width: 40%; overflow: hidden; white-space: nowrap; text-align: center; font-size: 18px;">
+<div class="news-container" style="width: 40%; overflow: hidden; white-space: nowrap; text-align: center; font-size: 14px;">
   <span class="news-content" style="display: inline-block; padding-left: 100%;">
     📢 <a href="https://www.moea.gov.tw/MNS/populace/news/News.aspx?kind=1&menu_id=40&news_id=119376" target="_blank"> 《經濟部》臺法專利審查高速公路PPH將於114年7月1日實施 助力企業全球專利布局及競爭力</a>｜
     📢 <a href="https://www.tipo.gov.tw/tw/cp-883-1006957-a6ba3-1.html" target="_blank"> 《智慧財產局》「2025台灣創新技術博覽會」發明競賽開始徵展報名囉！</a>｜
@@ -204,7 +204,7 @@
 </details>
 
 <!-- 新聞區塊 - UAV -->
-<div class="news-container" style="width: 40%; overflow: hidden; white-space: nowrap; text-align: center; font-size: 18px;">
+<div class="news-container" style="width: 40%; overflow: hidden; white-space: nowrap; text-align: center; font-size: 14px;">
   <span class="news-content" style="display: inline-block; padding-left: 100%;">
     📢 <a href="https://www.itri.org.tw/ListStyle.aspx?DisplayStyle=01_content&SiteID=1&MmmID=1036276263153520257&MGID=114032512591770707" target="_blank"> 《工研院》經濟部助攻臺日無人機聯盟TEDIBOA與JDC簽署MoU</a>｜
     
@@ -262,7 +262,7 @@
 </details>
 
 <!-- 新聞區塊 - HUD -->
-<div class="news-container" style="width: 40%; overflow: hidden; white-space: nowrap; text-align: center; font-size: 18px;">
+<div class="news-container" style="width: 40%; overflow: hidden; white-space: nowrap; text-align: center; font-size: 14px;">
   <span class="news-content" style="display: inline-block; padding-left: 100%;">
     📢 <a href="https://money.udn.com/money/story/5612/8756093" target="_blank"> 《經濟日報》Google搶進AI眼鏡市場 全新拿下關鍵元件訂單、宏達電也沾光</a>｜
     📢 <a href="https://money.udn.com/money/story/5607/8473287" target="_blank"> 《經濟日報》輝達搶先公開 AR 眼鏡專利 這兩檔概念股應聲漲停</a>｜
@@ -365,34 +365,50 @@
     
     
     <!-- 新聞的JS - 共用 - 放於新聞最後 -->
-    <script>
-	  document.querySelectorAll('.news-container').forEach(container => {
-	    const ticker = container.querySelector('.news-content');
-	    let pos = 0;
-	    let intervalId;
+	<script>
+	  // 等整個網頁資源載入完成後才執行
+	  window.addEventListener('load', () => {
+	    // 找到所有跑馬燈容器，逐一處理
+	    document.querySelectorAll('.news-container').forEach(container => {
+	      const ticker = container.querySelector('.news-content'); // 取得跑馬燈內容元素
+	      let pos = -725; // 初始文字位置（向左推 725px），可依需求調整
+	      let intervalId;  // 用來存放 setInterval 的 ID，好控制開始/停止
 	
-	    function startTicker() {
-	      intervalId = setInterval(() => {
-	        pos -= 1;
-	        ticker.style.transform = `translateX(${pos}px)`;
-	        if (Math.abs(pos) > ticker.offsetWidth) {
-	          pos = container.offsetWidth;
-	        }
-	      }, 20);
-	    }
+	      // 開始跑馬燈
+	      function startTicker() {
+	        clearInterval(intervalId); // 避免多次啟動導致重複計時
+	        intervalId = setInterval(() => {
+	          pos -= 1; // 位置每 20 毫秒往左移動 1px
+	          ticker.style.transform = `translateX(${pos}px)`; // 更新跑馬燈位置
+	          // 當文字完全移出左邊（移動距離大於文字寬度），從右邊重新開始
+	          if (Math.abs(pos) > ticker.offsetWidth) {
+	            pos = container.offsetWidth;
+	          }
+	        }, 20);
+	      }
 	
-	    function stopTicker() {
-	      clearInterval(intervalId);
-	    }
+	      // 停止跑馬燈
+	      function stopTicker() {
+	        clearInterval(intervalId); // 清除計時器，停止移動
+	      }
 	
-	    container.addEventListener('mouseenter', stopTicker);
-	    container.addEventListener('mouseleave', startTicker);
+	      // 初始狀態，先把文字放到初始位置（但不動）
+	      ticker.style.transform = `translateX(${pos}px)`;
 	
-	    startTicker();
+	      // 滑鼠移入容器時開始跑馬燈
+	      container.addEventListener('mouseenter', () => {
+	        startTicker();
+	      });
+	
+	      // 滑鼠移出容器時停止跑馬燈，保持當前位置不變
+	      container.addEventListener('mouseleave', () => {
+	        stopTicker();
+	        // 不回復初始位置，文字停在目前位置
+	      });
+	    });
 	  });
 	</script>
-    	
-    	
+
     </section>
 
     <!-- 空白區塊 -->
