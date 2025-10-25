@@ -30,8 +30,26 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
-    <url>
+  <url>
     <loc>https://patenthunterjohn.com/smart-grid/smart-grid-v2g-en.html</loc>
+    <lastmod>2025-10-25</lastmod> 
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://patenthunterjohn.com/smart-grid/smart-grid-v2g-applicant.html</loc>
+    <lastmod>2025-10-25</lastmod> 
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://patenthunterjohn.com/smart-grid/smart-grid-v2g-applicant-en.html</loc>
+    <lastmod>2025-10-25</lastmod> 
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://patenthunterjohn.com/smart-grid/smart-grid-v2g-applicant-en.html</loc>
     <lastmod>2025-10-25</lastmod> 
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
