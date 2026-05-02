@@ -1,602 +1,682 @@
-﻿<!DOCTYPE HTML>
-<html lang="zh-tw">
+﻿
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="content-language" content="zh-tw" />
-    <!-- <meta name="robots" content="noodp, nofollow" /> -->
-    <meta name="robots" content="index, follow" />
-    <meta name="description" content="醬找專利是一個將專利資訊視覺化的網站，把專利檢索的結果以儀表板的方式呈現。" />
-    <meta name="keywords" content="專利 醬找專利 專利檢索 儀表板 大數據 雲端 專利地圖 專利分析 patent dashboard big data cloud patent map patent analysis patent search" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="content-language" content="zh-tw" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="醬找專利是一個專利分析與專利資訊視覺化網站，提供專利地圖、專利儀表板、技術主題導讀與專利分析文章" />
+  <meta name="keywords" content="專利分析, 專利地圖, 專利儀表板, 專利檢索, patent analysis, patent map, patent dashboard" />
+  <title>醬找專利 | 專利分析、專利地圖與技術趨勢</title>
 
-	<!-- 辨識醬找專利 -->
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "WebSite",
-	  "name": "醬找專利",
-	  "url": "https://patenthunterjohn.com"
-	 
-	}
-	</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "醬找專利",
+    "url": "https://patenthunterjohn.com",
+    "description": "醬找專利提供專利分析、專利地圖、專利儀表板與技術趨勢文章。"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "醬找專利",
+    "url": "https://patenthunterjohn.com",
+    "logo": "https://patenthunterjohn.com/logo.jpg",
+    "description": "醬找專利是一個將專利資訊視覺化的網站，把專利檢索結果以儀表板與專利地圖方式呈現。"
+  }
+  </script>
 
-
-
-    <!-- 辨識醬找專利 -->
-    <!-- Organization Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "醬找專利",
-      "url": "https://patenthunterjohn.com",
-      "logo": "https://patenthunterjohn.com/logo.jpg",
-      "description": "醬找專利是一個將專利資訊視覺化的網站，把專利檢索的結果以儀表板的方式呈現。",
-      "sameAs": []
+  <style>
+    :root {
+      --ink: #14213d;
+      --ink-2: #24324f;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --accent-2: #0f766e;
+      --soft-blue: #eef4ff;
+      --soft-green: #eefaf7;
+      --soft-orange: #fff7ed;
+      --radius: 20px;
+      --shadow: 0 18px 40px rgba(20, 33, 61, .08);
+      --max: 1180px;
     }
-    </script>
 
-    <title>醬找專利 | 專利儀表板</title>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.75;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.dropotron.min.js"></script>
-    <script src="js/jquery.scrollgress.min.js"></script>
-    <script src="js/jquery.scrolly.min.js"></script>
-    <script src="js/jquery.slidertron.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-layers.min.js"></script>
-    <script src="js/init.js"></script>
+    .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
 
-    <!-- Stylesheets -->
-    <noscript>
-        <link rel="stylesheet" href="css/skel.css" />
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/style-xlarge.css" />
-    </noscript>
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(255,255,255,.86);
+      border-bottom: 1px solid rgba(229,231,235,.9);
+    }
+    .nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .03em; }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1d4ed8, #0f766e);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+    }
+    .nav-links { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a {
+      padding: 10px 12px;
+      border-radius: 999px;
+      color: #374151;
+      font-size: 15px;
+    }
+    .nav-links a:hover { background: #eef2ff; color: var(--accent); }
+    .nav-links .primary { background: var(--soft-blue); color: var(--accent); }
+    .nav-links .primary:hover { background: var(--accent); color: #fff; }
 
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="css/ie/v9.css" />
-    <![endif]-->
-    <!--[if lte IE 8]>
-        <script src="css/ie/html5shiv.js"></script>
-        <link rel="stylesheet" href="css/ie/v8.css" />
-    <![endif]-->
+    .hero {
+      background:
+        radial-gradient(circle at 10% 10%, rgba(37,99,235,.18), transparent 28%),
+        radial-gradient(circle at 85% 15%, rgba(15,118,110,.16), transparent 30%),
+        linear-gradient(180deg, #fff 0%, #f7f8fb 100%);
+      padding: 86px 0 52px;
+      overflow: hidden;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 42px; align-items: center; max-width: 880px; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #eef4ff;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.15;
+      letter-spacing: -.04em;
+    }
+    .hero p { margin: 0 0 28px; color: #4b5563; font-size: 19px; max-width: 720px; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(20,33,61,.12); }
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn.secondary { background: #fff; color: var(--ink); border-color: var(--line); }
+    .btn.green { background: var(--accent-2); color: #fff; }
+section { padding: 58px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+    .section-head h2 { margin: 0; font-size: clamp(26px, 3vw, 38px); letter-spacing: -.03em; }
+    .section-head p { margin: 0; color: var(--muted); max-width: 620px; }
 
-    <!-- Google Analytics v1 -->
-    <script>
-        (function(i,s,o,g,r,a,m){
-            i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)
-            },i[r].l=1*new Date();
-            a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];
-            a.async=1;a.src=g;
-            m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .topic-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 22px rgba(20,33,61,.04);
+    }
+    .topic-card { padding: 22px; min-height: 260px; display: flex; flex-direction: column; gap: 12px; }
+    .tag {
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--accent);
+      background: var(--soft-blue);
+    }
+    .tag.tech { color: var(--accent-2); background: var(--soft-green); }
+    .tag.company { color: var(--accent); background: var(--soft-blue); }
+    .tag.tw, .tag.orange { color: #c2410c; background: var(--soft-orange); }
+    .tag.other { color: #6d28d9; background: #f3e8ff; }
+    .topic-card h3 { margin: 0; font-size: 22px; }
+    .topic-card p { margin: 0; color: #4b5563; }
+    .content-links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; }
+    .content-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      font-size: 13px;
+      transition: background .18s ease, color .18s ease, border-color .18s ease;
+    }
+    .content-links a.link-dashboard {
+      color: #4338ca;
+      background: #eef2ff;
+      border-color: #c7d2fe;
+    }
+    .content-links a.link-dashboard:hover {
+      background: #4338ca;
+      border-color: #4338ca;
+      color: #fff;
+    }
+    .content-links a.link-article {
+      color: #334155;
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+    .content-links a.link-article:hover {
+      background: #334155;
+      border-color: #334155;
+      color: #fff;
+    }
+.meta { color: var(--muted); font-size: 14px; }
+    .readmore { color: var(--accent); font-weight: 800; }
 
-        ga('create', 'UA-XXXXX-Y', 'auto');
-        ga('send', 'pageview');
-    </script>
+    .ebook-section { padding-top: 20px; background: #fff; }
+    .ebook-feature {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 24px;
+      padding: 26px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 22px rgba(20,33,61,.04);
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .book-cover {
+      aspect-ratio: 4 / 5;
+      border-radius: 20px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 320px;
+    }
+    .simple-cover {
+      background: linear-gradient(145deg, #eef4ff, #ffffff 62%, #eefaf7);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      box-shadow: 0 18px 32px rgba(20,33,61,.08);
+    }
 
-    <!-- Google Analytics v2 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-212822931-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-212822931-1');
-    </script>
-	</head>
+    .book-cover-image {
+      padding: 0;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 32px rgba(20,33,61,.08);
+    }
+    .book-cover-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+    .book-cover small { color: var(--muted); font-weight: 700; }
+    .book-cover h3 { margin: 0; font-size: 32px; line-height: 1.2; }
+    .ebook-copy h3 { margin: 10px 0 10px; font-size: clamp(24px, 3vw, 34px); line-height: 1.25; }
+    .ebook-copy p { margin: 0 0 18px; color: #4b5563; font-size: 17px; }
+    .dashboard-list { display: grid; gap: 16px; }
+    details.dashboard {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(20,33,61,.04);
+    }
+    details.dashboard summary {
+      cursor: pointer;
+      padding: 20px 22px;
+      font-weight: 850;
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    details.dashboard summary .meta {
+      margin-left: auto;
+      white-space: nowrap;
+      text-align: right;
+    }
+    details.dashboard summary::-webkit-details-marker { display: none; }
+    details.dashboard summary::after {
+      content: "+";
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #eef2ff;
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      margin-left: 4px;
+    }
+    details.dashboard[open] summary::after { content: "−"; }
+    .dashboard-body { border-top: 1px solid var(--line); padding: 22px; }
+    .dashboard-body p { margin-top: 0; }
+    .iframe-wrap { width: 100%; overflow: auto; border: 1px solid var(--line); border-radius: 14px; background: #f3f4f6; }
+    iframe { display: block; border: 0; width: 1660px; height: 812px; max-width: none; }
 
-<body class="landing">
+    .article-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .article-link {
+      display: flex;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 13px 15px;
+      color: #374151;
+    }
+    .article-link:hover { border-color: #bfdbfe; background: #f8fbff; color: var(--accent); }
+.footer { padding: 30px 0; color: var(--muted); border-top: 1px solid var(--line); background: #fff; }
+    .chip {
+      display:inline-flex; align-items:center; min-height:24px; padding:3px 9px;
+      border-radius:999px; background:#f3f4f6; color:#374151; font-size:12px; font-weight:750;
+    }
+    .mobile-note {
+      display:none; margin: 0 0 14px; padding: 12px 14px; border-radius: 12px;
+      background: #fff7ed; color: #9a3412; border: 1px solid #fed7aa; font-weight:700;
+    }
+    .dashboard-meta { display:flex; flex-wrap:wrap; gap:8px; margin: 0 0 16px; }
+    .dashboard-meta .chip { background:#eef4ff; color: var(--accent); }
+    .filter-bar { display:flex; flex-wrap:wrap; gap:8px; margin: 0 0 18px; }
+    .filter-btn {
+      border:1px solid var(--line); background:#fff; color:#374151; padding:8px 12px;
+      border-radius:999px; cursor:pointer; font-weight:800; font-family:inherit;
+    }
+    .filter-btn:hover, .filter-btn.active { background: var(--accent); color:#fff; border-color: var(--accent); }
+    .article-link[hidden] { display:none; }
+    .empty-message {
+      display: none;
+      background: #fff;
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .empty-message.show { display: block; }
+    .nav-links a.active { background: var(--accent); color:#fff; }
+    .topic-card .readmore { margin-top:auto; display:inline-flex; align-self:flex-start; }
 
-    <!-- 辨識醬找專利2 -->
-    <!-- H1 標題 
-    <section id="home-title">
-      <h1 style="text-align: center;">醬找專利</h1>
-    </section>-->
+    @media (max-width: 920px) {
+      .hero-grid, .ebook-feature { grid-template-columns: 1fr; }
+      .topic-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav { height: auto; padding: 14px 0; align-items: flex-start; }
+      .nav-links { display: none; }
+      .article-list { grid-template-columns: 1fr; }
+}
+    @media (max-width: 640px) {
+      .container { width: min(100% - 24px, var(--max)); }
+      .hero { padding: 58px 0 36px; }
+      .topic-grid { grid-template-columns: 1fr; }
+      section { padding: 42px 0; }
+      .book-cover { min-height: 300px; }
+      .section-head { display: block; }
+      .mobile-note { display:block; }
+      .dashboard-meta { display:block; }
+      .dashboard-meta .chip { margin:0 6px 6px 0; }
+      details.dashboard summary { gap: 10px; }
+      details.dashboard summary .meta { font-size: 12px; }
+    }
+  </style>
 
-    <!-- Header -->
-    <header id="header" class="alt skel-layers-fixed">
-        <nav id="nav">
-            <ul>
-                <li><a href="index.html">首頁</a></li>
-                <li>主題導覽
-                	<ul>
-						<li><a href="#map-02">【專利地圖】車網互動與智慧電網</a></li>
-						<li><a href="#map-01">【專利地圖】Meta公司</a></li>
-						<li><a href="#dash-03">【儀表板】臺灣專利2025年動態追蹤</a></li>
-						<li><a href="#dash-07">【儀表板】高智發明 (Intellectual Ventures) 專利</a></li>
-						<li><a href="#dash-06">【儀表板】無機LED</a></li>
-						<li><a href="#dash-05">【儀表板】無人飛行器(UAV)</a></li>
-						<li><a href="#dash-02">【儀表板】抬頭顯示器(HUD) — 資料表</a></li>
-						<li><a href="#dash-04">【儀表板】抬頭顯示器(HUD) — 前百大申請人趨勢</a></li>
-						
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-212822931-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-212822931-1');
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="醬找專利首頁">
+        <span class="brand-mark">醬</span>
+        <span>醬找專利</span>
+      </a>
+      <nav class="nav-links" aria-label="主要導覽">
+        <a href="#topics">主題分析</a>
+        <a href="#dashboards">儀表板</a>
+        <a href="#articles">文章</a>
+        <a href="#ebook">電子書</a>
+        <a href="about.html">關於我們</a>
+        <a href="privacy-policy.html">隱私政策</a>
+      </nav>
+    </div>
+  </header>
 
-			
-					</ul>
-				</li>
-                <li><a href="about.html">關於我們</a></li>
-                <li><a href="privacy-policy.html">隱私政策</a></li>
-                
-                <!-- 可加上更多導覽項目 -->
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Banner -->
-    <section id="banner">
-        <div class="inner">
-            <h2>醬找專利</h2>
-            <p>專利檢索 | 專利地圖 | 大數據 | 儀表板 | 雲端 | 開放平台</p>
-
-            <br><br><br><br>
-
-            <ul class="actions">
-                <li><a href="#logo" class="button big scrolly">開始探索</a></li>
-            </ul>
-            <p>網站更新日期：2025/10/25</p>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">專利地圖・儀表板・技術趨勢・企業布局・大數據・雲端開放平台</span>
+          <h1>專利資料驅動分析</h1>
+          <p>醬找專利以專利資料為基礎，製作專利地圖型互動儀表板與 AI 輔助生成文章，協助你理解技術趨勢與企業布局。</p>
+          <div class="actions">
+            <a class="btn primary" href="#topics">瀏覽主題分析</a>
+            <a class="btn secondary" href="#dashboards">查看儀表板</a>
+            <a class="btn secondary" href="#articles">閱讀文章</a>
+            <a class="btn green" href="#ebook">前往電子書</a>
+          </div>
+          <p class="meta" style="margin-top: 20px;">網站更新日期：2026/5/2</p>
         </div>
+      </div>
     </section>
-
-    <!-- Logo -->
-    <section id="logo">
-        <br><br>
-        <div style="width: 150px;">
-            <img src="logo.jpg" height="50" width="150" alt="醬找專利 Logo" />
+    <section id="topics">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>主題分析</h2>
+          </div>
         </div>
+
+        <div class="topic-grid">
+          <article class="topic-card">
+            <span class="tag tech">技術趨勢</span>
+            <h3>車網互動與智慧電網</h3>
+            <p>車網互動讓電動車成為可調度儲能，智慧電網能即時協調發電、用電與儲能，提升再生能源利用、降低尖峰負載、穩定供電，並減少碳排與能源成本。</p>
+            <div class="content-links" aria-label="車網互動與智慧電網內容連結">
+              <a class="link-dashboard" href="https://dash20-ybxs.onrender.com/smart-grid/" target="_blank" rel="noopener">美國專利之技術功效圖</a>
+              <a class="link-article" href="/smart-grid/smart-grid-v2g.html">車網互動（V2G）之技術趨勢</a>
+              <a class="link-article" href="/smart-grid/smart-grid-v2g-applicant.html">V2G之申請人</a>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <span class="tag company">企業布局</span>
+            <h3>Meta 公司專利布局</h3>
+            <p>Meta Platforms, Inc. 是全球大型社群與科技平台企業。本站從美國專利觀察其在 AI、VR/AR、元宇宙、數位廣告與智慧裝置等領域的研發方向與競爭布局。</p>
+            <div class="content-links" aria-label="Meta 公司專利布局內容連結">
+              <a class="link-dashboard" href="https://dash20-ybxs.onrender.com/meta/" target="_blank" rel="noopener">美國專利之技術功效圖</a>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <span class="tag tw">臺灣專利</span>
+            <h3>臺灣專利動態追蹤</h3>
+            <p>追蹤公開／公告的臺灣專利，掌握企業技術布局、申請趨勢與競爭動態，並透過文章整理重點技術主題與年度觀察。</p>
+            <div class="content-links" aria-label="臺灣專利動態追蹤內容連結">
+              <a class="link-dashboard" href="https://dash16.onrender.com" target="_blank" rel="noopener">2025年動態追蹤</a>
+              <a class="link-article" href="/tw/tw_patents_2025_trends-analysis.html">2025 年上半年度分析</a>
+              <a class="link-article" href="/tw/tw_patents_2025_ar-glasses.html">2025 年 AR 眼鏡分析</a>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <span class="tag company">企業布局</span>
+            <h3>Intellectual Ventures（高智發明）專利布局</h3>
+            <p>高智發明是代表性 NPE，主要透過專利收購、管理、授權與主張權利獲利。分析其專利資料，有助於觀察潛在訴訟風險、技術聚類與授權策略。</p>
+            <div class="content-links" aria-label="Intellectual Ventures 高智發明專利布局內容連結">
+              <a class="link-dashboard" href="https://dash15.onrender.com" target="_blank" rel="noopener">美國專利之語意分布圖</a>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <span class="tag tech">技術趨勢</span>
+            <h3>無機 LED</h3>
+            <p>無機 LED 以氮化鎵、砷化鎵等無機半導體材料為核心，具高亮度、高效率與高穩定性，廣泛應用於照明、顯示器、車用光源與 Micro LED。</p>
+            <div class="content-links" aria-label="無機 LED 內容連結">
+              <a class="link-dashboard" href="https://dash13-tugn.onrender.com" target="_blank" rel="noopener">美國專利之資料表</a>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <span class="tag tech">技術趨勢</span>
+            <h3>無人飛行器（UAV）</h3>
+            <p>無人飛行器結合飛控、感測、通訊與自主導航技術，應用於物流、巡檢、測繪、農業與國防。從專利資料可觀察 UAV 技術演進與應用布局。</p>
+            <div class="content-links" aria-label="無人飛行器 UAV 內容連結">
+              <a class="link-dashboard" href="https://dash12.onrender.com" target="_blank" rel="noopener">美國專利之資料表</a>
+            </div>
+          </article>
+
+          <article class="topic-card">
+            <span class="tag tech">技術趨勢</span>
+            <h3>抬頭顯示器（HUD）</h3>
+            <p>HUD 可將車速、導航與警示資訊投影在駕駛視線前方，提升行車安全與便利性，是智慧座艙、車載 AR 與先進駕駛輔助的重要人機介面。</p>
+            <div class="content-links" aria-label="HUD 抬頭顯示器內容連結">
+              <a class="link-dashboard" href="https://dash04.onrender.com" target="_blank" rel="noopener">美國專利之資料表</a>
+              <a class="link-dashboard" href="https://dash11-bt5r.onrender.com" target="_blank" rel="noopener">美國專利之前百大申請人分布圖</a>
+              <a class="link-article" href="/hud/hud_e-lead_technology_2014_2025.html">怡利電子</a>
+              <a class="link-article" href="/hud/magicleap_healthhud_technology_2015_2025.html">Magic Leap</a>
+              <a class="link-article" href="/hud/nvidia_hud_ar_technology_2019_2025.html">NVIDIA</a>
+              <a class="link-article" href="/hud/hud_gree_overview.html">GREE</a>
+              <a class="link-article" href="/hud/hud_automotive_top10_cited.html">車用之高引用</a>
+              <a class="link-article" href="/hud/hud_health_magic_leap_top10_cited.html">Magic Leap 之高引用</a>
+              <a class="link-article" href="/hud/hud_apple_over20_inventors.html">Apple 之高發明人數</a>
+              <a class="link-article" href="/hud/hud_apple_over150_cited.html">Apple 之高引用</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- One: 主要內容 -->
-    <section id="one" class="wrapper style1" style="background-color: white;">
+    <section id="dashboards">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>儀表板</h2>
+          </div>
+        </div>
 
+        <div class="dashboard-list">
+          <details class="dashboard" id="map-02">
+            <summary>【儀表板】車網互動與智慧電網 <span class="meta">更新日：2025/10/11</span></summary>
+            <div class="dashboard-body">
+              <p>收錄與車網互動與智慧電網技術相關的 689 筆美國專利。泡泡矩陣圖呈現技術 × 功效布局，並提供技術・功效群組查詢、醬AI小編分析與專利資料表。</p>
+              <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：技術 × 功效分析</span><span class="chip">載入：約 1–3 分鐘</span></div>
+              <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
+              <p class="meta">若圖表顯示異常，請在標題處按滑鼠右鍵，選擇「重新載入頁框」。</p>
+              <div class="iframe-wrap"><iframe title="車網互動與智慧電網專利地圖" src="https://dash20-ybxs.onrender.com/smart-grid/"></iframe></div>
+            </div>
+          </details>
 
-<!-- 專利地圖02 -->
-<details>
-  <summary id="map-02" style="margin-left: 30px; cursor: pointer;">
-    【專利地圖】車網互動與智慧電網 | 更新日: 2025/10/11
-  </summary>
-  <div class="box post" style="width: 80%; margin: 0 auto; line-height: 1.8;">
- 
-<p align="left">
-      ✅ 收錄 <strong>與車網互動與智慧電網</strong>技術相關的<strong>689</strong> 筆美國專利。<br>
-      ✅ 背景：<br>
-      車網互動（Vehicle-Grid Interaction, VGI）是智慧電網發展的核心之一，強調電動車與電力系統之間的雙向能源流動。傳統的 G2V（Grid-to-Vehicle）代表電網向車輛充電，而進階的 V2G（Vehicle-to-Grid）則讓車輛在適當時機將電力回饋電網，協助削峰填谷、穩定頻率。隨著通訊技術與雲端控制的成熟，車輛不僅能與電網互動，還能與其他能源節點形成更廣泛的 V2X（Vehicle-to-Everything）網絡，例如 V2H（車對家）、V2B（車對建築）與 V2L（車對負載）。這些模式讓電動車從單純的交通工具，進化為行動儲能與能源交換的節點。結合智慧電網的即時調度與再生能源整合，車網互動技術正成為實現分散式能源與能源韌性的重要推手。<br>
-      ✅ 功能說明：<br>
-      (1) <strong>「泡泡矩陣圖」</strong>呈現技術 × 功效的佈局；泡泡愈大代表專利數愈多。將滑鼠移到泡泡上可查看所屬技術、功效與件數。<br>
-      (2) <strong>「技術•功效群組查詢」</strong>提供單選條件的進階查詢；點擊「查詢」後會顯示「醬AI小編的分析」與「專利資料表」。<br>
-      (3) <strong>「醬AI小編的分析」</strong>會針對所選技術 × 功效群組做整體解讀，讓你迅速掌握技術佈局與發展趨勢。<br>
-      (4)<strong>「專利資料表」</strong>支援各欄位的二次篩選與排序；點擊<strong>「匯出資料表」</strong>可下載該技術與功效群組的專利書目 Excel 檔。<br>
-      ✅ 首次載入約需 1–3 分鐘，敬請耐心等候。若圖表顯示異常，請在標題處按滑鼠右鍵，選擇「重新載入頁框」即可恢復。
-            </p>
-  </div>
-  <!-- 內嵌 Dash App iframe -->
-  <div class="box post" style="width: 100%; margin: 0 auto;">
-    <iframe
-      src="https://dash20-ybxs.onrender.com/smart-grid/" style="width: 1660px; height: 812px"> <!-- Dash App 的網址，請替換為你自己的 URL -->
-      
-    </iframe>
-  </div>
-</details>
+          <details class="dashboard" id="map-01">
+            <summary>【儀表板】Meta 公司 <span class="meta">更新日：2025/10/6</span></summary>
+            <div class="dashboard-body">
+              <p>收錄 Meta Platforms 公司的 1,121 筆美國專利。泡泡矩陣圖呈現技術 × 功效布局，協助快速掌握企業研發方向。</p>
+              <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：企業布局</span><span class="chip">載入：約 1–3 分鐘</span></div>
+              <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
+              <div class="iframe-wrap"><iframe title="Meta 公司專利地圖" src="https://dash20-ybxs.onrender.com/meta/"></iframe></div>
+            </div>
+          </details>
 
-<!-- 圖層02-1 -->  
-<div style="display: flex; align-items: center; padding-left: 25px;">
-	<p style="margin: 0;">
-	  📄<a href="\smart-grid\smart-grid-v2g.html" style="text-decoration: none; color: inherit;">
-	    車網互動與智慧電網 - V2G | 作者:醬AI小編 | 更新日: 2025/10/11
-	  </a>
-	  <a href="\smart-grid\smart-grid-v2g-jp.html" style="margin-left: 8px; text-decoration: none; padding: 2px 6px; border: 1px solid #888; border-radius: 4px; font-size: 0.9em; color: #333; background: #f3f3f3;">
-	    日本語版
-	  </a>
-	  <a href="\smart-grid\smart-grid-v2g-en.html" style="margin-left: 6px; text-decoration: none; padding: 2px 6px; border: 1px solid #888; border-radius: 4px; font-size: 0.9em; color: #333; background: #f3f3f3;">
-	    English Version
-	  </a>
-	</p> 
+          <details class="dashboard" id="dash-03">
+            <summary>【儀表板】臺灣專利 2025 年動態追蹤 <span class="meta">更新日：2025/9/21</span></summary>
+            <div class="dashboard-body">
+              <p>每月更新 2025 年公開的臺灣專利資料。資料範圍：2025/1/1 至 2025/8/31，去重複後 64,303 筆。</p>
+              <div class="dashboard-meta"><span class="chip">資料類型：臺灣專利</span><span class="chip">用途：趨勢追蹤</span><span class="chip">載入：約 3–5 分鐘</span></div>
+              <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
+              <div class="iframe-wrap"><iframe title="臺灣專利 2025 年動態追蹤" src="https://dash16.onrender.com"></iframe></div>
+            </div>
+          </details>
 
- 
-</div>
+          <details class="dashboard" id="dash-07">
+            <summary>【儀表板】高智發明 Intellectual Ventures 專利 <span class="meta">更新日：2025/6/15</span></summary>
+            <div class="dashboard-body">
+              <p>整理 2025/04/30 前已核准公告的高智發明美國專利，協助觀察 NPE 專利資產、訴訟風險與技術聚類。</p>
+              <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：NPE 風險分析</span><span class="chip">載入：約 1–3 分鐘</span></div>
+              <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
+              <div class="iframe-wrap"><iframe title="高智發明專利儀表板" src="https://dash15.onrender.com"></iframe></div>
+            </div>
+          </details>
 
-<!-- 圖層02-2 -->  
-<div style="display: flex; align-items: center; padding-left: 25px;">
-	<p style="margin: 0;">
-	  📄<a href="\smart-grid\smart-grid-v2g-applicant.html" style="text-decoration: none; color: inherit;">
-	    V2G - 申請人分析 | 作者:醬AI小編 | 更新日: 2025/10/25
-	  </a>
-	  <a href="\smart-grid\smart-grid-v2g-applicant-jp.html" style="margin-left: 8px; text-decoration: none; padding: 2px 6px; border: 1px solid #888; border-radius: 4px; font-size: 0.9em; color: #333; background: #f3f3f3;">
-	    日本語版
-	  </a>
-	  <a href="\smart-grid\smart-grid-v2g-applicant-en.html" style="margin-left: 6px; text-decoration: none; padding: 2px 6px; border: 1px solid #888; border-radius: 4px; font-size: 0.9em; color: #333; background: #f3f3f3;">
-	    English Version
-	  </a>
-	</p> 
+          <details class="dashboard" id="dash-06">
+            <summary>【儀表板】無機 LED <span class="meta">更新日：2025/6/2</span></summary>
+            <div class="dashboard-body">
+              <p>涵蓋 2025/04/30 前公開、涉及 IPC/CPC 分類 H10H 的美國無機 LED 專利，總計 68,121 筆。</p>
+              <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：光電技術布局</span><span class="chip">載入：約 1–3 分鐘</span></div>
+              <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
+              <div class="iframe-wrap"><iframe title="無機 LED 專利儀表板" src="https://dash13-tugn.onrender.com"></iframe></div>
+            </div>
+          </details>
 
- 
-</div>
+          <details class="dashboard" id="dash-05">
+            <summary>【儀表板】無人飛行器 UAV <span class="meta">更新日：2025/5/23</span></summary>
+            <div class="dashboard-body">
+              <p>涵蓋 2025/04/30 前公開、涉及 IPC/CPC 分類 B64U 的美國無人飛行器專利。</p>
+              <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：UAV 技術分析</span><span class="chip">載入：約 1–3 分鐘</span></div>
+              <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
+              <div class="iframe-wrap"><iframe title="無人飛行器 UAV 專利儀表板" src="https://dash12.onrender.com"></iframe></div>
+            </div>
+          </details>
 
+          <details class="dashboard" id="dash-02">
+            <summary>【儀表板】抬頭顯示器 HUD — 資料表 <span class="meta">更新日：2025/5/9</span></summary>
+            <div class="dashboard-body">
+              <p>涵蓋 2025/04/30 前公開、涉及 IPC 分類 G02B 27/01 的美國 HUD 專利，提供篩選條件與資料表查詢。</p>
+              <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：HUD 資料表查詢</span><span class="chip">載入：約 1–3 分鐘</span></div>
+              <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
+              <div class="iframe-wrap"><iframe title="抬頭顯示器 HUD 資料表" src="https://dash04.onrender.com"></iframe></div>
+            </div>
+          </details>
 
-
-<!-- 專利地圖01 -->
-<details>
-  <summary id="map-01" style="margin-left: 30px; cursor: pointer;">
-    【專利地圖】Meta 公司 | 更新日: 2025/10/6
-  </summary>
-  <div class="box post" style="width: 80%; margin: 0 auto; line-height: 1.8;">
- 
-<p align="left">
-      ✅ 收錄 <strong>Meta Platforms 公司</strong>的 <strong>1,121</strong> 筆美國專利。<br>
-      ✅ 功能說明：<br>
-      (1) <strong>「泡泡矩陣圖」</strong>呈現技術 × 功效的佈局；泡泡愈大代表專利數愈多。將滑鼠移到泡泡上可查看所屬技術、功效與件數。<br>
-      (2) <strong>「技術•功效群組查詢」</strong>提供單選條件的進階查詢；點擊「查詢」後會顯示「醬AI小編的分析」與「專利資料表」。<br>
-      (3) <strong>「醬AI小編的分析」</strong>會針對所選技術 × 功效群組做整體解讀，讓你迅速掌握技術佈局與發展趨勢。<br>
-      (4)<strong>「專利資料表」</strong>支援各欄位的二次篩選與排序；點擊<strong>「匯出資料表」</strong>可下載該技術與功效群組的專利書目 Excel 檔。<br>
-      ✅ 首次載入約需 1–3 分鐘，敬請耐心等候。若圖表顯示異常，請在標題處按滑鼠右鍵，選擇「重新載入頁框」即可恢復。
-            </p>
-  </div>
-  <!-- 內嵌 Dash App iframe -->
-  <div class="box post" style="width: 100%; margin: 0 auto;">
-    <iframe
-      <!-- src="https://dash03.onrender.com" style="width: 1660px; height: 812px">  --> 
-      src="https://dash20-ybxs.onrender.com/meta/" style="width: 1660px; height: 812px"> <!-- Dash App 的網址，請替換為你自己的 URL -->
-      
-    </iframe>
-  </div>
-</details>
-
-
-
-<!-- 儀表板03 -->
-<details>
-  <summary id="dash-03" style="margin-left: 30px; cursor: pointer;">
-    	【儀表板】臺灣專利 2025 年動態追蹤 | 更新日: 2025/9/21
-  </summary>
- <div class="box post" style="width: 80%; margin: 0 auto; line-height: 1.8;">
-<p align="left">
-    ✅ 本儀表板<strong>每月更新2025年</strong>公開的臺灣專利資料。<br>
-	✅ 資料範圍：2025年1月1日至<strong>2025年8月31日</strong>。<br>
-	✅ 資料筆數：64,303筆（去重複）。<br>
-	✅ 功能說明：<br>
-	(1)請設定<strong>篩選條件</strong>以檢索專利資料。每次變更篩選條件後，請點選<strong>「檢索」按鈕</strong>，以重新載入並更新資料表內容。<br>
-	(2)篩選條件包括：公開/公告日、申請人、技術分類、輸出結果。<br>
-	(3)其中，輸出結果包括：資料表、公開/公告件數趨勢、前10大申請人分布、前10大IPC分布、引用專利件數分布。<br>
-	(4)「醬AI小編」已上線，為您提供即時的初步數據洞察。<br>
-	✅ 儀表板載入時間約為3至5分鐘，請耐心等候。若網頁閒置過久導致功能異常，請重新整理以恢復操作。    
-	</p>
-	</div>
-  <!-- 內嵌 Dash App iframe -->
-  <div class="box post" style="width: 100%; margin: 0 auto;">
-    <iframe
-      src="https://dash16.onrender.com" style="width: 1660px; height: 812px"> <!-- Dash App 的網址，請替換為你自己的 URL。例如:dash07.onrender.com -->
-    </iframe>
-  </div>
-</details>
-<!-- 新聞區塊 - 臺灣 
-<div class="news-container" style="width: 750px; overflow: hidden; white-space: nowrap; text-align: center; font-size: 16px;">
-  <span class="news-content" style="display: inline-block; padding-left: 100%;">
-    📢 <a href="https://www.ctee.com.tw/news/20250625700428-430503" target="_blank"> 《工商時報》築防護網對抗專利蟑螂索錢 政府聯手台積大廠成立「台版LOT」</a>｜
-    📢 <a href="https://www.tipa.org.tw/tc/apply_detial76.htm" target="_blank"> 《智慧財產培訓學院》2025 TIPA國際研討會:專利侵權訴訟之審理模式—臺、美之對照借鏡</a>｜
-    📢 <a href="https://www.foxconn.com/zh-tw/press-center/events/foxconn-events/1592" target="_blank"> 《鴻海》鴻海加入全球專利聯盟 LOT Network強化智慧財產保護</a>｜
-    📢 <a href="https://www.itri.org.tw/ListStyle.aspx?DisplayStyle=18_content&SiteID=1&MmmID=1036452026061075714&MGID=1310012613360432034" target="_blank"> 《工研院》LOT助攻臺灣產業　共同防禦NPE威脅</a>｜
-    📢 <a href="https://www.tipo.gov.tw/tw/cp-883-1006957-a6ba3-1.html" target="_blank"> 《智慧財產局》「2025台灣創新技術博覽會」發明競賽開始徵展報名囉！</a>｜
-    
-  </span>
-</div>
--->
-
-<!-- 圖層15 -->  
-<div style="display: flex; align-items: center; padding-left: 25px;">
-  <p style="margin: 0;">
-    📄<a href="\tw\tw_patents_2025_trends-analysis.html" style="text-decoration: none; color: inherit;">
-      2025年臺灣專利趨勢分析（上半年度） | 作者:醬AI小編 | 更新日: 2025/7/27
-    </a>
-  </p>
-</div>
-
-<!-- 圖層16 -->  
-<div style="display: flex; align-items: center; padding-left: 25px;">
-  <p style="margin: 0;">
-    📄<a href="\tw\tw_patents_2025_ar-glasses.html" style="text-decoration: none; color: inherit;">
-      2025年臺灣專利趨勢分析（AR眼鏡） | 作者:醬AI小編 | 更新日: 2025/7/28
-    </a>
-  </p>
-</div>
-
-
-<!-- 儀表板07 -->
-<details>
-  <summary id="dash-07" style="margin-left: 30px; cursor: pointer;">
-    【儀表板】高智發明 (Intellectual Ventures) 專利 | 更新日: 2025/6/15
-  </summary>
-  <div class="box post" style="width: 80%; margin: 0 auto; line-height: 1.8;">
- 
-<p align="left">
-      ✅ 資料範圍： <strong>2025/04/30</strong> 前已經核准公告的<strong>高智發明 (Intellectual Ventures)</strong>美國專利，總計991筆專利。<br>
-      ✅ 資料限制：由於 Intellectual Ventures 在專利申請過程中可能使用多個不同名稱或關係企業進行申請，<strong>僅能掌握部分已知申請人名稱，導致資料未能完整涵蓋</strong>其所有專利資產。<br>
-      ✅ 背景說明：Intellectual Ventures 是典型的<strong>非實施實體（NPE）</strong>，本身不從事產品製造，而是透過專利的授權、轉讓或訴訟來獲取收益。Intellectual Ventures 曾對多家大型科技公司提起專利訴訟，因此分析其專利布局，有助於預測潛在的訴訟風險與研擬談判策略。Intellectual Ventures 長期致力於收購來自學術界與企業的專利資產，並透過授權、拆分或轉售等方式進行專利操作，對產業供應鏈及競爭者的技術布局產生實質影響。對於從事專利風險控管、併購投資、競業分析或技術發展預測的相關人員而言，深入掌握  Intellectual Ventures 的專利結構與策略，具有高度的參考價值與實務意義。<br>
-      ✅ 功能特色：<br>
-      (1) 每個數據點對應一件專利，將滑鼠移至該點可顯示其<strong>第一組獨立請求項</strong>的內容。<br>
-      (2) <strong>紅色</strong>表示該專利涉及訴訟，<strong>黃色</strong>則代表其專利家族中包含訴訟專利。<br>
-      (3) <strong>聚集在一起的數據點</strong>通常技術手段較為接近，顯示<strong>這些專利的獨立請求項內容具高度相似性</strong>。<br>
-      ✅ 儀表板載入時間約為 1 至 3 分鐘，敬請耐心等候。如網頁閒置過久，請重新整理頁面以恢復儀表板功能。<br>
-    </p>
-  </div>
-    <!-- 內嵌 Dash App iframe -->
-  <div class="box post" style="width: 100%; margin: 0 auto;">
-    <iframe
-      src="https://dash15.onrender.com" style="width: 1660px; height: 812px"> <!-- Dash App 的網址，請替換為你自己的 URL -->
-    </iframe>
-  </div>
-    
-</details>
-
-
-
-
-<!-- 儀表板06 -->
-<details>
-  <summary id="dash-06" style="margin-left: 30px; cursor: pointer;">
-    【儀表板】無機LED | 更新日: 2025/6/2
-  </summary>
-  <div class="box post" style="width: 80%; margin: 0 auto; line-height: 1.8;">
- 
-<p align="left">
-      ✅ 資料範圍： <strong>2025/04/30</strong> 前公開的<strong>美國</strong>專利，涉及 IPC/CPC 分類 <strong>H10H</strong> 的<strong>無機LED</strong>，總計68,121筆專利。<br>
-      ✅ 隨著固態照明與顯示技術的快速演進，無機發光二極體（Inorganic Light-Emitting Diodes）已成為現代光電子領域的核心元件之一。從傳統的白光照明，到近年來炙手可熱的 microLED顯示器與深紫外（deep UV）消毒應用，無機LED展現出極高的效率、穩定性與廣泛的波段可調性。在這些應用中，<strong>深紫外LED（以AlGaN為基礎）</strong>因具備短波長殺菌能力而成為公共衛生與工業檢測中的關鍵技術；同時，<strong>microLED</strong>顯示器則因其高亮度、低功耗與超高解析度潛力，被視為次世代顯示的顛覆者。值得注意的是，這些熱門無機LED的成功都建立在精密的材料工程與能帶設計之上。尤其是<strong>「電位障（potential barrier）」的設計，在異質接面、量子井以及電子阻擋層（EBL）等結構</strong>中扮演關鍵角色，有效提升載子侷限與發光效率。<br>
-      ✅ 儀表板載入時間約為 1 至 3 分鐘，敬請耐心等候。如網頁閒置過久，請重新整理頁面以恢復儀表板功能。
-    </p>
-  </div>
-    <!-- 內嵌 Dash App iframe -->
-  <div class="box post" style="width: 100%; margin: 0 auto;">
-    <iframe
-      src="https://dash13-tugn.onrender.com" style="width: 1660px; height: 812px"> <!-- Dash App 的網址，請替換為你自己的 URL -->
-    </iframe>
-  </div>
-</details>
-
-<!-- 新聞區塊 - 無機LED 
-<div class="news-container" style="width: 750px; overflow: hidden; white-space: nowrap; text-align: center; font-size: 16px;">
-  <span class="news-content" style="display: inline-block; padding-left: 100%;">
-    📢 <a href="https://www.ledinside.com.tw/news/20250610-39980.html" target="_blank"> 《LEDinside》台積電進軍Micro LED，什麽信號？</a>｜
-    📢 <a href="https://www.ctee.com.tw/news/20250530700161-439901" target="_blank"> 《工商時報》Micro LED應用再拓展 透明、非顯助力新商機</a>｜
-	📢 <a href="https://www.ledinside.com.tw/showreport/20250515-39942.html" target="_blank"> 《LEDinside》走進SID 2025，看MicroLED應用多元齊放</a>｜
-    📢 <a href="https://www.ctee.com.tw/news/20250507701096-430704" target="_blank"> 《工商時報》日亞化透過專利訴訟自經銷商 回收侵害專利的Dominant LED</a>｜
-    
-  </span>
-</div>
--->
-
-<!-- 儀表板05 -->
-<details>
-  <summary id="dash-05" style="margin-left: 30px; cursor: pointer;">
-    【儀表板】無人飛行器(UAV) | 更新日: 2025/5/23
-  </summary>
-  <div class="box post" style="width: 80%; margin: 0 auto; line-height: 1.8;">
- 
-<p align="left">
-      ✅ 資料範圍： <strong>2025/04/30</strong> 前公開的<strong>美國</strong>專利，涉及 IPC/CPC 分類 <strong>B64U</strong> 的無人飛行器(UAV)。<br>
-      ✅ 無人飛行器（Unmanned Aerial Vehicle, UAV）是一種不需機上駕駛員即可操作的飛行器，常由遠端操控或具備自動飛行能力。UAV廣泛應用於軍事偵察、地理測繪、農業噴灑、物流配送及空拍攝影等領域，具有成本低、風險小、機動性高等優點。在專利分類號中，B64U即用於標示與無人飛行器相關的技術和創新。<br>
-      ✅ 儀表板載入時間約為 1 至 3 分鐘，敬請耐心等候。如網頁閒置過久，請重新整理頁面以恢復儀表板功能。
-    </p>
-  </div>
-    <!-- 內嵌 Dash App iframe -->
-  <div class="box post" style="width: 100%; margin: 0 auto;">
-    <iframe
-      src="https://dash12.onrender.com" style="width: 1660px; height: 812px"> <!-- Dash App 的網址，請替換為你自己的 URL -->
-    </iframe>
-  </div>
-</details>
-
-<!-- 新聞區塊 - UAV 
-<div class="news-container" style="width: 750px; overflow: hidden; white-space: nowrap; text-align: center; font-size: 16px;">
-  <span class="news-content" style="display: inline-block; padding-left: 100%;">
-    📢 <a href="https://twtm-eco.yeos.blue/p/drone-conf-2025" target="_blank"> 《臺灣技術交易資訊網》無人機技術線上媒合商談會</a>｜
-    📢 <a href="https://uanalyze.com.tw/articles/7223019781" target="_blank"> 《優分析》無人機新勢力崛起！昶瑞機電（7642）動力模組備戰放量、拚高毛利成長</a>｜
-    📢 <a href="https://www.cna.com.tw/news/afe/202505260189.aspx" target="_blank"> 《中央社》台灣無人機聯盟赴美 胡開宏：台美技術整合絕佳機會</a>｜   
-    📢 <a href="https://www.itri.org.tw/ListStyle.aspx?DisplayStyle=01_content&SiteID=1&MmmID=1036276263153520257&MGID=114032512591770707" target="_blank"> 《工研院》經濟部助攻臺日無人機聯盟TEDIBOA與JDC簽署MoU</a>｜
-    
-  </span>
-</div>
--->
-
-
-<!-- 儀表板02 -->
-<details>
-  <summary id="dash-02" style="margin-left: 30px; cursor: pointer;">
-    【儀表板】抬頭顯示器(HUD) — 資料表 | 更新日: 2025/5/9
-  </summary>
- <div class="box post" style="width: 80%; margin: 0 auto; line-height: 1.8;">
-<p align="left">
-      ✅ 本儀表板涵蓋截至 <strong>2025/04/30</strong> 前公開的美國專利，涉及 IPC 分類 <strong>G02B 27/01</strong> 的抬頭顯示器（HUD）。<br>
-      ✅ 請使用下方篩選條件，即時動態更新專利資料表格。<br>
-      ✅ 儀表板載入時間約為 1 至 3 分鐘，敬請耐心等候。如網頁閒置過久，請重新整理頁面以恢復儀表板功能。
-    </p>
-	</div>
-  <!-- 內嵌 Dash App iframe -->
-  <div class="box post" style="width: 100%; margin: 0 auto;">
-    <iframe
-      src="https://dash04.onrender.com" style="width: 1660px; height: 812px"> <!-- Dash App 的網址，請替換為你自己的 URL -->
-    </iframe>
-  </div>
-</details>
-
-<!-- 儀表板04 -->
-<details>
-  <summary id="dash-04" style="margin-left: 30px; cursor: pointer;">
-    【儀表板】抬頭顯示器(HUD) — 前百大申請人趨勢 | 更新日: 2025/5/22
-  </summary>
- <div class="box post" style="width: 80%; margin: 0 auto; line-height: 1.8;">
-<p align="left">
-      ✅ 資料範圍： <strong>2025/04/30</strong> 前公開的<strong>美國</strong>專利，涉及 IPC 分類 <strong>G02B 27/01</strong> 的抬頭顯示器（HUD）。<br>
-      ✅ 資料限制：<br>
-      (1)僅涵蓋前百大專利申請人。<br>
-      (2)凡專利申請人名稱<strong>有任何拼寫上的差異，均視為不同申請人</strong> 。包括英文大小寫變化、縮寫或其它形式上的差異，皆不例外。閱讀相關資料時，請特別留意此一情形。<br>
-      ✅ 功能說明：<br>
-	  (1) 專利資料以數據點方式呈現，Y軸為申請人，X軸為申請日。滑鼠移至數據點上方可顯示該筆專利書目資訊。<br>
-	  (2) 建議使用滑鼠<strong>滾輪</strong>來輕鬆瀏覽整張圖表，滑鼠左鍵具備互動功能，操作時請留意避免誤觸。<br>
-	  (3) 圖表右上角提供9個<strong>互動按鈕</strong>，包括：下載圖像、放大/縮小、平移圖表、重設顯示等功能。<br>
-	  (4) 圖表右側為圖例，列出所有申請人名稱。點擊名稱可篩選顯示的數據點。例如：在申請人名稱上<strong>連點兩下</strong>，即可僅顯示該申請人的資料。再連點兩下，即可恢復顯示所有申請人的資料。<br>
-	  (5) 顯示異常時，請於圖表標題上點右鍵，選「重新載入頁框」，以恢復原始畫面。<br>
-	  ✅ 儀表板載入時間約為1至3分鐘，請耐心等候。若網頁閒置過久導致功能異常，請重新整理以恢復操作。
-    </p>
-	</div>
-  <!-- 內嵌 Dash App iframe -->
-  <div class="box post" style="width: 100%; margin: 0 auto;">
-    <iframe
-      src="https://dash11-bt5r.onrender.com" style="width: 1660px; height: 812px"> <!-- Dash App 的網址，請替換為你自己的 URL -->
-    </iframe>
-  </div>
-</details>
-
-<!-- 新聞區塊 - HUD 
-<div class="news-container" style="width: 750px; overflow: hidden; white-space: nowrap; text-align: center; font-size: 16px;">
-  <span class="news-content" style="display: inline-block; padding-left: 100%;">
-    📢 <a href="https://technews.tw/2025/05/23/apple-2026-smart-glass/" target="_blank"> 《科技新報》蘋果 2026 年推智慧眼鏡，但延後有相機的 Apple Watch</a>｜
-    📢 <a href="https://www.cna.com.tw/news/ait/202505300111.aspx" target="_blank"> 《中央社》Meta合作Anduril開發鷹眼系統 可偵測遠程無人機</a>｜
-    📢 <a href="https://money.udn.com/money/story/5612/8756093" target="_blank"> 《經濟日報》Google搶進AI眼鏡市場 全新拿下關鍵元件訂單、宏達電也沾光</a>｜
-    📢 <a href="https://money.udn.com/money/story/5607/8473287" target="_blank"> 《經濟日報》輝達搶先公開 AR 眼鏡專利 這兩檔概念股應聲漲停</a>｜
-    📢 <a href="https://iknow.stpi.niar.org.tw/post/Read.aspx?PostID=21556" target="_blank"> 《科技產業資訊室》雷朋 Meta 智慧眼鏡成為功臣，2025年將再成長60%</a>｜   
-    
-  </span>
-</div>
--->
-
-<!-- 圖層14 -->  
-<div style="display: flex; align-items: center; padding-left: 25px;">
-  <p style="margin: 0;">
-    📄<a href="\hud\hud_e-lead_technology_2014_2025.html" style="text-decoration: none; color: inherit;">
-      怡利電子(E-Lead) 在 HUD 技術的發展脈絡（2014–2025） | 更新日: 2025/5/24
-    </a>
-  </p>
-</div>
-
-
-
-<!-- 圖層13 -->  
-<div style="display: flex; align-items: center; padding-left: 25px;">
-  <p style="margin: 0;">
-    📄<a href="\hud\magicleap_healthhud_technology_2015_2025.html" style="text-decoration: none; color: inherit;">
-      Magic Leap 的 HUD 技術在健康應用的發展脈絡（2015-2025） | 更新日: 2025/5/19
-    </a>
-  </p>
-</div>
-
-
-
-<!-- 圖層12 -->  
-<div style="display: flex; align-items: center; padding-left: 25px;">
-  <p style="margin: 0;">
-    📄<a href="\hud\nvidia_hud_ar_technology_2019_2025.html" style="text-decoration: none; color: inherit;">
-      輝達（NVIDIA）在HUD技術的發展脈絡（2015–2025） | 更新日: 2025/5/16
-    </a>
-  </p>
-</div>
-
-<!-- 圖層11 -->      
-<div style="display: flex; align-items: center; padding-left: 25px;">
-  <p style="margin: 0;">
-    📄<a href="\hud\hud_gree_overview.html" style="text-decoration: none; color: inherit;">
-      GREE Holdings 的 HUD 技術在遊戲應用的專利布局分析 | 更新日: 2025/5/15
-    </a>
-  </p>
-</div>
-
-
-<!-- 圖層10 --> 
-<div style="display: flex; align-items: center; padding-left: 25px;">
-  <p style="margin: 0;">
-    📄<a href="\hud\hud_automotive_top10_cited.html" style="text-decoration: none; color: inherit;">
-      車用抬頭顯示器（HUD）的高引用次數專利布局分析 | 更新日: 2025/5/14
-    </a>
-  </p>
-</div>
-
-
-<!-- 圖層09 -->    
-<div style="display: flex; align-items: center; padding-left: 25px;">
-  <p style="margin: 0;">
-    📄<a href="\hud\hud_health_magic_leap_top10_cited.html" style="text-decoration: none; color: inherit;">
-      Magic Leap 的 HUD 技術在健康應用的高引用次數專利布局分析 | 更新日: 2025/5/13
-    </a>
-  </p>
-</div>
-
-
-<!-- 圖層08 -->    
-<div style="display: flex; align-items: center; padding-left: 25px;">
-  <p style="margin: 0;">
-    📄<a href="\hud\hud_apple_over20_inventors.html" style="text-decoration: none; color: inherit;">
-      Apple 的 HUD 技術的高發明人數專利布局分析 | 更新日: 2025/5/12
-    </a>
-  </p>
-</div>
-
-
-
-<!-- 圖層07 -->    
-<div style="display: flex; align-items: center; padding-left: 25px;">
-  <p style="margin: 0;">
-    📄<a href="\hud\hud_apple_over150_cited.html" style="text-decoration: none; color: inherit;">
-      Apple 的 HUD 技術的高引用次數專利布局分析 | 更新日: 2025/5/11
-    </a>
-  </p>
-</div>
-
-    
-    
-    <!-- 新聞的JS - 共用 - 放於新聞最後 -->
-	<script>
-	  // 等整個網頁資源載入完成後才執行
-	  window.addEventListener('load', () => {
-	    // 找到所有跑馬燈容器，逐一處理
-	    document.querySelectorAll('.news-container').forEach(container => {
-	      const ticker = container.querySelector('.news-content'); // 取得跑馬燈內容元素
-	      let pos = -700; // 初始文字位置（向左推 725px），可依需求調整
-	      let intervalId;  // 用來存放 setInterval 的 ID，好控制開始/停止
-	
-	      // 開始跑馬燈
-	      function startTicker() {
-	        clearInterval(intervalId); // 避免多次啟動導致重複計時
-	        intervalId = setInterval(() => {
-	          pos -= 1; // 位置每 20 毫秒往左移動 1px
-	          ticker.style.transform = `translateX(${pos}px)`; // 更新跑馬燈位置
-	          // 當文字完全移出左邊（移動距離大於文字寬度），從右邊重新開始
-	          if (Math.abs(pos) > ticker.offsetWidth) {
-	            pos = container.offsetWidth;
-	          }
-	        }, 20);
-	      }
-	
-	      // 停止跑馬燈
-	      function stopTicker() {
-	        clearInterval(intervalId); // 清除計時器，停止移動
-	      }
-	
-	      // 初始狀態，先把文字放到初始位置（但不動）
-	      ticker.style.transform = `translateX(${pos}px)`;
-	
-	      // 滑鼠移入容器時開始跑馬燈
-	      container.addEventListener('mouseenter', () => {
-	        startTicker();
-	      });
-	
-	      // 滑鼠移出容器時停止跑馬燈，保持當前位置不變
-	      container.addEventListener('mouseleave', () => {
-	        stopTicker();
-	        // 不回復初始位置，文字停在目前位置
-	      });
-	    });
-	  });
-	</script>
-
+          <details class="dashboard" id="dash-04">
+            <summary>【儀表板】抬頭顯示器 HUD — 前百大申請人趨勢 <span class="meta">更新日：2025/5/22</span></summary>
+            <div class="dashboard-body">
+              <p>以數據點呈現前百大專利申請人的 HUD 專利申請趨勢，滑鼠移至數據點可查看專利書目資訊。</p>
+              <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：申請人趨勢</span><span class="chip">載入：約 1–3 分鐘</span></div>
+              <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
+              <div class="iframe-wrap"><iframe title="HUD 前百大申請人趨勢" src="https://dash11-bt5r.onrender.com"></iframe></div>
+            </div>
+          </details>
+        </div>
+      </div>
     </section>
 
-    <!-- 空白區塊 -->
-	<div style="height: 500px;"></div>
+    <section id="articles">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>文章</h2>
+          </div>
+        </div>
 
-    <!-- CTA -->
-    <section id="cta" class="wrapper style3">
-        <h4>©2025 醬找專利 版權所有</h4>
+        <div class="filter-bar" aria-label="文章主題篩選">
+          <button class="filter-btn active" type="button" data-filter="all">全部</button>
+          <button class="filter-btn" type="button" data-filter="tw">臺灣專利</button>
+          <button class="filter-btn" type="button" data-filter="hud">HUD</button>
+          <button class="filter-btn" type="button" data-filter="smart-grid">智慧電網</button>
+
+        </div>
+        <div class="article-list">
+          <a class="article-link" data-topic="smart-grid" href="/smart-grid/smart-grid-v2g-applicant.html">📄 V2G - 申請人分析 | 更新日：2025/10/25</a>
+          <a class="article-link" data-topic="smart-grid" href="/smart-grid/smart-grid-v2g.html">📄 車網互動與智慧電網 - V2G | 更新日：2025/10/11</a>
+          <a class="article-link" data-topic="tw" href="/tw/tw_patents_2025_ar-glasses.html">📄 2025年臺灣專利趨勢分析（AR眼鏡） | 更新日：2025/7/28</a>
+          <a class="article-link" data-topic="tw" href="/tw/tw_patents_2025_trends-analysis.html">📄 2025年臺灣專利趨勢分析（上半年度） | 更新日：2025/7/27</a>
+          <a class="article-link" data-topic="hud" href="/hud/hud_e-lead_technology_2014_2025.html">📄 怡利電子 E-Lead 在 HUD 技術的發展脈絡 | 更新日：2025/5/24</a>
+          <a class="article-link" data-topic="hud" href="/hud/magicleap_healthhud_technology_2015_2025.html">📄 Magic Leap 的 HUD 技術在健康應用的發展脈絡 | 更新日：2025/5/19</a>
+          <a class="article-link" data-topic="hud" href="/hud/nvidia_hud_ar_technology_2019_2025.html">📄 NVIDIA 在 HUD 技術的發展脈絡 | 更新日：2025/5/16</a>
+          <a class="article-link" data-topic="hud" href="/hud/hud_gree_overview.html">📄 GREE Holdings 的 HUD 技術在遊戲應用的專利布局分析 | 更新日：2025/5/15</a>
+          <a class="article-link" data-topic="hud" href="/hud/hud_automotive_top10_cited.html">📄 車用 HUD 的高引用次數專利布局分析 | 更新日：2025/5/14</a>
+          <a class="article-link" data-topic="hud" href="/hud/hud_health_magic_leap_top10_cited.html">📄 Magic Leap 的 HUD 技術在健康應用的高引用次數專利布局分析 | 更新日：2025/5/13</a>
+          <a class="article-link" data-topic="hud" href="/hud/hud_apple_over20_inventors.html">📄 Apple 的 HUD 技術高發明人數專利布局分析 | 更新日：2025/5/12</a>
+          <a class="article-link" data-topic="hud" href="/hud/hud_apple_over150_cited.html">📄 Apple 的 HUD 技術高引用次數專利布局分析 | 更新日：2025/5/11</a>
+        </div>
+        <p id="article-empty" class="empty-message">目前沒有此分類文章。</p>
+      </div>
+    </section>
+    <section id="ebook" class="ebook-section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>電子書</h2>
+          </div>
+        </div>
+
+        <div class="ebook-feature">
+          <div class="book-cover book-cover-image" aria-label="最新電子書封面">
+            <img src="dji/images/ebook-dji-cover.png" alt="最新電子書封面" />
+          </div>
+          <div class="ebook-copy compact-copy">
+            <span class="tag orange">最新出版</span>
+            <h3>DJI 無人機專利布局解析</h3>
+            <p>即將出版</p>
+            <div class="actions">
+              <a class="btn primary" >Google Play 圖書</a>
+              <a class="btn secondary">歷年電子書</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
     </section>
 
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span>©2025–2026 醬找專利 版權所有</span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.filter-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        document.querySelectorAll('.filter-btn').forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+        let visibleCount = 0;
+        document.querySelectorAll('.article-link').forEach((link) => {
+          link.hidden = filter !== 'all' && link.dataset.topic !== filter;
+          if (!link.hidden) visibleCount += 1;
+        });
+        const emptyMessage = document.getElementById('article-empty');
+        if (emptyMessage) emptyMessage.classList.toggle('show', visibleCount === 0);
+      });
+    });
+
+    const sections = ['topics', 'dashboards', 'articles', 'ebook'];
+    const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  </script>
 
 </body>
 </html>
