@@ -1,0 +1,724 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="content-language" content="zh-tw" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Lumus 公司 2025 年臺灣 HUD 相關專利布局分析，聚焦光導光學元件、光路引導、圖像品質校正與近眼顯示應用。" />
+  <meta name="keywords" content="Lumus, HUD, 臺灣專利, 光導光學元件, LOE, 近眼顯示, 專利分析" />
+  <title>Lumus 公司 2025 年臺灣 HUD 專利布局觀察｜醬找專利</title>
+  <link rel="icon" type="image/svg+xml" href="https://patenthunterjohn.com/favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Lumus 公司 2025 年臺灣 HUD 專利布局觀察",
+    "description": "Lumus 公司 2025 年臺灣 HUD 相關專利布局分析，聚焦光導光學元件、光路引導、圖像品質校正與近眼顯示應用。",
+    "author": {
+      "@type": "Organization",
+      "name": "醬找專利"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "醬找專利",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://patenthunterjohn.com/logo.jpg"
+      }
+    },
+    "inLanguage": "zh-Hant"
+  }
+  </script>
+
+  <style>
+    :root {
+      --ink: #14213d;
+      --ink-2: #24324f;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --accent-2: #0f766e;
+      --soft-blue: #eef4ff;
+      --soft-green: #eefaf7;
+      --soft-orange: #fff7ed;
+      --radius: 20px;
+      --shadow: 0 18px 40px rgba(20, 33, 61, .08);
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .article-header {
+      padding: 64px 0 32px;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(37,99,235,.14), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(15,118,110,.12), transparent 32%),
+        linear-gradient(180deg, #fff 0%, #f7f8fb 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.15;
+      letter-spacing: -.04em;
+      max-width: 980px;
+    }
+
+    .lead {
+      max-width: 860px;
+      margin: 0;
+      color: #4b5563;
+      font-size: 19px;
+    }
+
+    .article-meta {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    section {
+      padding: 54px 0;
+    }
+
+    section.white {
+      background: #fff;
+    }
+
+    .section-head {
+      margin-bottom: 24px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 8px;
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1.25;
+      letter-spacing: -.03em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .content-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 22px rgba(20,33,61,.04);
+      padding: 24px;
+    }
+
+    .content-card p {
+      margin-top: 0;
+      color: #374151;
+    }
+
+    .content-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 8px 22px rgba(20,33,61,.04);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 920px;
+    }
+
+    th,
+    td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #f8fafc;
+      color: var(--ink);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    td {
+      color: #374151;
+      font-size: 15px;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--soft-blue);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .patent {
+      display: inline-flex;
+      margin: 0 5px 5px 0;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      color: #334155;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .insight-list {
+      display: grid;
+      gap: 12px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .insight-list li {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+      color: #374151;
+    }
+
+    .footer {
+      padding: 30px 0;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      background: #fff;
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 24px, var(--max));
+      }
+
+      .article-header {
+        padding: 46px 0 28px;
+      }
+
+      section {
+        padding: 42px 0;
+      }
+
+      table {
+        min-width: 760px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article>
+      <header class="article-header">
+        <div class="container">
+          <h1>Lumus 公司 2025 年臺灣 HUD 專利布局觀察</h1>
+          <p class="lead">
+            本文整理 Lumus 在 2025 年、臺灣公開／公告的 HUD 相關專利樣本，聚焦光導光學元件（LOE）、光路引導、圖像品質校正、眼動偵測與製造結構設計等方向。
+          </p>
+          <p class="article-meta">資料範圍：2025 年臺灣專利樣本｜文章整理日期：2026/5/19</p>
+        </div>
+      </header>
+
+      <section class="white" id="company-intro">
+        <div class="container">
+          <div class="section-head">
+            <h2>Lumus 公司介紹與臺灣供應鏈互動</h2>
+            <p>Lumus 是一家專注於擴增實境（AR）近眼顯示光學的公司，其技術核心圍繞透明顯示、反射式幾何波導與光導光學元件（Light-guide Optical Element, LOE）。</p>
+          </div>
+
+          <div class="content-card">
+            <p>
+              Lumus 的主要定位是 AR 眼鏡與頭戴式顯示器的光學引擎供應商。相較於終端品牌商，Lumus 更接近「關鍵光學模組與波導技術平台」的角色，提供可讓虛擬影像疊加於真實世界視野中的透明顯示技術。其反射式波導設計利用波導內部的反射結構，將影像光導向使用者眼睛，對於智慧眼鏡的小型化、亮度、戶外可視性與量產可行性具有關鍵影響。
+            </p>
+            <p>
+              從產業鏈角度觀察，Lumus 與臺灣公司的互動主要集中在「微顯示元件」與「量產製造」兩個層面。其一，Lumus 曾與臺灣顯示晶片公司奇景光電（Himax）合作，將 Himax 的 LCOS 微顯示技術與 Lumus 的透明顯示光學結合，形成適用於智慧眼鏡的顯示方案。這代表臺灣公司在 AR 顯示供應鏈中，可扮演微顯示晶片與影像源元件的角色。
+            </p>
+            <p>
+              其二，Lumus 與廣達電腦（Quanta Computer）的合作更直接連結到 AR 眼鏡的製造與量產。公開資料顯示，廣達曾參與投資 Lumus，雙方亦簽署授權與製造相關合作，目標是推動 Lumus 光學引擎與 AR 眼鏡模組走向量產。後續 Lumus 也持續擴大與廣達的合作，以提升反射式波導光學引擎的量產性、良率與成本競爭力。
+            </p>
+            <p>
+              因此，Lumus 在臺灣的專利布局不宜只看成單純的海外專利申請，而可視為其 AR 光學技術與臺灣電子製造、顯示晶片、ODM/OEM 供應鏈之間的互補關係。Lumus 掌握波導與光學引擎設計，臺灣廠商則可能在微顯示、模組化、製程放大、系統整合與終端量產方面提供產業支撐。這也使得 Lumus 的臺灣專利樣本，對觀察 AR 眼鏡、HUD、近眼顯示及智慧穿戴裝置供應鏈具有參考價值。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="white" id="overview">
+        <div class="container">
+          <div class="section-head">
+            <h2>整體布局觀察</h2>
+            <p>從樣本內容觀察，Lumus 的專利重心並非單一顯示終端，而是圍繞 LOE 元件、光路控制與近眼顯示系統整合形成技術組合。</p>
+          </div>
+
+          <div class="content-card">
+            <p>
+              Lumus 的專利技術布局主要聚焦於光導光學元件（LOE）的製造方法與結構，以及光學系統中的光路引導與調製技術。此兩項技術方向相互關聯，前者提供 LOE 的基礎結構與製程，後者則探討如何透過這些元件控制光線傳播，以達成特定光學功能。
+            </p>
+            <p>
+              此外，技術布局亦涵蓋光學系統的結構組件與整合，與 LOE 的製造與光路引導緊密結合，確保各元件能有效協同工作。為提升成像品質，公司亦投入於改善圖像品質的光學調製與校正技術，以及用於圖像生成的光源與調製技術。
+            </p>
+            <p>
+              在特定應用與功能方面，專利亦涵蓋光學元件的瑕疵檢測與測試方法，以及基於瞳孔位置的光源選擇與光束變形技術、整合衍射光學元件與光學延遲器的光路引導技術、用於眼睛注視方向偵測的光重定向佈置技術。這些方向共同構成 Lumus 在光學顯示與成像領域的技術基礎。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech">
+        <div class="container">
+          <div class="section-head">
+            <h2>技術方向彙整</h2>
+            <p>以下表格整理樣本中可歸納的主要技術方向、支持情形、代表專利與方向摘要。</p>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>技術方向</th>
+                  <th>支持情形</th>
+                  <th>代表專利</th>
+                  <th>方向摘要</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="chip">T001</span></td>
+                  <td>光導光學元件（LOE）的製造方法與結構</td>
+                  <td>多件技術方向</td>
+                  <td>
+                    <span class="patent">TW202548363A</span>
+                    <span class="patent">TWI869501B</span>
+                    <span class="patent">TW202530772A</span>
+                    <span class="patent">TW202532924A</span>
+                    <span class="patent">TW202542601A</span>
+                  </td>
+                  <td>涵蓋光導光學元件的製造方法與結構設計，包含材料、結構組成與製程步驟，以達成特定光學特性。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">T002</span></td>
+                  <td>光學系統中的光路引導與調製技術</td>
+                  <td>多件技術方向</td>
+                  <td>
+                    <span class="patent">TWI888348B</span>
+                    <span class="patent">TW202503319A</span>
+                    <span class="patent">TW202509467A</span>
+                    <span class="patent">TW202509535A</span>
+                    <span class="patent">TW202511788A</span>
+                  </td>
+                  <td>探討光學元件的設計與配置，以控制光線在系統中的傳播路徑，包含引導、偏轉、反射、吸收、孔徑擴展及強度調製。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">T003</span></td>
+                  <td>光學系統的結構組件與整合</td>
+                  <td>多件技術方向</td>
+                  <td>
+                    <span class="patent">TWI895322B</span>
+                    <span class="patent">TW202518111A</span>
+                    <span class="patent">TW202519937A</span>
+                    <span class="patent">TW202514182A</span>
+                    <span class="patent">TWI870411B</span>
+                  </td>
+                  <td>關注光學系統中各結構組件的設計、配置與整合方式，強調組件組合對系統功能與性能的影響。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">T004</span></td>
+                  <td>用於改善圖像品質的光學調製與校正技術</td>
+                  <td>多件技術方向</td>
+                  <td><span class="patent">TWI888348B</span></td>
+                  <td>透過分析光學系統特性與眼瞳資料，進行數學運算生成校正信號，調製圖像以提高強度均勻性或改善成像品質。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">T005</span></td>
+                  <td>用於圖像生成的光源與調製技術</td>
+                  <td>多件技術方向</td>
+                  <td><span class="patent">TW202503323A</span></td>
+                  <td>利用不同光源組合與控制，配合 SLM 等元件，以特定模式或順序照射，生成圖像光。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">T006</span></td>
+                  <td>光學元件的瑕疵檢測與測試方法</td>
+                  <td>單件觀察方向</td>
+                  <td><span class="patent">TW202509467A</span></td>
+                  <td>開發用於檢測光學元件瑕疵的系統與方法，特別是利用散射光檢測技術。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">T007</span></td>
+                  <td>基於瞳孔位置的光源選擇與光束變形技術</td>
+                  <td>單件觀察方向</td>
+                  <td><span class="patent">TWI902993B</span></td>
+                  <td>基於瞳孔位置選擇光源並確定光束變形，以照射眼動箱的對應部分。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">T008</span></td>
+                  <td>整合衍射光學元件與光學延遲器的光路引導技術</td>
+                  <td>單件觀察方向</td>
+                  <td><span class="patent">TWI898485B</span></td>
+                  <td>在 LOE 中整合衍射光學元件與光學延遲器，以引導圖像照射並進行偏振旋轉。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">T009</span></td>
+                  <td>用於眼睛注視方向偵測的光重定向佈置技術</td>
+                  <td>單件觀察方向</td>
+                  <td><span class="patent">TWI910077B</span></td>
+                  <td>利用光重定向佈置將眼睛光偏轉至感測器，以偵測眼睛注視方向。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="white" id="function">
+        <div class="container">
+          <div class="section-head">
+            <h2>功能方向彙整</h2>
+            <p>功能方向用來觀察專利技術最終欲達成的應用效果或系統功能。</p>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>功能方向</th>
+                  <th>支持情形</th>
+                  <th>代表專利</th>
+                  <th>方向摘要</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="chip">F001</span></td>
+                  <td>光導光學元件（LOE）的圖像耦出與傳播</td>
+                  <td>多件功能方向</td>
+                  <td>
+                    <span class="patent">TW202548363A</span>
+                    <span class="patent">TWI869501B</span>
+                    <span class="patent">TWI895322B</span>
+                    <span class="patent">TWI897867B</span>
+                    <span class="patent">TW202503319A</span>
+                  </td>
+                  <td>涵蓋將圖像信號耦入 LOE，並透過元件內部結構使圖像光線傳播、偏轉、擴展孔徑，最終耦出至使用者眼睛。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">F002</span></td>
+                  <td>圖像品質的增強與校正</td>
+                  <td>多件功能方向</td>
+                  <td><span class="patent">TWI888348B</span></td>
+                  <td>透過分析光學系統特性與輸入圖像數據，進行計算與調製，以改善圖像的視覺品質。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">F003</span></td>
+                  <td>基於多光源組合的圖像生成</td>
+                  <td>單件觀察方向</td>
+                  <td><span class="patent">TW202503323A</span></td>
+                  <td>利用多種光源組合與控制，配合 SLM 等元件，以特定模式或順序照射，生成圖像光。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">F004</span></td>
+                  <td>眼睛注視方向偵測</td>
+                  <td>單件觀察方向</td>
+                  <td>
+                    <span class="patent">TWI895322B</span>
+                    <span class="patent">TWI910077B</span>
+                  </td>
+                  <td>透過感測眼睛光線並處理信號，偵測使用者當前的注視方向。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">F005</span></td>
+                  <td>光學元件瑕疵檢測</td>
+                  <td>單件觀察方向</td>
+                  <td><span class="patent">TW202509467A</span></td>
+                  <td>利用特定檢測機制，對光學元件進行瑕疵檢測，以確保其品質。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">F006</span></td>
+                  <td>透明板堆疊的壓力施加與補償</td>
+                  <td>單件觀察方向</td>
+                  <td><span class="patent">TW202543815A</span></td>
+                  <td>透過補償構件對應板臺階偏移並施加壓力，形成透明板堆疊。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">F007</span></td>
+                  <td>降低光學元件翹曲的結構設計</td>
+                  <td>單件觀察方向</td>
+                  <td>
+                    <span class="patent">TWI869273B</span>
+                    <span class="patent">TWI884885B</span>
+                  </td>
+                  <td>透過交替佈置未經塗覆與經塗覆的透明板形成堆疊，並採用特定塗層與結構設計，降低或消除板的翹曲量。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">F008</span></td>
+                  <td>頭戴式顯示裝置的顯示模組調節功能</td>
+                  <td>單件觀察方向</td>
+                  <td><span class="patent">TWI870411B</span></td>
+                  <td>頭戴式顯示裝置中，透過調節機構移動顯示模組，改變距離並保持會聚距離，創建統一虛擬立體圖像。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">F009</span></td>
+                  <td>電可控可變透鏡的像差校正功能</td>
+                  <td>單件觀察方向</td>
+                  <td><span class="patent">TWI870420B</span></td>
+                  <td>透過控制器確定圖像感興趣區域，改變電可控可變透鏡屬性，減小該區域像差。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">F010</span></td>
+                  <td>基於瞳孔位置的光束照射與變形功能</td>
+                  <td>單件觀察方向</td>
+                  <td><span class="patent">TWI902993B</span></td>
+                  <td>基於瞳孔位置選擇光源並變形光束，以照射眼動箱的對應部分。</td>
+                </tr>
+                <tr>
+                  <td><span class="chip">F011</span></td>
+                  <td>複合光導光學元件的製造功能</td>
+                  <td>單件觀察方向</td>
+                  <td><span class="patent">TWI903793B</span></td>
+                  <td>透過接合 LOE 前體與第一塊，並切割形成的第二塊，製造複合光導光學元件。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="patents">
+        <div class="container">
+          <div class="section-head">
+            <h2>代表專利技術手段</h2>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>專利號</th>
+                  <th>技術內容</th>
+                  <th>技術機制</th>
+                  <th>功能說明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TW202548363A</td>
+                  <td>透明材料的第一前體塊和第二前體塊，以及光學延遲器層。</td>
+                  <td>將第一前體塊的第一平面接合表面與第二前體塊的第二平面接合表面接合，形成組合塊，然後對組合塊沿多個平行切片平面進行切片，以形成包含第一區域、第二區域和光學延遲器的多個 LOE。</td>
+                  <td>提供第一前體塊和第二前體塊，接合形成組合塊，並進行切片以製造多個光導光學元件。</td>
+                </tr>
+                <tr>
+                  <td>TWI869501B</td>
+                  <td>光導光學元件的製造方法，包括使用透明基板的光學組合器元件，以及透明聚合物樹脂進行封裝。</td>
+                  <td>透過模製過程封裝光學組合器元件，利用包含主腔和楔形副腔的中空模具，分兩階段填充樹脂並固化。</td>
+                  <td>形成具有光學品質的成對平行外表面，並在封裝結構的縱向端部形成楔形部。</td>
+                </tr>
+                <tr>
+                  <td>TWI888348B</td>
+                  <td>光學系統與控制單元，包括強度映射生成器、強度映射調製器、積分器模組與眼瞳相關資料。</td>
+                  <td>控制單元分析光學系統的強度傳遞函數映射及眼瞳資料，生成校正強度映射，並將強度調製施加到輸入圖像資料。</td>
+                  <td>改善出射瞳處輸出光的強度均勻性，提高觀察者所見圖像品質。</td>
+                </tr>
+                <tr>
+                  <td>TWI895322B</td>
+                  <td>光學系統，包括透光基板、第一內表面、光學感測器、光重定向佈置及處理器。</td>
+                  <td>透光基板透過內反射引導圖像照明，第一內表面將圖像耦出至眼睛，第二內表面將來自眼睛的光偏轉至感測器，由處理器處理信號。</td>
+                  <td>引導圖像照明並偵測眼睛光線，以得出眼睛的當前注視方向。</td>
+                </tr>
+                <tr>
+                  <td>TWI897867B</td>
+                  <td>光導光學元件、耦出構造、圖像投影儀與內部平面分束器。</td>
+                  <td>圖像投影儀生成圖像照射並引入 LOE，圖像照射在 LOE 內通過內反射傳播，光束倍增器區域的內部平面分束器將 LOE 厚度細分為多個層。</td>
+                  <td>將圖像照射的一部分從 LOE 向使用者眼睛耦出。</td>
+                </tr>
+                <tr>
+                  <td>TW202503319A</td>
+                  <td>波導系統，包括第一波導部分、第二波導部分與一個或更多個反射器。</td>
+                  <td>第一波導部分將光耦出並在第一維度擴展孔徑，第二波導部分接收光並在第二維度擴展孔徑，反射器將光反射回波導部分。</td>
+                  <td>在第一維度與第二維度擴展孔徑，以支援近眼顯示器應用。</td>
+                </tr>
+                <tr>
+                  <td>TW202503323A</td>
+                  <td>光導光學元件、圖像投影儀、RGB 光源、白色光源、控制器與空間光調製器。</td>
+                  <td>控制器在第一模式下操作，由白色光源生成圖像像素子集的部分強度，並以 RGB 光源與白色光源的脈衝順序照射 SLM。</td>
+                  <td>生成與圖像對應的光，並改善白色像素或圖像亮度表現。</td>
+                </tr>
+                <tr>
+                  <td>TW202509467A</td>
+                  <td>光源與檢測器裝置。</td>
+                  <td>光源生成光並使其進入光學板，光在光學板內經內反射傳播，檢測器檢測因瑕疵造成的散射光。</td>
+                  <td>檢測因瑕疵引起並通過主外表面離開光學板的光，以測試光學板瑕疵。</td>
+                </tr>
+                <tr>
+                  <td>TW202509535A</td>
+                  <td>頭戴式顯示器，包含光導結構、支承裝置與圖像投射儀。</td>
+                  <td>圖像投射儀將準直圖像光引入光導結構，第一組部分反射內表面將光逐漸偏轉為第二方向，第二組部分反射內表面再將光朝使用者眼睛耦出。</td>
+                  <td>將光導結構中的圖像光引導並耦出至使用者眼睛。</td>
+                </tr>
+                <tr>
+                  <td>TW202511788A</td>
+                  <td>圖像投影儀、第一光導與光導光學元件。</td>
+                  <td>圖像投影儀將準直圖像引入第一光導，經由第一光導與 LOE 中的部分反射表面逐步偏轉與傳播。</td>
+                  <td>接收來自圖像投影儀的準直圖像，並透過光導傳播與偏轉，最終將圖像耦出供使用者觀看。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="white" id="results">
+        <div class="container">
+          <div class="section-head">
+            <h2>主要技術結果與摘要</h2>
+            <p>此表從結果面說明各代表專利的技術產出，作為專利重點導讀。</p>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>專利號</th>
+                  <th>主要結果</th>
+                  <th>摘要</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TW202548363A</td>
+                  <td>製造出包含第一區域、第二區域和光學延遲器的多個光導光學元件。</td>
+                  <td>藉由提供透明材料的第一前體塊和第二前體塊，以及光學延遲器層，將前體塊接合形成組合塊並進行切片，達成多個 LOE 的製造結果。</td>
+                </tr>
+                <tr>
+                  <td>TWI869501B</td>
+                  <td>製造出具有光學品質的成對平行外表面及楔形部的 LOE 封裝結構。</td>
+                  <td>利用具有匹配折射率的透明聚合物樹脂，以模製過程分兩階段填充中空模具腔體並固化樹脂，形成封裝結構。</td>
+                </tr>
+                <tr>
+                  <td>TWI888348B</td>
+                  <td>輸出光具有由觀看者觀察到的提高強度均勻性的調製強度映射。</td>
+                  <td>藉由分析光學系統的強度傳遞函數映射與眼瞳資料，生成校正強度映射並施加到輸入圖像資料，改善圖像強度均勻性。</td>
+                </tr>
+                <tr>
+                  <td>TWI895322B</td>
+                  <td>得出眼睛的當前注視方向。</td>
+                  <td>透過內反射引導圖像照明並將其耦出至眼睛，同時偏轉來自眼睛的光至感測器並處理信號，達成注視方向偵測。</td>
+                </tr>
+                <tr>
+                  <td>TWI897867B</td>
+                  <td>圖像照射通過內反射在 LOE 內傳播，並透過分束器結構耦出。</td>
+                  <td>圖像投影儀生成圖像照射並引入 LOE，利用光束倍增器區域中的內部平面分束器，將圖像照射的一部分向使用者眼睛耦出。</td>
+                </tr>
+                <tr>
+                  <td>TW202503319A</td>
+                  <td>在第一維度與第二維度中擴展孔徑，以用於近眼顯示器。</td>
+                  <td>波導系統藉由第一波導部分、第二波導部分與反射器的配合，實現兩個方向的孔徑擴展。</td>
+                </tr>
+                <tr>
+                  <td>TW202503323A</td>
+                  <td>在第一模式下，由白色光源生成圖像部分強度並順序照射 SLM。</td>
+                  <td>控制器透過 RGB 光源與白色光源的脈衝組合，配合空間光調製器生成與圖像對應的光。</td>
+                </tr>
+                <tr>
+                  <td>TW202509467A</td>
+                  <td>對通過主外表面離開光學板的光進行檢測，以測試光學板瑕疵。</td>
+                  <td>光源使光進入光學板並經內反射傳播，由檢測器偵測因瑕疵引起的散射光。</td>
+                </tr>
+                <tr>
+                  <td>TW202509535A</td>
+                  <td>使用者眼睛得以接收從光導結構耦出的圖像。</td>
+                  <td>光導結構中的部分反射內表面逐步改變光線方向，將圖像光耦出至使用者眼睛。</td>
+                </tr>
+                <tr>
+                  <td>TW202511788A</td>
+                  <td>將來自圖像投影儀的圖像照明朝向使用者引導以供觀看。</td>
+                  <td>藉由圖像投影儀、第一光導及 LOE，使準直圖像透過內反射傳播與偏轉，最後耦出供觀看。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="problems">
+        <div class="container">
+          <div class="section-head">
+            <h2>先前技術問題</h2>
+            <p>這些問題可用來理解 Lumus 專利技術試圖解決的設計限制與工程痛點。</p>
+          </div>
+
+          <ul class="insight-list">
+            <li>先前技術中的波導系統存在尺寸限制，難以實現頭戴式顯示器的小型化，且常規特徵可能增大波導尺寸或降低圖像品質。投影儀也無助於實現緊湊性，因此需要創新的緊湊型照射系統，包括緊湊型波導系統和新型投影儀，以減小波導系統尺寸並提高近眼顯示器的緊湊性。</li>
+            <li>部分反射表面的光學塗層性能取決於角度和波長，導致原色的塗層反射率和透射率跨圖像以不同方式變化。即使平衡 RGB 源強度以獲得單個像素的完美白色，也可能導致圖像中其他像素的白色色調變化，降低觀看體驗品質。</li>
+            <li>常規測量工具和儀器缺乏識別微小光波導瑕疵所需的靈敏度，因此需要更適合光導元件的瑕疵檢測方法。</li>
+            <li>將圖像耦合到光導中存在設計挑戰。當圖像光填充光導厚度時，實現最佳圖像均勻性通常需要相對較大的投影儀和耦合配置，且可能與人體工程學和外觀設計考量不一致。</li>
+            <li>近眼顯示器需要大孔徑以覆蓋眼動箱，但圖像投影儀尺寸通常較小，難以生成大孔徑圖像，且 LOE 的均勻填充圖像對投影儀尺寸與光學設計形成限制。</li>
+            <li>先前技術並未明確揭露透過接合兩個具有不同方向部分反射表面的光學結構，並沿特定輪廓線與切割平面加工，以確保製造出的 LOE 具有相同輪廓形狀的方法。</li>
+          </ul>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span>2026 醬找專利 版權所有</span>&nbsp;
+    </div>
+  </footer>
+</body>
+</html>
