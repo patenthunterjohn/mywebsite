@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.patenthunterjohn.com/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -17,6 +17,12 @@
     <lastmod>2025-08-23</lastmod> 
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://patenthunterjohn.com/tw/tw_Lumus_2025_hud.html</loc>
+    <lastmod>2026-05-19</lastmod> 
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://patenthunterjohn.com/smart-grid/smart-grid-v2g.html</loc>
