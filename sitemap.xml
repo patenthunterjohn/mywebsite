@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.patenthunterjohn.com/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -18,7 +18,14 @@
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
   </url>
-    <url>
+  <url>
+    <loc>https://patenthunterjohn.com/SiPH/SiPH_Lightmatter_us_all.html</loc>
+    <lastmod>2026-05-22</lastmod> 
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>  
+  <url>
     <loc>https://patenthunterjohn.com/tw/tw_Meta_all.html</loc>
     <lastmod>2026-05-20</lastmod> 
     <changefreq>yearly</changefreq>
