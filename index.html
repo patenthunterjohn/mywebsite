@@ -638,14 +638,17 @@ section { padding: 58px 0; }
           <button class="filter-btn" type="button" data-filter="tw">臺灣專利</button>
           <button class="filter-btn" type="button" data-filter="hud">HUD</button>
           <button class="filter-btn" type="button" data-filter="smart-grid">智慧電網</button>
+          <button class="filter-btn" type="button" data-filter="SiPH">矽光子</button>
+          <button class="filter-btn" type="button" data-filter="meta">Meta</button>
+          <button class="filter-btn" type="button" data-filter="apple">Apple</button>
 
         </div>
         <div class="article-list">
        
-          <a class="article-link" data-topic="tw" href="/apple/apple_us_2025.html" target="_blank" rel="noopener">📄  Apple公司2025年美國專利統計數據 | 更新日：2026/5/30</a>
-          <a class="article-link" data-topic="tw" href="/meta/meta_us_2025.html" target="_blank" rel="noopener">📄  Meta公司2025年美國專利統計數據 | 更新日：2026/5/29</a>
-          <a class="article-link" data-topic="tw" href="/SiPH/SiPH_Lightmatter_us_all.html" target="_blank" rel="noopener">📄 Lightmatter-美國專利分析 | 更新日：2026/5/22</a>
-          <a class="article-link" data-topic="tw" href="/tw/tw_Meta_all.html" target="_blank" rel="noopener">📄 Meta-歷年臺灣專利統計 | 更新日：2026/5/20</a>
+          <a class="article-link" data-topic="apple" href="/apple/apple_us_2025.html" target="_blank" rel="noopener">📄  Apple公司2025年美國專利統計數據 | 更新日：2026/5/30</a>
+          <a class="article-link" data-topic="meta" href="/meta/meta_us_2025.html" target="_blank" rel="noopener">📄  Meta公司2025年美國專利統計數據 | 更新日：2026/5/29</a>
+          <a class="article-link" data-topic="SiPH" href="/SiPH/SiPH_Lightmatter_us_all.html" target="_blank" rel="noopener">📄 Lightmatter-美國專利分析 | 更新日：2026/5/22</a>
+          <a class="article-link" data-topic="tw meta" href="/tw/tw_Meta_all.html" target="_blank" rel="noopener">📄 Meta-歷年臺灣專利統計 | 更新日：2026/5/20</a>
           <a class="article-link" data-topic="tw" href="/tw/tw_Lumus_2025_hud.html" target="_blank" rel="noopener">📄 Lumus-2025年HUD相關臺灣專利分析 | 更新日：2026/5/19</a>
           <a class="article-link" data-topic="smart-grid" href="/smart-grid/smart-grid-v2g-applicant.html" target="_blank" rel="noopener">📄 V2G - 申請人分析 | 更新日：2025/10/25</a>
           <a class="article-link" data-topic="smart-grid" href="/smart-grid/smart-grid-v2g.html" target="_blank" rel="noopener">📄 車網互動與智慧電網 - V2G | 更新日：2025/10/11</a>
@@ -657,8 +660,8 @@ section { padding: 58px 0; }
           <a class="article-link" data-topic="hud" href="/hud/hud_gree_overview.html" target="_blank" rel="noopener">📄 GREE Holdings 的 HUD 技術在遊戲應用的專利布局分析 | 更新日：2025/5/15</a>
           <a class="article-link" data-topic="hud" href="/hud/hud_automotive_top10_cited.html" target="_blank" rel="noopener">📄 車用 HUD 的高引用次數專利布局分析 | 更新日：2025/5/14</a>
           <a class="article-link" data-topic="hud" href="/hud/hud_health_magic_leap_top10_cited.html" target="_blank" rel="noopener">📄 Magic Leap 的 HUD 技術在健康應用的高引用次數專利布局分析 | 更新日：2025/5/13</a>
-          <a class="article-link" data-topic="hud" href="/hud/hud_apple_over20_inventors.html" target="_blank" rel="noopener">📄 Apple 的 HUD 技術高發明人數專利布局分析 | 更新日：2025/5/12</a>
-          <a class="article-link" data-topic="hud" href="/hud/hud_apple_over150_cited.html" target="_blank" rel="noopener">📄 Apple 的 HUD 技術高引用次數專利布局分析 | 更新日：2025/5/11</a>
+          <a class="article-link" data-topic="hud apple" href="/hud/hud_apple_over20_inventors.html" target="_blank" rel="noopener">📄 Apple 的 HUD 技術高發明人數專利布局分析 | 更新日：2025/5/12</a>
+          <a class="article-link" data-topic="hud apple" href="/hud/hud_apple_over150_cited.html" target="_blank" rel="noopener">📄 Apple 的 HUD 技術高引用次數專利布局分析 | 更新日：2025/5/11</a>
         </div>
         <p id="article-empty" class="empty-message">目前沒有此分類文章。</p>
       </div>
@@ -707,7 +710,8 @@ section { padding: 58px 0; }
         button.classList.add('active');
         let visibleCount = 0;
         document.querySelectorAll('.article-link').forEach((link) => {
-          link.hidden = filter !== 'all' && link.dataset.topic !== filter;
+          const topics = (link.dataset.topic || '').split(/\s+/);
+          link.hidden = filter !== 'all' && !topics.includes(filter);
           if (!link.hidden) visibleCount += 1;
         });
         const emptyMessage = document.getElementById('article-empty');
