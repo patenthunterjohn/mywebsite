@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="zh-tw" http-equiv="content-language"/>
+<meta content="index, follow" name="robots"/>
+<meta content="以截至2026年4月30日公開／公告的Figure AI美國專利資料為樣本，從人形本體、靈巧手、感知、致動器、AI控制與任務規劃觀察人形機器人的專利布局。" name="description"/>
+<meta content="Figure AI, 人形機器人, Physical AI, Embodied AI, 美國專利, 專利分析, Humanoid Robotics, 具身智能, 機器人控制" name="keywords"/>
+<title>Figure AI：從美國專利看人形機器人的關鍵技術布局｜醬找專利</title>
+<link href="https://patenthunterjohn.com/favicon.svg" rel="icon" type="image/svg+xml"/>
+<style>
+    :root {
+      --ink: #14213d;
+      --ink-2: #24324f;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --accent: #2563eb;
+      --accent-2: #0f766e;
+      --soft-blue: #eef4ff;
+      --soft-green: #eefaf7;
+      --radius: 20px;
+      --shadow: 0 14px 34px rgba(20,33,61,.07);
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.8; overflow-wrap: normal; word-break: normal; }
+    .container { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+    .article-header { padding: 62px 0 34px; background: radial-gradient(circle at 10% 10%, rgba(37,99,235,.13), transparent 28%), radial-gradient(circle at 90% 20%, rgba(15,118,110,.12), transparent 30%), linear-gradient(180deg, #fff 0%, #f7f8fb 100%); border-bottom: 1px solid var(--line); }
+    h1 { margin: 0 0 20px; font-size: clamp(34px, 5vw, 56px); line-height: 1.16; letter-spacing: -.035em; max-width: var(--max); }
+    h2 { margin: 0 0 12px; font-size: clamp(26px, 3vw, 38px); line-height: 1.28; letter-spacing: -.02em; }
+    h3 { margin: 0 0 10px; font-size: 22px; line-height: 1.35; }
+    .lead { margin: 0; color: #4b5563; font-size: 19px; max-width: var(--max); }
+    .article-meta { margin-top: 18px; color: var(--muted); font-size: 14px; }
+    section { padding: 54px 0; }
+    section.white { background: #fff; }
+    .section-head { margin-bottom: 20px; }
+    .section-head p { margin: 0; color: var(--muted); max-width: var(--max); }
+    .content-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 26px; }
+    .content-card p { margin: 0 0 14px; color: #374151; }
+    .content-card p:last-child { margin-bottom: 0; }
+    .summary-text p { font-size: 17px; }
+    .grid-2 { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+    .grid-3 { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .stat-grid { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+    .stat-card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:var(--shadow); }
+    .stat-num { font-size:34px; font-weight:850; line-height:1; color:var(--accent); }
+    .stat-label { color:#374151; margin-top:8px; font-weight:700; }
+    .tag { display:inline-block; border:1px solid var(--line); background:var(--soft-blue); border-radius:999px; padding:4px 10px; margin:4px 6px 4px 0; color:var(--ink-2); font-size:14px; font-weight:700; }
+    .note { border-left: 4px solid var(--accent-2); background: var(--soft-green); border-radius: 14px; padding: 16px 18px; color: #374151; margin: 18px 0 0; }
+    .table-wrap { overflow-x: auto; margin-top: 22px; border: 1px solid var(--line); border-radius: 16px; background:#fff; page-break-inside: avoid; break-inside: avoid; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    th { background: var(--soft-blue); color: var(--ink); text-align: left; font-weight: 850; padding: 13px 14px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+    td { padding: 12px 14px; border-bottom: 1px solid var(--line); color:#374151; vertical-align: top; }
+    tr:last-child td { border-bottom: 0; }
+    .table-caption { margin-top: 12px; color:#374151; font-size: 15px; line-height: 1.65; }
+    .footer { padding: 30px 0; color: var(--muted); border-top: 1px solid var(--line); background: #fff; font-size: 14px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 860px) { .grid-2, .grid-3, .stat-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .container { width: min(100% - 24px, var(--max)); } .article-header { padding: 42px 0 28px; } section { padding: 40px 0; } .content-card { padding: 20px; } }
+    @media print { body { background: #fff; } section { padding: 34px 0; } .article-header { padding: 36px 0 24px; } .content-card, .table-wrap, .stat-card { box-shadow: none; } .table-wrap { page-break-inside: avoid; break-inside: avoid; } }
+</style>
+</head>
+<body>
+<main>
+<article>
+<header class="article-header">
+<div class="container">
+<h1>Figure AI：<br/>從美國專利看人形機器人的關鍵技術布局</h1>
+<p class="lead">這篇文章以截至2026年4月30日公開／公告的Figure AI美國專利資料作為觀察樣本，從人形本體、靈巧手、頭部感知、致動器與傳動、資料收集、AI控制模型與部署情境等面向，觀察Figure AI如何把人形機器人從單一零組件推進到整機平台布局。</p>
+<p class="article-meta">資料範圍：截至2026/4/30公開／公告之Figure 
+AI美國專利｜樣本數：48件｜文章整理日期：2026/5/31</p>
+</div>
+</header>
+<section class="white" id="summary">
+<div class="container">
+<div class="section-head"><h2>重點摘要</h2></div>
+<div class="content-card summary-text">
+<p>Figure AI的專利組合值得觀察，核心在於其技術主題並非停留在單一手臂、單一夾爪或單一AI模型，而是反覆圍繞「人形機器人」、「雙足機器人」、「軀幹」、「頭部」、「腰部」、「手臂」、「末端夾爪」、「拇指」、「指組件」、「感測器」、「自然語言指令」與「雙足動作模型」展開，共同描繪出一個具有人類身形、能在真實環境中移動、觀察、抓取、接受語言指令並執行任務的整機系統。</p>
+<p>從48筆專利摘要歸納，Figure AI的專利布局大致可分為六個面向：第一，靈巧手與欠驅動末端夾爪；第二，人形本體、腰部、軀幹與頭部外殼；第三，高扭矩致動器、傳動、肌腱、線束與過載保護；第四，頭部攝影機、感測器、照明與觸覺感測；第五，結合自然語言、視覺與動作輸出的AI控制模型；第六，資料收集、停靠支撐與商業部署。這些面向合在一起，才構成「人形機器人」的專利版圖。</p>
+<p>小結：Figure AI正在圍繞人形整機做多層次布局，從手指連桿、拇指齒輪、腕部肌腱、髖膝軸、腰部脊柱角度、頭部感測器配置，到VLA／BAM類型的層級式動作模型與安全逆向運動學，皆呈現出將硬體本體與AI控制共同保護的方向。</p>
+</div>
+<div class="stat-grid">
+<div class="stat-card"><div class="stat-num">22</div><div class="stat-label">靈巧手／末端夾爪</div></div>
+<div class="stat-card"><div class="stat-num">16</div><div class="stat-label">本體結構／軀幹頭部</div></div>
+<div class="stat-card"><div class="stat-num">18</div><div class="stat-label">致動器／傳動線束</div></div>
+<div class="stat-card"><div class="stat-num">17</div><div class="stat-label">感知／校正</div></div>
+<div class="stat-card"><div class="stat-num">17</div><div class="stat-label">AI控制／任務規劃</div></div>
+<div class="stat-card"><div class="stat-num">3</div><div class="stat-label">部署／商業化</div></div>
+</div>
+</div>
+</section>
+<section id="figure-ai">
+<div class="container">
+<div class="section-head">
+<h2>一、Figure AI是誰？為什麼它被視為人形機器人獨角獸</h2>
+<p>Figure AI的市場定位，與傳統自動化設備公司不同：它以通用型人形機器人為核心敘事，並試圖把AI能力延伸到真實世界任務。</p>
+</div>
+<div class="content-card summary-text">
+<p>Figure AI官方將Figure 03描述為「general purpose humanoid robot」，並將Helix稱為支撐Figure 03理解與執行任務的AI能力。公開資訊顯示，Figure 03被設計成可處理家務與日常任務的通用型人形機器人，並標示身高、載重、重量、續航、速度與電動系統等整機規格。這種定位使Figure AI不只是機械零組件公司，而是試圖把機械本體、感知、動作控制、語言理解與部署場景整合成一個可規模化產品的平台公司。</p>
+<p>它被稱為獨角獸，主要來自資本市場對「Physical AI」的想像。Figure AI於2025年宣布Series C承諾資本超過10億美元，投後估值達390億美元；同日Reuters也報導其估值由前一輪約26億美元大幅上升。這種估值背後的核心假設，是人形機器人若能進入家庭、倉儲、製造與服務場景，將可能把AI從純軟體介面延伸到真實世界勞動。</p>
+<p>不過，專利分析必須和募資敘事分開。募資新聞能說明市場為何重視Figure AI，但真正要理解技術布局，仍要回到專利摘要本身。本資料集顯示，Figure AI不是只在抽象地談「AI機器人」，而是同時申請了手部欠驅動結構、頭部感測器配置、腰部和脊柱幾何、扭矩保護、線束穿越致動器、資料收集裝置與層級式雙足動作模型等具體技術。這些內容讓Figure AI更像是一家整合機械本體、感知、控制與AI模型的人形機器人平台公司。</p>
+
+</div>
+</div>
+</section>
+
+<section id="layout">
+<div class="container">
+<div class="section-head"><h2>二、技術布局一：靈巧手、拇指與欠驅動末端夾爪</h2></div>
+<div class="grid-2">
+<div class="content-card summary-text">
+<h3>不是普通夾爪，而是往「可操作日常物件」靠近</h3>
+<p>Figure AI多件專利集中在指組件、拇指組件與欠驅動末端夾爪。US20250205908A1描述可拆卸連接至框架的指組件，包含蝸桿驅動連桿、近端驅動連桿、近端連桿、中節連桿與中節驅動連桿。US20250214259A1則描述人形機器人的欠驅動末端夾爪，包含可拆卸的指夾組件與拇指組件，並對拇指馬達軸心與齒輪軸心的平行配置提出設計。這些摘要顯示Figure AI不是只把工業夾爪裝到機器人手臂末端，而是在設計更像手部的多連桿、多狀態末端操作機構。</p>
+<p>US20250375897A1與US20250375905A1進一步涉及第一馬達、第二馬達、屈曲齒輪、夾持齒輪、掌腕關節、近端指關節與遠端指關節，使指部或拇指能在過伸、彎曲、未旋轉與旋轉狀態之間移動。這類布局的價值在於，人形機器人若要處理日常物件，不能只靠二指夾爪做開合，還需要更細緻的拇指對掌、抓取姿態與接觸感知。</p>
+</div>
+<div class="content-card summary-text">
+<h3>接觸與觸覺是人形操作的重要補強</h3>
+<p>US20260102903A1與US20260102926A1將雙足機器人的軀幹、頭部、手臂組件、末端夾爪、拇指組件、第一指組件與視覺感測器連在一起，並提到偵測物體與拇指或指組件之間的接觸資訊。US20260091509A1則涉及應變規與觸覺感測器組件，用於接收外部力並產生處理後資料。這些摘要說明Figure AI手部布局的重點不只是「讓手指會動」，也包括「知道自己是否碰到物體、碰到哪裡、力如何傳遞」。</p>
+<p>這些手部相關專利的共同重點，是把抓取能力拆成可替換指組件、拇指自由度、欠驅動機構、接觸偵測與觸覺感測等多個層次。對人形機器人而言，手部不是附屬零件，而是連接AI決策與實體世界物件的關鍵介面。</p>
+</div>
+</div>
+</div>
+</section>
+<section class="white" id="body">
+<div class="container">
+<div class="section-head"><h2>三、技術布局二：人形本體、腰部、脊柱與頭部外殼</h2></div>
+<div class="content-card summary-text">
+<p>人形機器人的本體設計，決定了它能否在以人為尺度設計的空間中移動與互動。US20250242500A1直接描述包含下半部與上半部的人形機器人，其中上半部包含軀幹、頭部、左右肩、左右臂與左右末端致動器，且上半部包含至少65%的自由度；該案還提到覆蓋不同關節範圍的撓性覆蓋件。這類專利把自由度、關節覆蓋與人形外觀／保護納入整機設計，顯示Figure AI關注的不只是單一可動部件，而是整台機器人的可用性與安全性。</p>
+<p>US20250312911A1描述腰部結構，包含軀幹扭轉致動器、軀幹傾斜致動器與脊柱支撐組件，並在中立位置時定義軀幹扭轉軸與軀幹傾斜軸之間的脊柱角度。US12583126B2則描述中央區域包含俯仰、滾轉、偏航等軸向，使上部區域相對於下部區域具有較廣泛的運動範圍。US12611766B2進一步涉及髖屈軸、膝蓋軸與致動器扭矩關係，並描述中央部分的運動學架構。這些摘要共同指向一件事：Figure AI重視的是「整個人形身體如何協調移動」，也就是讓軀幹、腰部、下肢與上肢在任務中形成穩定的整體。</p>
+<p>頭部外殼與照明也形成一個小型專利群。US12365094B2、US12403611B2、US12447628B1與US12466080B2分別涉及頭部照明、前殼弧長關係、頭部光源與外殼幾何。這些設計看似偏外觀或結構，但在人形機器人上具有安全、感知、互動與產品化意義。人形機器人在公共或家庭環境中工作，頭部不只是保護感測器的外殼，也可能是人機互動、方向提示與社會接受度的一部分。</p>
+</div>
+</div>
+</section>
+<section id="actuator">
+<div class="container">
+<div class="section-head"><h2>四、技術布局三：致動器、傳動、線束與過載保護</h2></div>
+<div class="content-card summary-text">
+<p>人形機器人的機械難度，很多時候藏在致動器與線束裡。US20260008178A1描述扭矩額定值大於70 N-m的致動器，並判斷致動器旋轉軸是否偏移；US20260077481A1描述具有特定扭矩額定值範圍的致動器馬達。這些摘要顯示，Figure AI關注的不只是「關節能轉」，也在定義人形機器人關節所需的扭矩與幾何配置。</p>
+<p>US20260070216A1涉及齒輪箱、輸出環、外體、內體、離合器摩擦片與液壓壓力機構，當扭矩超過預定值時使離合器摩擦片滑動，以避免齒輪箱承受過大旋轉扭矩而損壞。這對人形機器人尤其重要，因為雙足移動、搬運、跌倒、碰撞或被外力干擾時，關節與傳動系統可能承受突發負載。過載保護不是亮眼的AI功能，但它是讓機器人能在真實環境中長時間運作的基礎。</p>
+<p>線束也是Figure AI專利中反覆出現的工程問題。US20250367837A1、US20260054369A1與US20260054379A1均涉及第一、第二致動器與線束，包含線束延伸通過致動器開口、線束不同部分具有不同形狀、線束連接至PCB終端等配置。人形機器人有大量關節、感測器、致動器與控制板，若線束沒有良好路徑，容易受到拉扯、磨耗、干涉或維修困難影響。從專利角度看，這說明Figure AI布局不只在演算法，也在量產與可靠性所需的整機工程細節。</p>
+</div>
+</div>
+</section>
+<section class="white" id="sensing">
+<div class="container">
+<div class="section-head"><h2>五、技術布局四：頭部視覺、感測器配置與自我校正</h2></div>
+<div class="content-card summary-text">
+<p>多件專利摘要聚焦在頭部感測器的位置、視線與外殼遮蔽。US20250387919A1描述雙足機器人頭部外殼內第一與第二攝影機的配置，以及其延伸範圍相對於橫向面的相對位置。US20260014710A1描述第一攝影機位於頭部外殼內、位於第一外殼後方且顯示器下方，並定義攝影範圍相對於矢狀面與橫切面的關係。US20260027736A1則提到第一與第二感測器具有大致平行的視線，且不耦合至單一PCB；中間蓋與護罩的開口可對齊感測器並遮蔽部分感測器。US20260042224A1同樣描述顯示器上方與下方的第一、第二感測器，以及鏡頭沿矢狀面對齊的配置。</p>
+<p>這些專利的價值在於，它們把「機器人看世界」轉化為非常具體的機構與幾何問題。攝影機不只是裝在頭上即可，還要考慮視線方向、外殼遮蔽、鏡頭與顯示器的相對位置、感測器是否共用PCB、以及中性狀態頭部朝前時的視野配置。對人形機器人而言，頭部感測器相當於眼睛與部分互動介面，其穩定性會影響導航、抓取、避障與人機互動。</p>
+<p>另外，US20260084309A1與US20260084314A1將視覺資料用於運動學偏差修正與機器人零件偵測。前者描述控制人類型機器人執行預定姿勢後，利用影像感測器捕捉資料，並由雙足空間感知模型判斷修正後的運動學偏差值；後者則透過多個影像感測器與雙足空間感知模型，偵測影像資料中的機器人零件並計算三維位置與方向。這讓Figure AI的感知布局不只是對外看物體，也包括對內校正自己的身體狀態。這種「自我感知」能力，對多自由度人形機器人非常關鍵。</p>
+</div>
+</div>
+</section>
+<section id="ai-control">
+<div class="container">
+<div class="section-head"><h2>六、技術布局五：AI控制、雙足動作模型與任務規劃</h2></div>
+<div class="content-card summary-text">
+<p>Figure AI最具辨識度的專利群之一，是把自然語言、視覺觀察與機器人動作結合的AI控制模型。US20260070221A1描述包含alpha模型與beta模型的雙足動作模型，其中alpha模型基於視覺觀察與語言指令產生上下文嵌入，並使用參數超過十億的視覺語言模型；beta模型則基於上下文嵌入，以高於alpha模型的頻率運作並使用較少參數，產生用於人形機器人的指令。這個設計重點在於把高階理解與低階控制頻率分開，讓大模型負責語義與情境，小模型或反應層負責較高頻率的動作輸出。</p>
+<p>US20260097492A1進一步描述以多模態輸入資料，包括視覺資料與自然語言指令，透過包含Alpha模型與Beta模型的層級式雙足動作模型處理，產生任務目標的語義註釋與指定機器人動作的運動指令註釋。US12578733B2也提到alpha模型與beta模型分別部署在第一與第二GPU上，接收自然語言指令並產生控制雙足機器人的輸出資料。US12605824B2則涉及轉換器基礎的第一AI演算法與第二AI演算法之間的資料傳遞，用於控制左腕程度。這些摘要說明Figure AI並非只把Chatbot接到機器人，而是嘗試把多模態理解、分層運動模型與機器人控制頻率整合。</p>
+<p>在任務規劃與安全控制上，US20260070212A1與US12611767B2都描述識別機器人任務、建立安全相關限制、建構幻象逆向運動學任務，並把任務、安全限制與逆向運動學整合求解，以取得目標關節參數。US20260061611A1則描述從最高優先級的無狀態控制器開始，選擇預定義操作域包含當前狀態的控制器，且只執行該選定控制器以確保穩定性。這些技術對人形機器人很重要，因為一個會走、會伸手、會抓取的系統，必須在完成任務的同時避免失衡、碰撞、關節超限或不安全姿態。</p>
+<p>資料收集也被納入專利布局。US20260070211A1描述固定於操作者軀幹的可穿戴式資料收集設備，包含鉸接式手臂、手套、關節感測器與手部位置感測器，可追蹤至少六個自由度的鉸接式手臂與手套至少一個自由度。US20260091507A1則描述偵測操作員手指移動，並透過可撓性連接件的彎曲反映手指屈伸。這代表Figure AI不只申請機器人本體，也關注如何取得人類示範資料，供機器人學習抓取、手部操作與任務執行。</p>
+</div>
+</div>
+</section>
+<section class="white" id="deployment">
+<div class="container">
+<div class="section-head"><h2>七、技術布局六：部署、停靠、商業化與營運場景</h2></div>
+<div class="content-card summary-text">
+<p>人形機器人若要從實驗室進入真實場域，還需要支撐、充電、維護與商業模式。US20260106490A1描述基座、向上延伸的支架組件與上方支撐件，當機器人處於停靠站上的準站立位置時，上方支撐件位於機器人肩膀下方，以至少部分支撐機器人重量。這類專利提醒我們，人形機器人不是只有「走路」與「抓取」；在不工作、充電、維修或待命時，如何安全地停靠與承重也會影響產品可用性。</p>
+<p>US20250322372A1則涉及接收第一方提供人形機器人在操作地點使用且執行多項任務的資訊，以處理補償請求，讓第一方取得指定金額的貨幣補償。從摘要可支持的判斷是，Figure AI也考慮到機器人在操作地點執行任務後，相關資訊如何被用於補償或商業流程。這不等於可以推論其最終商業模式，但至少顯示其專利布局已延伸到部署後的任務紀錄與價值結算。</p>
+<p>因此，Figure AI的專利版圖可以被理解為一個「從硬體到營運」的閉環：機器人本體要能站立與移動，手部要能抓取與感測，頭部要能看見與保護感測器，AI模型要能理解語言並轉成動作，安全控制要避免危險姿態，資料收集要讓模型持續學習，而停靠與補償相關專利則指向產品化與場域營運。</p>
+</div>
+</div>
+</section>
+
+<section class="white" id="conclusion">
+<div class="container">
+<div class="section-head"><h2>八、結論：Figure AI的專利布局重點，是把AI與人形整機綁在一起</h2></div>
+<div class="content-card summary-text">
+<p>從這48筆美國專利摘要來看，Figure AI的布局更像是「人形整機平台」：一方面，它在末端夾爪、拇指、指組件、觸覺與接觸偵測上建立操作能力；另一方面，它在腰部、脊柱、髖膝軸、頭頸、外殼與致動器上建立人形本體；再進一步，它用頭部感測器、多影像資料、自我校正、逆向運動學、安全限制、層級式雙足動作模型與自然語言指令，把AI控制接上真實機械身體。</p>
+<p>人形機器人的挑戰在於，它必須同時處理全身自由度、雙足平衡、頭部感知、手部靈巧操作、安全限制、語言任務與環境互動。Figure AI的專利資料呈現的正是這些面向的交會：硬體不是孤立的機械結構，AI也不是孤立的模型，而是要在真實機器人的身體上共同運作。</p>
+<p>當然，專利摘要不能直接證明產品已經量產，也不能保證技術一定成功。但它能揭示公司認為值得保護的技術邊界。就本資料集而言，Figure AI值得關注的地方，在於它把「人形」拆成許多可申請、可保護、可工程化的模組：手、腕、腰、頭、感測器、致動器、線束、保護機構、資料收集與AI控制模型。這些模組累積起來，才是人形機器人從展示影片走向真實應用所需要的專利地基。</p>
+</div>
+</div>
+</section>
+</article>
+</main>
+<footer class="footer"><div class="container">© 2026 醬找專利 版權所有</div></footer>
+</body>
+</html>
