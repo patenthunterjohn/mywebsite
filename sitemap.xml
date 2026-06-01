@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.patenthunterjohn.com/</loc>
-    <lastmod>2026-05-31</lastmod>
+    <lastmod>2026-06-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -17,6 +17,12 @@
     <lastmod>2025-08-23</lastmod> 
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://patenthunterjohn.com/HAV/UAV_Zipline_us_all.html</loc>
+    <lastmod>2026-05-31</lastmod> 
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://patenthunterjohn.com/robotics/robotics_Figure_AI_us_all.html</loc>
