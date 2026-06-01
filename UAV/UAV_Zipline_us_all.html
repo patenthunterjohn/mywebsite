@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="content-language" content="zh-tw"/>
+<meta name="robots" content="index, follow"/>
+<meta name="description" content="依使用者提供之專利資料，從任務調度、多機協調、DAA、模組化機體、電池熱管理、酬載停靠與遠端操作觀察 Zipline 無人機物流專利布局。"/>
+<meta name="keywords" content="Zipline, 無人機物流, UAV, 專利分析, 空中物流, DAA, 電池熱管理, 酬載, 停靠, 專利布局"/>
+<title>Zipline：從美國專利看無人機物流的關鍵技術布局｜醬找專利</title>
+<link href="https://patenthunterjohn.com/favicon.svg" rel="icon" type="image/svg+xml"/>
+<style>
+  :root {
+    --ink: #14213d;
+    --ink-2: #24324f;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --bg: #f7f8fb;
+    --card: #ffffff;
+    --accent: #2563eb;
+    --accent-2: #0f766e;
+    --soft-blue: #eef4ff;
+    --soft-green: #eefaf7;
+    --soft-amber: #fff7ed;
+    --radius: 20px;
+    --shadow: 0 14px 34px rgba(20,33,61,.07);
+    --max: 1120px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.8;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .container { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+  .article-header {
+    padding: 62px 0 34px;
+    background:
+      radial-gradient(circle at 10% 10%, rgba(37,99,235,.13), transparent 28%),
+      radial-gradient(circle at 90% 20%, rgba(15,118,110,.12), transparent 30%),
+      linear-gradient(180deg, #fff 0%, #f7f8fb 100%);
+    border-bottom: 1px solid var(--line);
+  }
+  h1 { margin: 0 0 20px; font-size: clamp(34px, 5vw, 56px); line-height: 1.16; letter-spacing: -.035em; max-width: var(--max); }
+  h2 { margin: 0 0 12px; font-size: clamp(26px, 3vw, 38px); line-height: 1.28; letter-spacing: -.02em; }
+  h3 { margin: 0 0 10px; font-size: 22px; line-height: 1.35; }
+  .lead { margin: 0; color: #4b5563; font-size: 19px; max-width: var(--max); }
+  .article-meta { margin-top: 18px; color: var(--muted); font-size: 14px; }
+  section { padding: 54px 0; }
+  section.white { background: #fff; }
+  .section-head { margin-bottom: 20px; }
+  .section-head p { margin: 0; color: var(--muted); max-width: var(--max); }
+  .content-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 26px; }
+  .content-card p { margin: 0 0 14px; color: #374151; }
+  .content-card p:last-child { margin-bottom: 0; }
+  .summary-text p { font-size: 17px; }
+  .grid-2 { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+  .stat-grid { display:grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+  .stat-card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:var(--shadow); }
+  .stat-num { font-size:34px; font-weight:850; line-height:1; color:var(--accent); }
+  .stat-label { color:#374151; margin-top:8px; font-weight:700; }
+  .tag { display:inline-block; border:1px solid var(--line); background:var(--soft-blue); border-radius:999px; padding:4px 10px; margin:4px 6px 4px 0; color:var(--ink-2); font-size:14px; font-weight:700; }
+  .note { border-left: 4px solid var(--accent-2); background: var(--soft-green); border-radius: 14px; padding: 16px 18px; color: #374151; margin: 18px 0 0; }
+  .caution { border-left: 4px solid #f59e0b; background: var(--soft-amber); border-radius: 14px; padding: 16px 18px; color: #374151; margin: 18px 0 0; }
+  .table-wrap { overflow-x: auto; margin-top: 22px; border: 1px solid var(--line); border-radius: 16px; background:#fff; page-break-inside: avoid; break-inside: avoid; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th { background: var(--soft-blue); color: var(--ink); text-align: left; font-weight: 850; padding: 13px 14px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  td { padding: 12px 14px; border-bottom: 1px solid var(--line); color:#374151; vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  .footer { padding: 30px 0; color: var(--muted); border-top: 1px solid var(--line); background: #fff; font-size: 14px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  @media (max-width: 980px) { .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 860px) { .grid-2 { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) { .container { width: min(100% - 24px, var(--max)); } .article-header { padding: 42px 0 28px; } section { padding: 40px 0; } .content-card { padding: 20px; } .stat-grid { grid-template-columns: 1fr; } }
+  @media print { body { background: #fff; } section { padding: 34px 0; } .article-header { padding: 36px 0 24px; } .content-card, .table-wrap, .stat-card { box-shadow: none; } .table-wrap { page-break-inside: avoid; break-inside: avoid; } }
+</style>
+</head>
+<body>
+<main>
+<article>
+<header class="article-header">
+  <div class="container">
+    <h1>從 Zipline 專利看無人機物流技術</h1>
+    <p class="lead">以專利資料作為觀察樣本，從任務調度、多機協調、聲學偵測與 DAA、模組化機體、電池熱管理、酬載停靠與遠端操作等面向，觀察 Zipline 如何把無人機物流從單架飛行器推進到可營運的空中物流系統。</p>
+    <p class="article-meta">樣本數：33件相關專利｜文章整理日期：2026/6/1</p>
+  </div>
+</header>
+
+<section class="white" id="intro">
+  <div class="container">
+    <div class="section-head"><h2>前言</h2></div>
+    <div class="content-card summary-text">
+      <p>無人機物流之所以值得觀察，不只是因為「用飛機送貨」看起來更快，而是因為它把航空器、地面配送中心、任務派遣、酬載處理、飛行安全、能源管理與營運系統綁成一個高度耦合的平台。只要其中一環不穩定，整個商業模式就很難規模化。</p>
+      <p>Zipline 這類無人機物流公司真正要解決的問題，也不是單架 UAV 能不能飛，而是多架 UAV 能不能在多個配送中心、不同目的地、不同天氣與空域條件下，持續、安全、可預測地完成任務。從專利角度看，這使它的布局不會只落在機體硬體，而會延伸到路線規劃、遠端操作、偵測與迴避、電池熱管理、停靠與酬載轉運等系統層。</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="white" id="summary">
+  <div class="container">
+    <div class="section-head"><h2>重點摘要</h2></div>
+    <div class="content-card summary-text">
+      <p>Zipline 的專利組合最值得注意之處，在於它呈現一套「空中物流作業系統」：前端有使用者服務請求與產品配送限制，中段有配送中心選擇、任務資料生成、飛行計畫更新與多機協調，後段則有酬載轉運、停靠、自動捕獲、電池熱管理與安全偵測。</p>
+      <p>這批相關專利大致可分為七個面向：第一，配送任務與路線規劃；第二，多機協調與地圖更新；第三，聲學偵測與 DAA 偵測迴避；第四，模組化機體與飛行狀態監測；第五，電池熱管理與能源可靠性；第六，酬載、停靠與物流基礎設施；第七，遠端操作與安全狀態控制。</p>
+      <p>這些技術面向共同指向一個核心邏輯：Zipline 要保護的不是「一架能飛的無人機」，而是「可規模化營運的無人機物流網路」。換句話說，專利布局的重點不只在空中飛行，而在如何把訂單、酬載、配送中心、飛行器、空域安全與地面基礎設施整合成閉環。</p>
+      <p>小結：Zipline 的專利布局本質，是把無人機物流從飛行器工程推進到航空級營運系統，並在任務派遣、空域安全、電池可靠性與地面轉運節點上建立技術邊界。</p>
+    </div>
+    
+  </div>
+</section>
+
+<section id="mission">
+  <div class="container">
+    <div class="section-head">
+      <h2>一、技術布局一：配送任務、配送中心選擇與飛行計畫</h2>
+      <p>無人機物流的核心，不是起飛，而是把服務請求轉成可執行任務。</p>
+    </div>
+    <div class="content-card summary-text">
+      <p>Zipline 多件專利圍繞「如何把需求變成飛行任務」展開。US10395543B2 描述接收用戶端裝置的服務請求，依目的地站點選擇配送中心，並產生任務資料傳送至無人航空載具；US11113976B2 進一步把目的地位置與酬載納入配送中心選擇與任務資料生成。這類專利的重點不是單純導航，而是把前端需求、配送中心與 UAV 任務指令接在一起。</p>
+      <p>US09747808B2 則描述由伺服器儲存包含配送中心到目的地站點之飛行走廊的空圖，並結合 UAV 庫存管理，在 UAV 庫存低於閾值時產生額外 UAV 請求。US12125396B2 進一步提到依無人航空載具的通行成本選擇 UAV，生成任務資料並傳輸至飛行控制器，使 UAV 導航至目的地站點。US20230306355A1 則處理訂單更新後是否需要更新初始飛行計畫，並依訂單更新與 UAV 狀態資訊更新飛行計畫。</p>
+      <p>這一群專利共同解決的是「物流任務動態化」問題。傳統配送可以由人員臨場判斷，但無人機物流需要在任務開始前就把配送中心、飛行走廊、UAV 狀態、酬載限制與目的地條件轉成可執行資料。從商業化角度看，這是從單次飛行展示走向網路化營運的關鍵。</p>
+      <div class="note">觀察重點：這類專利比較像營運系統與任務調度層的布局，可能保護的是無人機物流平台的中樞流程，而不只是某個機械零件。不過，僅依摘要無法判斷其 claim 是否涵蓋廣泛的任務派遣方法，或只是特定資料流程與系統架構。</div>
+    </div>
+  </div>
+</section>
+
+<section class="white" id="fleet">
+  <div class="container">
+    <div class="section-head">
+      <h2>二、技術布局二：多機協調、局部地圖與航路調整</h2>
+      <p>當無人機變成機隊，問題就從「飛到目的地」變成「彼此不要互相干擾」。</p>
+    </div>
+    <div class="content-card summary-text">
+      <p>無人機物流一旦規模化，單架 UAV 的路線規劃不足以支撐整體系統，還需要處理多架 UAV 的抵達時間、航向、速度與地圖更新。US11295624B2 描述第一無人航空載具確定抵達地理區域的預估抵達時間，並透過網狀網路與第二無人航空載具交換狀態訊息，再比較預估抵達時間以修改速度或航向。這顯示 Zipline 關注的不只是中心化調度，也包含 UAV 之間的狀態協調。</p>
+      <p>US20240428697A1 則描述接收地理區域的局部地圖與 UAV 路線上的監控資料，並更新局部地圖。US20250140123A1 進一步涉及接收第二架飛機傳輸的飛行資訊，判斷第二架飛機與第一架飛機的交會時間及第一架飛機的調整量，並改變第一架飛機路徑。這與 US11295624B2 的多機 ETA 協調形成呼應，顯示該布局在空中交通互動上有延伸性。</p>
+      <p>這一群專利的設計邏輯，是把 UAV 從孤立飛行器變成網路節點。對產品化而言，這種能力有助於提高機隊密度、降低路線衝突風險，並讓配送網路更有彈性。</p>
+     
+    </div>
+  </div>
+</section>
+
+<section id="daa">
+  <div class="container">
+    <div class="section-head">
+      <h2>三、技術布局三：聲學偵測、DAA 與空域安全</h2>
+      <p>大規模無人機物流的門檻之一，是讓飛行器能聽見並避開風險。</p>
+    </div>
+    <div class="grid-2">
+      <div class="content-card summary-text">
+        <h3>從音訊訊號到飛行機動</h3>
+        <p>Zipline 在聲學偵測與偵測迴避方面的專利相當集中。US20220011786A1 描述飛機上的聲學偵測系統接收多頻道音訊訊號，判斷其是否與入侵飛機相關，並結合第二訊號指令飛機機動。US12322292B2 進一步描述透過 DAA 運算資源分析音訊訊號，判斷音訊來源方向、位置、相對距離與仰角，並決定是否需要機動以維持迴避區域。</p>
+        <p>US20250265938A1 則把機器學習模型導入 DAA 音訊分析，透過飛機上的音訊感測器接收音訊訊號，估計訊號來源位置與速度，將訊號來源分類為空中訊號來源，並據此修改飛行特性。這顯示其技術路線不只是「聽到聲音」，而是嘗試把音訊分類、位置速度估計與飛行控制連在一起。</p>
+      </div>
+      <div class="content-card summary-text">
+        <h3>感測器結構與環境噪音處理</h3>
+        <p>硬體端也有相應布局。US11765494B2 描述包含麥克風組件與鼻錐體的感測器探針，藉由聲學通道保護麥克風並降低噪音；US12155982B2 描述包含鼻錐、安裝組件、麥克風與聲學通道的航空器感測探針，以減緩氣流阻力並傳輸外部聲音；US20240182152A1 則以較大孔隙率材料形成感測器探針鼻錐的一部分，以降低高濕度條件造成的聲學噪音放大。</p>
+        <p>這一群專利的共同意義，是 Zipline 把空域安全視為軟硬整合問題。聲學 DAA 需要前端感測器抗風噪、抗環境干擾，也需要後端演算法判斷音源是否為空中風險，最後還要接到飛行控制。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="white" id="airframe">
+  <div class="container">
+    <div class="section-head">
+      <h2>四、技術布局四：模組化機體、可更換動力模組與飛行狀態監測</h2>
+      <p>物流機隊要長期運作，維修性與狀態監測可能比單次性能更重要。</p>
+    </div>
+    <div class="content-card summary-text">
+      <p>無人機物流的成本結構高度依賴機隊可用率，因此機體模組化與維修效率會成為關鍵。US10988253B2 描述 UAV 機身、錨定結構、可拆卸機翼結構與可拆卸動力模組，形成可釋放耦合至機身的機翼與動力模組組態。US11912409B2 則描述拆卸第一電源模組與第一機翼結構，並安裝第二機翼結構與第二電源模組，以執行 UAV 組件更換作業。</p>
+      <p>狀態監測方面，US10793269B2 描述接收基座標記物與可移動標記物影像，判斷飛行控制面的實際位置並與回報位置比較，差異過大時發出通知。US11807361B2 也描述透過攝影機影像判斷飛機基座部分與可移動部分之間的相對方向與位置，並與回報位置比較。這類技術本質上是在建立「機體自我稽核」能力，避免控制面或可動部件的回報狀態與實際狀態不一致。</p>
+      <p>US20220089293A1 則描述飛機周邊組件與釋放組件，在接收到閾值力時使周邊組件與飛機一部分分離。US12024283B2 涉及與航空器相關的電路板組件，包含電磁訊號穿透層、阻擋層與導電屏障，以處理電磁干擾元件。這些摘要顯示 Zipline 的硬體布局涵蓋可拆卸、可監測、可保護與抗干擾等工程細節。</p>
+    </div>
+  </div>
+</section>
+
+<section id="battery">
+  <div class="container">
+    <div class="section-head">
+      <h2>五、技術布局五：電池熱管理與飛行路徑能源可靠性</h2>
+      <p>無人機物流不是只看電池容量，也要看飛行途中能否維持可用溫度區間。</p>
+    </div>
+    <div class="content-card summary-text">
+      <p>電池是無人機物流的核心限制之一，尤其飛行任務會受路徑、功率需求與環境溫度影響。US11654794B1 描述預測無人機電池的溫度變化與預定飛行路徑的功率需求，決定目標初始溫度，並選擇及預處理候選電池，使電池在飛行期間超出操作溫度視窗的時間受到限制。這個摘要顯示 Zipline 關注的是「任務前」的電池狀態準備。</p>
+      <p>US12338011B2 則描述接收 UAV 穿越預定飛行路徑所預測的電池溫度變化資訊，依此決定電池目標初始溫度，並選擇性啟動覆蓋件，允許熱管理裝置的空氣流向電池，使電池在飛行路徑期間維持偏好溫度範圍。US20250282504A1 進一步描述接收無人機機身、電池、進氣口、出氣口、風道與熱管理裝置的組態資訊，依預定飛行路徑的預測溫度變化判斷電池目標溫度，並以經處理空氣加熱或冷卻電池。</p>
+      <p>這些專利共同指向一個設計邏輯：能源管理不是靜態規格，而是任務級控制。Zipline 似乎試圖把電池溫度、飛行路徑、機身風道與熱管理裝置一起納入任務前與任務中的控制策略。對商業化而言，這可能影響航程穩定性、可派遣率與不同氣候條件下的服務可靠性。</p>
+    </div>
+  </div>
+</section>
+
+<section class="white" id="payload">
+  <div class="container">
+    <div class="section-head">
+      <h2>六、技術布局六：酬載處理、停靠與地面物流基礎設施</h2>
+      <p>無人機物流的護城河，可能藏在飛行器與建築物之間的轉運介面。</p>
+    </div>
+    <div class="content-card summary-text">
+      <p>Zipline 的專利布局也明顯延伸到地面與建築物端。US11958629B2 描述接收並停靠無人機於與建築物共置、錨定於建築物外牆的高架結構，並透過支撐件與輸送裝置，將酬載物從建築物內部裝載站提升至高架結構，使無人機能從建築物外牆上方起飛。這不只是停機坪設計，而是把建築物內部物流與外部 UAV 起降節點接起來。</p>
+      <p>US20250187753A1 也描述將酬載儲存在第一高度的酬載艙結構，並利用輸送裝置的裝載區與抬升區，把酬載輸送至較高高度的 UAV。US12304670B2 則描述停靠組件以引導特徵與推進組件接收 UAV，將其引導至第一捕獲位置，再移動至第二停靠位置，形成自動停靠功能。</p>
+      <p>酬載末端交付也有布局。US12589898B2 描述定位第一 UAV 於遞送位置閾值距離內，並釋放載有酬載的第二 UAV，以控制酬載存取並釋放酬載。US12479576B2 則描述降落傘與貨物容器的連接結構，利用錨點、面板與固定面板分散應力，使貨物容器能安全連接至降落傘。US20240140629A1 雖然寫的是第一輛自主車輛與第二輛自主車輛進行酬載物遞送，並未限定為空中 UAV，但其摘要仍與自動化物流遞送流程相關。</p>
+    </div>
+  </div>
+</section>
+
+<section id="remote">
+  <div class="container">
+    <div class="section-head">
+      <h2>七、技術布局七：遠端操作、狀態機與安全控制</h2>
+      <p>全自動物流仍需要人機協作與可驗證的控制狀態。</p>
+    </div>
+    <div class="content-card summary-text">
+      <p>無人機物流常被描述為自動化系統，但從專利摘要看，Zipline 也重視遠端操作員與狀態控制。US09910432B1 描述接收協助請求、狀況報告與遠端操作員指令，產生操作員訊息與車輛指令，並透過指令驗證值轉換有限狀態機狀態。US10365645B1 則描述從群組中選擇遠端車輛操作員，接收移動體狀況報告與操作員指令，判斷優先權並轉換車輛狀態。</p>
+      <p>US11016510B2 更直接涉及無人機：接收與無人機相關的資訊，傳送至遠端操作員控制裝置，接收操作員指令，產生車輛指令與指令驗證值，再由無人機判斷車輛指令有效性，決定進入第二車輛狀態或維持第一車輛狀態。</p>
+      <p>這一群專利反映出無人機物流不只是「自動飛行」，也需要可介入、可驗證、可轉換狀態的安全控制架構。特別是在異常、協助請求、路線變更或空域風險場景中，遠端操作與指令驗證可能是營運安全的重要部分。</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="conclusion">
+  <div class="container">
+    <div class="section-head"><h2>結論</h2></div>
+    <div class="content-card summary-text">
+      <p>從這 33 件無人機物流相關專利摘要來看，Zipline 的專利布局重點不是單點式 UAV 硬體，而是圍繞「無人機物流網路」展開：前端接收服務請求與產品限制，中段完成配送中心選擇、任務生成、飛行計畫更新與多機協調，飛行中透過聲學 DAA、狀態監測與電池熱管理提升安全與可靠性，末端則透過酬載轉運、停靠捕獲與降落傘／容器設計完成物流閉環。</p>
+      <p>這些專利顯示 Zipline 可能想保護的技術邊界，主要包括四層：第一，物流任務如何被生成與派遣；第二，UAV 如何在空域中感知風險並調整飛行；第三，機體如何透過模組化、狀態監測與電池熱管理支撐高頻營運；第四，地面端如何完成裝載、停靠、捕獲與酬載釋放。這是一種從「航空器」延伸到「物流基礎設施」的專利布局。</p>
+      <p>從商業與產業競爭角度，下一步最值得觀察的不是單一新機型，而是 Zipline 能否把這些專利所指向的能力整合成可複製的營運節點：配送中心如何部署、UAV 如何高頻調度、DAA 如何滿足安全需求、電池如何支撐不同環境任務，以及停靠與酬載系統能否降低場域導入成本。專利摘要不能直接證明商業化成果，但它清楚顯示，Zipline 的技術布局正在圍繞「可規模化、可維運、可安全管控」的無人機物流系統建立防線。</p>
+    </div>
+  </div>
+</section>
+</article>
+</main>
+<footer class="footer">
+  <div class="container">© 2026 醬找專利 版權所有</div>
+</footer>
+</body>
+</html>
