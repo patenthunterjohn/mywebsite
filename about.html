@@ -1,10 +1,12 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-tw">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於我們 　|　醬找專利</title>
+    <meta name="description" content="認識醬找專利：以公開專利資料為基礎，透過專利導讀、專利地圖、互動式儀表板、主題文章與電子書，協助讀者理解技術脈絡與專利布局。">
+    <title>關於我們｜醬找專利</title>
+
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.dropotron.min.js"></script>
@@ -22,46 +24,150 @@
         <link rel="stylesheet" href="css/style-xlarge.css" />
     </noscript>
 
+    <style>
+        #about-us {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 90px 32px 60px;
+            line-height: 1.9;
+        }
+
+        #about-us h2 {
+            margin-bottom: 1.2em;
+        }
+
+        #about-us h3 {
+            margin-top: 2.2em;
+            margin-bottom: 0.7em;
+        }
+
+        #about-us h4 {
+            margin-top: 1.4em;
+            margin-bottom: 0.4em;
+        }
+
+        #about-us ul {
+            margin-left: 1.4em;
+        }
+
+        #about-us .notice-box {
+            margin-top: 1.4em;
+            padding: 20px 24px;
+            border-left: 4px solid #2f6f64;
+            background: #f6f8f7;
+        }
+
+        #about-us .contact-list {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        #about-us .contact-list li {
+            margin-bottom: 0.4em;
+        }
+
+        #page-footer {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px 32px 50px;
+            border-top: 1px solid #e2e2e2;
+            color: #666;
+            font-size: 0.92em;
+            line-height: 1.8;
+        }
+
+        @media screen and (max-width: 736px) {
+            #about-us {
+                padding: 76px 20px 40px;
+            }
+
+            #page-footer {
+                padding: 20px 20px 36px;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <!-- Header -->
     <header id="header" class="alt skel-layers-fixed">
-        <nav id="nav">
+        <nav id="nav" aria-label="主要導覽">
             <ul>
                 <li><a href="index.html">首頁</a></li>
-              
-                <li><a href="about.html">關於我們</a></li>
+                <li><a href="about.html" aria-current="page">關於我們</a></li>
                 <li><a href="privacy-policy.html">隱私政策</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-<section id="about-us" style="padding: 40px;">
-    <h2>關於我們</h2>
+        <section id="about-us">
+            <h2>關於我們</h2>
 
-    <p>歡迎來到「醬找專利」！本平台專注於分享專利資訊視覺化的觀念與分析方法，幫助讀者理解龐大的專利資料。我們並不提供商業服務，平台內容僅供學術與個人學習參考。</p>
+            <p>歡迎來到「醬找專利」。</p>
 
-    <h3>我們的初衷</h3>
-    <p>我們希望透過直觀的資料展示與分析思路，讓更多人輕鬆接觸專利世界。無論您是初學者還是具備背景知識的讀者，都能從中獲得啟發。</p>
+            <p>醬找專利以公開專利資料為基礎，透過專利導讀、專利地圖、互動式儀表板、主題文章與電子書，將龐大且不易閱讀的專利文件，轉化為較容易理解、探索與比較的技術資訊。</p>
 
-    <h3>我們分享的內容</h3>
-    <p>目前平台主要提供以下內容：</p>
-    <ul>
-        <li><strong>專利儀表板展示</strong>：透過視覺化圖表觀察產業專利趨勢與技術布局。</li>
-        <li><strong>專利摘要解析</strong>：擷取部分專利的說明書重點，協助理解其技術核心。</li>
-        <li><strong>API 應用探索（概念分享）</strong>：我們正研究資料整合與 API 應用的可行性，僅以教學文章形式分享相關想法與實驗結果，無對外提供系統服務。</li>
-    </ul>
+            <p>我們希望建立的不只是專利文章網站，也不只是專利查詢工具，而是一個能夠持續累積技術知識、呈現專利布局，並協助讀者掌握技術脈絡的雲端專利知識平台。</p>
 
-   
-    <h3>重要聲明</h3>
-    <p>「醬找專利」是一個非商業性平台，目的在於知識分享與技術交流。我們不提供顧問服務、工具下載，也未開放任何對外商業功能。如有任何資訊更新，將於網站上另行公告。</p>
+            <h3>我們的初衷</h3>
 
-    <h3>聯絡我們</h3>
-    <p>若您對本站內容有任何建議或想進一步交流，歡迎與我們聯繫：</p>
-    <ul>
-        <li>電子郵件：<a href="mailto:patenthunterjohn.ai@gmail.com">patenthunterjohn.ai@gmail.com</a></li>
-    </ul>
-</section></body>
+            <p>公開專利資料雖然可以查詢，但不代表容易理解。單件專利往往篇幅龐大，法律與技術文字交錯；大量專利資料則涉及分類、統計、比較與視覺化，讀者不容易從中快速看出整體方向。</p>
+
+            <p>因此，我們嘗試以較直觀的方式整理專利資料，讓讀者可以從不同層次認識技術：</p>
+
+            <ul>
+                <li>從單件專利導讀，理解具體技術內容。</li>
+                <li>從專利地圖，快速掌握技術競爭局勢。</li>
+                <li>從互動式儀表板，自行探索申請人、技術分類與年度趨勢。</li>
+                <li>從文章與電子書，進一步理解分析方法與產業脈絡。</li>
+            </ul>
+
+            <h3>我們提供的內容</h3>
+
+            <h4>專利導讀</h4>
+            <p>以圖片、文字與影片說明單件專利的主要技術概念，協助讀者快速理解專利欲解決的問題、採用的技術手段及可能產生的效果。</p>
+
+            <h4>專利地圖</h4>
+            <p>將專利數量、技術分類、功效目標、產品功能位置、發展動能與競爭阻力等資訊，濃縮為一頁式視覺地圖，協助讀者快速掌握重點技術戰場。</p>
+
+            <h4>互動式儀表板</h4>
+            <p>透過圖表、篩選條件及資料表，呈現申請趨勢、主要申請人、技術分布及不同分析維度之間的關聯。</p>
+
+            <h4>主題文章與電子書</h4>
+            <p>針對特定技術領域，整理專利資料、分析架構、技術分類與觀察結果，提供較完整且系統化的閱讀內容。</p>
+
+            <h4>AI與自動化分析探索</h4>
+            <p>研究如何運用AI代理人、資料處理流程與自動化工具，協助進行專利資料整理、導讀、分類與分析。相關內容仍會持續測試與調整。</p>
+
+            <h3>平台定位</h3>
+
+            <p>醬找專利目前以專利資訊整理、技術導讀、研究分析與知識分享為主要目的。</p>
+
+            <p>本站部分內容可能連結至第三方影音、圖書或其他平台。未來若增加付費內容、數位出版品、會員功能或其他服務，將於相關頁面另行說明適用條件。</p>
+
+            <h3>重要聲明</h3>
+
+            <div class="notice-box">
+                <p>本站內容係依公開專利資料進行整理、分析與導讀，僅供技術資訊、研究與學習參考。</p>
+                <p>本站內容不構成法律意見、專利有效性判斷、侵權分析、自由實施判斷、投資建議或專業委任服務。任何涉及具體法律權利、商業決策或專利爭議之事項，仍應洽詢合格專業人員。</p>
+            </div>
+
+            <h3>聯絡我們</h3>
+
+            <p>若您對本站內容有任何建議、錯誤指正或交流需求，歡迎透過電子郵件聯絡：</p>
+
+            <ul class="contact-list">
+                <li>電子郵件：<a href="mailto:patenthunterjohn.ai@gmail.com">patenthunterjohn.ai@gmail.com</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="page-footer">
+        <p>本站內容僅供技術資訊與研究參考，不構成法律意見、專利有效性判斷、侵權分析或專業委任服務。</p>
+        <p>&copy; 2026 醬找專利。保留所有權利。</p>
+    </footer>
+
+</body>
 </html>

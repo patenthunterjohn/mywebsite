@@ -2,6 +2,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -9,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="content-language" content="zh-tw" />
   <meta name="robots" content="index, follow" />
-  <meta name="description" content="醬找專利是一個專利分析與專利資訊視覺化網站，提供專利地圖、專利儀表板、技術主題導讀與專利分析文章" />
+  <meta name="description" content="醬找專利以專利大數據為基礎，提供專利導讀、專利地圖、互動儀表板、AI代理人分析、文章與電子書等雲端專利資訊服務" />
   <meta name="keywords" content="專利分析, 專利地圖, 專利儀表板, 專利檢索, patent analysis, patent map, patent dashboard" />
   <title>醬找專利：專利地圖・儀表板・AI代理人・大數據・雲端開放平台</title>
   <link rel="icon" type="image/svg+xml" href="https://patenthunterjohn.com/favicon.svg">
@@ -19,7 +20,7 @@
     "@type": "WebSite",
     "name": "醬找專利",
     "url": "https://patenthunterjohn.com",
-    "description": "醬找專利提供專利分析、專利地圖、專利儀表板與技術趨勢文章。"
+    "description": "醬找專利以專利大數據為基礎，提供專利導讀、專利地圖、互動儀表板、AI代理人分析、文章與電子書等雲端專利資訊服務。"
   }
   </script>
   <script type="application/ld+json">
@@ -29,7 +30,7 @@
     "name": "醬找專利",
     "url": "https://patenthunterjohn.com",
     "logo": "https://patenthunterjohn.com/logo.jpg",
-    "description": "醬找專利是一個將專利資訊視覺化的網站，把專利檢索結果以儀表板與專利地圖方式呈現。"
+    "description": "醬找專利結合專利大數據、專利地圖、互動儀表板與AI代理人，建構雲端開放的專利導讀與分析平台。"
   }
   </script>
 
@@ -345,12 +346,17 @@ section { padding: 58px 0; }
     @media (max-width: 920px) {
       .hero-grid, .ebook-feature { grid-template-columns: 1fr; }
       .topic-grid { grid-template-columns: repeat(2, 1fr); }
-      .nav { height: auto; padding: 14px 0; align-items: flex-start; }
-      .nav-links { display: none; }
+      .nav { height: auto; padding: 12px 0; align-items: center; gap: 12px; }
+      .nav-links { display: flex; gap: 3px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links a { padding: 8px 9px; font-size: 13px; white-space: nowrap; }
       .article-list { grid-template-columns: 1fr; }
 }
     @media (max-width: 640px) {
       .container { width: min(100% - 24px, var(--max)); }
+      .nav { align-items: center; }
+      .brand { flex: 0 0 auto; }
+      .nav-links { flex: 1 1 auto; min-width: 0; }
       .hero { padding: 58px 0 36px; }
       .topic-grid { grid-template-columns: 1fr; }
       section { padding: 42px 0; }
@@ -362,6 +368,102 @@ section { padding: 58px 0; }
       details.dashboard summary { gap: 10px; }
       details.dashboard summary .meta { font-size: 12px; }
     }
+
+    /* ===== 專利導讀：沿用首頁視覺語言 ===== */
+    .guide-section{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+        .guide-toolbar{display:flex;gap:10px;align-items:center;margin:14px 0 22px}.guide-search{flex:1;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 13px;outline:none;font:inherit}.guide-search:focus{border-color:var(--accent)}.guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));column-gap:24px;row-gap:28px}
+    .guide-card{position:relative;min-height:92px;padding:17px 16px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.8);box-shadow:none;cursor:pointer;transition:.16s}
+    .guide-card:hover,.guide-card.active{transform:translateY(-2px);border-color:var(--accent);background:#fff;box-shadow:none}
+    .guide-card.seen::after{content:"✓ 已預覽";position:absolute;right:10px;bottom:9px;font-size:9px;color:var(--accent-2);font-weight:800}
+    .guide-card-dot{position:absolute;right:10px;top:10px;width:6px;height:6px;border-radius:50%;background:var(--accent-2);opacity:0;transition:opacity .16s}
+        .guide-card h3{margin:0;padding-right:12px;font-size:14px;line-height:1.5;font-weight:650}
+    .guide-number{margin-top:7px;color:var(--muted);font-size:13px}
+    .guide-open-hint{margin-top:10px;color:var(--accent);font-size:9px;font-weight:800;opacity:0;transition:opacity .16s}
+    .guide-card:hover .guide-card-dot,.guide-card:focus-visible .guide-card-dot,.guide-card:hover .guide-open-hint,.guide-card:focus-visible .guide-open-hint{opacity:1}
+    .guide-preview{position:fixed;left:18px;right:18px;top:8px;z-index:60;display:grid;grid-template-columns:320px 1fr;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 22px 54px rgba(20,33,61,.22);opacity:0;visibility:hidden;transform:translateY(-12px);transition:.18s ease}
+    .guide-preview.show{opacity:1;visibility:visible;transform:translateY(0)}
+    .guide-video-wrap{position:static;min-height:180px;aspect-ratio:16/9;background:#111827}
+    .guide-video{display:block;width:100%;height:100%;object-fit:contain;background:#111827}
+    .guide-end-overlay{position:absolute;inset:0;z-index:5;display:none;align-items:center;justify-content:center;padding:20px;border-radius:18px;background:rgba(15,23,42,.88);color:#fff;text-align:center}
+    .guide-end-overlay.show{display:flex}.guide-end-overlay h3{margin:0 0 8px;font-size:19px}.guide-end-overlay p{margin:0 0 14px;color:#e5e7eb;font-size:13px}
+    .guide-end-actions,.guide-actions{display:flex;gap:9px;flex-wrap:wrap}.guide-end-actions{justify-content:center}
+    .guide-copy{display:flex;flex-direction:column;justify-content:center;padding:18px 20px}.guide-eyebrow{color:var(--accent-2);font-size:11px;font-weight:850;letter-spacing:.08em}
+    .guide-copy h2{margin:6px 0 5px;font-size:20px;line-height:1.45}.guide-meta{color:var(--muted);font-size:12px}.guide-desc{margin:10px 0 0;color:#4b5563;font-size:13px;line-height:1.65}.guide-actions{margin-top:13px}
+    .guide-button{min-height:36px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);cursor:pointer;font:inherit;font-size:12px;font-weight:800}.guide-button:hover{border-color:#bfdbfe;background:#f8fbff}.guide-button.primary{border-color:var(--accent);background:var(--accent);color:#fff}.guide-status{margin-top:9px;color:var(--muted);font-size:11px}
+    @media(max-width:720px){.guide-preview{left:10px;right:10px;top:8px;grid-template-columns:1fr;max-height:calc(100vh - 16px);overflow-y:auto}.guide-video-wrap{min-height:0}.guide-grid{grid-template-columns:1fr}}
+
+
+    /* ===== 主題卡片：控制預設高度，避免連結數量造成落差 ===== */
+    .topic-card > p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
+      min-height: 7em;
+    }
+    .content-links {
+      align-content: flex-start;
+    }
+    .content-links a.topic-link-extra {
+      display: none;
+    }
+    .content-links.expanded a.topic-link-extra {
+      display: inline-flex;
+    }
+    .topic-links-toggle {
+      display: none;
+      align-items: center;
+      width: fit-content;
+      min-height: 30px;
+      padding: 5px 10px;
+      border: 1px dashed #cbd5e1;
+      border-radius: 999px;
+      background: #fff;
+      color: #475569;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .topic-links-toggle.show {
+      display: inline-flex;
+    }
+    .topic-links-toggle:hover {
+      border-color: #93c5fd;
+      background: #f8fbff;
+      color: var(--accent);
+    }
+
+    /* ===== 擴充頁尾 ===== */
+    .footer-inner {
+      display: grid;
+      gap: 14px;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+    }
+    .footer-links a {
+      color: #374151;
+      font-weight: 750;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+    .footer-disclaimer {
+      max-width: 920px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    .footer-copy {
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
   </style>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-212822931-1"></script>
@@ -380,12 +482,11 @@ section { padding: 58px 0; }
         <span>醬找專利</span>
       </a>
       <nav class="nav-links" aria-label="主要導覽">
+        <a href="#patent-guide">專利導讀</a>
         <a href="#topics">主題分析</a>
         <a href="#dashboards">儀表板</a>
         <a href="#articles">文章</a>
         <a href="#ebook">電子書</a>
-        <a href="about.html">關於我們</a>
-        <a href="privacy-policy.html">隱私政策</a>
       </nav>
     </div>
   </header>
@@ -396,17 +497,77 @@ section { padding: 58px 0; }
         <div>
           <span class="eyebrow">專利地圖・儀表板・AI代理人・大數據・雲端開放平台</span>
           <h1>專利資料驅動分析</h1>
-          <p>醬找專利以專利資料為基礎，製作專利地圖型互動儀表板與 AI 輔助生成文章，協助你理解技術趨勢與企業布局。</p>
+          <p>醬找專利以專利大數據為基礎，透過專利地圖與互動儀表板呈現技術脈絡，並結合 AI 代理人協助導讀、整理與分析，逐步建構可於雲端使用的開放式專利資訊平台。</p>
           <div class="actions">
-            <a class="btn primary" href="#topics">瀏覽主題分析</a>
+            <a class="btn primary" href="#patent-guide">開始專利導讀</a>
+            <a class="btn secondary" href="#topics">瀏覽主題分析</a>
             <a class="btn secondary" href="#dashboards">查看儀表板</a>
             <a class="btn secondary" href="#articles">閱讀文章</a>
             <a class="btn green" href="#ebook">前往電子書</a>
           </div>
-          <p class="meta" style="margin-top: 20px;">網站更新日期：2026/7/8</p>
         </div>
       </div>
     </section>
+
+    <section id="patent-guide" class="guide-section">
+      <div class="container">
+        <div class="section-head"><div><h2>專利導讀</h2></div></div>
+        <div class="guide-toolbar">
+          <input id="guideSearch" class="guide-search" type="search" placeholder="搜尋專利標題或專利號" aria-label="搜尋專利標題或專利號">
+        </div>
+        <div id="guideGrid" class="guide-grid">
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽專利：看不到對車，系統怎麼先知道會撞？"
+            data-search="看不到對車 系統怎麼先知道會撞 US6405132B1"
+            data-title="看不到對車，系統怎麼先知道會撞？"
+            data-patent="US6405132B1"
+            data-desc="整合兩車位置、地圖與號誌狀態，預測可能碰撞位置，並提前啟動預防動作。"
+            data-preview="youtube/US6405132B1_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=rbMNd2g01ro">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>看不到對車，系統怎麼先知道會撞？</h3>
+            <div class="guide-number">US6405132B1</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽專利：還沒看見目標物，系統就先算出事故風險？"
+            data-search="還沒看見目標物 系統就先算出事故風險 US10647315B2"
+            data-title="還沒看見目標物，系統就先算出事故風險？"
+            data-patent="US10647315B2"
+            data-desc="根據盲點障礙物與最短路徑模型，先估算道路各位置的事故機率。"
+            data-preview="youtube/US10647315B2_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=pAPA4qCdaLk">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>還沒看見目標物，系統就先算出事故風險？</h3>
+            <div class="guide-number">US10647315B2</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽專利：兩輛車還沒撞上，系統怎麼先分級反應？"
+            data-search="兩輛車還沒撞上 系統怎麼先分級反應 US9630619B1"
+            data-title="兩輛車還沒撞上，系統怎麼先分級反應？"
+            data-patent="US9630619B1"
+            data-desc="先預測碰撞位置，再依第一、第二閾值觸發不同層級的安全控制。"
+            data-preview="youtube/US9630619B1_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=CCuZABq9Czk&pp=0gcJCZkLAYcqIYzv">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>兩輛車還沒撞上，系統怎麼先分級反應？</h3>
+            <div class="guide-number">US9630619B1</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <aside id="guidePreview" class="guide-preview" aria-live="polite">
+      <div class="guide-video-wrap"><video id="guideVideo" class="guide-video" muted playsinline preload="none"><source id="guideSource" type="video/mp4"></video>
+        <div id="guideEndOverlay" class="guide-end-overlay"><div><h3>30 秒預覽已結束</h3><p>可重新播放，或前往 YouTube 觀看完整影片。</p><div class="guide-end-actions"><button id="guideReplayBtn" class="guide-button" type="button">重新播放</button><button id="guideOverlayYoutubeBtn" class="guide-button primary" type="button">前往 YouTube</button><button id="guideOverlayCloseBtn" class="guide-button" type="button">關閉</button></div></div></div>
+      </div>
+      <div class="guide-copy"><div class="guide-eyebrow">專利導讀預覽</div><h2 id="guidePreviewTitle">專利導讀</h2><div id="guidePreviewMeta" class="guide-meta"></div><p id="guidePreviewDesc" class="guide-desc"></p><div class="guide-actions"><button id="guideSoundBtn" class="guide-button" type="button">開啟聲音</button><button id="guideFullBtn" class="guide-button primary" type="button">前往 YouTube 觀看完整影片</button><button id="guideCloseBtn" class="guide-button" type="button">關閉</button></div><div id="guideStatus" class="guide-status"></div></div>
+    </aside>
+
     <section id="topics">
       <div class="container">
         <div class="section-head">
@@ -564,7 +725,7 @@ section { padding: 58px 0; }
               <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：技術 × 功效分析</span><span class="chip">載入：約 1–3 分鐘</span></div>
               <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
               <p class="meta">若圖表顯示異常，請在標題處按滑鼠右鍵，選擇「重新載入頁框」。</p>
-              <div class="iframe-wrap"><iframe title="車網互動與智慧電網專利地圖" src="https://dash20-ybxs.onrender.com/smart-grid/"></iframe></div>
+              <div class="iframe-wrap"><iframe title="車網互動與智慧電網專利地圖" data-src="https://dash20-ybxs.onrender.com/smart-grid/" loading="lazy"></iframe></div>
             </div>
           </details>
 
@@ -574,14 +735,14 @@ section { padding: 58px 0; }
               <p>收錄 Meta Platforms 公司的 1,121 筆美國專利。泡泡矩陣圖呈現技術 × 功效布局，協助快速掌握企業研發方向。</p>
               <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：企業布局</span><span class="chip">載入：約 1–3 分鐘</span></div>
               <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
-              <div class="iframe-wrap"><iframe title="Meta 公司專利地圖" src="https://dash20-ybxs.onrender.com/meta/"></iframe></div>
+              <div class="iframe-wrap"><iframe title="Meta 公司專利地圖" data-src="https://dash20-ybxs.onrender.com/meta/" loading="lazy"></iframe></div>
             </div>
           </details>
 
           <details class="dashboard" id="dash-03">
             <summary>【儀表板】 2025 年臺灣專利  <span class="meta">更新日：2026/5/3</span></summary>
             <div class="dashboard-body">
-             <div class="iframe-wrap"><iframe title="臺灣專利 2025 年動態追蹤" src="https://dash16.onrender.com"></iframe></div>
+             <div class="iframe-wrap"><iframe title="臺灣專利 2025 年動態追蹤" data-src="https://dash16.onrender.com" loading="lazy"></iframe></div>
             </div>
           </details>
 
@@ -591,7 +752,7 @@ section { padding: 58px 0; }
               <p>整理 2025/04/30 前已核准公告的高智發明美國專利，協助觀察 NPE 專利資產、訴訟風險與技術聚類。</p>
               <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：NPE 風險分析</span><span class="chip">載入：約 1–3 分鐘</span></div>
               <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
-              <div class="iframe-wrap"><iframe title="高智發明專利儀表板" src="https://dash15.onrender.com"></iframe></div>
+              <div class="iframe-wrap"><iframe title="高智發明專利儀表板" data-src="https://dash15.onrender.com" loading="lazy"></iframe></div>
             </div>
           </details>
 
@@ -601,7 +762,7 @@ section { padding: 58px 0; }
               <p>涵蓋 2025/04/30 前公開、涉及 IPC/CPC 分類 H10H 的美國無機 LED 專利，總計 68,121 筆。</p>
               <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：光電技術布局</span><span class="chip">載入：約 1–3 分鐘</span></div>
               <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
-              <div class="iframe-wrap"><iframe title="無機 LED 專利儀表板" src="https://dash13-tugn.onrender.com"></iframe></div>
+              <div class="iframe-wrap"><iframe title="無機 LED 專利儀表板" data-src="https://dash13-tugn.onrender.com" loading="lazy"></iframe></div>
             </div>
           </details>
 
@@ -611,7 +772,7 @@ section { padding: 58px 0; }
               <p>涵蓋 2025/04/30 前公開、涉及 IPC/CPC 分類 B64U 的美國無人飛行器專利。</p>
               <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：UAV 技術分析</span><span class="chip">載入：約 1–3 分鐘</span></div>
               <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
-              <div class="iframe-wrap"><iframe title="無人飛行器 UAV 專利儀表板" src="https://dash12.onrender.com"></iframe></div>
+              <div class="iframe-wrap"><iframe title="無人飛行器 UAV 專利儀表板" data-src="https://dash12.onrender.com" loading="lazy"></iframe></div>
             </div>
           </details>
 
@@ -621,7 +782,7 @@ section { padding: 58px 0; }
               <p>涵蓋 2025/04/30 前公開、涉及 IPC 分類 G02B 27/01 的美國 HUD 專利，提供篩選條件與資料表查詢。</p>
               <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：HUD 資料表查詢</span><span class="chip">載入：約 1–3 分鐘</span></div>
               <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
-              <div class="iframe-wrap"><iframe title="抬頭顯示器 HUD 資料表" src="https://dash04.onrender.com"></iframe></div>
+              <div class="iframe-wrap"><iframe title="抬頭顯示器 HUD 資料表" data-src="https://dash04.onrender.com" loading="lazy"></iframe></div>
             </div>
           </details>
 
@@ -631,7 +792,7 @@ section { padding: 58px 0; }
               <p>以數據點呈現前百大專利申請人的 HUD 專利申請趨勢，滑鼠移至數據點可查看專利書目資訊。</p>
               <div class="dashboard-meta"><span class="chip">資料類型：美國專利</span><span class="chip">用途：申請人趨勢</span><span class="chip">載入：約 1–3 分鐘</span></div>
               <p class="mobile-note">此互動儀表板建議使用桌機或平板瀏覽。</p>
-              <div class="iframe-wrap"><iframe title="HUD 前百大申請人趨勢" src="https://dash11-bt5r.onrender.com"></iframe></div>
+              <div class="iframe-wrap"><iframe title="HUD 前百大申請人趨勢" data-src="https://dash11-bt5r.onrender.com" loading="lazy"></iframe></div>
             </div>
           </details>
         </div>
@@ -719,10 +880,82 @@ section { padding: 58px 0; }
 
   </main>
   <footer class="footer">
-    <div class="container">
-      <span>©2025–2026 醬找專利 版權所有</span>
+    <div class="container footer-inner">
+      <nav class="footer-links" aria-label="頁尾導覽">
+        <a href="about.html">關於我們</a>
+        <a href="website-development.html">網站發展紀錄</a>
+        <a href="privacy-policy.html">隱私政策</a>
+      </nav>
+      <div class="footer-disclaimer">
+        本站內容係依公開專利資料進行整理、分析與導讀，僅供技術資訊與研究參考，不構成法律意見、專利有效性判斷、侵權分析或專業委任服務。
+      </div>
+      <div class="footer-copy">©2025–2026 醬找專利 版權所有</div>
     </div>
   </footer>
+
+  <script>
+    (()=>{
+      const cards=Array.from(document.querySelectorAll(".guide-card"));
+      const p=document.getElementById("guidePreview"),v=document.getElementById("guideVideo"),s=document.getElementById("guideSource"),sb=document.getElementById("guideSoundBtn"),fb=document.getElementById("guideFullBtn"),cb=document.getElementById("guideCloseBtn"),eo=document.getElementById("guideEndOverlay"),rb=document.getElementById("guideReplayBtn"),oy=document.getElementById("guideOverlayYoutubeBtn"),oc=document.getElementById("guideOverlayCloseBtn"),st=document.getElementById("guideStatus"),title=document.getElementById("guidePreviewTitle"),meta=document.getElementById("guidePreviewMeta"),desc=document.getElementById("guidePreviewDesc");
+      let started=false,currentCard=null,currentYoutube="";
+      function open(card){
+        cards.forEach(item=>item.classList.remove("active"));
+        currentCard=card;currentYoutube=card.dataset.youtube||"";card.classList.add("active");
+        title.textContent=card.dataset.title||"專利導讀";meta.textContent=card.dataset.patent||"";desc.textContent=card.dataset.desc||"";
+        p.classList.add("show");eo.classList.remove("show");v.pause();v.currentTime=0;v.muted=true;started=false;sb.textContent="開啟聲音";
+        const preview=card.dataset.preview||"";
+        if(s.getAttribute("src")!==preview){s.src=preview;v.load()}
+        st.textContent="";v.play().catch(()=>st.textContent="請點擊開啟聲音播放預覽");
+      }
+      function close(){p.classList.remove("show");eo.classList.remove("show");v.pause();cards.forEach(item=>item.classList.remove("active"));currentCard=null}
+      function yt(){if(!currentYoutube){st.textContent="尚未設定 YouTube 影片連結";return}window.open(currentYoutube,"_blank","noopener,noreferrer")}
+      const search=document.getElementById("guideSearch");
+      cards.forEach(card=>{card.addEventListener("click",()=>open(card));card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open(card)}})});
+      search.addEventListener("input",()=>{const q=search.value.trim().toLowerCase();cards.forEach(card=>{card.hidden=q!==""&&!card.dataset.search.toLowerCase().includes(q)})});
+      sb.addEventListener("click",()=>{eo.classList.remove("show");if(!started){v.currentTime=0;v.muted=false;started=true;sb.textContent="關閉聲音";v.play();st.textContent="";return}v.muted=!v.muted;sb.textContent=v.muted?"開啟聲音":"關閉聲音";if(v.paused)v.play();st.textContent=""});
+      v.addEventListener("ended",()=>{st.textContent="";eo.classList.add("show");if(currentCard)currentCard.classList.add("seen")});
+      rb.addEventListener("click",()=>{eo.classList.remove("show");v.currentTime=0;v.play();st.textContent=""});fb.addEventListener("click",yt);oy.addEventListener("click",yt);cb.addEventListener("click",close);oc.addEventListener("click",close);
+    })();
+  </script>
+
+  <script>
+    (() => {
+      // 儀表板只在使用者第一次展開時載入
+      document.querySelectorAll('details.dashboard').forEach((panel) => {
+        panel.addEventListener('toggle', () => {
+          if (!panel.open) return;
+          panel.querySelectorAll('iframe[data-src]').forEach((frame) => {
+            if (!frame.getAttribute('src')) {
+              frame.setAttribute('src', frame.dataset.src);
+            }
+          });
+        });
+      });
+
+      // 每張主題卡預設只顯示前 2 個連結，其餘由讀者自行展開
+      document.querySelectorAll('.topic-card .content-links').forEach((linksBox) => {
+        const links = Array.from(linksBox.querySelectorAll('a'));
+        if (links.length <= 2) return;
+
+        links.slice(2).forEach((link) => link.classList.add('topic-link-extra'));
+
+        const hiddenCount = links.length - 2;
+        const toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'topic-links-toggle show';
+        toggle.textContent = `查看更多（${hiddenCount}）`;
+        toggle.setAttribute('aria-expanded', 'false');
+
+        toggle.addEventListener('click', () => {
+          const expanded = linksBox.classList.toggle('expanded');
+          toggle.setAttribute('aria-expanded', String(expanded));
+          toggle.textContent = expanded ? '收合連結' : `查看更多（${hiddenCount}）`;
+        });
+
+        linksBox.appendChild(toggle);
+      });
+    })();
+  </script>
 
   <script>
     document.querySelectorAll('.filter-btn').forEach((button) => {
@@ -741,7 +974,7 @@ section { padding: 58px 0; }
       });
     });
 
-    const sections = ['topics', 'dashboards', 'articles', 'ebook'];
+    const sections = ['patent-guide', 'topics', 'dashboards', 'articles', 'ebook'];
     const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
