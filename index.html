@@ -367,12 +367,14 @@ section { padding: 58px 0; }
     /* ===== 專利導讀：沿用首頁視覺語言 ===== */
     .guide-section{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
         .guide-toolbar{display:flex;gap:10px;align-items:center;margin:14px 0 22px}.guide-search{flex:1;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 13px;outline:none;font:inherit}.guide-search:focus{border-color:var(--accent)}.guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));column-gap:24px;row-gap:28px}
-    .guide-card{position:relative;min-height:92px;padding:17px 16px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.8);box-shadow:none;cursor:pointer;transition:.16s}
+    .guide-card{position:relative;min-height:118px;padding:17px 16px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.8);box-shadow:none;cursor:pointer;transition:.16s}
     .guide-card:hover,.guide-card.active{transform:translateY(-2px);border-color:var(--accent);background:#fff;box-shadow:none}
     .guide-card.seen::after{content:"✓ 已預覽";position:absolute;right:10px;bottom:9px;font-size:9px;color:var(--accent-2);font-weight:800}
     .guide-card-dot{position:absolute;right:10px;top:10px;width:6px;height:6px;border-radius:50%;background:var(--accent-2);opacity:0;transition:opacity .16s}
         .guide-card h3{margin:0;padding-right:12px;font-size:14px;line-height:1.5;font-weight:650}
     .guide-number{margin-top:7px;color:var(--muted);font-size:13px}
+    .guide-applicant{margin-top:3px;color:#475569;font-size:11px;line-height:1.45;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+    .guide-applicant span{margin-right:5px;color:var(--accent-2);font-weight:800}
     .guide-open-hint{margin-top:10px;color:var(--accent);font-size:9px;font-weight:800;opacity:0;transition:opacity .16s}
     .guide-card:hover .guide-card-dot,.guide-card:focus-visible .guide-card-dot,.guide-card:hover .guide-open-hint,.guide-card:focus-visible .guide-open-hint{opacity:1}
     .guide-preview{position:fixed;left:18px;right:18px;top:8px;z-index:60;display:grid;grid-template-columns:320px 1fr;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 22px 54px rgba(20,33,61,.22);opacity:0;visibility:hidden;transform:translateY(-12px);transition:.18s ease}
@@ -508,82 +510,142 @@ section { padding: 58px 0; }
       <div class="container">
         <div class="section-head"><div><h2>專利導讀</h2></div></div>
         <div class="guide-toolbar">
-          <input id="guideSearch" class="guide-search" type="search" placeholder="搜尋專利標題或專利號" aria-label="搜尋專利標題或專利號">
+          <input id="guideSearch" class="guide-search" type="search" placeholder="搜尋專利標題、專利號或申請人" aria-label="搜尋專利標題、專利號或申請人">
         </div>
         <div id="guideGrid" class="guide-grid">
 
           <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽專利：只看前方影像，神經網路就能直接算出 TTC？"
+            data-search="只看前方影像 神經網路就能直接算出 TTC US11854401B2 NVIDIA Corporation"
+            data-title="只看前方影像，神經網路就能直接算出 TTC？"
+            data-patent="US11854401B2"
+            data-applicant="NVIDIA Corporation"
+            data-desc="由感測影像推得與碰撞時間相關的時間資訊，並據此調整移動、速度或機器操作。"
+            data-preview="youtube/US11854401B2_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=DhaXjmkyWVM">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>只看前方影像，神經網路就能直接算出 TTC？</h3>
+            <div class="guide-number">US11854401B2</div>
+            <div class="guide-applicant">NVIDIA Corporation</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽專利：還沒撞上，怎麼先決定誰先傳？"
+            data-search="還沒撞上 怎麼先決定誰先傳 US11024175B2 Ford Global Technologies, LLC"
+            data-title="還沒撞上，怎麼先決定誰先傳？"
+            data-patent="US11024175B2"
+            data-applicant="Ford Global Technologies, LLC"
+            data-desc="依預測軌跡判斷碰撞嚴重性，並結合物體分類與有限訊息容量，決定資料傳送優先順序。"
+            data-preview="youtube/US11024175B2_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=3nZ1c-FWD8U&amp;pp=0gcJCaMLAYcqIYzv">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>還沒撞上，怎麼先決定誰先傳？</h3>
+            <div class="guide-number">US11024175B2</div>
+            <div class="guide-applicant">Ford Global Technologies, LLC</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+
+
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽專利：還沒打方向燈，鄰車怎麼先知道？"
+            data-search="還沒打方向燈 鄰車怎麼先知道 US10406972B2 Tesla, Inc."
+            data-title="還沒打方向燈，鄰車怎麼先知道？"
+            data-patent="US10406972B2"
+            data-applicant="Tesla, Inc."
+            data-desc="利用多源資料判斷轉向操作與鄰車距離，在符合條件時自動啟動轉向訊號。"
+            data-preview="youtube/US10406972B2_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=5wEJrZizZJE">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>還沒打方向燈，鄰車怎麼先知道？</h3>
+            <div class="guide-number">US10406972B2</div>
+            <div class="guide-applicant">Tesla, Inc.</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+
+
+
+
+          <article class="guide-card" tabindex="0" role="button"
             aria-label="預覽專利：駕駛越想睡，車子怎麼來調整？"
-            data-search="駕駛越想睡 車子怎麼來調整 US9296382B2"
+            data-search="駕駛越想睡 車子怎麼來調整 US9296382B2 Honda Motor Co., Ltd."
             data-title="駕駛越想睡，車子怎麼來調整？"
             data-patent="US9296382B2"
+            data-applicant="Honda Motor Co., Ltd."
             data-desc="監測駕駛狀態並計算身體狀態指數，動態調整車輛控制參數與相關功能的啟用條件。"
             data-preview="youtube/US9296382B2_30秒預覽.mp4"
             data-youtube="https://www.youtube.com/watch?v=2su4TXvznPo">
             <span class="guide-card-dot" aria-hidden="true"></span>
             <h3>駕駛越想睡，車子怎麼來調整？</h3>
             <div class="guide-number">US9296382B2</div>
+            <div class="guide-applicant">Honda Motor Co., Ltd.</div>
             <div class="guide-open-hint">點擊預覽</div>
           </article>
 
-
-
           <article class="guide-card" tabindex="0" role="button"
             aria-label="預覽專利：危險還沒發生，警告先出現？"
-            data-search="危險還沒發生 警告先出現 US10981503B2"
+            data-search="危險還沒發生 警告先出現 US10981503B2 Mindtronic AI Co., Ltd.; Shanghai XPT Technology Limited"
             data-title="危險還沒發生，警告先出現？"
             data-patent="US10981503B2"
+            data-applicant="Mindtronic AI Co., Ltd.; Shanghai XPT Technology Limited"
             data-desc="根據接近物體的方向、距離與預估時間，分級判斷風險，並在對應方向顯示警告。"
             data-preview="youtube/US10981503B2_30秒預覽.mp4"
             data-youtube="https://www.youtube.com/watch?v=tEzmaGC3uk0">
             <span class="guide-card-dot" aria-hidden="true"></span>
             <h3>危險還沒發生，警告先出現？</h3>
             <div class="guide-number">US10981503B2</div>
+            <div class="guide-applicant">Mindtronic AI Co., Ltd.; Shanghai XPT Technology Limited</div>
             <div class="guide-open-hint">點擊預覽</div>
           </article>
 
-
           <article class="guide-card" tabindex="0" role="button"
             aria-label="預覽專利：還沒看見目標物，系統就先算出事故風險？"
-            data-search="還沒看見目標物 系統就先算出事故風險 US10647315B2"
+            data-search="還沒看見目標物 系統就先算出事故風險 US10647315B2 Mitsubishi Electric Corporation"
             data-title="還沒看見目標物，系統就先算出事故風險？"
             data-patent="US10647315B2"
+            data-applicant="Mitsubishi Electric Corporation"
             data-desc="根據盲點障礙物與最短路徑模型，先估算道路各位置的事故機率。"
             data-preview="youtube/US10647315B2_30秒預覽.mp4"
             data-youtube="https://www.youtube.com/watch?v=pAPA4qCdaLk">
             <span class="guide-card-dot" aria-hidden="true"></span>
             <h3>還沒看見目標物，系統就先算出事故風險？</h3>
             <div class="guide-number">US10647315B2</div>
+            <div class="guide-applicant">Mitsubishi Electric Corporation</div>
             <div class="guide-open-hint">點擊預覽</div>
           </article>
 
           <article class="guide-card" tabindex="0" role="button"
             aria-label="預覽專利：兩輛車還沒撞上，系統怎麼先分級反應？"
-            data-search="兩輛車還沒撞上 系統怎麼先分級反應 US9630619B1"
+            data-search="兩輛車還沒撞上 系統怎麼先分級反應 US9630619B1 Zoox, Inc."
             data-title="兩輛車還沒撞上，系統怎麼先分級反應？"
             data-patent="US9630619B1"
+            data-applicant="Zoox, Inc."
             data-desc="先預測碰撞位置，再依第一、第二閾值觸發不同層級的安全控制。"
             data-preview="youtube/US9630619B1_30秒預覽.mp4"
-            data-youtube="https://www.youtube.com/watch?v=CCuZABq9Czk&pp=0gcJCZkLAYcqIYzv">
+            data-youtube="https://www.youtube.com/watch?v=CCuZABq9Czk&amp;pp=0gcJCZkLAYcqIYzv">
             <span class="guide-card-dot" aria-hidden="true"></span>
             <h3>兩輛車還沒撞上，系統怎麼先分級反應？</h3>
             <div class="guide-number">US9630619B1</div>
+            <div class="guide-applicant">Zoox, Inc.</div>
             <div class="guide-open-hint">點擊預覽</div>
           </article>
 
           <article class="guide-card" tabindex="0" role="button"
             aria-label="預覽專利：看不到對車，系統怎麼先知道會撞？"
-            data-search="看不到對車 系統怎麼先知道會撞 US6405132B1"
+            data-search="看不到對車 系統怎麼先知道會撞 US6405132B1 Intelligent Technologies International, Inc."
             data-title="看不到對車，系統怎麼先知道會撞？"
             data-patent="US6405132B1"
+            data-applicant="Intelligent Technologies International, Inc."
             data-desc="整合兩車位置、地圖與號誌狀態，預測可能碰撞位置，並提前啟動預防動作。"
             data-preview="youtube/US6405132B1_30秒預覽.mp4"
             data-youtube="https://www.youtube.com/watch?v=rbMNd2g01ro">
             <span class="guide-card-dot" aria-hidden="true"></span>
             <h3>看不到對車，系統怎麼先知道會撞？</h3>
             <div class="guide-number">US6405132B1</div>
+            <div class="guide-applicant">Intelligent Technologies International, Inc.</div>
             <div class="guide-open-hint">點擊預覽</div>
           </article>
+
 
 
         </div>
@@ -930,7 +992,7 @@ section { padding: 58px 0; }
       function open(card){
         cards.forEach(item=>item.classList.remove("active"));
         currentCard=card;currentYoutube=card.dataset.youtube||"";card.classList.add("active");
-        title.textContent=card.dataset.title||"專利導讀";meta.textContent=card.dataset.patent||"";desc.textContent=card.dataset.desc||"";
+        title.textContent=card.dataset.title||"專利導讀";meta.textContent=[card.dataset.patent||"",card.dataset.applicant?`申請人：${card.dataset.applicant}`:""] .filter(Boolean).join(" ｜ ");desc.textContent=card.dataset.desc||"";
         p.classList.add("show");eo.classList.remove("show");v.pause();v.currentTime=0;v.muted=true;started=false;sb.textContent="開啟聲音";
         const preview=card.dataset.preview||"";
         if(s.getAttribute("src")!==preview){s.src=preview;v.load()}
