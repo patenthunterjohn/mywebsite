@@ -8,7 +8,11 @@
   <meta name="description" content="醬找專利以專利大數據為基礎，提供專利導讀、專利地圖、互動儀表板、AI代理人分析、文章與電子書等雲端專利資訊服務" />
   <meta name="keywords" content="專利分析, 專利地圖, 專利儀表板, 專利檢索, patent analysis, patent map, patent dashboard" />
   <title>醬找專利：專利地圖・儀表板・AI代理人・大數據・雲端開放平台</title>
-  <link rel="icon" type="image/svg+xml" href="https://patenthunterjohn.com/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://patenthunterjohn.com/favicon-32.png?v=20260816">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://patenthunterjohn.com/favicon-48.png?v=20260816">
+  <link rel="apple-touch-icon" sizes="512x512" href="https://patenthunterjohn.com/apple-touch-icon.png?v=20260816">
+  <meta property="og:image" content="https://patenthunterjohn.com/logo.png?v=20260816" />
+  <meta itemprop="image" content="https://patenthunterjohn.com/logo.png?v=20260816" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -24,7 +28,13 @@
     "@type": "Organization",
     "name": "醬找專利",
     "url": "https://patenthunterjohn.com",
-    "logo": "https://patenthunterjohn.com/logo.jpg",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://patenthunterjohn.com/logo.png?v=20260816",
+      "width": 1240,
+      "height": 1240
+    },
+    "image": "https://patenthunterjohn.com/logo.png?v=20260816",
     "description": "醬找專利結合專利大數據、專利地圖、互動儀表板與AI代理人，建構雲端開放的專利導讀與分析平台。"
   }
   </script>
@@ -77,20 +87,24 @@
       gap: 24px;
     }
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .03em; }
-	.brand-mark {
-	  width: 42px;
-	  height: 42px;
-	  border-radius: 12px;
-	  background: #fff;
-	  display: grid;
-	  place-items: center;
-	  color: #14213d;
-	  font-weight: 900;
-	
-	  font-size: 34px;
-	  line-height: 1;
-	  letter-spacing: -0.12em;
-	}
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(20,33,61,.05);
+      flex: 0 0 42px;
+    }
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      border-radius: 12px;
+    }
     .nav-links { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
     .nav-links a {
       padding: 10px 12px;
@@ -537,7 +551,7 @@ section { padding: 58px 0; }
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="醬找專利首頁">
-        <span class="brand-mark">醬</span>
+        <span class="brand-mark" aria-hidden="true"><img src="logo.png" alt=""></span>
         <span>醬找專利</span>
       </a>
       <nav class="nav-links" aria-label="主要導覽">
@@ -575,6 +589,119 @@ section { padding: 58px 0; }
           <input id="guideSearch" class="guide-search" type="search" placeholder="搜尋專利標題、專利號或申請人" aria-label="搜尋專利標題、專利號或申請人">
         </div>
         <div id="guideGrid" class="guide-grid">
+
+
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽主題：從電漿到氚燃料"
+            data-search="從電漿到氚燃料 Tokamak Energy 核融合 球形托卡馬克 高場磁體 氚燃料 WO2021191030A1 US20260081069A1 WO2024240616A1 WO2024231500A1 WO2026087707A1 WO2025261987A1 WO2024074721A2 US11929184B2 EP4200876B1 US11869677B2"
+            data-title="從電漿到氚燃料"
+            data-patent="10 件專利主題導讀"
+            data-applicant="Tokamak Energy Ltd."
+            data-desc="從球形托卡馬克、高場磁體與中子屏蔽，到氚燃料回收等方向，快速建立 Tokamak Energy 核融合反應器的技術輪廓。"
+            data-preview="youtube/047-醬找專利快速看_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=nhXxeMuq2fI">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>從電漿到氚燃料：Tokamak Energy 的 10 件專利看懂核融合反應器</h3>
+            <div class="guide-number">10件專利主題導覽</div>
+            <div class="guide-applicant">Tokamak Energy Ltd.</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽專利：碰撞還沒發生，先決定未來狀態｜US9132775B2"
+            data-search="碰撞還沒發生 先決定未來狀態 US9132775B2 TOYOTA JIDOSHA KABUSHIKI KAISHA"
+            data-title="碰撞還沒發生，先決定未來狀態"
+            data-patent="US9132775B2"
+            data-applicant="TOYOTA JIDOSHA KABUSHIKI KAISHA"
+            data-desc="根據目標移動體與鄰近移動體的狀態及預期碰撞機率，依預設關係判斷目標移動體接下來的目標狀態。"
+            data-preview="youtube/US9132775B2_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=cEhy9SvW9eY">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>碰撞還沒發生，先決定未來狀態</h3>
+            <div class="guide-number">US9132775B2</div>
+            <div class="guide-applicant">TOYOTA JIDOSHA KABUSHIKI KAISHA</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽專利：不是車對車直連，也能先警示風險？｜US7990283B2"
+            data-search="不是車對車直連 也能先警示風險 US7990283B2 Intelligent Technologies International, Inc."
+            data-title="不是車對車直連，也能先警示風險？"
+            data-patent="US7990283B2"
+            data-applicant="Intelligent Technologies International, Inc."
+            data-desc="兩車各自取得位置資訊，透過基礎設施交換彼此位置，再分別結合道路邊緣或車道邊界判斷事故風險並發出警示。"
+            data-preview="youtube/US7990283B2_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=KqQ9zw18NDY&amp;t=14s">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>不是車對車直連，也能先警示風險？</h3>
+            <div class="guide-number">US7990283B2</div>
+            <div class="guide-applicant">Intelligent Technologies International, Inc.</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽專利：AI 晶片離不開 HBM，一件專利看懂 Netlist 為何告 Samsung｜US12308087B2"
+            data-search="AI 晶片離不開 HBM 一件專利看懂 Netlist 為何告 Samsung US12308087B2 Netlist, Inc."
+            data-title="AI 晶片離不開 HBM，一件專利看懂 Netlist 為何告 Samsung"
+            data-patent="US12308087B2"
+            data-applicant="Netlist, Inc."
+            data-desc="以分組互連讓不同 DRAM 僅連接部分路徑，將命令／位址與資料互連分開配置，以降低單一驅動器的負載。"
+            data-preview="youtube/US12308087B2_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=uqjBta9JJvw&amp;t=117s">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>AI 晶片離不開 HBM，一件專利看懂 Netlist 為何告 Samsung</h3>
+            <div class="guide-number">US12308087B2</div>
+            <div class="guide-applicant">Netlist, Inc.</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽專利：AI 幫律師寫文件也有專利？一件專利看懂 AI.Law 為何控告 Eve｜US12461932B1"
+            data-search="AI 幫律師寫文件也有專利 一件專利看懂 AI.Law 為何控告 Eve US12461932B1 www.ai.law Corp"
+            data-title="AI 幫律師寫文件也有專利？一件專利看懂 AI.Law 為何控告 Eve"
+            data-patent="US12461932B1"
+            data-applicant="www.ai.law Corp"
+            data-desc="先把非結構化案件資料轉成結構化資料，再由 AI 平行生成文件，並在輸出受限時自動續接內容。"
+            data-preview="youtube/US12461932B1_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=1ne7HxFz-WU&amp;t=31s">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>AI 幫律師寫文件也有專利？一件專利看懂 AI.Law 為何控告 Eve</h3>
+            <div class="guide-number">US12461932B1</div>
+            <div class="guide-applicant">www.ai.law Corp</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽專利：人車混雜路口，神經網路怎麼整合判斷？｜US12352597B2"
+            data-search="人車混雜路口 神經網路怎麼整合判斷 US12352597B2 Aptiv Technologies AG"
+            data-title="人車混雜路口，神經網路怎麼整合判斷？"
+            data-patent="US12352597B2"
+            data-applicant="Aptiv Technologies AG"
+            data-desc="把道路使用者與靜態道路環境轉成同一座標網格，再由動態、靜態雙編碼器與時空神經網路共同處理。"
+            data-preview="youtube/US12352597B2_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=osRgh5w54No">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>人車混雜路口，神經網路怎麼整合判斷？</h3>
+            <div class="guide-number">US12352597B2</div>
+            <div class="guide-applicant">Aptiv Technologies AG</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
+
+          <article class="guide-card" tabindex="0" role="button"
+            aria-label="預覽主題：從電動車到換電站"
+            data-search="從電動車到換電站 7 件專利 重型電動車 電池結構 車輛傳動 充電調度 換電"
+            data-title="從電動車到換電站"
+            data-patent="7 件專利主題導讀"
+            data-applicant="重型電動車能源與補能技術"
+            data-desc="從電池內部結構、車輛整合與傳動，到充電調度與換電等方向，以 7 件專利快速看懂重型電動車的能源與補能技術。"
+            data-preview="youtube/046-醬找專利快速看_30秒預覽.mp4"
+            data-youtube="https://www.youtube.com/watch?v=2ZkwOaoQeik">
+            <span class="guide-card-dot" aria-hidden="true"></span>
+            <h3>從電動車到換電站</h3>
+            <div class="guide-number">7 件專利主題導讀</div>
+            <div class="guide-applicant">重型電動車能源與補能技術</div>
+            <div class="guide-open-hint">點擊預覽</div>
+          </article>
 
           <article class="guide-card" tabindex="0" role="button"
             aria-label="預覽專利：碰撞還沒發生，軌跡模型先算出逃生路線｜US12415545B2"
