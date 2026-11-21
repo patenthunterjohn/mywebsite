@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "generator_version": "patent_html_pipeline_v2.5",
+  "build_id": "20261121_231311",
+  "company": "NVIDIA",
+  "output_mode": "shared-site",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "patent_pool",
+      "status": "PASS",
+      "message": "公司專利池 9,522 件",
+      "metrics": {
+        "pool_size": 9522
+      }
+    },
+    {
+      "id": "company_filter",
+      "status": "PASS",
+      "message": "公司過濾後保留 9,522 件申請案",
+      "metrics": {
+        "enabled": true,
+        "company": "NVIDIA",
+        "aliases": [
+          "NVIDIA"
+        ],
+        "raw_row_count": 13524,
+        "kept_row_count": 13516,
+        "excluded_row_count": 8,
+        "raw_application_count": 9530,
+        "kept_application_count": 9522,
+        "excluded_application_count": 8,
+        "excluded_samples": [
+          {
+            "_資料國別": "TW",
+            "申請號": "TW056027",
+            "公開/公告號": "TW011818",
+            "專利名稱": "粘帶切斷印字兩用機",
+            "申請人": "李輝達",
+            "第一申請人": "李輝達"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW019884",
+            "公開/公告號": "TW012585",
+            "專利名稱": "撳扣式拉鍊",
+            "申請人": "李輝達",
+            "第一申請人": "李輝達"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW06223297",
+            "公開/公告號": "TW016237U",
+            "專利名稱": "强力十字形實用鐵釘",
+            "申請人": "李輝達",
+            "第一申請人": "李輝達"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW06223298",
+            "公開/公告號": "TW016742U",
+            "專利名稱": "實用木螺釘",
+            "申請人": "李輝達",
+            "第一申請人": "李輝達"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW057630",
+            "公開/公告號": "TW017456",
+            "專利名稱": "牙齒內外同時起刷牙刷",
+            "申請人": "李輝達",
+            "第一申請人": "李輝達"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW056608",
+            "公開/公告號": "TW019148",
+            "專利名稱": "U字形子母萬能槽鋼",
+            "申請人": "李輝達;郭重義",
+            "第一申請人": "李輝達"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW019884A01",
+            "公開/公告號": "TW013306",
+            "專利名稱": "撳扣式拉鍊",
+            "申請人": "李輝達",
+            "第一申請人": "李輝達"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW104214880",
+            "公開/公告號": "TWM526427U",
+            "專利名稱": "骰子裝置;Dice device",
+            "申請人": "祥輝達精密工業科技股份有限公司",
+            "第一申請人": "祥輝達精密工業科技股份有限公司"
+          }
+        ]
+      }
+    },
+    {
+      "id": "applicant_normalization",
+      "status": "PASS",
+      "message": "正規化後法人實體 9 個",
+      "metrics": {
+        "entity_count": 9,
+        "alias_group_count": 5
+      }
+    },
+    {
+      "id": "priority_normalization",
+      "status": "PASS",
+      "message": "優先權來源解析率 99.72%",
+      "metrics": {
+        "item_count": 15270,
+        "unknown_item_count": 43,
+        "parse_rate_pct": 99.72,
+        "unknown_samples": [
+          "GR 20210100648 20210930",
+          "GR 20220100249 20220322",
+          "RU 2022RU00044 20220218",
+          "GR 20220100820 20221006",
+          "GR 20220100957 20221121",
+          "GR 20220100957 20221121",
+          "GR 20-220100957 20221121",
+          "GR 20220100957 20221121",
+          "GR 20220100957 20221121",
+          "GR 20210100648 20210930"
+        ]
+      }
+    },
+    {
+      "id": "classification_match",
+      "status": "PASS",
+      "message": "未指定分類檔；以純專利概況模式輸出",
+      "metrics": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "payload_optimization",
+      "status": "PASS",
+      "message": "compact records 9,522 筆；raw_records 已移除",
+      "metrics": {
+        "record_count": 9522,
+        "raw_records_present": false
+      }
+    },
+    {
+      "id": "shared_site_bundle",
+      "status": "PASS",
+      "message": "shared-site 公司資料已新增：data/nvidia/；companies.json 已同步",
+      "metrics": {
+        "slug": "nvidia",
+        "company_dir": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔\\data\\nvidia",
+        "registry_action": "added",
+        "registry_company_count": 1,
+        "summary_bytes": 17314,
+        "records_bytes": 3115140,
+        "classification_bytes": 137
+      }
+    }
+  ],
+  "shared_site": {
+    "site_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔",
+    "slug": "nvidia",
+    "company_url": "company.html?c=nvidia",
+    "data_path": "data/nvidia",
+    "registry": "companies.json"
+  }
+}
