@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html>
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="zh-Hant">
 <head>
@@ -538,6 +537,97 @@ section { padding: 58px 0; }
       font-size: 13px;
     }
 
+
+    /* ===== 企業專利情報：共用 company.html + companies.json ===== */
+    .company-intel-section {
+      background: linear-gradient(180deg, #f7fbf9 0%, #ffffff 100%);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .company-intel-toolbar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin: 0 0 20px;
+    }
+    .company-intel-search {
+      flex: 1;
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 12px;
+      padding: 11px 13px;
+      outline: none;
+      font: inherit;
+    }
+    .company-intel-search:focus {
+      border-color: var(--accent-2);
+      box-shadow: 0 0 0 3px rgba(15,118,110,.08);
+    }
+    .company-intel-count {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .company-intel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+      gap: 14px;
+    }
+    .company-intel-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-height: 155px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 8px 22px rgba(20,33,61,.04);
+      transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+    }
+    .company-intel-card:hover {
+      transform: translateY(-2px);
+      border-color: #99d2bc;
+      box-shadow: 0 12px 26px rgba(20,33,61,.08);
+    }
+    .company-intel-card .company-name {
+      margin: 0;
+      color: var(--ink);
+      font-size: 20px;
+      line-height: 1.35;
+    }
+    .company-intel-card .company-patents {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .company-intel-card .company-open {
+      margin-top: auto;
+      color: var(--accent-2);
+      font-weight: 850;
+      font-size: 14px;
+    }
+    .company-intel-card:hover .company-open { text-decoration: underline; }
+    .company-intel-message {
+      grid-column: 1 / -1;
+      padding: 20px;
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      background: #fff;
+      color: var(--muted);
+      text-align: center;
+    }
+    .company-intel-note {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media(max-width:640px) {
+      .company-intel-toolbar { align-items: stretch; flex-direction: column; }
+      .company-intel-count { white-space: normal; }
+      .company-intel-grid { grid-template-columns: 1fr; }
+    }
+
   </style>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-212822931-1"></script>
 <script>
@@ -557,6 +647,7 @@ section { padding: 58px 0; }
 <nav aria-label="主要導覽" class="nav-links">
 <a href="#patent-guide">專利導讀</a>
 <a href="#topics">主題分析</a>
+<a href="#company-intelligence">企業情報</a>
 <a href="#dashboards">儀表板</a>
 <a href="#articles">文章</a>
 <a href="#ebook">電子書</a>
@@ -573,11 +664,30 @@ section { padding: 58px 0; }
 <div class="actions">
 <a class="btn primary" href="#patent-guide">開始專利導讀</a>
 <a class="btn secondary" href="#topics">瀏覽主題分析</a>
+<a class="btn secondary" href="#company-intelligence">企業專利情報</a>
 <a class="btn secondary" href="#dashboards">查看儀表板</a>
 <a class="btn secondary" href="#articles">閱讀文章</a>
 <a class="btn green" href="#ebook">前往電子書</a>
 </div>
 </div>
+</div>
+</section>
+<section class="company-intel-section" id="company-intelligence">
+<div class="container">
+<div class="section-head">
+<div>
+<h2>企業專利情報</h2>
+<p>以共用儀表板框架呈現各企業的專利規模、申請趨勢、IPC、優先權來源與技術布局；點選公司後才載入該公司的 JSON 資料。</p>
+</div>
+</div>
+<div class="company-intel-toolbar">
+<input aria-label="搜尋企業名稱" class="company-intel-search" id="companyIntelSearch" placeholder="搜尋企業名稱，例如 NVIDIA、AMD、Apple" type="search"/>
+<div class="company-intel-count" id="companyIntelCount" aria-live="polite">讀取公司清單中…</div>
+</div>
+<div class="company-intel-grid" id="companyIntelGrid" aria-live="polite">
+<div class="company-intel-message">讀取企業專利情報中…</div>
+</div>
+<p class="company-intel-note" id="companyIntelNote"></p>
 </div>
 </section>
 <section class="guide-section" id="patent-guide">
@@ -1003,6 +1113,7 @@ section { padding: 58px 0; }
 </div>
 </div>
 </section>
+
 <section id="dashboards">
 <div class="container">
 <div class="section-head">
@@ -1310,6 +1421,95 @@ section { padding: 58px 0; }
       });
     })();
   </script>
+
+<script>
+    (() => {
+      const manifestUrl = 'company_dashboard/companies.json';
+      const companyPage = 'company_dashboard/company.html';
+      const grid = document.getElementById('companyIntelGrid');
+      const count = document.getElementById('companyIntelCount');
+      const note = document.getElementById('companyIntelNote');
+      const search = document.getElementById('companyIntelSearch');
+      const defaultLimit = 12;
+      const searchLimit = 30;
+      let companies = [];
+
+      function render() {
+        const q = (search.value || '').trim().toLowerCase();
+        const filtered = q
+          ? companies.filter((c) => `${c.name || ''} ${c.slug || ''}`.toLowerCase().includes(q))
+          : companies;
+        const limit = q ? searchLimit : defaultLimit;
+        const shown = filtered.slice(0, limit);
+
+        grid.innerHTML = '';
+        if (!shown.length) {
+          const empty = document.createElement('div');
+          empty.className = 'company-intel-message';
+          empty.textContent = q ? '找不到符合的企業。' : '目前尚無企業資料。';
+          grid.appendChild(empty);
+        } else {
+          shown.forEach((c) => {
+            const card = document.createElement('a');
+            card.className = 'company-intel-card';
+            card.href = `${companyPage}?c=${encodeURIComponent(c.slug || '')}`;
+            card.setAttribute('aria-label', `開啟 ${c.name || c.slug || '企業'} 專利情報儀表板`);
+
+            const tag = document.createElement('span');
+            tag.className = 'tag company';
+            tag.textContent = '企業布局';
+
+            const h3 = document.createElement('h3');
+            h3.className = 'company-name';
+            h3.textContent = c.name || c.slug || '未命名企業';
+
+            const meta = document.createElement('div');
+            meta.className = 'company-patents';
+            const n = Number(c.patent_count || 0);
+            meta.textContent = n ? `${n.toLocaleString('zh-TW')} 件專利` : '專利資料';
+
+            const open = document.createElement('div');
+            open.className = 'company-open';
+            open.textContent = '開啟儀表板 →';
+
+            card.append(tag, h3, meta, open);
+            grid.appendChild(card);
+          });
+        }
+
+        count.textContent = q
+          ? `符合 ${filtered.length.toLocaleString('zh-TW')} 家｜共 ${companies.length.toLocaleString('zh-TW')} 家`
+          : `共 ${companies.length.toLocaleString('zh-TW')} 家企業`;
+
+        if (filtered.length > shown.length) {
+          note.textContent = `目前顯示前 ${shown.length} 家；可使用上方搜尋快速找到其他企業。`;
+        } else {
+          note.textContent = '';
+        }
+      }
+
+      fetch(manifestUrl, { cache: 'no-store' })
+        .then((r) => {
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          return r.json();
+        })
+        .then((data) => {
+          companies = Array.isArray(data.companies) ? data.companies : [];
+          render();
+        })
+        .catch((err) => {
+          count.textContent = '公司清單讀取失敗';
+          note.textContent = `請確認 ${manifestUrl} 已上傳至網站。`;
+          grid.innerHTML = '';
+          const msg = document.createElement('div');
+          msg.className = 'company-intel-message';
+          msg.textContent = `企業資料暫時無法載入（${err.message}）。`;
+          grid.appendChild(msg);
+        });
+
+      search.addEventListener('input', render);
+    })();
+  </script>
 <script>
     document.querySelectorAll('.filter-btn').forEach((button) => {
       button.addEventListener('click', () => {
@@ -1327,7 +1527,7 @@ section { padding: 58px 0; }
       });
     });
 
-    const sections = ['patent-guide', 'topics', 'dashboards', 'articles', 'ebook'];
+    const sections = ['patent-guide', 'topics', 'company-intelligence', 'dashboards', 'articles', 'ebook'];
     const navLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
