@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generator_version": "patent_html_pipeline_v2.6.2",
-  "build_id": "20261122_173337",
+  "generator_version": "patent_html_pipeline_v2.6.3",
+  "build_id": "20261122_220537",
   "company": "NVIDIA",
   "output_mode": "shared-site",
   "status": "PASS",
@@ -9,27 +9,31 @@
     {
       "id": "patent_pool",
       "status": "PASS",
-      "message": "公司專利池 9,522 件",
+      "message": "公司專利池 9,479 件",
       "metrics": {
-        "pool_size": 9522
+        "pool_size": 9479
       }
     },
     {
       "id": "company_filter",
       "status": "PASS",
-      "message": "公司過濾後保留 9,522 件申請案",
+      "message": "公司過濾後保留 9,479 件申請案",
       "metrics": {
         "enabled": true,
         "company": "NVIDIA",
         "aliases": [
-          "NVIDIA"
+          "NVIDIA Corporation",
+          "NVIDIA International, Inc.",
+          "NVIDIA",
+          "NVIDIA U.S. Investment Company",
+          "c/o NVIDIA Corporation"
         ],
         "raw_row_count": 13524,
-        "kept_row_count": 13516,
-        "excluded_row_count": 8,
+        "kept_row_count": 13471,
+        "excluded_row_count": 53,
         "raw_application_count": 9530,
-        "kept_application_count": 9522,
-        "excluded_application_count": 8,
+        "kept_application_count": 9479,
+        "excluded_application_count": 51,
         "excluded_samples": [
           {
             "_資料國別": "TW",
@@ -89,22 +93,598 @@
           },
           {
             "_資料國別": "TW",
+            "申請號": "TW095105355",
+            "公開/公告號": "TWI413213B",
+            "專利名稱": "對齊之邏輯元件格與互連線繞線架構;ALIGNED LOGIC CELL GRID AND INTERCONNECT ROUTING ARCHITECTURE",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW094109124",
+            "公開/公告號": "TWI413935B",
+            "專利名稱": "用於在雙路徑處理器中之控制處理的裝置及方法;APPARATUS AND METHOD FOR CONTROL PROCESSING IN DUAL PATH PROCESSOR",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW095105363",
+            "公開/公告號": "TWI417936B",
+            "專利名稱": "用於最佳化積體電路中電晶體效能之方法;METHOD FOR OPTIMISING TRANSISTOR PERFORMANCE IN INTEGRATED CIRCUITS",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW095116018",
+            "公開/公告號": "TWI439928B",
+            "專利名稱": "可組態執行單元，操作其之方法，以及電腦程式產品及其指令集;CONFIGURABLE EXECUTING UNIT, METHOD OF OPERATING THE SAME, AND COMPUTER PROGRAM PRODUCT AND INSTRUCTION SET THEREOF",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097140629",
+            "公開/公告號": "TWI445324B",
+            "專利名稱": "處理無線網路中的信號之技術;PROCESSING SIGNALS IN A WIRELESS NETWORK",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097140631",
+            "公開/公告號": "TWI449354B",
+            "專利名稱": "同步分碼多重進接通訊系統與方法;SYNCHRONOUS CDMA COMMUNICATION SYSTEM AND METHOD",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097148468",
+            "公開/公告號": "TWI449357B",
+            "專利名稱": "無線通訊系統中之功率控制之方法與裝置;METHOD AND DEVICE OF POWER CONTROL IN A WIRELESS COMMUNICATION SYSTEM",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW099133459",
+            "公開/公告號": "TWI450192B",
+            "專利名稱": "用於處理器中之控制處理的裝置及方法;APPARATUS AND METHOD FOR CONTROL PROCESSING IN PROCESSOR",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW101101349",
+            "公開/公告號": "TWI451716B",
+            "專利名稱": "在無線網路之通道上接收輸入信號;RECEIVING AN INPUT SIGNAL OVER A CHANNEL OF A WIRELESS NETWORK",
+            "申請人": "輝達技術英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達技術英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW098100487",
+            "公開/公告號": "TWI452864B",
+            "專利名稱": "無線通訊之系統及方法;SYSTEM AND METHOD OF WIRELESS COMMUNICATION",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097140635",
+            "公開/公告號": "TWI454072B",
+            "專利名稱": "頻率估計技術;FREQUENCY ESTIMATION",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097146272",
+            "公開/公告號": "TWI454073B",
+            "專利名稱": "於無線電接收器中產生頻道估值之技術;GENERATING CHANNEL ESTIMATES IN A RADIO RECEIVER",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097148456",
+            "公開/公告號": "TWI454078B",
+            "專利名稱": "無線通訊系統、用於無線通訊系統之接收器及功率控制之方法;A WIRELESS COMMUNICATIONS SYSTEM, RECEIVER THEREFOR AND METHOD OF POWER CONTROL THEREIN",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097140622",
+            "公開/公告號": "TWI456952B",
+            "專利名稱": "無線通訊系統中之無線電接收器（一）;A RADIO RECEIVER IN A WIRELESS COMMUNICATIONS SYSTEM",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW098106399",
+            "公開/公告號": "TWI456933B",
+            "專利名稱": "於無線接收器中處理數位取樣值之技術;PROCESSING DIGITAL SAMPLES IN A WIRELESS RECEIVER",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097140637",
+            "公開/公告號": "TWI459511B",
+            "專利名稱": "記憶體晶胞;MEMORY CELLS",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097145693",
+            "公開/公告號": "TWI459727B",
+            "專利名稱": "無線電接取技術;RADIO ACCESS TECHNOLOGY",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097145935",
+            "公開/公告號": "TWI463818B",
+            "專利名稱": "無線通訊接收器中之信號對干擾比評估技術;ESTIMATING SIGNAL TO INTERFERENCE RATIO IN A WIRELESS COMMUNICATIONS RECEIVER",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097148465",
+            "公開/公告號": "TWI466468B",
+            "專利名稱": "載波檢測技術;CARRIER DETECTION",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097140636",
+            "公開/公告號": "TWI469584B",
+            "專利名稱": "用於在無線通訊系統中處理透過通道所傳送的信號之方法與接收器;METHOD AND RECEIVER FOR PROCESSING A SIGNAL TRANSMITTED OVER A CHANNEL IN A WIRELESS COMMUNICATION SYSTEM",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW098108746",
+            "公開/公告號": "TWI469585B",
+            "專利名稱": "等化處理技術;EQUALISATION PROCESSING",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW100103392",
+            "公開/公告號": "TWI474627B",
+            "專利名稱": "無線通訊接收器之信號處理技術;SIGNAL PROCESSING IN WIRELESS COMMUNICATION RECEIVERS",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW098113454",
+            "公開/公告號": "TWI475824B",
+            "專利名稱": "無線通訊系統中之回授技術;FEEDBACK IN A WIRELESS COMMUNICATION SYSTEM",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW095112369",
+            "公開/公告號": "TWI476681B",
+            "專利名稱": "資料存取及排列單元;DATA ACCESS AND PERMUTE UNIT",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097140624",
+            "公開/公告號": "TWI479827B",
+            "專利名稱": "具接收分集之無線接收器;WIRELESS RECEIVER WITH RECEIVE DIVERSITY",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097148451",
+            "公開/公告號": "TWI479817B",
+            "專利名稱": "無線通訊系統中之功率控制技術（二）;POWER CONTROL IN A WIRELESS COMMUNICATION SYSTEM",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097140628",
+            "公開/公告號": "TWI481231B",
+            "專利名稱": "於無線接收器中處理數位樣本之技術;PROCESSING DIGITAL SAMPLES IN A WIRELESS RECEIVER",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097145694",
+            "公開/公告號": "TWI481281B",
+            "專利名稱": "實體通道建立技術;PHYSICAL CHANNEL ESTABLISHMENT",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097140625",
+            "公開/公告號": "TWI484794B",
+            "專利名稱": "無線通訊系統中之無線電接收器（二）;A RADIO RECEIVER IN A WIRELESS COMMUNICATIONS SYSTEM",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW100103394",
+            "公開/公告號": "TWI485994B",
+            "專利名稱": "蜂巢式通訊系統;A CELLULAR COMMUNICATIONS SYSTEM",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW100106005",
+            "公開/公告號": "TWI486754B",
+            "專利名稱": "用以控制供應電壓之方法及系統;METHOD AND SYSTEM FOR CONTROLLING A SUPPLY VOLTAGE",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW100103380",
+            "公開/公告號": "TWI491181B",
+            "專利名稱": "處理無線電信號之方法、無線電接收器及電腦程式產品;METHOD OF PROCESSING RADIO SIGNALS, RADIO RECEIVER AND COMPUTER PROGRAM PRODUCT",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW098118916",
+            "公開/公告號": "TWI492041B",
+            "專利名稱": "作動電源管理技術;ACTIVE POWER MANAGEMENT",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW100106012",
+            "公開/公告號": "TWI517587B",
+            "專利名稱": "積體電路、數位鎖頻迴路、及使用數位鎖頻迴路之方法;INTEGRATED CIRCUIT, DIGITAL FREQUENCY LOCKED LOOP AND METHOD OF USING THE DIGITAL FREQUENCY LOCKED LOOP",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097136648",
+            "公開/公告號": "TWI521914B",
+            "專利名稱": "頻道品質資訊報告技術;REPORTING CHANNEL QUALITY INFORMATION",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "TW",
             "申請號": "TW104214880",
             "公開/公告號": "TWM526427U",
             "專利名稱": "骰子裝置;Dice device",
             "申請人": "祥輝達精密工業科技股份有限公司",
             "第一申請人": "祥輝達精密工業科技股份有限公司"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW100103395",
+            "公開/公告號": "TWI571079B",
+            "專利名稱": "用於無線接收器之等化器;AN EQUALISER FOR WIRELESS RECEIVERS",
+            "申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "輝達科技英國有限公司;NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US13511880",
+            "公開/公告號": "US20120284021A1",
+            "專利名稱": "CONCEALING AUDIO INTERRUPTIONS",
+            "申請人": "NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US13577300",
+            "公開/公告號": "US20120311314A1",
+            "專利名稱": "PROCESSOR SECURITY",
+            "申請人": "NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US13579207",
+            "公開/公告號": "US20120311374A1",
+            "專利名稱": "METHOD AND SYSTEM FOR CONTROLLING A SUPPLY VOLTAGE",
+            "申請人": "NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US13577480",
+            "公開/公告號": "US20120313678A1",
+            "專利名稱": "DIGITAL FREQUENCY LOCKED LOOP",
+            "申請人": "NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US13582695",
+            "公開/公告號": "US20120328049A1",
+            "專利名稱": "METHOD AND DEVICE FOR SENDING BETWEEN A RADIO FREQUENCY CIRCUIT AND A BASEBAND CIRCUIT",
+            "申請人": "NVIDIA TECHNOLOGY UK LIMITED",
+            "第一申請人": "NVIDIA TECHNOLOGY UK LIMITED"
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US14700343",
+            "公開/公告號": "US20150234659A1",
+            "專利名稱": "APPARATUS AND METHOD FOR ASYMMETRIC DUAL PATH PROCESSING",
+            "申請人": "Nvidia Technology UK Limited",
+            "第一申請人": "Nvidia Technology UK Limited"
           }
-        ]
+        ],
+        "entity_resolution": {
+          "enabled": true,
+          "company": "NVIDIA",
+          "target_names": [
+            "NVIDIA"
+          ],
+          "anchor": "NVIDIA Corporation",
+          "anchor_application_count": 9447,
+          "confirmed_entity_count": 5,
+          "candidate_entity_count": 0,
+          "excluded_target_entity_count": 0,
+          "group_only_application_count": 0,
+          "candidate_application_count": 0,
+          "unresolved_target_text_application_count": 43,
+          "manual_aliases": [],
+          "manual_excludes": [],
+          "confirmed_entities": [
+            {
+              "name": "NVIDIA Corporation",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 123.0,
+              "application_count": 9447,
+              "year_min": 1995,
+              "year_max": 2026,
+              "relative_to_anchor_pct": 100.0,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 100.0,
+              "reasons": [
+                "name_match=1.00",
+                "organization_marker",
+                "exact_core_name",
+                "frequency>=2%_of_anchor",
+                "inventor_overlap>=25%",
+                "ipc_overlap>=50%",
+                "year_overlap_or_adjacent",
+                "primary_anchor"
+              ]
+            },
+            {
+              "name": "NVIDIA International, Inc.",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 78.0,
+              "application_count": 14,
+              "year_min": 1999,
+              "year_max": 2007,
+              "relative_to_anchor_pct": 0.148,
+              "inventor_overlap_pct": 13.79,
+              "ipc_jaccard_pct": 6.08,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "frequency>=0.1%_of_anchor",
+                "inventor_overlap>=8%",
+                "ipc_overlap>=5%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "NVIDIA",
+              "entity_type": "unknown",
+              "status": "CONFIRMED",
+              "score": 92.0,
+              "application_count": 11,
+              "year_min": 1995,
+              "year_max": 2022,
+              "relative_to_anchor_pct": 0.116,
+              "inventor_overlap_pct": 93.33,
+              "ipc_jaccard_pct": 5.41,
+              "reasons": [
+                "name_match=1.00",
+                "entity_type_unknown",
+                "exact_core_name",
+                "frequency>=0.1%_of_anchor",
+                "inventor_overlap>=25%",
+                "ipc_overlap>=5%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "NVIDIA U.S. Investment Company",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 81.0,
+              "application_count": 10,
+              "year_min": 1997,
+              "year_max": 2004,
+              "relative_to_anchor_pct": 0.106,
+              "inventor_overlap_pct": 54.55,
+              "ipc_jaccard_pct": 4.05,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "frequency>=0.1%_of_anchor",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "c/o NVIDIA Corporation",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 1,
+              "year_min": 2023,
+              "year_max": 2023,
+              "relative_to_anchor_pct": 0.011,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 1.35,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            }
+          ],
+          "candidate_entities": [],
+          "excluded_target_entities": []
+        }
+      }
+    },
+    {
+      "id": "company_entity_resolution",
+      "status": "PASS",
+      "message": "企業實體辨識：CONFIRMED 5、CANDIDATE 0、目標字樣排除實體 0",
+      "metrics": {
+        "anchor": "NVIDIA Corporation",
+        "anchor_application_count": 9447,
+        "confirmed_entities": [
+          {
+            "name": "NVIDIA Corporation",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 123.0,
+            "application_count": 9447,
+            "year_min": 1995,
+            "year_max": 2026,
+            "relative_to_anchor_pct": 100.0,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 100.0,
+            "reasons": [
+              "name_match=1.00",
+              "organization_marker",
+              "exact_core_name",
+              "frequency>=2%_of_anchor",
+              "inventor_overlap>=25%",
+              "ipc_overlap>=50%",
+              "year_overlap_or_adjacent",
+              "primary_anchor"
+            ]
+          },
+          {
+            "name": "NVIDIA International, Inc.",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 78.0,
+            "application_count": 14,
+            "year_min": 1999,
+            "year_max": 2007,
+            "relative_to_anchor_pct": 0.148,
+            "inventor_overlap_pct": 13.79,
+            "ipc_jaccard_pct": 6.08,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "frequency>=0.1%_of_anchor",
+              "inventor_overlap>=8%",
+              "ipc_overlap>=5%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "NVIDIA",
+            "entity_type": "unknown",
+            "status": "CONFIRMED",
+            "score": 92.0,
+            "application_count": 11,
+            "year_min": 1995,
+            "year_max": 2022,
+            "relative_to_anchor_pct": 0.116,
+            "inventor_overlap_pct": 93.33,
+            "ipc_jaccard_pct": 5.41,
+            "reasons": [
+              "name_match=1.00",
+              "entity_type_unknown",
+              "exact_core_name",
+              "frequency>=0.1%_of_anchor",
+              "inventor_overlap>=25%",
+              "ipc_overlap>=5%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "NVIDIA U.S. Investment Company",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 81.0,
+            "application_count": 10,
+            "year_min": 1997,
+            "year_max": 2004,
+            "relative_to_anchor_pct": 0.106,
+            "inventor_overlap_pct": 54.55,
+            "ipc_jaccard_pct": 4.05,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "frequency>=0.1%_of_anchor",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "c/o NVIDIA Corporation",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 1,
+            "year_min": 2023,
+            "year_max": 2023,
+            "relative_to_anchor_pct": 0.011,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 1.35,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          }
+        ],
+        "candidate_entities": [],
+        "excluded_target_entities": [],
+        "candidate_application_count": 0,
+        "unresolved_target_text_application_count": 43,
+        "group_only_application_count": 0,
+        "candidate_share_pct": 0.0,
+        "manual_aliases": [],
+        "manual_excludes": []
       }
     },
     {
       "id": "applicant_normalization",
       "status": "PASS",
-      "message": "正規化後法人實體 9 個",
+      "message": "正規化後法人實體 8 個",
       "metrics": {
-        "entity_count": 9,
-        "alias_group_count": 5
+        "entity_count": 8,
+        "alias_group_count": 4
       }
     },
     {
@@ -112,7 +692,7 @@
       "status": "PASS",
       "message": "優先權來源解析率 99.72%",
       "metrics": {
-        "item_count": 15270,
+        "item_count": 15223,
         "unknown_item_count": 43,
         "parse_rate_pct": 99.72,
         "unknown_samples": [
@@ -140,9 +720,9 @@
     {
       "id": "payload_optimization",
       "status": "PASS",
-      "message": "compact records 9,522 筆；raw_records 已移除",
+      "message": "compact records 9,479 筆；raw_records 已移除",
       "metrics": {
-        "record_count": 9522,
+        "record_count": 9479,
         "raw_records_present": false
       }
     },
@@ -152,23 +732,23 @@
       "message": "shared-site 公司資料已更新：data/nvidia/；輸出 companies.json 已同步",
       "metrics": {
         "slug": "nvidia",
-        "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔",
+        "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔",
         "registry_source": "C:\\mywebsite\\company_dashboard\\companies.json",
-        "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔\\companies.json",
+        "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔\\companies.json",
         "registry_action": "updated",
         "registry_company_count": 2,
-        "summary_bytes": 20438,
-        "records_bytes": 3115112,
+        "summary_bytes": 36332,
+        "records_bytes": 3097849,
         "classification_bytes": 139
       }
     }
   ],
   "shared_site": {
-    "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔",
+    "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔",
     "slug": "nvidia",
     "company_url": "company.html?c=nvidia",
     "data_path": "data/nvidia",
     "registry_source": "C:\\mywebsite\\company_dashboard\\companies.json",
-    "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔\\companies.json"
+    "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔\\companies.json"
   }
 }
