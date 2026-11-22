@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generator_version": "patent_html_pipeline_v2.6.2",
-  "build_id": "20261122_203630",
+  "generator_version": "patent_html_pipeline_v2.6.3",
+  "build_id": "20261122_215954",
   "company": "Apple",
   "output_mode": "shared-site",
   "status": "PASS",
@@ -9,28 +9,79 @@
     {
       "id": "patent_pool",
       "status": "PASS",
-      "message": "公司專利池 46,094 件",
+      "message": "公司專利池 45,599 件",
       "metrics": {
-        "pool_size": 46094
+        "pool_size": 45599
       }
     },
     {
       "id": "company_filter",
       "status": "PASS",
-      "message": "公司過濾後保留 46,094 件申請案",
+      "message": "公司過濾後保留 45,599 件申請案",
       "metrics": {
         "enabled": true,
         "company": "Apple",
         "aliases": [
-          "Apple"
+          "Apple Inc.",
+          "Apple Computer, Inc.",
+          "Apple Computers, Inc.",
+          "Apple Computer, Inc., A California Corporation",
+          "Apple Inc., a California corporation",
+          "Apple",
+          "Apple Comptuer, Inc.",
+          "Apple Compunter, Inc.",
+          "Apple Computer, Inc. One Infinite Loop",
+          "Apple Inc., a Delaware corporation",
+          "INC., APPLE",
+          "here. Apple Inc."
         ],
         "raw_row_count": 73078,
-        "kept_row_count": 73019,
-        "excluded_row_count": 59,
+        "kept_row_count": 72499,
+        "excluded_row_count": 579,
         "raw_application_count": 46137,
-        "kept_application_count": 46094,
-        "excluded_application_count": 43,
+        "kept_application_count": 45599,
+        "excluded_application_count": 538,
         "excluded_samples": [
+          {
+            "_資料國別": "TW",
+            "申請號": "TW096121701",
+            "公開/公告號": "TW200806229A",
+            "專利名稱": "用於人體模型之連接器結構;CONNECTING STRUCTURE FOR MANNEQUIN",
+            "申請人": "蘋果股份有限公司;APPLE CORPORATION",
+            "第一申請人": "蘋果股份有限公司;APPLE CORPORATION"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW096139837",
+            "公開/公告號": "TW200824616A",
+            "專利名稱": "人體模型的連接結構;CONNECTING STRUCTURE FOR MANNEQUIN",
+            "申請人": "蘋果股份有限公司;APPLE CORPORATION",
+            "第一申請人": "蘋果股份有限公司;APPLE CORPORATION"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW096106123",
+            "公開/公告號": "TW200835436A",
+            "專利名稱": "動物排遺收集裝置;Animal excrement collection device",
+            "申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC.",
+            "第一申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW096115361",
+            "公開/公告號": "TW200841821A",
+            "專利名稱": "環形分隔器,及附著件;Annular separator and an attached member",
+            "申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC.",
+            "第一申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW099131416",
+            "公開/公告號": "TW201110926A",
+            "專利名稱": "醫用檢測裝置;MEDICAL INSPECTION DEVICE",
+            "申請人": "愛譜實業有限公司;APPLE BIOMEDICAL INC.",
+            "第一申請人": "愛譜實業有限公司;APPLE BIOMEDICAL INC."
+          },
           {
             "_資料國別": "TW",
             "申請號": "TW101124557",
@@ -54,6 +105,14 @@
             "專利名稱": "具有一探針卡之測試設備及連接器機構;TEST APPARATUS HAVING A PROBE CARD AND CONNECTOR MECHANISM",
             "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.;英特爾公司;INTEL CORPORATION",
             "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW101120896",
+            "公開/公告號": "TW201350077A",
+            "專利名稱": "醫用檢測裝置;MEDICAL INSPECTION DEVICE",
+            "申請人": "愛譜實業有限公司;APPLE BIOMEDICAL INC.",
+            "第一申請人": "愛譜實業有限公司;APPLE BIOMEDICAL INC."
           },
           {
             "_資料國別": "TW",
@@ -118,6 +177,30 @@
             "專利名稱": "用於測試一受試裝置之探針設備、經結構設計以在用於測試一受試裝置之一探針設備中使用之探針心及用於將一探針心閂至一裝置之方法;PROBE APPARATUS FOR TESTING A DEVICE UNDER TEST, PROBE CORE CONFIGURED FOR USE IN A PROBE APPARATUS FOR TESTING A DEVICE UNDER TEST AND METHOD FOR LATCHING A PROBE CORE TO A DEVICE",
             "申請人": "美商色拉頓系統公司;CELADON SYSTEMS, INC.",
             "第一申請人": "美商色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW107123268",
+            "公開/公告號": "TW202005579A",
+            "專利名稱": "環保吸管;Eco-friendly straw",
+            "申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC.",
+            "第一申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW107130139",
+            "公開/公告號": "TW202008929A",
+            "專利名稱": "易清洗式吸管;Easy-to-clean straw",
+            "申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC.",
+            "第一申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW110134349",
+            "公開/公告號": "TW202312897A",
+            "專利名稱": "組合式胸罩;Modular bra",
+            "申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC.",
+            "第一申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC."
           },
           {
             "_資料國別": "TW",
@@ -217,6 +300,14 @@
           },
           {
             "_資料國別": "TW",
+            "申請號": "TW112143590",
+            "公開/公告號": "TW202501652A",
+            "專利名稱": "用於晶圓不良檢測的人工智慧系統;AI SYSTEM FOR WAFER DEFECT DETECTION",
+            "申請人": "南韓商艾波技術股份有限公司;APPLE T CO., LTD.",
+            "第一申請人": "南韓商艾波技術股份有限公司;APPLE T CO., LTD."
+          },
+          {
+            "_資料國別": "TW",
             "申請號": "TW113106241",
             "公開/公告號": "TW202507808A",
             "專利名稱": "導熱性提升的分段電晶體主動區;SEGMENTED TRANSISTOR ACTIVE REGION FOR ENHANCED THERMAL CONDUCTIVITY",
@@ -238,6 +329,14 @@
             "專利名稱": "光學聲向量感測器;OPTICAL ACOUSTIC VECTOR SENSOR",
             "申請人": "美商雷神公司;RAYTHEON COMPANY",
             "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113135270",
+            "公開/公告號": "TW202528310A",
+            "專利名稱": "經取代胺化合物，組合物及使用方法;SUBSTITUTED AMINE COMPOUNDS, COMPOSITIONS AND METHODS OF USE",
+            "申請人": "美商深蘋果治療股份有限公司;DEEP APPLE THERAPEUTICS, INC.",
+            "第一申請人": "美商深蘋果治療股份有限公司;DEEP APPLE THERAPEUTICS, INC."
           },
           {
             "_資料國別": "TW",
@@ -289,6 +388,30 @@
           },
           {
             "_資料國別": "TW",
+            "申請號": "TW114143219",
+            "公開/公告號": "TW202633610A",
+            "專利名稱": "經烷基苯基取代之化合物、組合物及使用方法;ALKYLPHENYL SUBSTITUTED COMPOUNDS, COMPOSITIONS AND METHODS OF USE",
+            "申請人": "美商深蘋果治療股份有限公司;DEEP APPLE THERAPEUTICS, INC.",
+            "第一申請人": "美商深蘋果治療股份有限公司;DEEP APPLE THERAPEUTICS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW095205713",
+            "公開/公告號": "TWM297623U",
+            "專利名稱": "動物行動馬桶;Mobile stool for animals",
+            "申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC.",
+            "第一申請人": "蘋信心文化事業有限公司;APPLE JU STUDIO INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW096209879",
+            "公開/公告號": "TWM323855U",
+            "專利名稱": "用於人體模型之連接器;CONNECTOR FOR MANNEQUIN",
+            "申請人": "蘋果股份有限公司;APPLE CORPORATION",
+            "第一申請人": "蘋果股份有限公司;APPLE CORPORATION"
+          },
+          {
+            "_資料國別": "TW",
             "申請號": "TW092117657",
             "公開/公告號": "TWI318300B",
             "專利名稱": "探測半導體晶圓之被屏蔽的探測裝置;SHIELDED PROBE APPARATUS FOR PROBING SEMICONDUCTOR WAFER",
@@ -305,86 +428,3740 @@
           },
           {
             "_資料國別": "TW",
+            "申請號": "TW100221005",
+            "公開/公告號": "TWM429160U",
+            "專利名稱": "可磁化解剖模型;MAGNETIZED ANATOMICAL MODEL",
+            "申請人": "愛譜實業有限公司;APPLE BIOMEDICAL INC.",
+            "第一申請人": "愛譜實業有限公司;APPLE BIOMEDICAL INC."
+          },
+          {
+            "_資料國別": "TW",
             "申請號": "TW094130088",
             "公開/公告號": "TWI391689B",
             "專利名稱": "用於探測半導體之可換式探針裝置;REPLACEABLE PROBE APPARATUS FOR PROBING SEMICONDUCTOR WAFER",
             "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
             "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
-          },
-          {
-            "_資料國別": "TW",
-            "申請號": "TW095105517",
-            "公開/公告號": "TWI408374B",
-            "專利名稱": "用於終止半導體晶圓探針裝置之裝置與方法;APPARATUS AND METHOD FOR TERMINATING PROBE APPARTUS OF SEMICONDUCTOR WAFER",
-            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
-            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
-          },
-          {
-            "_資料國別": "TW",
-            "申請號": "TW097119400",
-            "公開/公告號": "TWI431281B",
-            "專利名稱": "用於探測半導體晶圓之可替換式探測裝置;REPLACEABLE PROBE APPARATUS FOR PROBING SEMICONDUCTOR WAFER",
-            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
-            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
-          },
-          {
-            "_資料國別": "TW",
-            "申請號": "TW094115911",
-            "公開/公告號": "TWI450809B",
-            "專利名稱": "間隔化樹脂丸粒;COMPARTMENTALIZED RESIN PELLETS",
-            "申請人": "Ｍ＆Ｇ美國股份有限公司;M&G USA CORPORATION",
-            "第一申請人": "Ｍ＆Ｇ美國股份有限公司;M&G USA CORPORATION"
-          },
-          {
-            "_資料國別": "TW",
-            "申請號": "TW099119073",
-            "公開/公告號": "TWI486394B",
-            "專利名稱": "具有改良的氧反應性之聚醯胺－聚二烯摻合物;POLYAMIDE-POLYDIENE BLENDS WITH IMPROVED OXYGEN REACTIVITY",
-            "申請人": "Ｍ＆Ｇ美國股份有限公司;M&G USA CORPORATION",
-            "第一申請人": "Ｍ＆Ｇ美國股份有限公司;M&G USA CORPORATION"
-          },
-          {
-            "_資料國別": "TW",
-            "申請號": "TW108110278",
-            "公開/公告號": "TWI866904B",
-            "專利名稱": "多單元感應式無線電力傳送系統;MULTI-CELL INDUCTIVE WIRELESS POWER TRANSFER SYSTEM",
-            "申請人": "美商瑞西恩公司;RAYTHEON COMPANY",
-            "第一申請人": "美商瑞西恩公司;RAYTHEON COMPANY"
-          },
-          {
-            "_資料國別": "TW",
-            "申請號": "TW111108144",
-            "公開/公告號": "TWI878654B",
-            "專利名稱": "正交印刷電路板介面;ORTHOGONAL PRINTED CIRCUIT BOARD INTERFACE",
-            "申請人": "美商雷森公司;RAYTHEON COMPANY",
-            "第一申請人": "美商雷森公司;RAYTHEON COMPANY"
-          },
-          {
-            "_資料國別": "TW",
-            "申請號": "TW109122343",
-            "公開/公告號": "TWI883018B",
-            "專利名稱": "包含用於隔離增強之壁之電路總成及組裝其之方法;CIRCUIT ASSEMBLY COMPRISING WALL FOR ISOLATION ENHANCEMENT AND METHOD OF ASSEMBLING THE SAME",
-            "申請人": "美商瑞西恩公司;RAYTHEON COMPANY",
-            "第一申請人": "美商瑞西恩公司;RAYTHEON COMPANY"
-          },
-          {
-            "_資料國別": "TW",
-            "申請號": "TW112112432",
-            "公開/公告號": "TWI940793B",
-            "專利名稱": "用於高衝擊環境之表面貼裝相容平面磁體;SURFACE MOUNT COMPATIBLE PLANAR MAGNETICS FOR HIGH SHOCK ENVIRONMENTS",
-            "申請人": "美商雷森公司;RAYTHEON COMPANY",
-            "第一申請人": "美商雷森公司;RAYTHEON COMPANY"
           }
-        ]
+        ],
+        "entity_resolution": {
+          "enabled": true,
+          "company": "Apple",
+          "target_names": [
+            "Apple"
+          ],
+          "anchor": "Apple Inc.",
+          "anchor_application_count": 43613,
+          "confirmed_entity_count": 12,
+          "candidate_entity_count": 36,
+          "excluded_target_entity_count": 83,
+          "group_only_application_count": 0,
+          "candidate_application_count": 99,
+          "unresolved_target_text_application_count": 495,
+          "manual_aliases": [],
+          "manual_excludes": [],
+          "confirmed_entities": [
+            {
+              "name": "Apple Inc.",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 123.0,
+              "application_count": 43613,
+              "year_min": 1998,
+              "year_max": 2026,
+              "relative_to_anchor_pct": 100.0,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 100.0,
+              "reasons": [
+                "name_match=1.00",
+                "organization_marker",
+                "exact_core_name",
+                "frequency>=2%_of_anchor",
+                "inventor_overlap>=25%",
+                "ipc_overlap>=50%",
+                "year_overlap_or_adjacent",
+                "primary_anchor"
+              ]
+            },
+            {
+              "name": "Apple Computer, Inc.",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 96.0,
+              "application_count": 2278,
+              "year_min": 1977,
+              "year_max": 2012,
+              "relative_to_anchor_pct": 5.223,
+              "inventor_overlap_pct": 45.29,
+              "ipc_jaccard_pct": 33.03,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "frequency>=2%_of_anchor",
+                "inventor_overlap>=25%",
+                "ipc_overlap>=20%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Computers, Inc.",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 10,
+              "year_min": 1994,
+              "year_max": 2002,
+              "relative_to_anchor_pct": 0.023,
+              "inventor_overlap_pct": 38.46,
+              "ipc_jaccard_pct": 2.12,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Computer, Inc., A California Corporation",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 9,
+              "year_min": 2003,
+              "year_max": 2011,
+              "relative_to_anchor_pct": 0.021,
+              "inventor_overlap_pct": 82.35,
+              "ipc_jaccard_pct": 1.52,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Inc., a California corporation",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 6,
+              "year_min": 2010,
+              "year_max": 2012,
+              "relative_to_anchor_pct": 0.014,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 1.52,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple",
+              "entity_type": "unknown",
+              "status": "CONFIRMED",
+              "score": 85.0,
+              "application_count": 5,
+              "year_min": 1929,
+              "year_max": 2017,
+              "relative_to_anchor_pct": 0.011,
+              "inventor_overlap_pct": 50.0,
+              "ipc_jaccard_pct": 1.52,
+              "reasons": [
+                "name_match=1.00",
+                "entity_type_unknown",
+                "exact_core_name",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Comptuer, Inc.",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 1,
+              "year_min": 1998,
+              "year_max": 1998,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 33.33,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Compunter, Inc.",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 1,
+              "year_min": 1998,
+              "year_max": 1998,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Computer, Inc. One Infinite Loop",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 1,
+              "year_min": 2004,
+              "year_max": 2004,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Inc., a Delaware corporation",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 1,
+              "year_min": 2011,
+              "year_max": 2011,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "INC., APPLE",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 1,
+              "year_min": 2014,
+              "year_max": 2014,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "here. Apple Inc.",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 1,
+              "year_min": 2022,
+              "year_max": 2022,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            }
+          ],
+          "candidate_entities": [
+            {
+              "name": "APPLE ELECTRIC COMPANY",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 35,
+              "year_min": 1905,
+              "year_max": 1914,
+              "relative_to_anchor_pct": 0.08,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "Apple Computer",
+              "entity_type": "unknown",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 7,
+              "year_min": 1988,
+              "year_max": 2002,
+              "relative_to_anchor_pct": 0.016,
+              "inventor_overlap_pct": 40.0,
+              "ipc_jaccard_pct": 1.52,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Deep Apple Therapeutics, Inc.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 66.0,
+              "application_count": 7,
+              "year_min": 2024,
+              "year_max": 2026,
+              "relative_to_anchor_pct": 0.016,
+              "inventor_overlap_pct": 7.14,
+              "ipc_jaccard_pct": 0.91,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=2%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Medical Corporation",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 6,
+              "year_min": 1991,
+              "year_max": 2009,
+              "relative_to_anchor_pct": 0.014,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.91,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Midwest Apple Improvement Association",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 6,
+              "year_min": 2017,
+              "year_max": 2024,
+              "relative_to_anchor_pct": 0.014,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "APPLE VENDER COMPANY",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 3,
+              "year_min": 1927,
+              "year_max": 1930,
+              "relative_to_anchor_pct": 0.007,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "Apple Corporate Technologies, Inc.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 3,
+              "year_min": 2001,
+              "year_max": 2002,
+              "relative_to_anchor_pct": 0.007,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.91,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "VINCENT G. APPLE LABORATORIES",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 3,
+              "year_min": 1929,
+              "year_max": 1929,
+              "relative_to_anchor_pct": 0.007,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "APPLE T Co., Ltd.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 2,
+              "year_min": 2023,
+              "year_max": 2023,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.91,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Adhesives, Inc.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 2,
+              "year_min": 1983,
+              "year_max": 1984,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 1.21,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "Apple lnc.",
+              "entity_type": "unknown",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 2,
+              "year_min": 2018,
+              "year_max": 2022,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 1.82,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Shanghai Apple Flavor & Fragrance Co., Ltd.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 2,
+              "year_min": 2005,
+              "year_max": 2007,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Thorn Apple Valley, Inc.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 2,
+              "year_min": 1996,
+              "year_max": 1997,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "APPLE CREATIVE PRODUCTS, INC. (TAIWAN)",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2009,
+              "year_max": 2009,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.91,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "APPLE ELECTRICAL MANUFACTURING COMPANY",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 1,
+              "year_min": 1928,
+              "year_max": 1928,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "Apple Archery Products, LLC",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2008,
+              "year_max": 2008,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Blossom, LLC",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 1996,
+              "year_max": 1996,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Electric Car, Inc.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2014,
+              "year_max": 2014,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple House Elecronics Ltd.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 1,
+              "year_min": 1995,
+              "year_max": 1995,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "Apple Ic.",
+              "entity_type": "unknown",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2012,
+              "year_max": 2012,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.91,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Incl",
+              "entity_type": "unknown",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2012,
+              "year_max": 2012,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Ine.",
+              "entity_type": "unknown",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2023,
+              "year_max": 2023,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Inlc.",
+              "entity_type": "unknown",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2011,
+              "year_max": 2011,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Partners, LP",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2014,
+              "year_max": 2014,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Apple Sports, Inc.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 1,
+              "year_min": 1994,
+              "year_max": 1994,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "Apple Sugar LLC",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2025,
+              "year_max": 2025,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "BEATRICE CARAMEL APPLE CO. INC.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 1,
+              "year_min": 1970,
+              "year_max": 1970,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "CANDI APPLE TECH, CORP.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2015,
+              "year_max": 2015,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "COONS APPLE CORPORATION",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 1,
+              "year_min": 1927,
+              "year_max": 1927,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "CROWN APPLE PRODUCTS, INC.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 1,
+              "year_min": 1948,
+              "year_max": 1948,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "Carousel Apple, Inc.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 1,
+              "year_min": 1993,
+              "year_max": 1993,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "Dillard-Apple, LLC",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2018,
+              "year_max": 2018,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.91,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "New England Apple Products Co., Inc.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 1,
+              "year_min": 1987,
+              "year_max": 1987,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            },
+            {
+              "name": "One Apple Park Way",
+              "entity_type": "unknown",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2020,
+              "year_max": 2020,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.91,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "SHENZHEN WANHONG APPLE ELECTRONICSCO., LTD",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2022,
+              "year_max": 2022,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Tastee Apple Inc.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 56.0,
+              "application_count": 1,
+              "year_min": 1994,
+              "year_max": 1994,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker"
+              ]
+            }
+          ],
+          "excluded_target_entities": [
+            {
+              "name": "APPLE VINCENT G",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 115,
+              "year_min": 1917,
+              "year_max": 1931,
+              "relative_to_anchor_pct": 0.264,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 4.45,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "VINCENT G. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 71,
+              "year_min": 1901,
+              "year_max": 1918,
+              "relative_to_anchor_pct": 0.163,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "BESSIE D. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 40,
+              "year_min": 1933,
+              "year_max": 1940,
+              "relative_to_anchor_pct": 0.092,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 2.7,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE HERBERT F",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 35,
+              "year_min": 1928,
+              "year_max": 1933,
+              "relative_to_anchor_pct": 0.08,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 2.1,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE EDWARD M",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 34,
+              "year_min": 1928,
+              "year_max": 1951,
+              "relative_to_anchor_pct": 0.078,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 2.41,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Marc G.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 9,
+              "year_min": 1996,
+              "year_max": 2005,
+              "relative_to_anchor_pct": 0.021,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 1.52,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "EDWARD M. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 6,
+              "year_min": 1930,
+              "year_max": 1953,
+              "relative_to_anchor_pct": 0.014,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 1.51,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Dan",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 5,
+              "year_min": 2009,
+              "year_max": 2016,
+              "relative_to_anchor_pct": 0.011,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Howard P.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 5,
+              "year_min": 2001,
+              "year_max": 2017,
+              "relative_to_anchor_pct": 0.011,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.91,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Phillip C.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 5,
+              "year_min": 1993,
+              "year_max": 2003,
+              "relative_to_anchor_pct": 0.011,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.91,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "HERBERT F. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 5,
+              "year_min": 1930,
+              "year_max": 1933,
+              "relative_to_anchor_pct": 0.011,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 1.52,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Melvin J.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 4,
+              "year_min": 1996,
+              "year_max": 2003,
+              "relative_to_anchor_pct": 0.009,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 1.52,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Edward G.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 3,
+              "year_min": 1951,
+              "year_max": 2008,
+              "relative_to_anchor_pct": 0.007,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Wayne R.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 3,
+              "year_min": 1977,
+              "year_max": 1979,
+              "relative_to_anchor_pct": 0.007,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Wesley Larry",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 3,
+              "year_min": 2008,
+              "year_max": 2012,
+              "relative_to_anchor_pct": 0.007,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Deng, Zhipin Apple",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 3,
+              "year_min": 2012,
+              "year_max": 2015,
+              "relative_to_anchor_pct": 0.007,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE GAROLD E",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 2,
+              "year_min": 1964,
+              "year_max": 1965,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple Computer France, Sarl",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 2,
+              "year_min": 1988,
+              "year_max": 1989,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Clarence L.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 2,
+              "year_min": 1979,
+              "year_max": 1998,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.6,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Jeff",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 2,
+              "year_min": 2006,
+              "year_max": 2006,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Linda",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 2,
+              "year_min": 2008,
+              "year_max": 2008,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.6,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Merrill K.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 2,
+              "year_min": 1976,
+              "year_max": 1984,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.91,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Robert",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 2,
+              "year_min": 2003,
+              "year_max": 2006,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "CARL APPLE",
+              "entity_type": "unknown",
+              "status": "EXCLUDED",
+              "score": 41.0,
+              "application_count": 2,
+              "year_min": 1946,
+              "year_max": 1969,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown"
+              ]
+            },
+            {
+              "name": "WILLIAM M. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 2,
+              "year_min": 1914,
+              "year_max": 1915,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "50 Apple Hill Drive",
+              "entity_type": "unknown",
+              "status": "EXCLUDED",
+              "score": 46.0,
+              "application_count": 1,
+              "year_min": 2023,
+              "year_max": 2023,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "ALBERT G. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1935,
+              "year_max": 1935,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE CHARLES N",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1955,
+              "year_max": 1955,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE DANIEL A",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1932,
+              "year_max": 1932,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE DONALD C",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1965,
+              "year_max": 1965,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE FLOYD M",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1947,
+              "year_max": 1947,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE GEORGE W",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1935,
+              "year_max": 1935,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE GROVER C",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1921,
+              "year_max": 1921,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE JACK 199, L.P.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2015,
+              "year_max": 2015,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 1.52,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE LAUREL T",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1946,
+              "year_max": 1946,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE LEROY M",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1958,
+              "year_max": 1958,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE W,US",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1972,
+              "year_max": 1972,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE, Gary Elliot",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2010,
+              "year_max": 2010,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE, Robert B.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2010,
+              "year_max": 2010,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "APPLE, Robert E.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2010,
+              "year_max": 2010,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Adams Apple Distibuting L.P.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2003,
+              "year_max": 2003,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Adams Apple Distributing, L.P.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1993,
+              "year_max": 1993,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Allon, Aliza Apple",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2009,
+              "year_max": 2009,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.6,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Aaron",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2016,
+              "year_max": 2016,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Bradley G.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2017,
+              "year_max": 2017,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Chad Curtis",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2011,
+              "year_max": 2011,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, David L.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2001,
+              "year_max": 2001,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Glenn D.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1988,
+              "year_max": 1988,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.6,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Gregory L.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2002,
+              "year_max": 2002,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Hugh C.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1977,
+              "year_max": 1977,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.6,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, James E.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2016,
+              "year_max": 2016,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 2.42,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, James L.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2002,
+              "year_max": 2002,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, James R.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2012,
+              "year_max": 2012,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Jason K.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2010,
+              "year_max": 2010,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Jeffrey A.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2018,
+              "year_max": 2018,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, John Ray",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2004,
+              "year_max": 2004,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Jr., Edward G.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1994,
+              "year_max": 1994,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Judy A.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1998,
+              "year_max": 1998,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Ori",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2000,
+              "year_max": 2000,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, PhD, MBA, Howard P.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2017,
+              "year_max": 2017,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Scott D.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2019,
+              "year_max": 2019,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Terry Jay",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2012,
+              "year_max": 2012,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Thomas",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2014,
+              "year_max": 2014,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Uzi",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2007,
+              "year_max": 2007,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 16.67,
+              "ipc_jaccard_pct": 2.12,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, Wayne B.",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1997,
+              "year_max": 1997,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Apple, William",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2005,
+              "year_max": 2005,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "BARBARA K. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1907,
+              "year_max": 1907,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "CHARLES S. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1900,
+              "year_max": 1900,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "GAROLD E. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1966,
+              "year_max": 1966,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "GROVER C. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1917,
+              "year_max": 1917,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "J. L. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1899,
+              "year_max": 1899,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "JACK APPLE",
+              "entity_type": "unknown",
+              "status": "EXCLUDED",
+              "score": 41.0,
+              "application_count": 1,
+              "year_min": 1932,
+              "year_max": 1932,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown"
+              ]
+            },
+            {
+              "name": "KOLD-KRISP APPLE SERVICE",
+              "entity_type": "unknown",
+              "status": "EXCLUDED",
+              "score": 41.0,
+              "application_count": 1,
+              "year_min": 1947,
+              "year_max": 1947,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown"
+              ]
+            },
+            {
+              "name": "Mahmud, Apple",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2017,
+              "year_max": 2017,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.6,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "NED APPLE ARTHUR",
+              "entity_type": "unknown",
+              "status": "EXCLUDED",
+              "score": 41.0,
+              "application_count": 1,
+              "year_min": 1923,
+              "year_max": 1923,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown"
+              ]
+            },
+            {
+              "name": "OLIVER C. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1913,
+              "year_max": 1913,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "OSCAR D. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1908,
+              "year_max": 1908,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "PEARLEY O. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1906,
+              "year_max": 1906,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "PHILIP H. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1907,
+              "year_max": 1907,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "Pasamba, Apple Grace",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 2004,
+              "year_max": 2004,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.61,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            },
+            {
+              "name": "South Pacific Apple Breeders",
+              "entity_type": "unknown",
+              "status": "EXCLUDED",
+              "score": 41.0,
+              "application_count": 1,
+              "year_min": 1991,
+              "year_max": 1991,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown"
+              ]
+            },
+            {
+              "name": "WASHINGTON STATE APPLE ADVERTISING COMMISSION",
+              "entity_type": "unknown",
+              "status": "EXCLUDED",
+              "score": 41.0,
+              "application_count": 1,
+              "year_min": 1949,
+              "year_max": 1949,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.3,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown"
+              ]
+            },
+            {
+              "name": "WILLIAM S. APPLE",
+              "entity_type": "person",
+              "status": "EXCLUDED",
+              "score": 0.0,
+              "application_count": 1,
+              "year_min": 1903,
+              "year_max": 1903,
+              "relative_to_anchor_pct": 0.002,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.0,
+              "reasons": [
+                "natural_person_pattern"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "company_entity_resolution",
+      "status": "PASS",
+      "message": "企業實體辨識：CONFIRMED 12、CANDIDATE 36、目標字樣排除實體 83",
+      "metrics": {
+        "anchor": "Apple Inc.",
+        "anchor_application_count": 43613,
+        "confirmed_entities": [
+          {
+            "name": "Apple Inc.",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 123.0,
+            "application_count": 43613,
+            "year_min": 1998,
+            "year_max": 2026,
+            "relative_to_anchor_pct": 100.0,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 100.0,
+            "reasons": [
+              "name_match=1.00",
+              "organization_marker",
+              "exact_core_name",
+              "frequency>=2%_of_anchor",
+              "inventor_overlap>=25%",
+              "ipc_overlap>=50%",
+              "year_overlap_or_adjacent",
+              "primary_anchor"
+            ]
+          },
+          {
+            "name": "Apple Computer, Inc.",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 96.0,
+            "application_count": 2278,
+            "year_min": 1977,
+            "year_max": 2012,
+            "relative_to_anchor_pct": 5.223,
+            "inventor_overlap_pct": 45.29,
+            "ipc_jaccard_pct": 33.03,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "frequency>=2%_of_anchor",
+              "inventor_overlap>=25%",
+              "ipc_overlap>=20%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Computers, Inc.",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 10,
+            "year_min": 1994,
+            "year_max": 2002,
+            "relative_to_anchor_pct": 0.023,
+            "inventor_overlap_pct": 38.46,
+            "ipc_jaccard_pct": 2.12,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Computer, Inc., A California Corporation",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 9,
+            "year_min": 2003,
+            "year_max": 2011,
+            "relative_to_anchor_pct": 0.021,
+            "inventor_overlap_pct": 82.35,
+            "ipc_jaccard_pct": 1.52,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Inc., a California corporation",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 6,
+            "year_min": 2010,
+            "year_max": 2012,
+            "relative_to_anchor_pct": 0.014,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 1.52,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple",
+            "entity_type": "unknown",
+            "status": "CONFIRMED",
+            "score": 85.0,
+            "application_count": 5,
+            "year_min": 1929,
+            "year_max": 2017,
+            "relative_to_anchor_pct": 0.011,
+            "inventor_overlap_pct": 50.0,
+            "ipc_jaccard_pct": 1.52,
+            "reasons": [
+              "name_match=1.00",
+              "entity_type_unknown",
+              "exact_core_name",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Comptuer, Inc.",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 1,
+            "year_min": 1998,
+            "year_max": 1998,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 33.33,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Compunter, Inc.",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 1,
+            "year_min": 1998,
+            "year_max": 1998,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Computer, Inc. One Infinite Loop",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 1,
+            "year_min": 2004,
+            "year_max": 2004,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Inc., a Delaware corporation",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 1,
+            "year_min": 2011,
+            "year_max": 2011,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "INC., APPLE",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 1,
+            "year_min": 2014,
+            "year_max": 2014,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "here. Apple Inc.",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 1,
+            "year_min": 2022,
+            "year_max": 2022,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          }
+        ],
+        "candidate_entities": [
+          {
+            "name": "APPLE ELECTRIC COMPANY",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 35,
+            "year_min": 1905,
+            "year_max": 1914,
+            "relative_to_anchor_pct": 0.08,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "Apple Computer",
+            "entity_type": "unknown",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 7,
+            "year_min": 1988,
+            "year_max": 2002,
+            "relative_to_anchor_pct": 0.016,
+            "inventor_overlap_pct": 40.0,
+            "ipc_jaccard_pct": 1.52,
+            "reasons": [
+              "name_match=0.90",
+              "entity_type_unknown",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Deep Apple Therapeutics, Inc.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 66.0,
+            "application_count": 7,
+            "year_min": 2024,
+            "year_max": 2026,
+            "relative_to_anchor_pct": 0.016,
+            "inventor_overlap_pct": 7.14,
+            "ipc_jaccard_pct": 0.91,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=2%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Medical Corporation",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 6,
+            "year_min": 1991,
+            "year_max": 2009,
+            "relative_to_anchor_pct": 0.014,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.91,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Midwest Apple Improvement Association",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 6,
+            "year_min": 2017,
+            "year_max": 2024,
+            "relative_to_anchor_pct": 0.014,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.0,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "APPLE VENDER COMPANY",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 3,
+            "year_min": 1927,
+            "year_max": 1930,
+            "relative_to_anchor_pct": 0.007,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "Apple Corporate Technologies, Inc.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 3,
+            "year_min": 2001,
+            "year_max": 2002,
+            "relative_to_anchor_pct": 0.007,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.91,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "VINCENT G. APPLE LABORATORIES",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 3,
+            "year_min": 1929,
+            "year_max": 1929,
+            "relative_to_anchor_pct": 0.007,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "APPLE T Co., Ltd.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 2,
+            "year_min": 2023,
+            "year_max": 2023,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.91,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Adhesives, Inc.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 2,
+            "year_min": 1983,
+            "year_max": 1984,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 1.21,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "Apple lnc.",
+            "entity_type": "unknown",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 2,
+            "year_min": 2018,
+            "year_max": 2022,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 1.82,
+            "reasons": [
+              "name_match=0.90",
+              "entity_type_unknown",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Shanghai Apple Flavor & Fragrance Co., Ltd.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 2,
+            "year_min": 2005,
+            "year_max": 2007,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Thorn Apple Valley, Inc.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 2,
+            "year_min": 1996,
+            "year_max": 1997,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "APPLE CREATIVE PRODUCTS, INC. (TAIWAN)",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2009,
+            "year_max": 2009,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.91,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "APPLE ELECTRICAL MANUFACTURING COMPANY",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 1,
+            "year_min": 1928,
+            "year_max": 1928,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "Apple Archery Products, LLC",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2008,
+            "year_max": 2008,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Blossom, LLC",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 1996,
+            "year_max": 1996,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Electric Car, Inc.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2014,
+            "year_max": 2014,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple House Elecronics Ltd.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 1,
+            "year_min": 1995,
+            "year_max": 1995,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "Apple Ic.",
+            "entity_type": "unknown",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2012,
+            "year_max": 2012,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.91,
+            "reasons": [
+              "name_match=0.90",
+              "entity_type_unknown",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Incl",
+            "entity_type": "unknown",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2012,
+            "year_max": 2012,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "entity_type_unknown",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Ine.",
+            "entity_type": "unknown",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2023,
+            "year_max": 2023,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "entity_type_unknown",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Inlc.",
+            "entity_type": "unknown",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2011,
+            "year_max": 2011,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "entity_type_unknown",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Partners, LP",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2014,
+            "year_max": 2014,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Apple Sports, Inc.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 1,
+            "year_min": 1994,
+            "year_max": 1994,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "Apple Sugar LLC",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2025,
+            "year_max": 2025,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.0,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "BEATRICE CARAMEL APPLE CO. INC.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 1,
+            "year_min": 1970,
+            "year_max": 1970,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.0,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "CANDI APPLE TECH, CORP.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2015,
+            "year_max": 2015,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "COONS APPLE CORPORATION",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 1,
+            "year_min": 1927,
+            "year_max": 1927,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.0,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "CROWN APPLE PRODUCTS, INC.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 1,
+            "year_min": 1948,
+            "year_max": 1948,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "Carousel Apple, Inc.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 1,
+            "year_min": 1993,
+            "year_max": 1993,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.0,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "Dillard-Apple, LLC",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2018,
+            "year_max": 2018,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.91,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "New England Apple Products Co., Inc.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 1,
+            "year_min": 1987,
+            "year_max": 1987,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          },
+          {
+            "name": "One Apple Park Way",
+            "entity_type": "unknown",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2020,
+            "year_max": 2020,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.91,
+            "reasons": [
+              "name_match=0.90",
+              "entity_type_unknown",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "SHENZHEN WANHONG APPLE ELECTRONICSCO., LTD",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2022,
+            "year_max": 2022,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Tastee Apple Inc.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 56.0,
+            "application_count": 1,
+            "year_min": 1994,
+            "year_max": 1994,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker"
+            ]
+          }
+        ],
+        "excluded_target_entities": [
+          {
+            "name": "APPLE VINCENT G",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 115,
+            "year_min": 1917,
+            "year_max": 1931,
+            "relative_to_anchor_pct": 0.264,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 4.45,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "VINCENT G. APPLE",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 71,
+            "year_min": 1901,
+            "year_max": 1918,
+            "relative_to_anchor_pct": 0.163,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "BESSIE D. APPLE",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 40,
+            "year_min": 1933,
+            "year_max": 1940,
+            "relative_to_anchor_pct": 0.092,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 2.7,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE HERBERT F",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 35,
+            "year_min": 1928,
+            "year_max": 1933,
+            "relative_to_anchor_pct": 0.08,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 2.1,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE EDWARD M",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 34,
+            "year_min": 1928,
+            "year_max": 1951,
+            "relative_to_anchor_pct": 0.078,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 2.41,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Marc G.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 9,
+            "year_min": 1996,
+            "year_max": 2005,
+            "relative_to_anchor_pct": 0.021,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 1.52,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "EDWARD M. APPLE",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 6,
+            "year_min": 1930,
+            "year_max": 1953,
+            "relative_to_anchor_pct": 0.014,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 1.51,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Dan",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 5,
+            "year_min": 2009,
+            "year_max": 2016,
+            "relative_to_anchor_pct": 0.011,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Howard P.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 5,
+            "year_min": 2001,
+            "year_max": 2017,
+            "relative_to_anchor_pct": 0.011,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.91,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Phillip C.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 5,
+            "year_min": 1993,
+            "year_max": 2003,
+            "relative_to_anchor_pct": 0.011,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.91,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "HERBERT F. APPLE",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 5,
+            "year_min": 1930,
+            "year_max": 1933,
+            "relative_to_anchor_pct": 0.011,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 1.52,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Melvin J.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 4,
+            "year_min": 1996,
+            "year_max": 2003,
+            "relative_to_anchor_pct": 0.009,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 1.52,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Edward G.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 3,
+            "year_min": 1951,
+            "year_max": 2008,
+            "relative_to_anchor_pct": 0.007,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Wayne R.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 3,
+            "year_min": 1977,
+            "year_max": 1979,
+            "relative_to_anchor_pct": 0.007,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Wesley Larry",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 3,
+            "year_min": 2008,
+            "year_max": 2012,
+            "relative_to_anchor_pct": 0.007,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Deng, Zhipin Apple",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 3,
+            "year_min": 2012,
+            "year_max": 2015,
+            "relative_to_anchor_pct": 0.007,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE GAROLD E",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 2,
+            "year_min": 1964,
+            "year_max": 1965,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple Computer France, Sarl",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 2,
+            "year_min": 1988,
+            "year_max": 1989,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Clarence L.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 2,
+            "year_min": 1979,
+            "year_max": 1998,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.6,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Jeff",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 2,
+            "year_min": 2006,
+            "year_max": 2006,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Linda",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 2,
+            "year_min": 2008,
+            "year_max": 2008,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.6,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Merrill K.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 2,
+            "year_min": 1976,
+            "year_max": 1984,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.91,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Robert",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 2,
+            "year_min": 2003,
+            "year_max": 2006,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.0,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "CARL APPLE",
+            "entity_type": "unknown",
+            "status": "EXCLUDED",
+            "score": 41.0,
+            "application_count": 2,
+            "year_min": 1946,
+            "year_max": 1969,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "name_match=0.90",
+              "entity_type_unknown"
+            ]
+          },
+          {
+            "name": "WILLIAM M. APPLE",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 2,
+            "year_min": 1914,
+            "year_max": 1915,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "50 Apple Hill Drive",
+            "entity_type": "unknown",
+            "status": "EXCLUDED",
+            "score": 46.0,
+            "application_count": 1,
+            "year_min": 2023,
+            "year_max": 2023,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "name_match=0.90",
+              "entity_type_unknown",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "ALBERT G. APPLE",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1935,
+            "year_max": 1935,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.0,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE CHARLES N",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1955,
+            "year_max": 1955,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE DANIEL A",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1932,
+            "year_max": 1932,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE DONALD C",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1965,
+            "year_max": 1965,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE FLOYD M",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1947,
+            "year_max": 1947,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.0,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE GEORGE W",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1935,
+            "year_max": 1935,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE GROVER C",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1921,
+            "year_max": 1921,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE JACK 199, L.P.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 2015,
+            "year_max": 2015,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 1.52,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE LAUREL T",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1946,
+            "year_max": 1946,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE LEROY M",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1958,
+            "year_max": 1958,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE W,US",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1972,
+            "year_max": 1972,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE, Gary Elliot",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 2010,
+            "year_max": 2010,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE, Robert B.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 2010,
+            "year_max": 2010,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.0,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "APPLE, Robert E.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 2010,
+            "year_max": 2010,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Adams Apple Distibuting L.P.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 2003,
+            "year_max": 2003,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.0,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Adams Apple Distributing, L.P.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1993,
+            "year_max": 1993,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Allon, Aliza Apple",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 2009,
+            "year_max": 2009,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.6,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Aaron",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 2016,
+            "year_max": 2016,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Bradley G.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 2017,
+            "year_max": 2017,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.0,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Chad Curtis",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 2011,
+            "year_max": 2011,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.61,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, David L.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 2001,
+            "year_max": 2001,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Glenn D.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1988,
+            "year_max": 1988,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.6,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Gregory L.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 2002,
+            "year_max": 2002,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.3,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          },
+          {
+            "name": "Apple, Hugh C.",
+            "entity_type": "person",
+            "status": "EXCLUDED",
+            "score": 0.0,
+            "application_count": 1,
+            "year_min": 1977,
+            "year_max": 1977,
+            "relative_to_anchor_pct": 0.002,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.6,
+            "reasons": [
+              "natural_person_pattern"
+            ]
+          }
+        ],
+        "candidate_application_count": 99,
+        "unresolved_target_text_application_count": 495,
+        "group_only_application_count": 0,
+        "candidate_share_pct": 0.215,
+        "manual_aliases": [],
+        "manual_excludes": []
       }
     },
     {
       "id": "applicant_normalization",
       "status": "PASS",
-      "message": "正規化後法人實體 270 個",
+      "message": "正規化後法人實體 34 個",
       "metrics": {
-        "entity_count": 270,
-        "alias_group_count": 20
+        "entity_count": 34,
+        "alias_group_count": 9
       }
     },
     {
@@ -392,11 +4169,10 @@
       "status": "PASS",
       "message": "優先權來源解析率 99.73%",
       "metrics": {
-        "item_count": 116764,
-        "unknown_item_count": 319,
+        "item_count": 116095,
+        "unknown_item_count": 317,
         "parse_rate_pct": 99.73,
         "unknown_samples": [
-          "南韓 10-2023-0077424 20230616",
           "希臘 20240100636 20240918",
           "DK PA 201870336 20180611",
           "GR 20230100789 20230929",
@@ -405,7 +4181,8 @@
           "DK 201670655 20160826",
           "GR 20230101084 20231229",
           "DK 2017PA70392 20170529",
-          "DK 2017PA70401 20170529"
+          "DK 2017PA70401 20170529",
+          "DK 2017PA70402 20170529"
         ]
       }
     },
@@ -420,9 +4197,9 @@
     {
       "id": "payload_optimization",
       "status": "PASS",
-      "message": "compact records 46,094 筆；raw_records 已移除",
+      "message": "compact records 45,599 筆；raw_records 已移除",
       "metrics": {
-        "record_count": 46094,
+        "record_count": 45599,
         "raw_records_present": false
       }
     },
@@ -437,8 +4214,8 @@
         "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔\\companies.json",
         "registry_action": "updated",
         "registry_company_count": 2,
-        "summary_bytes": 63687,
-        "records_bytes": 15337245,
+        "summary_bytes": 78816,
+        "records_bytes": 15220463,
         "classification_bytes": 138
       }
     }
