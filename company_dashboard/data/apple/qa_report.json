@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator_version": "patent_html_pipeline_v2.6.2",
-  "build_id": "20261122_172025",
+  "build_id": "20261122_203630",
   "company": "Apple",
   "output_mode": "shared-site",
   "status": "PASS",
@@ -9,26 +9,26 @@
     {
       "id": "patent_pool",
       "status": "PASS",
-      "message": "公司專利池 2,196 件",
+      "message": "公司專利池 46,094 件",
       "metrics": {
-        "pool_size": 2196
+        "pool_size": 46094
       }
     },
     {
       "id": "company_filter",
       "status": "PASS",
-      "message": "公司過濾後保留 2,196 件申請案",
+      "message": "公司過濾後保留 46,094 件申請案",
       "metrics": {
         "enabled": true,
         "company": "Apple",
         "aliases": [
           "Apple"
         ],
-        "raw_row_count": 4004,
-        "kept_row_count": 3945,
+        "raw_row_count": 73078,
+        "kept_row_count": 73019,
         "excluded_row_count": 59,
-        "raw_application_count": 2239,
-        "kept_application_count": 2196,
+        "raw_application_count": 46137,
+        "kept_application_count": 46094,
         "excluded_application_count": 43,
         "excluded_samples": [
           {
@@ -381,23 +381,31 @@
     {
       "id": "applicant_normalization",
       "status": "PASS",
-      "message": "正規化後法人實體 8 個",
+      "message": "正規化後法人實體 270 個",
       "metrics": {
-        "entity_count": 8,
-        "alias_group_count": 2
+        "entity_count": 270,
+        "alias_group_count": 20
       }
     },
     {
       "id": "priority_normalization",
       "status": "PASS",
-      "message": "優先權來源解析率 99.95%",
+      "message": "優先權來源解析率 99.73%",
       "metrics": {
-        "item_count": 4081,
-        "unknown_item_count": 2,
-        "parse_rate_pct": 99.95,
+        "item_count": 116764,
+        "unknown_item_count": 319,
+        "parse_rate_pct": 99.73,
         "unknown_samples": [
           "南韓 10-2023-0077424 20230616",
-          "希臘 20240100636 20240918"
+          "希臘 20240100636 20240918",
+          "DK PA 201870336 20180611",
+          "GR 20230100789 20230929",
+          "GR 20230100778 20230928",
+          "DK 201670636 20160824",
+          "DK 201670655 20160826",
+          "GR 20230101084 20231229",
+          "DK 2017PA70392 20170529",
+          "DK 2017PA70401 20170529"
         ]
       }
     },
@@ -412,9 +420,9 @@
     {
       "id": "payload_optimization",
       "status": "PASS",
-      "message": "compact records 2,196 筆；raw_records 已移除",
+      "message": "compact records 46,094 筆；raw_records 已移除",
       "metrics": {
-        "record_count": 2196,
+        "record_count": 46094,
         "raw_records_present": false
       }
     },
@@ -429,8 +437,8 @@
         "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔\\companies.json",
         "registry_action": "updated",
         "registry_company_count": 2,
-        "summary_bytes": 28875,
-        "records_bytes": 1004170,
+        "summary_bytes": 63687,
+        "records_bytes": 15337245,
         "classification_bytes": 138
       }
     }
