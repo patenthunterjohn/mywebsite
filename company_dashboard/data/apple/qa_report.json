@@ -1,0 +1,446 @@
+{
+  "schema_version": "1.0",
+  "generator_version": "patent_html_pipeline_v2.6.1",
+  "build_id": "20261122_105213",
+  "company": "Apple",
+  "output_mode": "shared-site",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "patent_pool",
+      "status": "PASS",
+      "message": "公司專利池 2,196 件",
+      "metrics": {
+        "pool_size": 2196
+      }
+    },
+    {
+      "id": "company_filter",
+      "status": "PASS",
+      "message": "公司過濾後保留 2,196 件申請案",
+      "metrics": {
+        "enabled": true,
+        "company": "Apple",
+        "aliases": [
+          "Apple"
+        ],
+        "raw_row_count": 4004,
+        "kept_row_count": 3945,
+        "excluded_row_count": 59,
+        "raw_application_count": 2239,
+        "kept_application_count": 2196,
+        "excluded_application_count": 43,
+        "excluded_samples": [
+          {
+            "_資料國別": "TW",
+            "申請號": "TW101124557",
+            "公開/公告號": "TW201307871A",
+            "專利名稱": "具有一探針裝置之測試系統及轉位機構;TEST SYSTEMS WITH A PROBE APPARATUS AND INDEX MECHANISM",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW101124558",
+            "公開/公告號": "TW201314215A",
+            "專利名稱": "具有一探針卡之測試設備及連接器機構;TEST APPARATUS HAVING A PROBE CARD AND CONNECTOR MECHANISM",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW101124559",
+            "公開/公告號": "TW201323883A",
+            "專利名稱": "具有一探針卡之測試設備及連接器機構;TEST APPARATUS HAVING A PROBE CARD AND CONNECTOR MECHANISM",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.;英特爾公司;INTEL CORPORATION",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW102128885",
+            "公開/公告號": "TW201403075A",
+            "專利名稱": "用於終止半導體晶圓探針裝置之裝置與方法;APPARATUS AND METHOD FOR TERMINATING PROBE APPARTUS OF SEMICONDUCTOR WAFER",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW104107856",
+            "公開/公告號": "TW201529711A",
+            "專利名稱": "具有改良的氧反應性之聚醯胺-聚二烯摻合物;POLYAMIDE-POLYDIENE BLENDS WITH IMPROVED OXYGEN REACTIVITY",
+            "申請人": "Ｍ＆Ｇ美國股份有限公司;M&G USA CORPORATION",
+            "第一申請人": "Ｍ＆Ｇ美國股份有限公司;M&G USA CORPORATION"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW103146642",
+            "公開/公告號": "TW201531716A",
+            "專利名稱": "具有探針心搭配閂機構之測試設備;TEST APPARATUS HAVING A PROBE CORE WITH A LATCH MECHANISM",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW103144850",
+            "公開/公告號": "TW201534925A",
+            "專利名稱": "微機電系統（ＭＥＭＳ）為主之探針;MICROELECTROMECHANICAL SYSTEM (MEMS) BASED PROBE",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW105141498",
+            "公開/公告號": "TW201712355A",
+            "專利名稱": "具有一探針裝置之測試系統及轉位機構;TEST SYSTEMS WITH A PROBE APPARATUS AND INDEX MECHANISM",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW105143727",
+            "公開/公告號": "TW201730567A",
+            "專利名稱": "模組化軌道系統、軌道系統、機構及用於受測試器件之設備;MODULAR RAIL SYSTEMS, RAIL SYSTEMS, MECHANISMS, AND EQUIPMENT FOR DEVICES UNDER TEST",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW106143790",
+            "公開/公告號": "TW201812329A",
+            "專利名稱": "具有一探針裝置之測試系統及轉位機構;TEST SYSTEMS WITH A PROBE APPARATUS AND INDEX MECHANISM",
+            "申請人": "美商色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "美商色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW107135280",
+            "公開/公告號": "TW201903418A",
+            "專利名稱": "用於測試一受試裝置之探針設備、經結構設計以在用於測試一受試裝置之一探針設備中使用之探針心及用於將一探針心閂至一裝置之方法;PROBE APPARATUS FOR TESTING A DEVICE UNDER TEST, PROBE CORE CONFIGURED FOR USE IN A PROBE APPARATUS FOR TESTING A DEVICE UNDER TEST AND METHOD FOR LATCHING A PROBE CORE TO A DEVICE",
+            "申請人": "美商色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "美商色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW112148798",
+            "公開/公告號": "TW202429818A",
+            "專利名稱": "使用ＩＱ混頻器偵測反射信號之振幅調變之穩頻微波源;FREQUENCY STABILIZED MICROWAVE SOURCE USING AN IQ MIXER TO DETECT AMPLITUDE MODULATION OF THE REFLECTED SIGNAL",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW112148827",
+            "公開/公告號": "TW202429829A",
+            "專利名稱": "使用ＩＱ混頻器偵測反射信號之振幅調變及相位擾動之穩頻及相位雜訊抑制微波源;FREQUENCY STABILIZED AND PHASE NOISE SUPPRESSED MICROWAVE SOURCE USING AN IQ MIXER TO DETECT AMPLITUDE MODULATION AND PHASE PERTUBATION OF THE REFLECTED SIGNAL",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW112140547",
+            "公開/公告號": "TW202430831A",
+            "專利名稱": "夾持退火熱解石墨散熱;CLAMPED ANNEALED PYROLYTIC GRAPHITE HEAT SPREADING",
+            "申請人": "美商雷森公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷森公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW112140207",
+            "公開/公告號": "TW202434010A",
+            "專利名稱": "具有樞轉保持器之夾持裝置;CLAMPING DEVICE WITH PIVOTING RETAINER",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW112140548",
+            "公開/公告號": "TW202436000A",
+            "專利名稱": "爐硬焊循環改善方法;FURNACE BRAZE CYCLE ENHANCEMENT",
+            "申請人": "美商雷森公司;RAYTHEON COMPANY;美商布蘭澤尼克斯股份有限公司;BRAZONICS, INC.",
+            "第一申請人": "美商雷森公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW112141626",
+            "公開/公告號": "TW202442057A",
+            "專利名稱": "用於散熱之編織熱解石墨片材;WEAVED PYROLYTIC GRAPHITE SHEETS FOR HEAT SPREADING",
+            "申請人": "美商雷森公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷森公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113113257",
+            "公開/公告號": "TW202444108A",
+            "專利名稱": "用於在即時及近即時視訊中實施資料傳輸合規性之單攝像機時延;SINGLE CAMERA TIME-DELAY TO ENFORCE DATA TRANSMISSION COMPLIANCE IN REAL AND NEAR REAL TIME VIDEO",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113113258",
+            "公開/公告號": "TW202444109A",
+            "專利名稱": "使用地面實況圖（ＧＴＭ）來強制執行離線及即時的資料擷取及傳輸合規性;ENFORCEMENT OF OFFLINE AND REAL TIME DATA CAPTURE AND TRANSMISSION COMPLIANCE USING A GROUND TRUTH MAP (GTM)",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113108994",
+            "公開/公告號": "TW202445942A",
+            "專利名稱": "用於海軍艦艇功率系統之主動諧波濾波器及無功功率控制系統;ACTIVE HARMONIC FILTER AND REACTIVE POWER CONTROL SYSTEM FOR NAVAL SHIP POWER SYSTEMS",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113110732",
+            "公開/公告號": "TW202445917A",
+            "專利名稱": "共形天線裝置;CONFORMAL ANTENNA DEVICE",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113115512",
+            "公開/公告號": "TW202447649A",
+            "專利名稱": "增材製造之電傳輸線及其製造方法;ADDITIVELY-MANUFACTURED ELECTRICAL TRANSMISSION LINE, AND METHOD OF MAKING",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113113553",
+            "公開/公告號": "TW202450202A",
+            "專利名稱": "鎖相至參考的基於注入鎖定雷射器之拍音產生;INJECTION-LOCKED LASER-BASED BEATNOTE GENERATION PHASE LOCKED TO REFERENCE",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113106241",
+            "公開/公告號": "TW202507808A",
+            "專利名稱": "導熱性提升的分段電晶體主動區;SEGMENTED TRANSISTOR ACTIVE REGION FOR ENHANCED THERMAL CONDUCTIVITY",
+            "申請人": "美商雷森公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷森公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113116041",
+            "公開/公告號": "TW202514931A",
+            "專利名稱": "安全屏障之可擴充方法;SCALABLE METHOD FOR SECURITY BARRIERS",
+            "申請人": "美商雷森公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷森公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113121893",
+            "公開/公告號": "TW202517977A",
+            "專利名稱": "光學聲向量感測器;OPTICAL ACOUSTIC VECTOR SENSOR",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113124755",
+            "公開/公告號": "TW202531802A",
+            "專利名稱": "射頻覆蓋層;RF COVER LAYER",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113138300",
+            "公開/公告號": "TW202532309A",
+            "專利名稱": "整合式纜線封裝、部署及悸動減輕系統;INTEGRATED CABLE PACKAGING, DEPLOYMENT AND STRUMMING MITIGATION SYSTEM",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113135732",
+            "公開/公告號": "TW202536287A",
+            "專利名稱": "可展開之進門通道防撞器;DEPLOYABLE DOORWAY BUMPER",
+            "申請人": "美商雷神公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷神公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW113142911",
+            "公開/公告號": "TW202540352A",
+            "專利名稱": "可氣溶膠噴射之基於銀奈米粒子之可轉換式油墨;AEROSOL-JETTABLE SILVER NANOPARTICLE-BASED CONVERTIBLE INK",
+            "申請人": "美商雷森公司;RAYTHEON COMPANY;麻州大學;THE UNIVERSITY OF MASSACHUSETTS",
+            "第一申請人": "美商雷森公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW114136801",
+            "公開/公告號": "TW202627491A",
+            "專利名稱": "使用經修改之射頻測試器的電路板上之高速數位測試;HIGH-SPEED DIGITAL TESTING ON CIRCUIT BOARDS USING MODIFIED RF TESTERS",
+            "申請人": "美商Ｒ＆Ｄ電路公司;R&D CIRCUITS;加拿大商精確邏輯股份有限公司;ACCULOGIC INC.",
+            "第一申請人": "美商Ｒ＆Ｄ電路公司;R&D CIRCUITS"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW114105778",
+            "公開/公告號": "TW202630718A",
+            "專利名稱": "封閉式液體冷卻系統;ENCLOSED LIQUID COOLING SYSTEM",
+            "申請人": "美商利葵亞庫爾ＩＰ有限責任公司;LIQUACOOL IP LLC",
+            "第一申請人": "美商利葵亞庫爾ＩＰ有限責任公司;LIQUACOOL IP LLC"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW092117657",
+            "公開/公告號": "TWI318300B",
+            "專利名稱": "探測半導體晶圓之被屏蔽的探測裝置;SHIELDED PROBE APPARATUS FOR PROBING SEMICONDUCTOR WAFER",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097122234",
+            "公開/公告號": "TWI327226B",
+            "專利名稱": "被屏蔽的探測裝置;SHIELDED PROBE APPARATUS",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW094130088",
+            "公開/公告號": "TWI391689B",
+            "專利名稱": "用於探測半導體之可換式探針裝置;REPLACEABLE PROBE APPARATUS FOR PROBING SEMICONDUCTOR WAFER",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW095105517",
+            "公開/公告號": "TWI408374B",
+            "專利名稱": "用於終止半導體晶圓探針裝置之裝置與方法;APPARATUS AND METHOD FOR TERMINATING PROBE APPARTUS OF SEMICONDUCTOR WAFER",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW097119400",
+            "公開/公告號": "TWI431281B",
+            "專利名稱": "用於探測半導體晶圓之可替換式探測裝置;REPLACEABLE PROBE APPARATUS FOR PROBING SEMICONDUCTOR WAFER",
+            "申請人": "色拉頓系統公司;CELADON SYSTEMS, INC.",
+            "第一申請人": "色拉頓系統公司;CELADON SYSTEMS, INC."
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW094115911",
+            "公開/公告號": "TWI450809B",
+            "專利名稱": "間隔化樹脂丸粒;COMPARTMENTALIZED RESIN PELLETS",
+            "申請人": "Ｍ＆Ｇ美國股份有限公司;M&G USA CORPORATION",
+            "第一申請人": "Ｍ＆Ｇ美國股份有限公司;M&G USA CORPORATION"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW099119073",
+            "公開/公告號": "TWI486394B",
+            "專利名稱": "具有改良的氧反應性之聚醯胺－聚二烯摻合物;POLYAMIDE-POLYDIENE BLENDS WITH IMPROVED OXYGEN REACTIVITY",
+            "申請人": "Ｍ＆Ｇ美國股份有限公司;M&G USA CORPORATION",
+            "第一申請人": "Ｍ＆Ｇ美國股份有限公司;M&G USA CORPORATION"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW108110278",
+            "公開/公告號": "TWI866904B",
+            "專利名稱": "多單元感應式無線電力傳送系統;MULTI-CELL INDUCTIVE WIRELESS POWER TRANSFER SYSTEM",
+            "申請人": "美商瑞西恩公司;RAYTHEON COMPANY",
+            "第一申請人": "美商瑞西恩公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW111108144",
+            "公開/公告號": "TWI878654B",
+            "專利名稱": "正交印刷電路板介面;ORTHOGONAL PRINTED CIRCUIT BOARD INTERFACE",
+            "申請人": "美商雷森公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷森公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW109122343",
+            "公開/公告號": "TWI883018B",
+            "專利名稱": "包含用於隔離增強之壁之電路總成及組裝其之方法;CIRCUIT ASSEMBLY COMPRISING WALL FOR ISOLATION ENHANCEMENT AND METHOD OF ASSEMBLING THE SAME",
+            "申請人": "美商瑞西恩公司;RAYTHEON COMPANY",
+            "第一申請人": "美商瑞西恩公司;RAYTHEON COMPANY"
+          },
+          {
+            "_資料國別": "TW",
+            "申請號": "TW112112432",
+            "公開/公告號": "TWI940793B",
+            "專利名稱": "用於高衝擊環境之表面貼裝相容平面磁體;SURFACE MOUNT COMPATIBLE PLANAR MAGNETICS FOR HIGH SHOCK ENVIRONMENTS",
+            "申請人": "美商雷森公司;RAYTHEON COMPANY",
+            "第一申請人": "美商雷森公司;RAYTHEON COMPANY"
+          }
+        ]
+      }
+    },
+    {
+      "id": "applicant_normalization",
+      "status": "PASS",
+      "message": "正規化後法人實體 8 個",
+      "metrics": {
+        "entity_count": 8,
+        "alias_group_count": 2
+      }
+    },
+    {
+      "id": "priority_normalization",
+      "status": "PASS",
+      "message": "優先權來源解析率 99.95%",
+      "metrics": {
+        "item_count": 4081,
+        "unknown_item_count": 2,
+        "parse_rate_pct": 99.95,
+        "unknown_samples": [
+          "南韓 10-2023-0077424 20230616",
+          "希臘 20240100636 20240918"
+        ]
+      }
+    },
+    {
+      "id": "classification_match",
+      "status": "PASS",
+      "message": "未指定分類檔；以純專利概況模式輸出",
+      "metrics": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "payload_optimization",
+      "status": "PASS",
+      "message": "compact records 2,196 筆；raw_records 已移除",
+      "metrics": {
+        "record_count": 2196,
+        "raw_records_present": false
+      }
+    },
+    {
+      "id": "shared_site_bundle",
+      "status": "PASS",
+      "message": "shared-site 公司資料已更新：data/apple/；輸出 companies.json 已同步",
+      "metrics": {
+        "slug": "apple",
+        "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔",
+        "registry_source": "C:\\mywebsite\\company_dashboard\\companies.json",
+        "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔\\companies.json",
+        "registry_action": "updated",
+        "registry_company_count": 2,
+        "summary_bytes": 27246,
+        "records_bytes": 1004170,
+        "classification_bytes": 138
+      }
+    }
+  ],
+  "shared_site": {
+    "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔",
+    "slug": "apple",
+    "company_url": "company.html?c=apple",
+    "data_path": "data/apple",
+    "registry_source": "C:\\mywebsite\\company_dashboard\\companies.json",
+    "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔\\companies.json"
+  }
+}
