@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generator_version": "patent_html_pipeline_v2.5",
-  "build_id": "20261121_231311",
+  "generator_version": "patent_html_pipeline_v2.6.2",
+  "build_id": "20261122_173337",
   "company": "NVIDIA",
   "output_mode": "shared-site",
   "status": "PASS",
@@ -149,23 +149,26 @@
     {
       "id": "shared_site_bundle",
       "status": "PASS",
-      "message": "shared-site 公司資料已新增：data/nvidia/；companies.json 已同步",
+      "message": "shared-site 公司資料已更新：data/nvidia/；輸出 companies.json 已同步",
       "metrics": {
         "slug": "nvidia",
-        "company_dir": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔\\data\\nvidia",
-        "registry_action": "added",
-        "registry_company_count": 1,
-        "summary_bytes": 17314,
-        "records_bytes": 3115140,
-        "classification_bytes": 137
+        "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔",
+        "registry_source": "C:\\mywebsite\\company_dashboard\\companies.json",
+        "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔\\companies.json",
+        "registry_action": "updated",
+        "registry_company_count": 2,
+        "summary_bytes": 20438,
+        "records_bytes": 3115112,
+        "classification_bytes": 139
       }
     }
   ],
   "shared_site": {
-    "site_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔",
+    "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔",
     "slug": "nvidia",
     "company_url": "company.html?c=nvidia",
     "data_path": "data/nvidia",
-    "registry": "companies.json"
+    "registry_source": "C:\\mywebsite\\company_dashboard\\companies.json",
+    "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔\\companies.json"
   }
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generator_version": "patent_html_pipeline_v2.6.1",
-  "build_id": "20261122_105213",
+  "generator_version": "patent_html_pipeline_v2.6.2",
+  "build_id": "20261122_172025",
   "company": "Apple",
   "output_mode": "shared-site",
   "status": "PASS",
@@ -429,7 +429,7 @@
         "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔\\companies.json",
         "registry_action": "updated",
         "registry_company_count": 2,
-        "summary_bytes": 27246,
+        "summary_bytes": 28875,
         "records_bytes": 1004170,
         "classification_bytes": 138
       }
