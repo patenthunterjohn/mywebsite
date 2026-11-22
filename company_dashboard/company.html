@@ -35,7 +35,8 @@ body{
 .page{max-width:1440px;margin:0 auto;padding:24px 20px 54px}
 .brandbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
 .brand{display:flex;align-items:center;gap:12px}
-.logo{width:42px;height:42px;border-radius:12px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px;color:#111;box-shadow:var(--shadow)}
+.logo{width:42px;height:42px;border-radius:12px;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:var(--shadow)}
+.logo img{width:100%;height:100%;object-fit:cover;display:block}
 .brand strong{font-size:18px}.brand span{font-size:13px;color:var(--muted)}
 .site-link{font-size:13px;color:var(--green-dark);font-weight:800;background:var(--green-soft);padding:8px 12px;border-radius:999px;border:1px solid #cfe9dc}
 .hero{
@@ -160,7 +161,23 @@ body{
 .base-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.base-tab{border:1px solid var(--line);background:#fff;color:#68786f;padding:8px 12px;border-radius:999px;font-weight:900;font-size:12px;cursor:pointer}.base-tab.active{background:var(--green-dark);border-color:var(--green-dark);color:#fff}
 .base-panel{display:none}.base-panel.active{display:block}.base-metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:13px}.base-metric{padding:12px;border:1px solid var(--line);border-radius:14px;background:var(--card-soft)}.base-metric .k{font-size:11px;color:var(--muted)}.base-metric .v{font-size:21px;font-weight:900;margin-top:5px;color:var(--ink)}
 .base-panel-card{border:1px solid var(--line);border-radius:16px;background:var(--card-soft);padding:14px}.base-panel-card h4{margin:0 0 10px;font-size:16px}.base-drill{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.base-drill-card{border:1px solid var(--line);border-radius:13px;background:#fff;padding:12px;cursor:pointer}.base-drill-card:hover{border-color:#a9d1bd;background:var(--green-pale)}.base-drill-card .n{font-size:19px;font-weight:900}.base-drill-card .t{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.45}
-.base-chart-wrap{height:300px}.base-table{width:100%;border-collapse:collapse;font-size:12px}.base-table th,.base-table td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.base-table th{color:var(--muted);background:#fbfcfb}.base-pagination{display:flex;gap:6px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:14px}.page-btn{border:1px solid var(--line);background:#fff;color:#5e7066;border-radius:9px;padding:6px 9px;font-size:11px;font-weight:800;cursor:pointer}.page-btn.active{background:var(--green-dark);border-color:var(--green-dark);color:#fff}.page-btn:disabled{opacity:.35;cursor:default}
+.base-chart-wrap{height:320px}
+/* 分析視窗中的寬表格必須允許 Grid 子項縮小，避免內容把彈窗往右撐出後被裁切 */
+.base-panel,.base-panel-card,.base-visual-stack,.base-visual-subcard{min-width:0;max-width:100%}
+.base-visual-stack{display:grid;gap:14px}
+.base-visual-subcard{border:1px solid var(--line);border-radius:14px;background:#fff;padding:12px}
+.base-visual-subcard h5{margin:0 0 10px;font-size:14px}
+.base-drill{max-height:420px;overflow:auto;padding-right:3px}
+/* 主要發明人 × 活躍年度：只讓矩陣區域橫向捲動，不裁掉右側年度 */
+.activity-matrix-wrap{width:100%;max-width:100%;min-width:0;overflow-x:auto;overflow-y:auto;max-height:420px;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.activity-matrix{width:max-content;min-width:100%;border-collapse:separate;border-spacing:3px;font-size:10px}
+.activity-matrix th{position:sticky;top:0;background:#fff;z-index:2;color:var(--muted);font-weight:800;padding:5px 6px;white-space:nowrap}
+.activity-matrix th:first-child{left:0;z-index:4;text-align:left}
+.activity-matrix td{min-width:34px;height:28px;text-align:center;border-radius:6px;padding:4px;white-space:nowrap}
+.activity-matrix td.name{position:sticky;left:0;background:#fff!important;z-index:3;text-align:left;min-width:160px;max-width:230px;font-weight:800;color:var(--text)}
+.network-wrap{overflow:auto}
+.network-svg{width:100%;min-width:760px;height:500px;display:block;background:linear-gradient(180deg,#fbfdfc,#f5faf7);border-radius:12px;border:1px solid var(--line)}
+.network-note{font-size:12px;color:var(--muted);line-height:1.7;margin:8px 0 0}.base-table{width:100%;border-collapse:collapse;font-size:12px}.base-table th,.base-table td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.base-table th{color:var(--muted);background:#fbfcfb}.base-pagination{display:flex;gap:6px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:14px}.page-btn{border:1px solid var(--line);background:#fff;color:#5e7066;border-radius:9px;padding:6px 9px;font-size:11px;font-weight:800;cursor:pointer}.page-btn.active{background:var(--green-dark);border-color:var(--green-dark);color:#fff}.page-btn:disabled{opacity:.35;cursor:default}
 .records-shell{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:0 16px 16px;overflow:hidden}.record-search{display:flex;align-items:center;gap:10px;padding:14px 0}.record-search input{flex:1;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13px;outline:none}.record-search input:focus{border-color:#9dc8b2;box-shadow:0 0 0 3px rgba(24,134,95,.07)}.record-count{font-size:11px;color:var(--muted);white-space:nowrap}
 .flow-bridge{margin-top:28px;padding:16px 18px;border-radius:18px;background:linear-gradient(135deg,#eef8f3,#f9fcfa);border:1px solid #d5eadf;display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:start}.flow-bridge .mark{width:38px;height:38px;border-radius:12px;background:var(--green-dark);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900}.flow-bridge h3{margin:0;font-size:17px}.flow-bridge p{margin:6px 0 0;color:var(--muted);font-size:12px;line-height:1.7}
 @media(max-width:1050px){.base-kpi-grid{grid-template-columns:repeat(2,1fr)}.base-metric-grid{grid-template-columns:repeat(2,1fr)}}
@@ -205,7 +222,7 @@ body{
 <body>
 <div class="page">
   <div class="brandbar">
-    <div class="brand"><div class="logo">醬</div><div><strong>醬找專利</strong><br><span>企業專利情報</span></div></div>
+    <div class="brand"><div class="logo"><img src="../logo.png" alt="醬找專利 Logo"></div><div><strong>醬找專利</strong><br><span>企業專利情報</span></div></div>
     <div class="top-actions">
       <a class="top-action" href="#baseSection">專利概況</a>
       <a class="top-action" href="#matrixSection" id="techNav">技術布局</a>
@@ -348,7 +365,7 @@ body{
       <div class="base-modal-body">
         <div class="base-tabs"><button class="base-tab active" data-base-tab="summary">摘要</button><button class="base-tab" data-base-tab="visual">圖表</button><button class="base-tab" data-base-tab="records" id="baseRecordsTab">專利</button></div>
         <div class="base-panel active" id="basePanelSummary"><div class="base-metric-grid" id="baseMetricGrid"></div><div class="base-panel-card"><h4>進一步查看</h4><div class="base-drill" id="baseDrillGrid"></div></div></div>
-        <div class="base-panel" id="basePanelVisual"><div class="base-panel-card"><h4 id="baseChartTitle"></h4><div class="base-chart-wrap"><canvas id="baseChart"></canvas></div></div></div>
+        <div class="base-panel" id="basePanelVisual"><div class="base-panel-card"><h4 id="baseChartTitle"></h4><div id="baseVisualContent" class="base-visual-stack"><div class="base-chart-wrap"><canvas id="baseChart"></canvas></div></div></div></div>
         <div class="base-panel" id="basePanelRecords"><div class="base-panel-card"><h4 id="baseRecordsTitle">相關專利</h4><div style="overflow:auto"><table class="base-table" id="baseRecordsTable"></table></div></div></div>
       </div>
     </div>
@@ -719,7 +736,7 @@ function renderMatrixDetail(cfg=getMatrixConfig()){
 }
 function openMatrixPatentModal(cfg=getMatrixConfig(),row=null){
   row=row||cfg.rows.find(r=>r.id===selectedMatrixRowId)||cfg.rows[0];
-  const rows=matrixCellRecords(row,selectedMatrixColKey,cfg);
+  const rows=sortByPubDateDesc(matrixCellRecords(row,selectedMatrixColKey,cfg));
   document.getElementById('matrixPatentTitle').textContent=`${row?.label||'—'} × ${selectedMatrixColKey||'—'}`;
   document.getElementById('matrixPatentSub').textContent=`目前顯示：${cfg.level}。以下列出符合此技術與功效組合的專利。`;
   document.getElementById('matrixPatentBody').innerHTML=rows.length?`<div style="overflow:auto"><table class="patent-list-table"><thead><tr><th>公開/公告號</th><th>公開/公告日</th><th>專利名稱</th></tr></thead><tbody>${rows.slice(0,100).map(r=>`<tr><td>${esc(r['公開/公告號'])}</td><td>${esc(r['公開/公告日'])}</td><td>${esc(r['專利名稱'])}</td></tr>`).join('')}</tbody></table></div>`:`<div class="matrix-empty">目前沒有符合此組合的專利。</div>`;
@@ -755,35 +772,99 @@ function priorityCountriesOf(r){
   [['美國',['美國','US ']],['英國',['英國','GB ','UK ']],['中國大陸',['中國大陸','中國 ','CN ']],['日本',['日本','JP ']],['韓國',['韓國','KR ']],['中華民國',['中華民國','台灣','臺灣','TW ']],['EP',['EP ']],['WO',['WO ','PCT/']]].forEach(([name,als])=>{if(als.some(a=>t.includes(String(a).toUpperCase())))out.push(name)});
   return [...new Set(out)];
 }
+function pubDateKey(r){const x=String(r?.['公開/公告日']||'').replace(/\D/g,'').slice(0,8);return Number(x||0)}
+function sortByPubDateDesc(rows){return [...(rows||[])].sort((a,b)=>pubDateKey(b)-pubDateKey(a)||String(b?.['公開/公告號']||'').localeCompare(String(a?.['公開/公告號']||''),'en'))}
 const B={
-  // v2.4 專利列表與所有 drill-down 統一使用「申請號去重後的代表專利」。
-  rows:unpackRecordTable(G.record_table||G.records||[]),
+  // v2.6.2：所有前端專利列表預設公開／公告日由新到舊。
+  rows:sortByPubDateDesc(unpackRecordTable(G.record_table||G.records||[])),
   pool:Number(G.pool_size??D.total_patents??0),
   active_min:G.active_min||'—',active_max:G.active_max||'—',
   inventor_count:Number(G.inventor_count||0),applicant_count:Number(G.applicant_count||0),
   citation_median:Number(G.citation_median||0),citation_mean:Number(G.citation_mean||0),citation_q1:Number(G.citation_q1||0),citation_q3:Number(G.citation_q3||0),citation_max:Number(G.citation_max||0),citation_nonempty:Number(G.citation_nonempty_application_count||0),citation_coverage:Number(G.citation_coverage_pct||0),
   ipc_median:Number(G.ipc_count_median||0),ipc_mean:Number(G.ipc_count_mean||0),ipc_max:Number(G.ipc_count_max||0),ipc_unique:Number(G.ipc_unique_full_code_count||0),
   ipc_top:G.ipc_top||[],applicants:G.applicant_entities||[],priority:G.priority_countries||[],years:G.app_years||[],countryPool:G.country_pool||[],
-  topInventors:G.advanced?.top_inventors||[]
+  countryYears:G.country_app_years||[],
+  topInventors:G.advanced?.top_inventors||[],
+  inventorYearMatrix:G.advanced?.inventor_year_matrix||{inventors:[],years:[],values:[]},
+  inventorCounting:G.advanced?.inventor_counting||{},
+  applicantNormalization:G.advanced?.applicant_normalization||{},
+  applicantCollaboration:G.advanced?.applicant_collaboration||{nodes:[],edges:[],co_application_count:0}
 };
 const bfmt=n=>Number.isInteger(Number(n))?Number(n).toLocaleString('zh-TW'):Number(n).toFixed(1);
 const pct=n=>`${Number(n||0).toFixed(1)}%`;
 function barChart(pairs,label){return {type:'bar',data:{labels:pairs.map(x=>x[0]),datasets:[{label,data:pairs.map(x=>x[1])}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true}}}}}
 function donutChart(pairs){return {type:'doughnut',data:{labels:pairs.map(x=>x[0]),datasets:[{data:pairs.map(x=>x[1])}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}}}}}
+function countryYearSeries(){
+  if(Array.isArray(B.countryYears)&&B.countryYears.length)return B.countryYears;
+  const map={};B.rows.forEach(r=>{const c=String(r['_資料國別']||'OTHER'),y=appYear(r);if(!y)return;(map[c]??={})[y]=((map[c]||{})[y]||0)+1});
+  return Object.entries(map).map(([country,obj])=>({country,series:Object.entries(obj).map(([y,n])=>[Number(y),Number(n)]).sort((a,b)=>a[0]-b[0])}));
+}
+function yearTrendChart(){
+  const years=[...new Set(B.years.map(x=>Number(x[0])))].sort((a,b)=>a-b);
+  const palette=['#106748','#2f7bbd','#c47d20','#7a5bb8','#b84f5f','#278d87','#6d7c45','#8c6239'];
+  const datasets=[{label:'總數',data:years.map(y=>Number((B.years.find(x=>Number(x[0])===y)||[0,0])[1]||0)),borderColor:'#17221d',backgroundColor:'rgba(23,34,29,.08)',borderWidth:3,tension:.25,pointRadius:2}];
+  countryYearSeries().filter(x=>x.series?.length).forEach((x,i)=>{const m=new Map(x.series.map(v=>[Number(v[0]),Number(v[1])]));datasets.push({label:x.country,data:years.map(y=>m.get(y)||0),borderColor:palette[i%palette.length],backgroundColor:'transparent',borderWidth:2,tension:.25,pointRadius:1.5})});
+  return {type:'line',data:{labels:years,datasets},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom'}},scales:{y:{beginAtZero:true,title:{display:true,text:'申請件數'}},x:{title:{display:true,text:'申請年度'}}}}};
+}
+function inventorMatrixHtml(m){
+  const names=m?.inventors||[],years=m?.years||[],vals=m?.values||[];if(!names.length||!years.length)return '<div class="empty">需以 v2.6.2 重建資料後，才會顯示發明人活躍年度矩陣。</div>';
+  let mx=0;vals.forEach(r=>r.forEach(v=>mx=Math.max(mx,Number(v||0))));mx=Math.max(mx,1);
+  const head='<tr><th>發明人</th>'+years.map(y=>`<th>${esc(y)}</th>`).join('')+'</tr>';
+  const body=names.map((name,i)=>'<tr><td class="name">'+esc(name)+'</td>'+years.map((y,j)=>{const v=Number(vals[i]?.[j]||0),a=v?(.12+.76*v/mx):0;return `<td title="${esc(name)}｜${esc(y)}：${v} 件" style="background:${v?`rgba(24,134,95,${a.toFixed(2)})`:'#f3f6f4'};color:${a>.5?'#fff':'#24352d'}">${v||''}</td>`}).join('')+'</tr>').join('');
+  return `<div class="base-visual-subcard"><h5>主要發明人 × 活躍年度</h5><div class="activity-matrix-wrap"><table class="activity-matrix"><thead>${head}</thead><tbody>${body}</tbody></table></div><p class="network-note">每格為該發明人在該申請年度參與的不同申請案件數；空白代表 0 件。</p></div>`;
+}
+function applicantNetworkHtml(c){
+  const nodes=c?.nodes||[],edges=c?.edges||[];if(!nodes.length||!edges.length)return '<div class="base-visual-subcard"><h5>共同申請合作網路</h5><div class="empty">目前資料未偵測到可繪製的共同申請關係；只有同一申請案出現 2 個以上正規化法人時才建立連線。</div></div>';
+  const W=920,H=500,cx=W/2,cy=H/2,R=185;const pos={};nodes.forEach((n,i)=>{const a=-Math.PI/2+2*Math.PI*i/nodes.length;pos[n.id]={x:cx+R*Math.cos(a),y:cy+R*Math.sin(a)}});let maxP=Math.max(...nodes.map(n=>Number(n.patent_count||0)),1),maxE=Math.max(...edges.map(e=>Number(e.patent_count||0)),1);
+  const lines=edges.map(e=>{const a=pos[e.source],b=pos[e.target];if(!a||!b)return '';const w=1+5*Number(e.patent_count||0)/maxE;return `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="#8fb7a3" stroke-opacity=".62" stroke-width="${w.toFixed(1)}"><title>共同申請 ${e.patent_count} 件</title></line>`}).join('');
+  const dots=nodes.map(n=>{const p=pos[n.id],r=10+15*Number(n.patent_count||0)/maxP,label=String(n.name||'').length>22?String(n.name).slice(0,21)+'…':String(n.name||'');return `<g><circle cx="${p.x}" cy="${p.y}" r="${r.toFixed(1)}" fill="#e4f2eb" stroke="#18865f" stroke-width="2"><title>${esc(n.name)}｜專利 ${n.patent_count} 件</title></circle><text x="${p.x}" y="${p.y+r+16}" text-anchor="middle" font-size="11" fill="#24352d">${esc(label)}</text></g>`}).join('');
+  return `<div class="base-visual-subcard"><h5>共同申請合作網路</h5><div class="network-wrap"><svg class="network-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="申請法人共同申請合作網路">${lines}${dots}</svg></div><p class="network-note">連線只代表「同一申請案共同申請」；線越粗代表共同申請案件越多。顯示主要合作節點與關係，共同申請案共 ${bfmt(c.co_application_count||0)} 件。</p></div>`;
+}
 function citationBuckets(){if(Array.isArray(G.citation_buckets)&&G.citation_buckets.length)return G.citation_buckets;const b={'0':0,'1–2':0,'3–4':0,'5+':0};B.rows.forEach(r=>{const n=Number(r['_引用專利數']||0);if(n===0)b['0']++;else if(n<=2)b['1–2']++;else if(n<=4)b['3–4']++;else b['5+']++});return Object.entries(b)}
 function peakYear(){return [...B.years].sort((a,b)=>b[1]-a[1])[0]||[null,0]}
 function sumYearRange(a,b){return B.years.filter(x=>Number(x[0])>=a&&Number(x[0])<=b).reduce((s,x)=>s+Number(x[1]||0),0)}
 function baseNodes(){
   const py=peakYear(),last=B.years.at(-1)?.[0]||null,r5=last?Number(last)-4:null,r10=last?Number(last)-9:null;
   const countryChildren=B.countryPool.filter(x=>x.included&&Number(x.count||0)>0).map(x=>[x.country,bfmt(x.count),'查看此國別專利',{kind:'country',value:x.country,title:`${x.country} 專利`}]);
+  const inventorRules=[
+    ['去重範圍','先以申請號建立專利池，再把全部專利的發明人放在同一集合中全域去重；不是把每件專利的發明人數相加。'],
+    ['姓名正規化','先做 Unicode／全半形與空白正規化，並以不分大小寫的姓名 key 合併完全相同名稱。'],
+    ['同案重複','同一申請案內重複出現的相同姓名只計一次。'],
+    ['TW 中英成對','GPSS 的 TW 發明人若為中英文成對排列，按一組一人處理，避免同一人被中英文各算一次。'],
+    ['跨國姓名差異','不推測跨語言或姓名順序是否為同一人；例如 TW 中文名與 US 英文名不同時，仍分開計算，避免誤合併。']
+  ];
+  const applicantRules=[
+    ['計數範圍','在全部去重後的專利池中，以正規化法人 key 全域去重。'],
+    ['TW 中英名稱','中文法人後若緊接英文法人名稱，視為同一實體；英文名稱作比對 key，中文名稱保留作顯示。'],
+    ['英文法人正規化','統一常見標點、大小寫與公司尾碼（如 Corporation／Corp.、Incorporated／Inc.），並保守修正常見尾碼拼字錯誤。'],
+    ['中文法人','不任意刪除「股份有限公司」等法律型態，避免把不同法人誤合併。']
+  ];
+  const citationRules=[
+    ['計數單位','每一申請號視為一件專利；同案 A／B 等公報列先彙整。'],
+    ['引用去重','同一申請案所有公報列的「引用專利」合併後，以正規化專利號去重。'],
+    ['中位數／平均數','以整個專利池每件專利的引用件數計算；沒有引用資料的案件以 0 件納入分布。'],
+    ['資料覆蓋率','表示原始 GPSS「引用專利」欄至少有一列非空的申請案件比例。']
+  ];
+  const ipcRules=[
+    ['計數單位','每一申請號視為一件專利。'],
+    ['IPC 正規化','移除版次文字並保留完整 IPC 碼；同一案件重複的相同 IPC 只計一次。'],
+    ['中位數／平均數','以每件專利擁有的不同完整 IPC 數量計算。'],
+    ['主要 IPC','依涉及的不同申請案件數排序。']
+  ];
+  const priorityRules=[
+    ['解析單位','逐一解析各申請案「優先權」欄中的每個優先權項目並正規化來源。'],
+    ['同源去重','同一申請案若多筆優先權都來自同一來源，該來源只計 1 件專利。'],
+    ['可重疊計數','同一申請案若同時涉及不同優先權來源，可同時出現在多個來源統計中，因此各來源件數不可直接相加當作專利總數。'],
+    ['解析率',`目前優先權項目來源解析率 ${pct(G.priority_source_parse_rate_pct??100)}。`]
+  ];
   return {
     pool:{title:'專利件數',question:`目前 ${D.company} 納入分析的專利共有多少件？`,metrics:[['專利件數',bfmt(B.pool)],['收錄國別',bfmt(countryChildren.length)],['申請法人',bfmt(B.applicant_count)],['查看方式','可依國別查看']],children:countryChildren,chartTitle:'專利來源國',chart:donutChart(B.countryPool.filter(x=>x.included&&Number(x.count||0)>0).map(x=>[x.country,Number(x.count||0)])),recordsLabel:'收錄規則',rules:[['公司篩選','先排除不屬於目標公司的誤收資料'],['計數單位','同一申請號只計為一件專利'],['代表專利','同案有公告／核准專利時，優先保留公告／核准案']]},
-    active:{title:'申請期間',question:'這批專利從何時開始申請？哪些年度申請較集中？',metrics:[['最早申請',B.active_min],['最新申請',B.active_max],['涵蓋年度',`${B.years.length} 年`],['最高峰',py[0]?`${py[0]} 年`:'—']],children:[['最高峰年度',String(py[0]||'—'),`${bfmt(py[1])} 件專利`,py[0]?{kind:'year',value:py[0],title:`${py[0]} 年專利`}:null],['近五年度',last?`${r5}–${last}`:'—',`${bfmt(last?sumYearRange(r5,Number(last)):0)} 件專利`,last?{kind:'year_range',start:r5,end:Number(last),title:`近五年度（${r5}–${last}）`}:null],['近十年度',last?`${r10}–${last}`:'—',`${bfmt(last?sumYearRange(r10,Number(last)):0)} 件專利`,last?{kind:'year_range',start:r10,end:Number(last),title:`近十年度（${r10}–${last}）`}:null],['最近申請年度',String(last||'—'),`${bfmt(last?sumYearRange(Number(last),Number(last)):0)} 件專利`,last?{kind:'year',value:Number(last),title:`${last} 年專利`}:null]],chartTitle:'各年度申請件數',chart:barChart(B.years,'申請件數'),recordsLabel:'統計方式',rules:[['時間基準','以專利的「申請日」為準'],['計算方式','同一申請案只計一次'],['近五／十年度','以資料中的最新申請年度往前計算']]},
-    inventors:{title:'發明人',question:'這批專利涉及多少位發明人？哪些人參與較多專利？',metrics:[['發明人數',bfmt(B.inventor_count)],['專利件數',bfmt(B.pool)],['主要用途','觀察研發參與者'],['查看方式','可點姓名看專利']],children:B.topInventors.slice(0,4).map(x=>[x.name,bfmt(x.patent_count),'參與專利',{kind:'inventor',value:x.name,title:`${x.name} 的專利`}]),chartTitle:'主要發明人',chart:barChart(B.topInventors.slice(0,10).map(x=>[x.name,x.patent_count]),'專利件數'),records:B.rows},
-    applicants:{title:'申請法人',question:'這批專利由哪些法人提出申請？',metrics:[['申請法人數',bfmt(B.applicant_count)],['主要申請人',B.applicants[0]?.[0]||'—'],['專利件數',bfmt(B.pool)],['查看方式','可點法人看專利']],children:B.applicants.slice(0,4).map(x=>[x[0],bfmt(x[1]),'涉及專利',{kind:'applicant',value:x[0],title:`${x[0]} 的專利`}]),chartTitle:'主要申請人',chart:barChart(B.applicants.slice(0,8),'專利件數'),records:B.rows},
-    citations:{title:'典型引用數',question:'一件典型專利大約引用多少件先前專利？',metrics:[['中位數',bfmt(B.citation_median)],['平均數',bfmt(B.citation_mean)],['Q1～Q3',`${bfmt(B.citation_q1)} ～ ${bfmt(B.citation_q3)}`],['資料覆蓋率',pct(B.citation_coverage)]],children:[['引用最多',`${bfmt(B.citation_max)} 件`,'查看最高引用案件',{kind:'citation_eq',value:B.citation_max,title:'引用專利數最多的案件'}],['高引用案件',`≥ ${bfmt(B.citation_q3)} 件`,'以 Q3 為門檻',{kind:'citation_gte',value:B.citation_q3,title:'高引用案件'}],['有引用資料',bfmt(B.citation_nonempty),'查看有引用資訊的專利',{kind:'citation_has_data',value:true,title:'有引用資料的專利'}]],chartTitle:'引用專利數分布',chart:barChart(citationBuckets(),'專利件數'),records:B.rows.filter(r=>r['_引用欄有資料'])},
-    ipc:{title:'典型 IPC 數',question:'一件典型專利配置多少個完整 IPC 分類？',metrics:[['中位數',bfmt(B.ipc_median)],['平均數',bfmt(B.ipc_mean)],['完整 IPC 種類',bfmt(B.ipc_unique)],['單件最多',bfmt(B.ipc_max)]],children:B.ipc_top.slice(0,4).map(x=>[x[0],bfmt(x[1]),'涉及專利',{kind:'ipc',value:x[0],title:`IPC ${x[0]} 的專利`}]),chartTitle:'主要完整 IPC 分類',chart:barChart(B.ipc_top.slice(0,8),'專利件數'),records:B.rows},
-    priority:{title:'優先權來源',question:'這批專利最早從哪些國家開始布局？',metrics:[['來源國數',bfmt(Number(G.priority_country_count||B.priority.length))],['主要來源',B.priority[0]?.[0]||'—'],['專利件數',bfmt(B.pool)],['主要用途','觀察最初布局來源']],children:B.priority.slice(0,4).map(x=>[x[0],bfmt(x[1]),'件專利',{kind:'priority_country',value:x[0],title:`優先權來源：${x[0]}`}]),chartTitle:'優先權來源國',chart:donutChart(B.priority.slice(0,8)),records:B.rows}
+    active:{title:'申請期間',question:'這批專利從何時開始申請？各國別的年度趨勢如何？',metrics:[['最早申請',B.active_min],['最新申請',B.active_max],['涵蓋年度',`${B.years.length} 年`],['最高峰',py[0]?`${py[0]} 年`:'—']],children:[['最高峰年度',String(py[0]||'—'),`${bfmt(py[1])} 件專利`,py[0]?{kind:'year',value:py[0],title:`${py[0]} 年專利`}:null],['近五年度',last?`${r5}–${last}`:'—',`${bfmt(last?sumYearRange(r5,Number(last)):0)} 件專利`,last?{kind:'year_range',start:r5,end:Number(last),title:`近五年度（${r5}–${last}）`}:null],['近十年度',last?`${r10}–${last}`:'—',`${bfmt(last?sumYearRange(r10,Number(last)):0)} 件專利`,last?{kind:'year_range',start:r10,end:Number(last),title:`近十年度（${r10}–${last}）`}:null],['最近申請年度',String(last||'—'),`${bfmt(last?sumYearRange(Number(last),Number(last)):0)} 件專利`,last?{kind:'year',value:Number(last),title:`${last} 年專利`}:null]],chartTitle:'年度申請趨勢：總數與各國別',chart:yearTrendChart(),recordsLabel:'統計方式',rules:[['時間基準','以專利的「申請日」為準'],['計算方式','同一申請案只計一次'],['各國別趨勢','依資料國別（例如 TW、US）分別統計申請年度件數'],['近五／十年度','以資料中的最新申請年度往前計算']]},
+    inventors:{title:'發明人',question:'這批專利涉及多少位不同發明人？主要發明人的活躍年度如何？',metrics:[['發明人數',bfmt(B.inventor_count)],['專利件數',bfmt(B.pool)],['主要用途','觀察研發參與者'],['去重範圍','全部專利池']],children:B.topInventors.slice(0,12).map(x=>[x.name,bfmt(x.patent_count),'參與專利',{kind:'inventor',value:x.name,title:`${x.name} 的專利`}]),chartTitle:'主要發明人與活躍年度',chart:barChart(B.topInventors.slice(0,10).map(x=>[x.name,x.patent_count]),'專利件數'),visualHtml:()=>inventorMatrixHtml(B.inventorYearMatrix),recordsLabel:'統計方式',rules:inventorRules},
+    applicants:{title:'申請法人',question:'這批專利由哪些法人提出申請？是否存在共同申請合作關係？',metrics:[['申請法人數',bfmt(B.applicant_count)],['主要申請人',B.applicants[0]?.[0]||'—'],['專利件數',bfmt(B.pool)],['共同申請案',bfmt(B.applicantCollaboration.co_application_count||0)]],children:B.applicants.map(x=>[x[0],bfmt(x[1]),'涉及專利',{kind:'applicant',value:x[0],title:`${x[0]} 的專利`}]),chartTitle:'主要申請人與共同申請合作網路',chart:barChart(B.applicants.slice(0,10),'專利件數'),visualHtml:()=>applicantNetworkHtml(B.applicantCollaboration),recordsLabel:'統計方式',rules:applicantRules},
+    citations:{title:'引用專利數',question:'每件專利引用多少件先前專利？整體分布如何？',metrics:[['中位數',bfmt(B.citation_median)],['平均數',bfmt(B.citation_mean)],['Q1～Q3',`${bfmt(B.citation_q1)} ～ ${bfmt(B.citation_q3)}`],['資料覆蓋率',pct(B.citation_coverage)]],children:[['引用最多',`${bfmt(B.citation_max)} 件`,'查看最高引用案件',{kind:'citation_eq',value:B.citation_max,title:'引用專利數最多的案件'}],['高引用案件',`≥ ${bfmt(B.citation_q3)} 件`,'以 Q3 為門檻',{kind:'citation_gte',value:B.citation_q3,title:'高引用案件'}],['有引用資料',bfmt(B.citation_nonempty),'查看有引用資訊的專利',{kind:'citation_has_data',value:true,title:'有引用資料的專利'}]],chartTitle:'引用專利數分布',chart:barChart(citationBuckets(),'專利件數'),recordsLabel:'統計方式',rules:citationRules},
+    ipc:{title:'IPC 分類數',question:'每件專利配置多少個不同的完整 IPC 分類？',metrics:[['中位數',bfmt(B.ipc_median)],['平均數',bfmt(B.ipc_mean)],['完整 IPC 種類',bfmt(B.ipc_unique)],['單件最多',bfmt(B.ipc_max)]],children:B.ipc_top.slice(0,12).map(x=>[x[0],bfmt(x[1]),'涉及專利',{kind:'ipc',value:x[0],title:`IPC ${x[0]} 的專利`}]),chartTitle:'主要完整 IPC 分類',chart:barChart(B.ipc_top.slice(0,10),'專利件數'),recordsLabel:'統計方式',rules:ipcRules},
+    priority:{title:'優先權來源',question:'這批專利的優先權紀錄涉及哪些來源？',metrics:[['來源數',bfmt(Number(G.priority_country_count||B.priority.length))],['主要來源',B.priority[0]?.[0]||'—'],['專利件數',bfmt(B.pool)],['解析率',pct(G.priority_source_parse_rate_pct??100)]],children:B.priority.map(x=>[x[0],bfmt(x[1]),'件專利',{kind:'priority_country',value:x[0],title:`優先權來源：${x[0]}`}]),chartTitle:'優先權來源',chart:donutChart(B.priority),recordsLabel:'統計方式',rules:priorityRules}
   };
 }
 const BN=baseNodes();
@@ -794,8 +875,8 @@ function renderBaseCards(){
     ['active','申請期間',`${B.active_min}<br>～ ${B.active_max}`,'從最早到最新的專利申請時間','range'],
     ['inventors','發明人',bfmt(B.inventor_count),'參與這批專利的不同發明人數'],
     ['applicants','申請法人',bfmt(B.applicant_count),'這批專利涉及的不同申請法人數'],
-    ['citations','典型引用數',bfmt(B.citation_median),'一件典型專利引用多少件先前專利'],
-    ['ipc','典型 IPC 數',bfmt(B.ipc_median),'一件典型專利使用多少個 IPC 分類'],
+    ['citations','引用專利數',bfmt(B.citation_median),'每件專利引用件數的中位數'],
+    ['ipc','IPC 分類數',bfmt(B.ipc_median),'每件專利不同完整 IPC 數的中位數'],
     ['priority','優先權來源',bfmt(B.priority.length),'專利最初布局涉及多少個國家']
   ];
   document.getElementById('baseOverviewGrid').innerHTML=cards.map(c=>`<div class="base-kpi" data-base-node="${c[0]}"><div class="k">${esc(c[1])}</div><div class="v ${c[4]||''}">${c[2]}</div><div class="t">${esc(c[3])}</div><div class="go">查看分析</div></div>`).join('');
@@ -808,7 +889,11 @@ function openBaseNode(id){
   document.getElementById('baseMetricGrid').innerHTML=(n.metrics||[]).map(x=>`<div class="base-metric"><div class="k">${esc(x[0])}</div><div class="v">${esc(x[1])}</div></div>`).join('');
   document.getElementById('baseDrillGrid').innerHTML=(n.children||[]).map((x,i)=>`<div class="base-drill-card" data-drill="${i}"><div class="n">${esc(x[0])}</div><div class="t"><b>${esc(x[1])}</b>｜${esc(x[2])}</div></div>`).join('')||'<div class="empty">目前沒有進階節點。</div>';
   document.querySelectorAll('[data-drill]').forEach(el=>el.onclick=()=>{const x=n.children[Number(el.dataset.drill)],meta=x[3];if(meta)openBaseList(meta.title||x[0],filterBaseRecords(meta),'進階探索')});
-  document.getElementById('baseChartTitle').textContent=n.chartTitle||'';if(baseChartObj){baseChartObj.destroy();baseChartObj=null} if(n.chart&&window.Chart)baseChartObj=new Chart(document.getElementById('baseChart'),n.chart);
+  document.getElementById('baseChartTitle').textContent=n.chartTitle||'';if(baseChartObj){baseChartObj.destroy();baseChartObj=null}
+  const visual=document.getElementById('baseVisualContent');visual.innerHTML='';
+  if(n.chart&&window.Chart){const wrap=document.createElement('div');wrap.className='base-chart-wrap';wrap.innerHTML='<canvas id="baseChart"></canvas>';visual.appendChild(wrap);baseChartObj=new Chart(wrap.querySelector('canvas'),n.chart)}
+  const extra=typeof n.visualHtml==='function'?n.visualHtml():n.visualHtml;if(extra){const box=document.createElement('div');box.innerHTML=extra;while(box.firstChild)visual.appendChild(box.firstChild)}
+  if(!visual.children.length)visual.innerHTML='<div class="empty">目前沒有可顯示的圖表資料。</div>';
   const tab=document.getElementById('baseRecordsTab'),title=document.getElementById('baseRecordsTitle');tab.textContent=n.recordsLabel||'相關專利';title.textContent=n.recordsLabel||'相關專利';
   if(n.rules){document.getElementById('baseRecordsTable').innerHTML='<thead><tr><th>項目</th><th>說明</th></tr></thead><tbody>'+n.rules.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join('')+'</tbody>'}
   else{const rs=n.records||[];document.getElementById('baseRecordsTable').innerHTML='<thead><tr><th>申請號</th><th>申請日</th><th>公開/公告號</th><th>專利名稱</th><th>第一申請人</th><th>IPC</th></tr></thead><tbody>'+rs.slice(0,50).map(r=>`<tr><td>${esc(r['申請號'])}</td><td>${esc(r['申請日'])}</td><td>${esc(r['公開/公告號'])}</td><td>${esc(r['專利名稱'])}</td><td>${esc(r['第一申請人'])}</td><td>${esc(r['IPC'])}</td></tr>`).join('')+'</tbody>'}
@@ -825,7 +910,7 @@ function renderCoverage(){document.getElementById('coverageTable').innerHTML='<t
 function openCoverage(){renderCoverage();document.getElementById('coverageOverlay').classList.add('open')}
 
 let recordRows=[...B.rows],recordPage=1;const RECORD_PAGE=25;
-function renderPatentTable(){const q=String(document.getElementById('recordSearch').value||'').trim().toUpperCase();recordRows=!q?[...B.rows]:B.rows.filter(r=>['申請號','公開/公告號','公開/公告日','專利名稱','申請人','第一申請人','IPC'].some(k=>String(r[k]||'').toUpperCase().includes(q)));const pages=Math.max(1,Math.ceil(recordRows.length/RECORD_PAGE));recordPage=Math.min(recordPage,pages);const rs=recordRows.slice((recordPage-1)*RECORD_PAGE,recordPage*RECORD_PAGE);document.getElementById('recordCount').textContent=`${bfmt(recordRows.length)} / ${bfmt(B.rows.length)} 件`; document.getElementById('patentTable').innerHTML='<thead><tr><th>公開/公告號</th><th>公開/公告日</th><th>專利名稱</th><th>申請人</th><th>IPC</th></tr></thead><tbody>'+rs.map(r=>`<tr><td>${esc(r['公開/公告號'])}</td><td>${esc(r['公開/公告日'])}</td><td>${esc(r['專利名稱'])}</td><td>${esc(r['申請人'])}</td><td>${esc(r['IPC'])}</td></tr>`).join('')+'</tbody>';renderPager('recordPagination',recordRows.length,RECORD_PAGE,recordPage,p=>{recordPage=p;renderPatentTable()})}
+function renderPatentTable(){const q=String(document.getElementById('recordSearch').value||'').trim().toUpperCase();recordRows=sortByPubDateDesc(!q?[...B.rows]:B.rows.filter(r=>['申請號','公開/公告號','公開/公告日','專利名稱','申請人','第一申請人','IPC'].some(k=>String(r[k]||'').toUpperCase().includes(q))));const pages=Math.max(1,Math.ceil(recordRows.length/RECORD_PAGE));recordPage=Math.min(recordPage,pages);const rs=recordRows.slice((recordPage-1)*RECORD_PAGE,recordPage*RECORD_PAGE);document.getElementById('recordCount').textContent=`${bfmt(recordRows.length)} / ${bfmt(B.rows.length)} 件`; document.getElementById('patentTable').innerHTML='<thead><tr><th>公開/公告號</th><th>公開/公告日</th><th>專利名稱</th><th>申請人</th><th>IPC</th></tr></thead><tbody>'+rs.map(r=>`<tr><td>${esc(r['公開/公告號'])}</td><td>${esc(r['公開/公告日'])}</td><td>${esc(r['專利名稱'])}</td><td>${esc(r['申請人'])}</td><td>${esc(r['IPC'])}</td></tr>`).join('')+'</tbody>';renderPager('recordPagination',recordRows.length,RECORD_PAGE,recordPage,p=>{recordPage=p;renderPatentTable()})}
 document.getElementById('recordSearch').addEventListener('input',()=>{recordPage=1;renderPatentTable()});
 ['coverageBtn','coverageInlineBtn'].forEach(id=>document.getElementById(id).onclick=openCoverage);
 document.getElementById('coverageClose').onclick=()=>document.getElementById('coverageOverlay').classList.remove('open');document.getElementById('coverageOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.classList.remove('open')});
