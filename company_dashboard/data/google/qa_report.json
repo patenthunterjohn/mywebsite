@@ -1,0 +1,978 @@
+{
+  "schema_version": "1.0",
+  "generator_version": "patent_html_pipeline_v2.6.3",
+  "build_id": "20261123_205100",
+  "company": "Google",
+  "output_mode": "shared-site",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "patent_pool",
+      "status": "PASS",
+      "message": "公司專利池 35,316 件",
+      "metrics": {
+        "pool_size": 35316
+      }
+    },
+    {
+      "id": "company_filter",
+      "status": "PASS",
+      "message": "公司過濾後保留 35,316 件申請案",
+      "metrics": {
+        "enabled": true,
+        "company": "Google",
+        "aliases": [
+          "Google LLC",
+          "Google Inc.",
+          "Google Technology Holdings LLC",
+          "Google Inc., a Delaware corporation",
+          "Google Inc., a California corporation",
+          "c/o Google LLC",
+          "Google",
+          "C/O GOOGLE INC.",
+          "Google Inc., a CA corporation",
+          "Google LLC 1600",
+          "Google Technology Holdings LLP"
+        ],
+        "raw_row_count": 53511,
+        "kept_row_count": 53500,
+        "excluded_row_count": 11,
+        "raw_application_count": 35323,
+        "kept_application_count": 35316,
+        "excluded_application_count": 7,
+        "excluded_samples": [
+          {
+            "_資料國別": "US",
+            "申請號": "US18970223",
+            "公開/公告號": "US20250191154A1",
+            "專利名稱": "REAL-TIME LOCAL TONE MAPPING",
+            "申請人": "GOOGLE LLE",
+            "第一申請人": "GOOGLE LLE"
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US17834190",
+            "公開/公告號": "US11765337B2",
+            "專利名稱": "Multi-processor support for array imagers",
+            "申請人": "Google Technology Holdings",
+            "第一申請人": "Google Technology Holdings"
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US15862411",
+            "公開/公告號": "US20180129652A1",
+            "專利名稱": "Method and Apparatus for Acquiring Program Information",
+            "申請人": "Google Technology Holding LLC",
+            "第一申請人": "Google Technology Holding LLC"
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US14696661",
+            "公開/公告號": "US20150235787A1",
+            "專利名稱": "Electrical Connector having a Domed Metal Switch",
+            "申請人": "Google Technology Holdings Inc.",
+            "第一申請人": "Google Technology Holdings Inc."
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US14711941",
+            "公開/公告號": "US20150244644A1",
+            "專利名稱": "ACCESSING A CLOUD-BASED SERVICE USING A COMMUNICATION DEVICE LINKED TO ANOTHER COMMUNICATION DEVICE VIA A PEER-TO-PEER AD HOC COMMUNICATION LINK",
+            "申請人": "GOOGLE TECHNOLOBY HOLDINGS LLC",
+            "第一申請人": "GOOGLE TECHNOLOBY HOLDINGS LLC"
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US13965711",
+            "公開/公告號": "US09042887B2",
+            "專利名稱": "Method for improving discovery of preferred mobile computing locations",
+            "申請人": "HOLDINGS LLC, GOOGLE TECHNOLOGY",
+            "第一申請人": "HOLDINGS LLC, GOOGLE TECHNOLOGY"
+          },
+          {
+            "_資料國別": "US",
+            "申請號": "US10328821",
+            "公開/公告號": "US20040119740A1",
+            "專利名稱": "Methods and apparatus for displaying and replying to electronic messages",
+            "申請人": "GOOGLE, INC., a Corporation of the State of California",
+            "第一申請人": "GOOGLE, INC., a Corporation of the State of California"
+          }
+        ],
+        "entity_resolution": {
+          "enabled": true,
+          "company": "Google",
+          "target_names": [
+            "Google"
+          ],
+          "anchor": "Google LLC",
+          "anchor_application_count": 19841,
+          "confirmed_entity_count": 11,
+          "candidate_entity_count": 10,
+          "excluded_target_entity_count": 0,
+          "group_only_application_count": 0,
+          "candidate_application_count": 7,
+          "unresolved_target_text_application_count": 7,
+          "manual_aliases": [],
+          "manual_excludes": [],
+          "confirmed_entities": [
+            {
+              "name": "Google LLC",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 123.0,
+              "application_count": 19841,
+              "year_min": 2012,
+              "year_max": 2026,
+              "relative_to_anchor_pct": 100.0,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 100.0,
+              "reasons": [
+                "name_match=1.00",
+                "organization_marker",
+                "exact_core_name",
+                "frequency>=2%_of_anchor",
+                "inventor_overlap>=25%",
+                "ipc_overlap>=50%",
+                "year_overlap_or_adjacent",
+                "primary_anchor"
+              ]
+            },
+            {
+              "name": "Google Inc.",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 123.0,
+              "application_count": 16128,
+              "year_min": 1997,
+              "year_max": 2022,
+              "relative_to_anchor_pct": 81.286,
+              "inventor_overlap_pct": 46.32,
+              "ipc_jaccard_pct": 61.34,
+              "reasons": [
+                "name_match=1.00",
+                "organization_marker",
+                "exact_core_name",
+                "frequency>=2%_of_anchor",
+                "inventor_overlap>=25%",
+                "ipc_overlap>=50%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Google Technology Holdings LLC",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 86.0,
+              "application_count": 786,
+              "year_min": 2009,
+              "year_max": 2025,
+              "relative_to_anchor_pct": 3.961,
+              "inventor_overlap_pct": 5.65,
+              "ipc_jaccard_pct": 31.4,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "frequency>=2%_of_anchor",
+                "inventor_overlap>=2%",
+                "ipc_overlap>=20%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Google Inc., a Delaware corporation",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 14,
+              "year_min": 2003,
+              "year_max": 2012,
+              "relative_to_anchor_pct": 0.071,
+              "inventor_overlap_pct": 48.72,
+              "ipc_jaccard_pct": 1.98,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Google Inc., a California corporation",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 4,
+              "year_min": 2011,
+              "year_max": 2012,
+              "relative_to_anchor_pct": 0.02,
+              "inventor_overlap_pct": 42.86,
+              "ipc_jaccard_pct": 0.79,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "c/o Google LLC",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 3,
+              "year_min": 2022,
+              "year_max": 2024,
+              "relative_to_anchor_pct": 0.015,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 1.19,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Google",
+              "entity_type": "unknown",
+              "status": "CONFIRMED",
+              "score": 85.0,
+              "application_count": 2,
+              "year_min": 2010,
+              "year_max": 2014,
+              "relative_to_anchor_pct": 0.01,
+              "inventor_overlap_pct": 85.71,
+              "ipc_jaccard_pct": 0.79,
+              "reasons": [
+                "name_match=1.00",
+                "entity_type_unknown",
+                "exact_core_name",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "C/O GOOGLE INC.",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 1,
+              "year_min": 2010,
+              "year_max": 2010,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 33.33,
+              "ipc_jaccard_pct": 0.4,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Google Inc., a CA corporation",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 1,
+              "year_min": 2010,
+              "year_max": 2010,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 66.67,
+              "ipc_jaccard_pct": 0.79,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Google LLC 1600",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 1,
+              "year_min": 2022,
+              "year_max": 2022,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.4,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Google Technology Holdings LLP",
+              "entity_type": "organization",
+              "status": "CONFIRMED",
+              "score": 76.0,
+              "application_count": 1,
+              "year_min": 2014,
+              "year_max": 2014,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 50.0,
+              "ipc_jaccard_pct": 1.19,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            }
+          ],
+          "candidate_entities": [
+            {
+              "name": "GOOGLE LLE",
+              "entity_type": "unknown",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 2,
+              "year_min": 2022,
+              "year_max": 2024,
+              "relative_to_anchor_pct": 0.01,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.79,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "GOOGLE ELLC",
+              "entity_type": "unknown",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2023,
+              "year_max": 2023,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.4,
+              "reasons": [
+                "name_match=0.90",
+                "entity_type_unknown",
+                "inventor_overlap>=25%",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "GOOGLE TECHNOLOBY HOLDINGS LLC",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2015,
+              "year_max": 2015,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.79,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "GOOGLE, INC., a Corporation of the State of California",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 71.0,
+              "application_count": 1,
+              "year_min": 2002,
+              "year_max": 2002,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 100.0,
+              "ipc_jaccard_pct": 0.79,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "inventor_overlap>=25%"
+              ]
+            },
+            {
+              "name": "Google Inc., a Delware Corporation",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2011,
+              "year_max": 2011,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.79,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Google Technology Holding LLC",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2018,
+              "year_max": 2018,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.79,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Google Technology Holdings",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2022,
+              "year_max": 2022,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.79,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "Google Technology Holdings Inc.",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2015,
+              "year_max": 2015,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 1.19,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "HOLDINGS LLC, GOOGLE TECHNOLOGY",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2013,
+              "year_max": 2013,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.79,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            },
+            {
+              "name": "c/o Google Technology Holdings",
+              "entity_type": "organization",
+              "status": "CANDIDATE",
+              "score": 61.0,
+              "application_count": 1,
+              "year_min": 2022,
+              "year_max": 2022,
+              "relative_to_anchor_pct": 0.005,
+              "inventor_overlap_pct": 0.0,
+              "ipc_jaccard_pct": 0.79,
+              "reasons": [
+                "name_match=0.90",
+                "organization_marker",
+                "year_overlap_or_adjacent"
+              ]
+            }
+          ],
+          "excluded_target_entities": []
+        }
+      }
+    },
+    {
+      "id": "company_entity_resolution",
+      "status": "PASS",
+      "message": "企業實體辨識：CONFIRMED 11、CANDIDATE 10、目標字樣排除實體 0",
+      "metrics": {
+        "anchor": "Google LLC",
+        "anchor_application_count": 19841,
+        "confirmed_entities": [
+          {
+            "name": "Google LLC",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 123.0,
+            "application_count": 19841,
+            "year_min": 2012,
+            "year_max": 2026,
+            "relative_to_anchor_pct": 100.0,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 100.0,
+            "reasons": [
+              "name_match=1.00",
+              "organization_marker",
+              "exact_core_name",
+              "frequency>=2%_of_anchor",
+              "inventor_overlap>=25%",
+              "ipc_overlap>=50%",
+              "year_overlap_or_adjacent",
+              "primary_anchor"
+            ]
+          },
+          {
+            "name": "Google Inc.",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 123.0,
+            "application_count": 16128,
+            "year_min": 1997,
+            "year_max": 2022,
+            "relative_to_anchor_pct": 81.286,
+            "inventor_overlap_pct": 46.32,
+            "ipc_jaccard_pct": 61.34,
+            "reasons": [
+              "name_match=1.00",
+              "organization_marker",
+              "exact_core_name",
+              "frequency>=2%_of_anchor",
+              "inventor_overlap>=25%",
+              "ipc_overlap>=50%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Google Technology Holdings LLC",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 86.0,
+            "application_count": 786,
+            "year_min": 2009,
+            "year_max": 2025,
+            "relative_to_anchor_pct": 3.961,
+            "inventor_overlap_pct": 5.65,
+            "ipc_jaccard_pct": 31.4,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "frequency>=2%_of_anchor",
+              "inventor_overlap>=2%",
+              "ipc_overlap>=20%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Google Inc., a Delaware corporation",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 14,
+            "year_min": 2003,
+            "year_max": 2012,
+            "relative_to_anchor_pct": 0.071,
+            "inventor_overlap_pct": 48.72,
+            "ipc_jaccard_pct": 1.98,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Google Inc., a California corporation",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 4,
+            "year_min": 2011,
+            "year_max": 2012,
+            "relative_to_anchor_pct": 0.02,
+            "inventor_overlap_pct": 42.86,
+            "ipc_jaccard_pct": 0.79,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "c/o Google LLC",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 3,
+            "year_min": 2022,
+            "year_max": 2024,
+            "relative_to_anchor_pct": 0.015,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 1.19,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Google",
+            "entity_type": "unknown",
+            "status": "CONFIRMED",
+            "score": 85.0,
+            "application_count": 2,
+            "year_min": 2010,
+            "year_max": 2014,
+            "relative_to_anchor_pct": 0.01,
+            "inventor_overlap_pct": 85.71,
+            "ipc_jaccard_pct": 0.79,
+            "reasons": [
+              "name_match=1.00",
+              "entity_type_unknown",
+              "exact_core_name",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "C/O GOOGLE INC.",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 1,
+            "year_min": 2010,
+            "year_max": 2010,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 33.33,
+            "ipc_jaccard_pct": 0.4,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Google Inc., a CA corporation",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 1,
+            "year_min": 2010,
+            "year_max": 2010,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 66.67,
+            "ipc_jaccard_pct": 0.79,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Google LLC 1600",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 1,
+            "year_min": 2022,
+            "year_max": 2022,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.4,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Google Technology Holdings LLP",
+            "entity_type": "organization",
+            "status": "CONFIRMED",
+            "score": 76.0,
+            "application_count": 1,
+            "year_min": 2014,
+            "year_max": 2014,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 50.0,
+            "ipc_jaccard_pct": 1.19,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          }
+        ],
+        "candidate_entities": [
+          {
+            "name": "GOOGLE LLE",
+            "entity_type": "unknown",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 2,
+            "year_min": 2022,
+            "year_max": 2024,
+            "relative_to_anchor_pct": 0.01,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.79,
+            "reasons": [
+              "name_match=0.90",
+              "entity_type_unknown",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "GOOGLE ELLC",
+            "entity_type": "unknown",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2023,
+            "year_max": 2023,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.4,
+            "reasons": [
+              "name_match=0.90",
+              "entity_type_unknown",
+              "inventor_overlap>=25%",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "GOOGLE TECHNOLOBY HOLDINGS LLC",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2015,
+            "year_max": 2015,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.79,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "GOOGLE, INC., a Corporation of the State of California",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 71.0,
+            "application_count": 1,
+            "year_min": 2002,
+            "year_max": 2002,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 100.0,
+            "ipc_jaccard_pct": 0.79,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "inventor_overlap>=25%"
+            ]
+          },
+          {
+            "name": "Google Inc., a Delware Corporation",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2011,
+            "year_max": 2011,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.79,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Google Technology Holding LLC",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2018,
+            "year_max": 2018,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.79,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Google Technology Holdings",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2022,
+            "year_max": 2022,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.79,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "Google Technology Holdings Inc.",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2015,
+            "year_max": 2015,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 1.19,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "HOLDINGS LLC, GOOGLE TECHNOLOGY",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2013,
+            "year_max": 2013,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.79,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          },
+          {
+            "name": "c/o Google Technology Holdings",
+            "entity_type": "organization",
+            "status": "CANDIDATE",
+            "score": 61.0,
+            "application_count": 1,
+            "year_min": 2022,
+            "year_max": 2022,
+            "relative_to_anchor_pct": 0.005,
+            "inventor_overlap_pct": 0.0,
+            "ipc_jaccard_pct": 0.79,
+            "reasons": [
+              "name_match=0.90",
+              "organization_marker",
+              "year_overlap_or_adjacent"
+            ]
+          }
+        ],
+        "excluded_target_entities": [],
+        "candidate_application_count": 7,
+        "unresolved_target_text_application_count": 7,
+        "group_only_application_count": 0,
+        "candidate_share_pct": 0.02,
+        "manual_aliases": [],
+        "manual_excludes": []
+      }
+    },
+    {
+      "id": "applicant_normalization",
+      "status": "PASS",
+      "message": "正規化後法人實體 106 個",
+      "metrics": {
+        "entity_count": 106,
+        "alias_group_count": 12
+      }
+    },
+    {
+      "id": "priority_normalization",
+      "status": "PASS",
+      "message": "優先權來源解析率 99.67%",
+      "metrics": {
+        "item_count": 85860,
+        "unknown_item_count": 283,
+        "parse_rate_pct": 99.67,
+        "unknown_samples": [
+          "IL 277910 20201009",
+          "RO a/00225/2020 20200427",
+          "RO a/00282/2020 20200522",
+          "VN 1-2020-05021 20200831",
+          "IL 277642 20200929",
+          "IL 274840 20200521",
+          "IB 2021IB00057 20210211",
+          "IL 279406 20201213",
+          "IL 280056 20210110",
+          "IL 280057 20210110"
+        ]
+      }
+    },
+    {
+      "id": "classification_match",
+      "status": "PASS",
+      "message": "未指定分類檔；以純專利概況模式輸出",
+      "metrics": {
+        "enabled": false
+      }
+    },
+    {
+      "id": "payload_optimization",
+      "status": "PASS",
+      "message": "compact records 35,316 筆；raw_records 已移除",
+      "metrics": {
+        "record_count": 35316,
+        "raw_records_present": false
+      }
+    },
+    {
+      "id": "shared_site_bundle",
+      "status": "PASS",
+      "message": "shared-site 公司資料已新增：data/google/；輸出 companies.json 已同步",
+      "metrics": {
+        "slug": "google",
+        "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P007_專利情報庫_Google\\09_輸出檔",
+        "registry_source": "C:\\mywebsite\\company_dashboard\\companies.json",
+        "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P007_專利情報庫_Google\\09_輸出檔\\companies.json",
+        "registry_action": "added",
+        "registry_company_count": 3,
+        "summary_bytes": 41327,
+        "records_bytes": 10986471,
+        "classification_bytes": 139
+      }
+    }
+  ],
+  "shared_site": {
+    "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P007_專利情報庫_Google\\09_輸出檔",
+    "slug": "google",
+    "company_url": "company.html?c=google",
+    "data_path": "data/google",
+    "registry_source": "C:\\mywebsite\\company_dashboard\\companies.json",
+    "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P007_專利情報庫_Google\\09_輸出檔\\companies.json"
+  }
+}
