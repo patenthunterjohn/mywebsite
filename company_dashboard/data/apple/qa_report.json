@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generator_version": "patent_html_pipeline_v2.6.3",
-  "build_id": "20261122_215954",
+  "generator_version": "patent_html_pipeline_v2.6.4",
+  "build_id": "20261124_002831",
   "company": "Apple",
   "output_mode": "shared-site",
   "status": "PASS",
@@ -25,13 +25,10 @@
           "Apple Inc.",
           "Apple Computer, Inc.",
           "Apple Computers, Inc.",
-          "Apple Computer, Inc., A California Corporation",
-          "Apple Inc., a California corporation",
           "Apple",
           "Apple Comptuer, Inc.",
           "Apple Compunter, Inc.",
           "Apple Computer, Inc. One Infinite Loop",
-          "Apple Inc., a Delaware corporation",
           "INC., APPLE",
           "here. Apple Inc."
         ],
@@ -450,8 +447,8 @@
             "Apple"
           ],
           "anchor": "Apple Inc.",
-          "anchor_application_count": 43613,
-          "confirmed_entity_count": 12,
+          "anchor_application_count": 43617,
+          "confirmed_entity_count": 9,
           "candidate_entity_count": 36,
           "excluded_target_entity_count": 83,
           "group_only_application_count": 0,
@@ -465,7 +462,7 @@
               "entity_type": "organization",
               "status": "CONFIRMED",
               "score": 123.0,
-              "application_count": 43613,
+              "application_count": 43617,
               "year_min": 1998,
               "year_max": 2026,
               "relative_to_anchor_pct": 100.0,
@@ -487,11 +484,11 @@
               "entity_type": "organization",
               "status": "CONFIRMED",
               "score": 96.0,
-              "application_count": 2278,
+              "application_count": 2286,
               "year_min": 1977,
               "year_max": 2012,
-              "relative_to_anchor_pct": 5.223,
-              "inventor_overlap_pct": 45.29,
+              "relative_to_anchor_pct": 5.241,
+              "inventor_overlap_pct": 45.33,
               "ipc_jaccard_pct": 33.03,
               "reasons": [
                 "name_match=0.90",
@@ -513,42 +510,6 @@
               "relative_to_anchor_pct": 0.023,
               "inventor_overlap_pct": 38.46,
               "ipc_jaccard_pct": 2.12,
-              "reasons": [
-                "name_match=0.90",
-                "organization_marker",
-                "inventor_overlap>=25%",
-                "year_overlap_or_adjacent"
-              ]
-            },
-            {
-              "name": "Apple Computer, Inc., A California Corporation",
-              "entity_type": "organization",
-              "status": "CONFIRMED",
-              "score": 76.0,
-              "application_count": 9,
-              "year_min": 2003,
-              "year_max": 2011,
-              "relative_to_anchor_pct": 0.021,
-              "inventor_overlap_pct": 82.35,
-              "ipc_jaccard_pct": 1.52,
-              "reasons": [
-                "name_match=0.90",
-                "organization_marker",
-                "inventor_overlap>=25%",
-                "year_overlap_or_adjacent"
-              ]
-            },
-            {
-              "name": "Apple Inc., a California corporation",
-              "entity_type": "organization",
-              "status": "CONFIRMED",
-              "score": 76.0,
-              "application_count": 6,
-              "year_min": 2010,
-              "year_max": 2012,
-              "relative_to_anchor_pct": 0.014,
-              "inventor_overlap_pct": 100.0,
-              "ipc_jaccard_pct": 1.52,
               "reasons": [
                 "name_match=0.90",
                 "organization_marker",
@@ -619,24 +580,6 @@
               "application_count": 1,
               "year_min": 2004,
               "year_max": 2004,
-              "relative_to_anchor_pct": 0.002,
-              "inventor_overlap_pct": 100.0,
-              "ipc_jaccard_pct": 0.3,
-              "reasons": [
-                "name_match=0.90",
-                "organization_marker",
-                "inventor_overlap>=25%",
-                "year_overlap_or_adjacent"
-              ]
-            },
-            {
-              "name": "Apple Inc., a Delaware corporation",
-              "entity_type": "organization",
-              "status": "CONFIRMED",
-              "score": 76.0,
-              "application_count": 1,
-              "year_min": 2011,
-              "year_max": 2011,
               "relative_to_anchor_pct": 0.002,
               "inventor_overlap_pct": 100.0,
               "ipc_jaccard_pct": 0.3,
@@ -2554,17 +2497,17 @@
     {
       "id": "company_entity_resolution",
       "status": "PASS",
-      "message": "企業實體辨識：CONFIRMED 12、CANDIDATE 36、目標字樣排除實體 83",
+      "message": "企業實體辨識：CONFIRMED 9、CANDIDATE 36、目標字樣排除實體 83",
       "metrics": {
         "anchor": "Apple Inc.",
-        "anchor_application_count": 43613,
+        "anchor_application_count": 43617,
         "confirmed_entities": [
           {
             "name": "Apple Inc.",
             "entity_type": "organization",
             "status": "CONFIRMED",
             "score": 123.0,
-            "application_count": 43613,
+            "application_count": 43617,
             "year_min": 1998,
             "year_max": 2026,
             "relative_to_anchor_pct": 100.0,
@@ -2586,11 +2529,11 @@
             "entity_type": "organization",
             "status": "CONFIRMED",
             "score": 96.0,
-            "application_count": 2278,
+            "application_count": 2286,
             "year_min": 1977,
             "year_max": 2012,
-            "relative_to_anchor_pct": 5.223,
-            "inventor_overlap_pct": 45.29,
+            "relative_to_anchor_pct": 5.241,
+            "inventor_overlap_pct": 45.33,
             "ipc_jaccard_pct": 33.03,
             "reasons": [
               "name_match=0.90",
@@ -2612,42 +2555,6 @@
             "relative_to_anchor_pct": 0.023,
             "inventor_overlap_pct": 38.46,
             "ipc_jaccard_pct": 2.12,
-            "reasons": [
-              "name_match=0.90",
-              "organization_marker",
-              "inventor_overlap>=25%",
-              "year_overlap_or_adjacent"
-            ]
-          },
-          {
-            "name": "Apple Computer, Inc., A California Corporation",
-            "entity_type": "organization",
-            "status": "CONFIRMED",
-            "score": 76.0,
-            "application_count": 9,
-            "year_min": 2003,
-            "year_max": 2011,
-            "relative_to_anchor_pct": 0.021,
-            "inventor_overlap_pct": 82.35,
-            "ipc_jaccard_pct": 1.52,
-            "reasons": [
-              "name_match=0.90",
-              "organization_marker",
-              "inventor_overlap>=25%",
-              "year_overlap_or_adjacent"
-            ]
-          },
-          {
-            "name": "Apple Inc., a California corporation",
-            "entity_type": "organization",
-            "status": "CONFIRMED",
-            "score": 76.0,
-            "application_count": 6,
-            "year_min": 2010,
-            "year_max": 2012,
-            "relative_to_anchor_pct": 0.014,
-            "inventor_overlap_pct": 100.0,
-            "ipc_jaccard_pct": 1.52,
             "reasons": [
               "name_match=0.90",
               "organization_marker",
@@ -2718,24 +2625,6 @@
             "application_count": 1,
             "year_min": 2004,
             "year_max": 2004,
-            "relative_to_anchor_pct": 0.002,
-            "inventor_overlap_pct": 100.0,
-            "ipc_jaccard_pct": 0.3,
-            "reasons": [
-              "name_match=0.90",
-              "organization_marker",
-              "inventor_overlap>=25%",
-              "year_overlap_or_adjacent"
-            ]
-          },
-          {
-            "name": "Apple Inc., a Delaware corporation",
-            "entity_type": "organization",
-            "status": "CONFIRMED",
-            "score": 76.0,
-            "application_count": 1,
-            "year_min": 2011,
-            "year_max": 2011,
             "relative_to_anchor_pct": 0.002,
             "inventor_overlap_pct": 100.0,
             "ipc_jaccard_pct": 0.3,
@@ -4158,10 +4047,49 @@
     {
       "id": "applicant_normalization",
       "status": "PASS",
-      "message": "正規化後法人實體 34 個",
+      "message": "正規化後法人實體 25 個（僅 organization）",
       "metrics": {
-        "entity_count": 34,
-        "alias_group_count": 9
+        "entity_count": 25,
+        "alias_group_count": 7,
+        "organization_only": true,
+        "source_entity_count": 32,
+        "organization_entity_count": 25,
+        "excluded_person_entity_count": 4,
+        "excluded_unknown_entity_count": 3,
+        "excluded_samples": [
+          {
+            "name": "Sun, Haitong",
+            "entity_type": "person"
+          },
+          {
+            "name": "Watrous, BJ",
+            "entity_type": "person"
+          },
+          {
+            "name": "Culbert, Diane",
+            "entity_type": "person"
+          },
+          {
+            "name": "Watrous, B J",
+            "entity_type": "person"
+          },
+          {
+            "name": "BJ Watrous",
+            "entity_type": "unknown"
+          },
+          {
+            "name": "Seid, Vincent Keane",
+            "entity_type": "person"
+          },
+          {
+            "name": "Apple Computer",
+            "entity_type": "unknown"
+          },
+          {
+            "name": "IBM",
+            "entity_type": "unknown"
+          }
+        ]
       }
     },
     {
@@ -4213,9 +4141,9 @@
         "registry_source": "C:\\mywebsite\\company_dashboard\\companies.json",
         "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔\\companies.json",
         "registry_action": "updated",
-        "registry_company_count": 2,
-        "summary_bytes": 78816,
-        "records_bytes": 15220463,
+        "registry_company_count": 3,
+        "summary_bytes": 77191,
+        "records_bytes": 19329439,
         "classification_bytes": 138
       }
     }

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generator_version": "patent_html_pipeline_v2.6.3",
-  "build_id": "20261122_220537",
+  "generator_version": "patent_html_pipeline_v2.6.4",
+  "build_id": "20261124_003505",
   "company": "NVIDIA",
   "output_mode": "shared-site",
   "status": "PASS",
@@ -25,8 +25,7 @@
           "NVIDIA Corporation",
           "NVIDIA International, Inc.",
           "NVIDIA",
-          "NVIDIA U.S. Investment Company",
-          "c/o NVIDIA Corporation"
+          "NVIDIA U.S. Investment Company"
         ],
         "raw_row_count": 13524,
         "kept_row_count": 13471,
@@ -444,7 +443,7 @@
           ],
           "anchor": "NVIDIA Corporation",
           "anchor_application_count": 9447,
-          "confirmed_entity_count": 5,
+          "confirmed_entity_count": 4,
           "candidate_entity_count": 0,
           "excluded_target_entity_count": 0,
           "group_only_application_count": 0,
@@ -534,24 +533,6 @@
                 "inventor_overlap>=25%",
                 "year_overlap_or_adjacent"
               ]
-            },
-            {
-              "name": "c/o NVIDIA Corporation",
-              "entity_type": "organization",
-              "status": "CONFIRMED",
-              "score": 76.0,
-              "application_count": 1,
-              "year_min": 2023,
-              "year_max": 2023,
-              "relative_to_anchor_pct": 0.011,
-              "inventor_overlap_pct": 100.0,
-              "ipc_jaccard_pct": 1.35,
-              "reasons": [
-                "name_match=0.90",
-                "organization_marker",
-                "inventor_overlap>=25%",
-                "year_overlap_or_adjacent"
-              ]
             }
           ],
           "candidate_entities": [],
@@ -562,7 +543,7 @@
     {
       "id": "company_entity_resolution",
       "status": "PASS",
-      "message": "企業實體辨識：CONFIRMED 5、CANDIDATE 0、目標字樣排除實體 0",
+      "message": "企業實體辨識：CONFIRMED 4、CANDIDATE 0、目標字樣排除實體 0",
       "metrics": {
         "anchor": "NVIDIA Corporation",
         "anchor_application_count": 9447,
@@ -648,24 +629,6 @@
               "inventor_overlap>=25%",
               "year_overlap_or_adjacent"
             ]
-          },
-          {
-            "name": "c/o NVIDIA Corporation",
-            "entity_type": "organization",
-            "status": "CONFIRMED",
-            "score": 76.0,
-            "application_count": 1,
-            "year_min": 2023,
-            "year_max": 2023,
-            "relative_to_anchor_pct": 0.011,
-            "inventor_overlap_pct": 100.0,
-            "ipc_jaccard_pct": 1.35,
-            "reasons": [
-              "name_match=0.90",
-              "organization_marker",
-              "inventor_overlap>=25%",
-              "year_overlap_or_adjacent"
-            ]
           }
         ],
         "candidate_entities": [],
@@ -681,10 +644,16 @@
     {
       "id": "applicant_normalization",
       "status": "PASS",
-      "message": "正規化後法人實體 8 個",
+      "message": "正規化後法人實體 8 個（僅 organization）",
       "metrics": {
         "entity_count": 8,
-        "alias_group_count": 4
+        "alias_group_count": 4,
+        "organization_only": true,
+        "source_entity_count": 8,
+        "organization_entity_count": 8,
+        "excluded_person_entity_count": 0,
+        "excluded_unknown_entity_count": 0,
+        "excluded_samples": []
       }
     },
     {
@@ -732,23 +701,23 @@
       "message": "shared-site 公司資料已更新：data/nvidia/；輸出 companies.json 已同步",
       "metrics": {
         "slug": "nvidia",
-        "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔",
+        "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔",
         "registry_source": "C:\\mywebsite\\company_dashboard\\companies.json",
-        "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔\\companies.json",
+        "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔\\companies.json",
         "registry_action": "updated",
-        "registry_company_count": 2,
-        "summary_bytes": 36332,
-        "records_bytes": 3097849,
+        "registry_company_count": 3,
+        "summary_bytes": 36160,
+        "records_bytes": 3905462,
         "classification_bytes": 139
       }
     }
   ],
   "shared_site": {
-    "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔",
+    "output_root": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔",
     "slug": "nvidia",
     "company_url": "company.html?c=nvidia",
     "data_path": "data/nvidia",
     "registry_source": "C:\\mywebsite\\company_dashboard\\companies.json",
-    "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P006_專利情報庫_Apple\\09_輸出檔\\companies.json"
+    "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P005_專利情報庫_NVIDIA_02\\09_輸出檔\\companies.json"
   }
 }
