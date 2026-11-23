@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "generator_version": "patent_html_pipeline_v2.6.4",
-  "build_id": "20261123_235238",
+  "build_id": "20261124_001856",
   "company": "Google",
   "output_mode": "shared-site",
   "status": "PASS",
@@ -773,7 +773,7 @@
         "registry_action": "updated",
         "registry_company_count": 3,
         "summary_bytes": 30749,
-        "records_bytes": 10986471,
+        "records_bytes": 13566003,
         "classification_bytes": 139
       }
     }
