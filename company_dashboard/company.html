@@ -788,7 +788,18 @@ const B={
   inventorYearMatrix:G.advanced?.inventor_year_matrix||{inventors:[],years:[],values:[]},
   inventorCounting:G.advanced?.inventor_counting||{},
   applicantNormalization:G.advanced?.applicant_normalization||{},
-  applicantCollaboration:G.advanced?.applicant_collaboration||{nodes:[],edges:[],co_application_count:0}
+  applicantCollaboration:G.advanced?.applicant_collaboration||{nodes:[],edges:[],co_application_count:0},
+  ipc3Count:Number(G.ipc3_count||0),
+  ipc3Ranking:Array.isArray(G.ipc3_ranking)?G.ipc3_ranking:[],
+  ipc3YearTrend:Array.isArray(G.ipc3_year_trend)?G.ipc3_year_trend:[],
+  ipc3PatentCountByYear:G.ipc3_patent_count_by_year||{},
+  ipc3Recent5yCount:G.ipc3_recent_5y_count||{},
+  ipc3Recent5yGrowth:G.ipc3_recent_5y_growth||{},
+  ipc3PeakYear:G.ipc3_peak_year||{},
+  ipc3SharePct:G.ipc3_share_pct||{},
+  ipc3LatestYear:G.ipc3_latest_year||null,
+  ipc3RecentWindow:G.ipc3_recent_5y_window||[],
+  ipc3PreviousWindow:G.ipc3_previous_5y_window||[]
 };
 const bfmt=n=>Number.isInteger(Number(n))?Number(n).toLocaleString('zh-TW'):Number(n).toFixed(1);
 const pct=n=>`${Number(n||0).toFixed(1)}%`;
@@ -805,6 +816,21 @@ function yearTrendChart(){
   const datasets=[{label:'總數',data:years.map(y=>Number((B.years.find(x=>Number(x[0])===y)||[0,0])[1]||0)),borderColor:'#17221d',backgroundColor:'rgba(23,34,29,.08)',borderWidth:3,tension:.25,pointRadius:2}];
   countryYearSeries().filter(x=>x.series?.length).forEach((x,i)=>{const m=new Map(x.series.map(v=>[Number(v[0]),Number(v[1])]));datasets.push({label:x.country,data:years.map(y=>m.get(y)||0),borderColor:palette[i%palette.length],backgroundColor:'transparent',borderWidth:2,tension:.25,pointRadius:1.5})});
   return {type:'line',data:{labels:years,datasets},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom'}},scales:{y:{beginAtZero:true,title:{display:true,text:'申請件數'}},x:{title:{display:true,text:'申請年度'}}}}};
+}
+function signedPct(v){if(v===null||v===undefined||v==='')return '—';const n=Number(v);return `${n>0?'+':''}${n.toFixed(1)}%`}
+function ipc3TrendChart(){
+  const ranking=B.ipc3Ranking.slice(0,6),keys=ranking.map(x=>x.ipc3);
+  const trendMap=new Map(B.ipc3YearTrend.map(x=>[x.ipc3,x.series||[]]));
+  const years=[...new Set(keys.flatMap(k=>(trendMap.get(k)||[]).map(v=>Number(v[0]))))].sort((a,b)=>a-b);
+  const palette=['#106748','#2f7bbd','#c47d20','#7a5bb8','#b84f5f','#278d87'];
+  const datasets=keys.map((k,i)=>{const m=new Map((trendMap.get(k)||[]).map(v=>[Number(v[0]),Number(v[1])]));return {label:k,data:years.map(y=>m.get(y)||0),borderColor:palette[i%palette.length],backgroundColor:'transparent',borderWidth:2,tension:.25,pointRadius:1.7}});
+  return {type:'line',data:{labels:years,datasets},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom'}},scales:{y:{beginAtZero:true,title:{display:true,text:'申請件數'}},x:{title:{display:true,text:'申請年度'}}}}};
+}
+function ipc3LandscapeNote(){
+  const r=B.ipc3Ranking[0];if(!r)return '<div class="empty">需以 v2.6.5 重新產生 JSON 後，才會顯示三階 IPC 技術領域資料。</div>';
+  const rw=B.ipc3RecentWindow?.length?`${B.ipc3RecentWindow[0]}–${B.ipc3RecentWindow.at(-1)}`:'—';
+  const pw=B.ipc3PreviousWindow?.length?`${B.ipc3PreviousWindow[0]}–${B.ipc3PreviousWindow.at(-1)}`:'—';
+  return `<div class="base-visual-subcard"><h5>IPC3 Technology Landscape</h5><p class="network-note">目前主要領域 <b>${esc(r.ipc3)}</b> 共 ${bfmt(r.patent_count)} 件，占全部專利 ${Number(r.share_pct||0).toFixed(1)}%；近 5 年（${rw}）${bfmt(r.recent_5y_count||0)} 件，較前 5 年（${pw}）${signedPct(r.recent_5y_growth)}；${r.peak_year?`${esc(r.peak_year)} 年達高峰（${bfmt(r.peak_year_count||0)} 件）`:'尚無有效年度資料'}。</p></div>`;
 }
 function inventorMatrixHtml(m){
   const names=m?.inventors||[],years=m?.years||[],vals=m?.values||[];if(!names.length||!years.length)return '<div class="empty">需以 v2.6.2 重建資料後，才會顯示發明人活躍年度矩陣。</div>';
@@ -851,6 +877,14 @@ function baseNodes(){
     ['中位數／平均數','以每件專利擁有的不同完整 IPC 數量計算。'],
     ['主要 IPC','依涉及的不同申請案件數排序。']
   ];
+  const ipc3Rules=[
+    ['技術領域層級','採 IPC subclass（三階 IPC），例如 G06F、H04W；由 Python 預先計算，HTML 不重新解析或重算。'],
+    ['計數單位','一件申請案在同一 IPC3 只計一次；同案可同時屬於多個 IPC3。'],
+    ['占全部專利','該 IPC3 涉及申請案數 ÷ 全部專利池；因 IPC3 可重疊，各領域占比不要求加總為 100%。'],
+    ['近 5 年件數','以資料中最新有效申請年度為終點，統計最近 5 個申請年度合計。'],
+    ['近 5 年成長','最近 5 年合計相對於緊接之前 5 年合計；若前 5 年為 0，顯示「—」。'],
+    ['高峰年度','該 IPC3 年度申請件數最高的年度；若並列最高，取較新的年度。']
+  ];
   const priorityRules=[
     ['解析單位','逐一解析各申請案「優先權」欄中的每個優先權項目並正規化來源。'],
     ['同源去重','同一申請案若多筆優先權都來自同一來源，該來源只計 1 件專利。'],
@@ -863,6 +897,7 @@ function baseNodes(){
     inventors:{title:'發明人',question:'這批專利涉及多少位不同發明人？主要發明人的活躍年度如何？',metrics:[['發明人數',bfmt(B.inventor_count)],['專利件數',bfmt(B.pool)],['主要用途','觀察研發參與者'],['去重範圍','全部專利池']],children:B.topInventors.slice(0,12).map(x=>[x.name,bfmt(x.patent_count),'參與專利',{kind:'inventor',value:x.name,title:`${x.name} 的專利`}]),chartTitle:'主要發明人與活躍年度',chart:barChart(B.topInventors.slice(0,10).map(x=>[x.name,x.patent_count]),'專利件數'),visualHtml:()=>inventorMatrixHtml(B.inventorYearMatrix),recordsLabel:'統計方式',rules:inventorRules},
     applicants:{title:'申請法人',question:'這批專利由哪些法人提出申請？是否存在共同申請合作關係？',metrics:[['申請法人數',bfmt(B.applicant_count)],['主要申請人',B.applicants[0]?.[0]||'—'],['專利件數',bfmt(B.pool)],['共同申請案',bfmt(B.applicantCollaboration.co_application_count||0)]],children:B.applicants.map(x=>[x[0],bfmt(x[1]),'涉及專利',{kind:'applicant',value:x[0],title:`${x[0]} 的專利`}]),chartTitle:'主要申請人與共同申請合作網路',chart:barChart(B.applicants.slice(0,10),'專利件數'),visualHtml:()=>applicantNetworkHtml(B.applicantCollaboration),recordsLabel:'統計方式',rules:applicantRules},
     citations:{title:'引用專利數',question:'每件專利引用多少件先前專利？整體分布如何？',metrics:[['中位數',bfmt(B.citation_median)],['平均數',bfmt(B.citation_mean)],['Q1～Q3',`${bfmt(B.citation_q1)} ～ ${bfmt(B.citation_q3)}`],['資料覆蓋率',pct(B.citation_coverage)]],children:[['引用最多',`${bfmt(B.citation_max)} 件`,'查看最高引用案件',{kind:'citation_eq',value:B.citation_max,title:'引用專利數最多的案件'}],['高引用案件',`≥ ${bfmt(B.citation_q3)} 件`,'以 Q3 為門檻',{kind:'citation_gte',value:B.citation_q3,title:'高引用案件'}],['有引用資料',bfmt(B.citation_nonempty),'查看有引用資訊的專利',{kind:'citation_has_data',value:true,title:'有引用資料的專利'}]],chartTitle:'引用專利數分布',chart:barChart(citationBuckets(),'專利件數'),recordsLabel:'統計方式',rules:citationRules},
+    ipc3:{title:'IPC 技術領域',question:'企業主要布局在哪些三階 IPC 技術領域？這些領域近年如何變化？',metrics:[['技術領域數',bfmt(B.ipc3Count)],['主要領域',B.ipc3Ranking[0]?.ipc3||'—'],['主要領域占比',B.ipc3Ranking[0]?`${Number(B.ipc3Ranking[0].share_pct||0).toFixed(1)}%`:'—'],['近 5 年成長',B.ipc3Ranking[0]?signedPct(B.ipc3Ranking[0].recent_5y_growth):'—']],children:B.ipc3Ranking.slice(0,12).map(x=>[x.ipc3,`${bfmt(x.patent_count)} 件`,`占 ${Number(x.share_pct||0).toFixed(1)}%｜近5年 ${bfmt(x.recent_5y_count||0)} 件｜${signedPct(x.recent_5y_growth)}｜${x.peak_year?`${x.peak_year} 年高峰`:'無年度資料'}`,{kind:'ipc3',value:x.ipc3,title:`IPC3 ${x.ipc3} 的專利`}]),chartTitle:'主要三階 IPC 年度申請趨勢',chart:ipc3TrendChart(),visualHtml:()=>ipc3LandscapeNote(),recordsLabel:'統計方式',rules:ipc3Rules},
     ipc:{title:'IPC 分類數',question:'每件專利配置多少個不同的完整 IPC 分類？',metrics:[['中位數',bfmt(B.ipc_median)],['平均數',bfmt(B.ipc_mean)],['完整 IPC 種類',bfmt(B.ipc_unique)],['單件最多',bfmt(B.ipc_max)]],children:B.ipc_top.slice(0,12).map(x=>[x[0],bfmt(x[1]),'涉及專利',{kind:'ipc',value:x[0],title:`IPC ${x[0]} 的專利`}]),chartTitle:'主要完整 IPC 分類',chart:barChart(B.ipc_top.slice(0,10),'專利件數'),recordsLabel:'統計方式',rules:ipcRules},
     priority:{title:'優先權來源',question:'這批專利的優先權紀錄涉及哪些來源？',metrics:[['來源數',bfmt(Number(G.priority_country_count||B.priority.length))],['主要來源',B.priority[0]?.[0]||'—'],['專利件數',bfmt(B.pool)],['解析率',pct(G.priority_source_parse_rate_pct??100)]],children:B.priority.map(x=>[x[0],bfmt(x[1]),'件專利',{kind:'priority_country',value:x[0],title:`優先權來源：${x[0]}`}]),chartTitle:'優先權來源',chart:donutChart(B.priority),recordsLabel:'統計方式',rules:priorityRules}
   };
@@ -876,6 +911,7 @@ function renderBaseCards(){
     ['inventors','發明人',bfmt(B.inventor_count),'參與這批專利的不同發明人數'],
     ['applicants','申請法人',bfmt(B.applicant_count),'這批專利涉及的不同申請法人數'],
     ['citations','引用專利數',bfmt(B.citation_median),'每件專利引用件數的中位數'],
+    ['ipc3','IPC 技術領域',bfmt(B.ipc3Count),'三階 IPC 技術領域分布與年度趨勢'],
     ['ipc','IPC 分類數',bfmt(B.ipc_median),'每件專利不同完整 IPC 數的中位數'],
     ['priority','優先權來源',bfmt(B.priority.length),'專利最初布局涉及多少個國家']
   ];
@@ -910,7 +946,7 @@ function recordHasNormalizedEntity(r,field,value,fallbackFields=[]){
   // 舊版 JSON 相容：沒有正規化欄位時才退回原始文字搜尋。
   return fallbackFields.some(k=>entityKey(r[k]).includes(target));
 }
-function filterBaseRecords(meta){const rs=B.rows;switch(meta.kind){case'country':return rs.filter(r=>r['_資料國別']===meta.value);case'year':return rs.filter(r=>appYear(r)===Number(meta.value));case'year_range':return rs.filter(r=>{const y=appYear(r);return y>=meta.start&&y<=meta.end});case'inventor':return rs.filter(r=>recordHasNormalizedEntity(r,'_發明人正規化',meta.value,['發明人']));case'applicant':return rs.filter(r=>recordHasNormalizedEntity(r,'_申請法人正規化',meta.value,['申請人','第一申請人']));case'citation_eq':return rs.filter(r=>Number(r['_引用專利數'])===Number(meta.value));case'citation_gte':return rs.filter(r=>Number(r['_引用專利數'])>=Number(meta.value));case'citation_has_data':return rs.filter(r=>Boolean(r['_引用欄有資料'])===Boolean(meta.value));case'ipc':return rs.filter(r=>String(r['IPC']).split(/[;；]/).map(normalizeIpc).includes(normalizeIpc(meta.value)));case'priority_country':return rs.filter(r=>priorityCountriesOf(r).includes(meta.value));default:return rs}}
+function filterBaseRecords(meta){const rs=B.rows;switch(meta.kind){case'country':return rs.filter(r=>r['_資料國別']===meta.value);case'year':return rs.filter(r=>appYear(r)===Number(meta.value));case'year_range':return rs.filter(r=>{const y=appYear(r);return y>=meta.start&&y<=meta.end});case'inventor':return rs.filter(r=>recordHasNormalizedEntity(r,'_發明人正規化',meta.value,['發明人']));case'applicant':return rs.filter(r=>recordHasNormalizedEntity(r,'_申請法人正規化',meta.value,['申請人','第一申請人']));case'citation_eq':return rs.filter(r=>Number(r['_引用專利數'])===Number(meta.value));case'citation_gte':return rs.filter(r=>Number(r['_引用專利數'])>=Number(meta.value));case'citation_has_data':return rs.filter(r=>Boolean(r['_引用欄有資料'])===Boolean(meta.value));case'ipc3':return rs.filter(r=>String(r['_IPC3']||'').split(/[;；]/).map(x=>x.trim()).filter(Boolean).includes(String(meta.value)));case'ipc':return rs.filter(r=>String(r['IPC']).split(/[;；]/).map(normalizeIpc).includes(normalizeIpc(meta.value)));case'priority_country':return rs.filter(r=>priorityCountriesOf(r).includes(meta.value));default:return rs}}
 let baseListRows=[],baseListPage=1;const BASE_PAGE=20;
 function openBaseList(title,rows,badge='進階探索'){baseListRows=[...(rows||[])].sort((a,b)=>String(b['公開/公告日']).localeCompare(String(a['公開/公告日'])));baseListPage=1;document.getElementById('baseListBadge').textContent=badge;document.getElementById('baseListTitle').textContent=title;document.getElementById('baseListSub').textContent=`共 ${bfmt(baseListRows.length)} 件專利`;renderBaseList();document.getElementById('baseListOverlay').classList.add('open')}
 function renderBaseList(){const start=(baseListPage-1)*BASE_PAGE,rs=baseListRows.slice(start,start+BASE_PAGE);document.getElementById('baseListTable').innerHTML='<thead><tr><th>公開/公告號</th><th>公開/公告日</th><th>專利名稱</th></tr></thead><tbody>'+rs.map(r=>`<tr><td>${esc(r['公開/公告號'])}</td><td>${esc(r['公開/公告日'])}</td><td>${esc(r['專利名稱'])}</td></tr>`).join('')+'</tbody>';renderPager('baseListPagination',baseListRows.length,BASE_PAGE,baseListPage,p=>{baseListPage=p;renderBaseList()})}
