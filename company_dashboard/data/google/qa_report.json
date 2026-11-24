@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "generator_version": "patent_html_pipeline_v2.6.5",
-  "build_id": "20261124_152152",
+  "generator_version": "patent_html_pipeline_v2.6.6",
+  "build_id": "20261124_180222",
   "company": "Google",
   "output_mode": "shared-site",
   "status": "PASS",
@@ -772,7 +772,7 @@
         "registry_output": "C:\\AI專利情報系統_v1\\10_專案資料\\P007_專利情報庫_Google\\09_輸出檔\\companies.json",
         "registry_action": "updated",
         "registry_company_count": 3,
-        "summary_bytes": 363691,
+        "summary_bytes": 630831,
         "records_bytes": 13958789,
         "classification_bytes": 139
       }
