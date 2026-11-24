@@ -217,6 +217,25 @@ body{
 .top-action{background:#fff}.top-action:hover{transform:translateY(-1px)}
 @media(max-width:760px){.section-head-rich{display:block}.section-action{margin-top:10px}.domain{min-width:0;width:100%}}
 
+
+/* ===== v2.6.6 IPC3 Domain Intelligence ===== */
+.base-drill-card{position:relative}
+.ipc3-tech-name{font-size:12px;color:var(--muted);font-weight:700;margin-top:3px;line-height:1.45}
+.domain-entry-btn{margin-top:10px;border:1px solid #b9ddcb;background:#f3fbf7;color:var(--green-dark);border-radius:9px;padding:7px 10px;font-weight:900;font-size:11px;cursor:pointer}
+.domain-entry-btn:hover{background:#e6f6ee;border-color:#82c3a4}
+.domain-status{display:inline-flex;align-items:center;gap:5px;margin-top:7px;font-size:10px;font-weight:800;color:#687970}
+.domain-status.ready{color:var(--green-dark)}
+.domain-status-dot{width:7px;height:7px;border-radius:50%;background:#aebbb4}.domain-status.ready .domain-status-dot{background:var(--green)}
+.domain-overlay{padding:18px}.domain-modal{max-width:1180px;margin:18px auto;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 24px 80px rgba(31,54,43,.26);overflow:hidden}
+.domain-modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:20px 24px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,#fbfdfc,#f1f8f4)}
+.domain-modal-head h2{margin:3px 0 0;font-size:28px;line-height:1.25}.domain-modal-head h2 small{display:block;margin-top:5px;font-size:15px;color:#53675d;font-weight:800}.domain-modal-head p{margin:8px 0 0;color:var(--muted);font-size:12px;line-height:1.7}
+.domain-modal-body{padding:18px 24px 24px}.domain-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}.domain-metric{border:1px solid var(--line);background:var(--card-soft);border-radius:14px;padding:12px 14px}.domain-metric .k{font-size:10px;color:var(--muted);font-weight:800}.domain-metric .v{margin-top:4px;font-size:18px;font-weight:900;color:var(--ink)}
+.domain-scheme-bar{display:grid;grid-template-columns:minmax(240px,1fr) minmax(260px,1.4fr) auto;gap:12px;align-items:end;padding:14px;border:1px solid var(--line);border-radius:15px;background:#fbfcfb;margin-bottom:14px}.domain-scheme-field label{display:block;font-size:10px;color:var(--muted);font-weight:900;margin-bottom:6px}.domain-scheme-field select{width:100%;border:1px solid #cfdcd5;border-radius:10px;background:#fff;padding:9px 11px;font-weight:800;color:var(--ink)}.domain-scheme-meta{font-size:11px;color:#607168;line-height:1.7}.domain-definition-btn{border:1px solid #cfe3d8;background:#fff;color:var(--green-dark);font-weight:900;border-radius:10px;padding:9px 12px;cursor:pointer}
+.domain-definition-box{display:none;margin:-4px 0 14px;padding:13px 15px;border-left:4px solid var(--green);border-radius:10px;background:#f5faf7;font-size:12px;color:#53675d;line-height:1.75}.domain-definition-box.open{display:block}.domain-definition-box b{color:var(--ink)}
+.domain-tabs{display:flex;gap:7px;border-bottom:1px solid var(--line);margin-bottom:14px}.domain-tab{border:0;background:transparent;padding:10px 13px;font-weight:900;color:#6c7c73;cursor:pointer;border-bottom:3px solid transparent}.domain-tab.active{color:var(--green-dark);border-bottom-color:var(--green)}
+.domain-panel{display:none}.domain-panel.active{display:block}.domain-placeholder{border:1px dashed #bfd4c8;border-radius:16px;background:#fbfdfc;padding:22px;min-height:230px}.domain-placeholder h3{margin:0 0 8px;font-size:19px}.domain-placeholder p{margin:0;color:var(--muted);font-size:13px;line-height:1.8}.domain-placeholder-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}.domain-placeholder-card{border:1px solid var(--line);border-radius:13px;background:#fff;padding:13px}.domain-placeholder-card .k{font-size:10px;color:var(--muted);font-weight:900}.domain-placeholder-card .v{font-size:14px;font-weight:900;margin-top:5px}.domain-level-demo{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}.domain-level-demo span{border:1px solid #d5e4dc;background:#fff;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:800;color:#52635a}
+@media(max-width:820px){.domain-metrics{grid-template-columns:repeat(2,1fr)}.domain-scheme-bar{grid-template-columns:1fr}.domain-placeholder-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -378,6 +397,41 @@ body{
     </div>
   </div>
 
+  <div class="modal-overlay domain-overlay" id="ipc3DomainOverlay">
+    <div class="domain-modal">
+      <div class="domain-modal-head">
+        <div>
+          <div class="eyebrow">第三層 · Domain Intelligence</div>
+          <h2><span id="domainIpc3Code">H04W</span><small id="domainIpc3Title">無線通訊網路</small></h2>
+          <p id="domainIpc3Sub">從三階 IPC 進入可版本化、可切換分類定義的深度技術分析工作區。</p>
+        </div>
+        <button class="modal-close" id="ipc3DomainClose">×</button>
+      </div>
+      <div class="domain-modal-body">
+        <div class="domain-metrics">
+          <div class="domain-metric"><div class="k">專利件數</div><div class="v" id="domainPatentCount">—</div></div>
+          <div class="domain-metric"><div class="k">占企業專利</div><div class="v" id="domainShare">—</div></div>
+          <div class="domain-metric"><div class="k">近 5 年成長</div><div class="v" id="domainGrowth">—</div></div>
+          <div class="domain-metric"><div class="k">高峰年度</div><div class="v" id="domainPeak">—</div></div>
+        </div>
+        <div class="domain-scheme-bar">
+          <div class="domain-scheme-field"><label>分類架構</label><select id="domainSchemeSelect"></select></div>
+          <div class="domain-scheme-meta" id="domainSchemeMeta"></div>
+          <button class="domain-definition-btn" id="domainDefinitionBtn">查看分類定義</button>
+        </div>
+        <div class="domain-definition-box" id="domainDefinitionBox"></div>
+        <div class="domain-tabs">
+          <button class="domain-tab active" data-domain-tab="tree">分類樹</button>
+          <button class="domain-tab" data-domain-tab="matrix">技術 × 功效矩陣</button>
+          <button class="domain-tab" data-domain-tab="quality">分類品質</button>
+        </div>
+        <div class="domain-panel active" id="domainPanelTree"></div>
+        <div class="domain-panel" id="domainPanelMatrix"></div>
+        <div class="domain-panel" id="domainPanelQuality"></div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="coverageOverlay">
     <div class="base-modal">
       <div class="base-modal-head"><div><div class="eyebrow">資料範圍</div><h2>資料範圍</h2><p>列出目前各國專利資料的最早公開日與最晚公開日，方便確認專利池的收錄範圍與更新狀態。</p></div><button class="modal-close" id="coverageClose">×</button></div>
@@ -400,7 +454,7 @@ body{
   </div>
 </div>
 
-<script id="dashboardData" type="application/json">{"site_mode":true,"shared_framework":true,"schema_version":"2.5-prototype","data_root":"data","default_company":"nvidia"}</script>
+<script id="dashboardData" type="application/json">{"site_mode":true,"shared_framework":true,"schema_version":"2.6-prototype","data_root":"data","default_company":"nvidia"}</script>
 <script>
 const BOOTSTRAP=JSON.parse(document.getElementById('dashboardData').textContent);
 async function fetchDashboardJson(url){
@@ -799,7 +853,11 @@ const B={
   ipc3SharePct:G.ipc3_share_pct||{},
   ipc3LatestYear:G.ipc3_latest_year||null,
   ipc3RecentWindow:G.ipc3_recent_5y_window||[],
-  ipc3PreviousWindow:G.ipc3_previous_5y_window||[]
+  ipc3PreviousWindow:G.ipc3_previous_5y_window||[],
+  ipc3Titles:G.ipc3_titles||{},
+  ipc3TitleVersion:G.ipc3_title_version||'—',
+  ipc3TitleSource:G.ipc3_title_source||'IPC',
+  ipc3DeepAnalysis:G.ipc3_deep_analysis||{}
 };
 const bfmt=n=>Number.isInteger(Number(n))?Number(n).toLocaleString('zh-TW'):Number(n).toFixed(1);
 const pct=n=>`${Number(n||0).toFixed(1)}%`;
@@ -818,19 +876,23 @@ function yearTrendChart(){
   return {type:'line',data:{labels:years,datasets},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom'}},scales:{y:{beginAtZero:true,title:{display:true,text:'申請件數'}},x:{title:{display:true,text:'申請年度'}}}}};
 }
 function signedPct(v){if(v===null||v===undefined||v==='')return '—';const n=Number(v);return `${n>0?'+':''}${n.toFixed(1)}%`}
+function ipc3Item(code){return B.ipc3Ranking.find(x=>x.ipc3===code)||null}
+function ipc3Title(x){if(!x)return '';return x.title_zh||x.title||B.ipc3Titles?.[x.ipc3]?.title_zh||B.ipc3Titles?.[x.ipc3]?.title||x.title_en||B.ipc3Titles?.[x.ipc3]?.title_en||''}
+function ipc3Display(x){const t=ipc3Title(x);return t?`${x.ipc3}｜${t}`:x.ipc3}
+function ipc3Deep(x){return x?.deep_analysis||B.ipc3DeepAnalysis?.[x?.ipc3]||{enabled:false,status:'not_built',status_label:'尚未建立深度分類架構'}}
 function ipc3TrendChart(){
   const ranking=B.ipc3Ranking.slice(0,6),keys=ranking.map(x=>x.ipc3);
   const trendMap=new Map(B.ipc3YearTrend.map(x=>[x.ipc3,x.series||[]]));
   const years=[...new Set(keys.flatMap(k=>(trendMap.get(k)||[]).map(v=>Number(v[0]))))].sort((a,b)=>a-b);
   const palette=['#106748','#2f7bbd','#c47d20','#7a5bb8','#b84f5f','#278d87'];
-  const datasets=keys.map((k,i)=>{const m=new Map((trendMap.get(k)||[]).map(v=>[Number(v[0]),Number(v[1])]));return {label:k,data:years.map(y=>m.get(y)||0),borderColor:palette[i%palette.length],backgroundColor:'transparent',borderWidth:2,tension:.25,pointRadius:1.7}});
+  const datasets=keys.map((k,i)=>{const m=new Map((trendMap.get(k)||[]).map(v=>[Number(v[0]),Number(v[1])]));const item=ipc3Item(k);return {label:item?ipc3Display(item):k,data:years.map(y=>m.get(y)||0),borderColor:palette[i%palette.length],backgroundColor:'transparent',borderWidth:2,tension:.25,pointRadius:1.7}});
   return {type:'line',data:{labels:years,datasets},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{position:'bottom'}},scales:{y:{beginAtZero:true,title:{display:true,text:'申請件數'}},x:{title:{display:true,text:'申請年度'}}}}};
 }
 function ipc3LandscapeNote(){
-  const r=B.ipc3Ranking[0];if(!r)return '<div class="empty">需以 v2.6.5 重新產生 JSON 後，才會顯示三階 IPC 技術領域資料。</div>';
+  const r=B.ipc3Ranking[0];if(!r)return '<div class="empty">需以 v2.6.6 重新產生 JSON 後，才會顯示三階 IPC 技術領域資料。</div>';
   const rw=B.ipc3RecentWindow?.length?`${B.ipc3RecentWindow[0]}–${B.ipc3RecentWindow.at(-1)}`:'—';
   const pw=B.ipc3PreviousWindow?.length?`${B.ipc3PreviousWindow[0]}–${B.ipc3PreviousWindow.at(-1)}`:'—';
-  return `<div class="base-visual-subcard"><h5>IPC3 Technology Landscape</h5><p class="network-note">目前主要領域 <b>${esc(r.ipc3)}</b> 共 ${bfmt(r.patent_count)} 件，占全部專利 ${Number(r.share_pct||0).toFixed(1)}%；近 5 年（${rw}）${bfmt(r.recent_5y_count||0)} 件，較前 5 年（${pw}）${signedPct(r.recent_5y_growth)}；${r.peak_year?`${esc(r.peak_year)} 年達高峰（${bfmt(r.peak_year_count||0)} 件）`:'尚無有效年度資料'}。</p></div>`;
+  return `<div class="base-visual-subcard"><h5>IPC3 Technology Landscape</h5><p class="network-note">目前主要領域 <b>${esc(ipc3Display(r))}</b> 共 ${bfmt(r.patent_count)} 件，占全部專利 ${Number(r.share_pct||0).toFixed(1)}%；近 5 年（${rw}）${bfmt(r.recent_5y_count||0)} 件，較前 5 年（${pw}）${signedPct(r.recent_5y_growth)}；${r.peak_year?`${esc(r.peak_year)} 年達高峰（${bfmt(r.peak_year_count||0)} 件）`:'尚無有效年度資料'}。技術名稱版本：${esc(B.ipc3TitleVersion)}。</p></div>`;
 }
 function inventorMatrixHtml(m){
   const names=m?.inventors||[],years=m?.years||[],vals=m?.values||[];if(!names.length||!years.length)return '<div class="empty">需以 v2.6.2 重建資料後，才會顯示發明人活躍年度矩陣。</div>';
@@ -883,7 +945,9 @@ function baseNodes(){
     ['占全部專利','該 IPC3 涉及申請案數 ÷ 全部專利池；因 IPC3 可重疊，各領域占比不要求加總為 100%。'],
     ['近 5 年件數','以資料中最新有效申請年度為終點，統計最近 5 個申請年度合計。'],
     ['近 5 年成長','最近 5 年合計相對於緊接之前 5 年合計；若前 5 年為 0，顯示「—」。'],
-    ['高峰年度','該 IPC3 年度申請件數最高的年度；若並列最高，取較新的年度。']
+    ['高峰年度','該 IPC3 年度申請件數最高的年度；若並列最高，取較新的年度。'],
+    ['技術名稱',`IPC 三階技術名稱由 Python 隨統計資料輸出；目前版本 ${B.ipc3TitleVersion}，來源標示為 ${B.ipc3TitleSource}。`],
+    ['第三層入口','已建立 Domain Intelligence 的 IPC 會顯示「進入深度分析」；分類樹與矩陣必須明確綁定分類架構與版本。']
   ];
   const priorityRules=[
     ['解析單位','逐一解析各申請案「優先權」欄中的每個優先權項目並正規化來源。'],
@@ -897,7 +961,7 @@ function baseNodes(){
     inventors:{title:'發明人',question:'這批專利涉及多少位不同發明人？主要發明人的活躍年度如何？',metrics:[['發明人數',bfmt(B.inventor_count)],['專利件數',bfmt(B.pool)],['主要用途','觀察研發參與者'],['去重範圍','全部專利池']],children:B.topInventors.slice(0,12).map(x=>[x.name,bfmt(x.patent_count),'參與專利',{kind:'inventor',value:x.name,title:`${x.name} 的專利`}]),chartTitle:'主要發明人與活躍年度',chart:barChart(B.topInventors.slice(0,10).map(x=>[x.name,x.patent_count]),'專利件數'),visualHtml:()=>inventorMatrixHtml(B.inventorYearMatrix),recordsLabel:'統計方式',rules:inventorRules},
     applicants:{title:'申請法人',question:'這批專利由哪些法人提出申請？是否存在共同申請合作關係？',metrics:[['申請法人數',bfmt(B.applicant_count)],['主要申請人',B.applicants[0]?.[0]||'—'],['專利件數',bfmt(B.pool)],['共同申請案',bfmt(B.applicantCollaboration.co_application_count||0)]],children:B.applicants.map(x=>[x[0],bfmt(x[1]),'涉及專利',{kind:'applicant',value:x[0],title:`${x[0]} 的專利`}]),chartTitle:'主要申請人與共同申請合作網路',chart:barChart(B.applicants.slice(0,10),'專利件數'),visualHtml:()=>applicantNetworkHtml(B.applicantCollaboration),recordsLabel:'統計方式',rules:applicantRules},
     citations:{title:'引用專利數',question:'每件專利引用多少件先前專利？整體分布如何？',metrics:[['中位數',bfmt(B.citation_median)],['平均數',bfmt(B.citation_mean)],['Q1～Q3',`${bfmt(B.citation_q1)} ～ ${bfmt(B.citation_q3)}`],['資料覆蓋率',pct(B.citation_coverage)]],children:[['引用最多',`${bfmt(B.citation_max)} 件`,'查看最高引用案件',{kind:'citation_eq',value:B.citation_max,title:'引用專利數最多的案件'}],['高引用案件',`≥ ${bfmt(B.citation_q3)} 件`,'以 Q3 為門檻',{kind:'citation_gte',value:B.citation_q3,title:'高引用案件'}],['有引用資料',bfmt(B.citation_nonempty),'查看有引用資訊的專利',{kind:'citation_has_data',value:true,title:'有引用資料的專利'}]],chartTitle:'引用專利數分布',chart:barChart(citationBuckets(),'專利件數'),recordsLabel:'統計方式',rules:citationRules},
-    ipc3:{title:'IPC 技術領域',question:'企業主要布局在哪些三階 IPC 技術領域？這些領域近年如何變化？',metrics:[['技術領域數',bfmt(B.ipc3Count)],['主要領域',B.ipc3Ranking[0]?.ipc3||'—'],['主要領域占比',B.ipc3Ranking[0]?`${Number(B.ipc3Ranking[0].share_pct||0).toFixed(1)}%`:'—'],['近 5 年成長',B.ipc3Ranking[0]?signedPct(B.ipc3Ranking[0].recent_5y_growth):'—']],children:B.ipc3Ranking.slice(0,12).map(x=>[x.ipc3,`${bfmt(x.patent_count)} 件`,`占 ${Number(x.share_pct||0).toFixed(1)}%｜近5年 ${bfmt(x.recent_5y_count||0)} 件｜${signedPct(x.recent_5y_growth)}｜${x.peak_year?`${x.peak_year} 年高峰`:'無年度資料'}`,{kind:'ipc3',value:x.ipc3,title:`IPC3 ${x.ipc3} 的專利`}]),chartTitle:'主要三階 IPC 年度申請趨勢',chart:ipc3TrendChart(),visualHtml:()=>ipc3LandscapeNote(),recordsLabel:'統計方式',rules:ipc3Rules},
+    ipc3:{title:'IPC 技術領域',question:'企業主要布局在哪些三階 IPC 技術領域？這些領域近年如何變化？',metrics:[['技術領域數',bfmt(B.ipc3Count)],['主要領域',B.ipc3Ranking[0]?ipc3Display(B.ipc3Ranking[0]):'—'],['主要領域占比',B.ipc3Ranking[0]?`${Number(B.ipc3Ranking[0].share_pct||0).toFixed(1)}%`:'—'],['近 5 年成長',B.ipc3Ranking[0]?signedPct(B.ipc3Ranking[0].recent_5y_growth):'—']],children:B.ipc3Ranking.slice(0,12).map(x=>{const deep=ipc3Deep(x),title=ipc3Title(x);return [x.ipc3,`${bfmt(x.patent_count)} 件`,`${title?title+'｜':''}占 ${Number(x.share_pct||0).toFixed(1)}%｜近5年 ${bfmt(x.recent_5y_count||0)} 件｜${signedPct(x.recent_5y_growth)}｜${x.peak_year?`${x.peak_year} 年高峰`:'無年度資料'}`,{kind:'ipc3',value:x.ipc3,title:`${ipc3Display(x)} 的專利`,deep_analysis:deep,domain_item:x}] }),chartTitle:'主要三階 IPC 年度申請趨勢',chart:ipc3TrendChart(),visualHtml:()=>ipc3LandscapeNote(),recordsLabel:'統計方式',rules:ipc3Rules},
     ipc:{title:'IPC 分類數',question:'每件專利配置多少個不同的完整 IPC 分類？',metrics:[['中位數',bfmt(B.ipc_median)],['平均數',bfmt(B.ipc_mean)],['完整 IPC 種類',bfmt(B.ipc_unique)],['單件最多',bfmt(B.ipc_max)]],children:B.ipc_top.slice(0,12).map(x=>[x[0],bfmt(x[1]),'涉及專利',{kind:'ipc',value:x[0],title:`IPC ${x[0]} 的專利`}]),chartTitle:'主要完整 IPC 分類',chart:barChart(B.ipc_top.slice(0,10),'專利件數'),recordsLabel:'統計方式',rules:ipcRules},
     priority:{title:'優先權來源',question:'這批專利的優先權紀錄涉及哪些來源？',metrics:[['來源數',bfmt(Number(G.priority_country_count||B.priority.length))],['主要來源',B.priority[0]?.[0]||'—'],['專利件數',bfmt(B.pool)],['解析率',pct(G.priority_source_parse_rate_pct??100)]],children:B.priority.map(x=>[x[0],bfmt(x[1]),'件專利',{kind:'priority_country',value:x[0],title:`優先權來源：${x[0]}`}]),chartTitle:'優先權來源',chart:donutChart(B.priority),recordsLabel:'統計方式',rules:priorityRules}
   };
@@ -923,8 +987,9 @@ function openBaseNode(id){
   const n=BN[id];if(!n)return;
   document.getElementById('baseModalTitle').textContent=n.title;document.getElementById('baseModalQuestion').textContent=n.question;
   document.getElementById('baseMetricGrid').innerHTML=(n.metrics||[]).map(x=>`<div class="base-metric"><div class="k">${esc(x[0])}</div><div class="v">${esc(x[1])}</div></div>`).join('');
-  document.getElementById('baseDrillGrid').innerHTML=(n.children||[]).map((x,i)=>`<div class="base-drill-card" data-drill="${i}"><div class="n">${esc(x[0])}</div><div class="t"><b>${esc(x[1])}</b>｜${esc(x[2])}</div></div>`).join('')||'<div class="empty">目前沒有進階節點。</div>';
+  document.getElementById('baseDrillGrid').innerHTML=(n.children||[]).map((x,i)=>{const meta=x[3]||{},deep=meta.kind==='ipc3'?meta.deep_analysis:null,ready=Boolean(deep?.enabled);return `<div class="base-drill-card" data-drill="${i}"><div class="n">${esc(x[0])}</div><div class="t"><b>${esc(x[1])}</b>｜${esc(x[2])}</div>${meta.kind==='ipc3'?`<div class="domain-status ${ready?'ready':''}"><span class="domain-status-dot"></span>${esc(deep?.status_label||'尚未建立深度分類架構')}</div>${ready?`<button class="domain-entry-btn" data-domain-entry="${esc(meta.value)}">進入深度分析</button>`:''}`:''}</div>`}).join('')||'<div class="empty">目前沒有進階節點。</div>';
   document.querySelectorAll('[data-drill]').forEach(el=>el.onclick=()=>{const x=n.children[Number(el.dataset.drill)],meta=x[3];if(meta)openBaseList(meta.title||x[0],filterBaseRecords(meta),'進階探索')});
+  document.querySelectorAll('[data-domain-entry]').forEach(btn=>btn.onclick=e=>{e.stopPropagation();openIpc3Domain(btn.dataset.domainEntry)});
   document.getElementById('baseChartTitle').textContent=n.chartTitle||'';if(baseChartObj){baseChartObj.destroy();baseChartObj=null}
   const visual=document.getElementById('baseVisualContent');visual.innerHTML='';
   if(n.chart&&window.Chart){const wrap=document.createElement('div');wrap.className='base-chart-wrap';wrap.innerHTML='<canvas id="baseChart"></canvas>';visual.appendChild(wrap);baseChartObj=new Chart(wrap.querySelector('canvas'),n.chart)}
@@ -937,6 +1002,41 @@ function openBaseNode(id){
 }
 function switchBaseTab(name){document.querySelectorAll('.base-tab').forEach(b=>b.classList.toggle('active',b.dataset.baseTab===name));['summary','visual','records'].forEach(x=>document.getElementById('basePanel'+x[0].toUpperCase()+x.slice(1)).classList.toggle('active',x===name))}
 document.querySelectorAll('.base-tab').forEach(b=>b.onclick=()=>switchBaseTab(b.dataset.baseTab));
+let currentDomainIpc3='';
+function switchDomainTab(name){
+  document.querySelectorAll('.domain-tab').forEach(b=>b.classList.toggle('active',b.dataset.domainTab===name));
+  ['tree','matrix','quality'].forEach(x=>document.getElementById('domainPanel'+x[0].toUpperCase()+x.slice(1)).classList.toggle('active',x===name));
+}
+function renderDomainPanels(item,deep){
+  const title=ipc3Title(item)||'技術名稱未收錄';
+  const scheme=deep?.scheme_name||'尚未建立分類架構';
+  document.getElementById('domainPanelTree').innerHTML=`<div class="domain-placeholder"><h3>${esc(item.ipc3)} 分類樹</h3><p>第三層將以「分類架構」為版本化分析單位。v2.6.6 先建立 H04W pilot 入口與資料契約；真正的主技術／次技術、主功效／次功效節點，後續由 H04W taxonomy JSON 載入，避免把分類定義寫死在 HTML。</p><div class="domain-placeholder-grid"><div class="domain-placeholder-card"><div class="k">目前分類架構</div><div class="v">${esc(scheme)}</div></div><div class="domain-placeholder-card"><div class="k">適用範圍</div><div class="v">${esc(item.ipc3)}｜${esc(title)}</div></div></div><div class="domain-level-demo"><span>主技術</span><span>次技術</span><span>主功效</span><span>次功效</span></div></div>`;
+  document.getElementById('domainPanelMatrix').innerHTML=`<div class="domain-placeholder"><h3>技術 × 功效矩陣</h3><p>矩陣將只使用目前選定的 ${esc(item.ipc3)} 分類架構，不再把不同 IPC 技術語境混在企業首頁同一張矩陣。分類架構切換後，矩陣、專利命中與覆蓋率也必須同步切換。</p><div class="domain-placeholder-grid"><div class="domain-placeholder-card"><div class="k">矩陣技術軸</div><div class="v">主技術 / 次技術</div></div><div class="domain-placeholder-card"><div class="k">矩陣功效軸</div><div class="v">主功效 / 次功效</div></div></div><div class="domain-level-demo"><span>專利件數</span><span>技術內占比</span><span>點格查看專利證據</span></div></div>`;
+  document.getElementById('domainPanelQuality').innerHTML=`<div class="domain-placeholder"><h3>分類品質</h3><p>此區預留分類覆蓋率、未分類案件、規則命中／AI 補充分類、分類版本與可追溯性。現在的 IPC3 專利母數為 ${bfmt(item.patent_count)} 件；深度分類尚未掛入時，不顯示虛構覆蓋率。</p><div class="domain-placeholder-grid"><div class="domain-placeholder-card"><div class="k">IPC3 母數</div><div class="v">${bfmt(item.patent_count)} 件</div></div><div class="domain-placeholder-card"><div class="k">深度分類狀態</div><div class="v">${esc(deep?.status_label||'尚未建立')}</div></div></div></div>`;
+}
+function openIpc3Domain(code){
+  const item=ipc3Item(String(code||'').toUpperCase());if(!item)return;
+  const deep=ipc3Deep(item);if(!deep?.enabled)return;
+  currentDomainIpc3=item.ipc3;
+  document.getElementById('domainIpc3Code').textContent=item.ipc3;
+  document.getElementById('domainIpc3Title').textContent=ipc3Title(item)||'技術名稱未收錄';
+  document.getElementById('domainIpc3Sub').textContent=`${D.company}｜${bfmt(item.patent_count)} 件 ${item.ipc3} 專利；由 IPC3 Technology Landscape 進入第三層深度分析。`;
+  document.getElementById('domainPatentCount').textContent=`${bfmt(item.patent_count)} 件`;
+  document.getElementById('domainShare').textContent=`${Number(item.share_pct||0).toFixed(1)}%`;
+  document.getElementById('domainGrowth').textContent=signedPct(item.recent_5y_growth);
+  document.getElementById('domainPeak').textContent=item.peak_year?`${item.peak_year} 年`:'—';
+  const sel=document.getElementById('domainSchemeSelect');sel.innerHTML=`<option value="${esc(deep.scheme_id||item.ipc3.toLowerCase()+'_scheme')}">${esc(deep.scheme_name||'CPC-based '+item.ipc3)}</option>`;
+  document.getElementById('domainSchemeMeta').innerHTML=`<b>版本：</b>${esc(deep.scheme_version||'—')}　<b>基礎：</b>${esc(deep.scheme_basis||'—')}<br><b>狀態：</b>${esc(deep.status_label||'—')}`;
+  document.getElementById('domainDefinitionBox').classList.remove('open');
+  document.getElementById('domainDefinitionBox').innerHTML=`<b>${esc(deep.scheme_name||'分類架構')}</b><br>適用範圍：${esc(item.ipc3)}｜${esc(ipc3Title(item)||'—')}<br>分類基礎：${esc(deep.scheme_basis||'—')}<br>目前 v2.6.6 僅建立可切換、可版本化的第三層框架；正式 taxonomy 應另存定義、包含／排除原則、CPC 對應與版本，不由 HTML 自行推測。`;
+  renderDomainPanels(item,deep);switchDomainTab('tree');
+  document.getElementById('ipc3DomainOverlay').classList.add('open');
+}
+document.querySelectorAll('.domain-tab').forEach(b=>b.onclick=()=>switchDomainTab(b.dataset.domainTab));
+document.getElementById('domainDefinitionBtn').onclick=()=>document.getElementById('domainDefinitionBox').classList.toggle('open');
+document.getElementById('ipc3DomainClose').onclick=()=>document.getElementById('ipc3DomainOverlay').classList.remove('open');
+document.getElementById('ipc3DomainOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.classList.remove('open')});
+
 function entityKey(x){return String(x||'').normalize('NFKC').trim().toLocaleLowerCase('en-US')}
 function normalizedEntityList(value){return String(value||'').split(/[;；]/).map(x=>x.trim()).filter(Boolean)}
 function recordHasNormalizedEntity(r,field,value,fallbackFields=[]){
